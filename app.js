@@ -111,6 +111,8 @@ try {
         optimizeImg: false,
         single_image: true,
         soon_banners: true,
+        white_line: false,
+        full_img_width: false,
         alarm: {
           isActive: false,
         },
@@ -349,7 +351,7 @@ try {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "02.06.25 - Beliani Birthday Start!",
                 tableRange: "16:27",
-                name: "category",
+                name: "categories",
               },
               {
                 tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
@@ -620,7 +622,7 @@ try {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "02.06.25 - Beliani Birthday Start!",
                 tableRange: "16:27",
-                name: "category",
+                name: "categories",
               },
               {
                 tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",

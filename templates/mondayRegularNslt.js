@@ -25,9 +25,9 @@ import { getCodes } from "../utils/getCodes.js";
  * Funkcja generująca sekcje kategorii dla newslettera/landing page
  * Kolejność parametrów zgodna z wymaganiami
  */
-function generateCategoriesSection(categories, queries, background, add_utm, getCategoryTitle, getProductById, getPhrase, getCategoryLink) {
+function generateCategoriesSection(categories, queries, background, add_utm, white_line, full_img_width, getCategoryTitle, getProductById, getPhrase, getCategoryLink) {
   let categoriesHTML = '';
-  
+
   // Sprawdź czy tablica categories istnieje i ma elementy
   if (!categories || !categories.length) {
     return categoriesHTML;
@@ -123,7 +123,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, get
     // Dodaj sekcję kategorii
     categoriesHTML += `
       <tr>
-        <td ${!category.products ? 'class="newsletterContainer"' : ""} style="background-color: ${category?.background || background}; color: ${category?.color || "#000000"}">
+        <td style="background-color: ${category?.background || background}; color: ${category?.color || "#000000"}">
           ${Category({
             href: categoryHref,
             name: queries?.categories && queries.categories[index]
@@ -133,6 +133,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, get
             cta: safeGetPhrase("Shop now"),
             color: category?.color,
             type: categoryType,
+            img_class: (full_img_width === false ? "newsletterContainer" : ""),
             products: category.products ? category.products.map((item) =>
               getProductById(item.id, item.src, item.name)
             ) : [],
@@ -140,6 +141,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, get
             idx: index, 
             len: categories.length - 1, // Ostatni element
             align: "left", // Ustawione na "left" zamiast "center"
+            line: (white_line === true || white_line === "true") ? "https://pictureserver.net/static/2024/white_line.jpg" : "https://beliani.info/newsletter/2022/line.jpg",
           })}
         </td>
       </tr>
@@ -175,6 +177,8 @@ export async function mondayRegularNslt({
   single_image,
   soon_banners,
   startId,
+  white_line,
+  full_img_width,
 }) {
   const codes = getCodes(queries);
 
@@ -182,14 +186,15 @@ export async function mondayRegularNslt({
     categories, 
     queries, 
     background, 
-    add_utm, 
+    add_utm,
+    white_line,
+    full_img_width,
     getCategoryTitle,
     getProductById, 
     getPhrase,
     getCategoryLink
   );
-  console.log();
-  console.log('single_image:', single_image, typeof single_image);
+  console.log('origin includes PL:', origin);
 
   return `
   ${Header(

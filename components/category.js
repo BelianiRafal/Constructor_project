@@ -18,6 +18,8 @@ export const Category = isAllowToRender(
     type = "monday",
     align,
     size,
+    className = "newsletterContainer",
+    img_class
   }) => {
     if (!type) {
       return "Please specify type category.";
@@ -129,7 +131,7 @@ export const Category = isAllowToRender(
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
       <tbody>
         <tr>
-          <td align="${align}">
+          <td align="${align}" class="${className}">
             ${Title({ title: name, align, color: color })}
           </td>
         </tr>
@@ -137,7 +139,7 @@ export const Category = isAllowToRender(
           <td class="newsletterBottom35px"></td>
         </tr>
         <tr>
-          <td>
+          <td class="${img_class}">
             <a href="${href}">
               <img alt="${name}" src="${src}" style="vertical-align: middle; max-width: 100%;" loading="lazy">
             </a>
@@ -172,7 +174,7 @@ export const Category = isAllowToRender(
     <table border="0" cellspacing="0" cellpadding="0" width="100%">
       <tbody>
         <tr>
-          <td>
+          <td class="${className}">
             ${Title({ title: name, align: "left", color: color })}
           </td>
         </tr>
@@ -180,7 +182,7 @@ export const Category = isAllowToRender(
           <td class="newsletterBottom35px"></td>
         </tr>
         <tr>
-          <td>
+          <td class="${img_class}">
             <a href="${href}">
               <img alt="${name}" src="${src}" style="vertical-align: middle; max-width: 100%;" loading="lazy">
             </a>
@@ -208,7 +210,7 @@ export const Category = isAllowToRender(
           <td class="newsletterBottom35px"></td>
         </tr>
         <tr>
-          <td>
+          <td class="${className}">
               ${Line(line)}
           </td>
         </tr>

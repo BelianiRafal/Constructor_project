@@ -496,6 +496,8 @@ export function initApp({ campaigns, shops, config }) {
       setState("optimizeImg", selectedCampaign.optimizeImg || false);
       setState("single_image", selectedCampaign.single_image || false);
       setState("soon_banners", selectedCampaign.soon_banners || false);
+      setState("white_line", selectedCampaign.white_line || false);
+      setState("full_img_width", selectedCampaign.full_img_width || false);
     });
 
     selectTemplates.addEventListener("change", (ev) => {

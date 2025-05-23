@@ -11,6 +11,8 @@ export class Campaign {
   figmaUrl;
   single_image;
   soon_banners;
+  white_line;
+  full_img_width;
   constructor({
     date,
     data,
@@ -25,6 +27,8 @@ export class Campaign {
     figmaUrl,
     single_image,
     soon_banners,
+    white_line,
+    full_img_width,
   }) {
     if (!Array.isArray(templates)) {
       throw new Error("templates property should be array");
@@ -64,5 +68,7 @@ export class Campaign {
     this.figmaUrl = figmaUrl || null;
     this.single_image = single_image || false;
     this.soon_banners = soon_banners || false;
+    this.white_line = white_line || false;
+    this.full_img_width = full_img_width || false;
   }
 }
