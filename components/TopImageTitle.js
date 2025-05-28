@@ -10,6 +10,10 @@ export const TopImageTitle = isAllowToRender(
         <h4 style="color:${color};" class="${title1.includes('%') ? 'newsletterTitleH1' : 'newsletterTitleH2'}">${title1}</h4>
         <h5 style="color:${color};" class="${title2?.includes('%') ? 'newsletterTitleH1' : 'newsletterTitleH2'}">${title2 ?? ''}</h5>
       `,
+      up_to_bigger: `
+        <h4 style="color:${color};" class="${title1.includes('%') ? 'newsletterTitleH1Bigger' : 'newsletterTitleH1Bold'}">${title1}</h4>
+        <h5 style="color:${color};" class="${title2?.includes('%') ? 'newsletterTitleH1Bigger' : 'newsletterTitleH1Bold'}">${title2 ?? ''}</h5>
+      `,
       standard: `
         <h5 style="color:${color};" class="newsletterTitleH1">${title1}</h5>
         <h4 style="color:${color};" class="newsletterTitleH2">${title2}</h4>
