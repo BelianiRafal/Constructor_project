@@ -20,6 +20,7 @@ import {
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
+import { NewsletterTemplate } from "../entities/NewsletterTemplate.js";
 import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
@@ -47,29 +48,58 @@ export async function FrenchDays({
   data,
   item,
   add_utm,
-  shop
+  shop,
+  campDate,
 }) {
   const codes = getCodes(queries);
-  const timer_link = {
-    CHDE: [""],
-    CHFR: [""],
-    UK: [""],
-    DE: [""],
-    FR: [""],
-    AT: [""],
-    ES: [""],
-    PL: [""],
-    NL: [""],
-    PT: [""],
-    IT: [""],
-    SE: [""],
-    HU: [""],
-    DK: [""],
-    CZ: [""],
-    FI: [""],
-    NO: [""],
-    SK: [""],
+   const gif_src1 = {
+    CHDE:['https://gen.sendtric.com/countdown/gx3ygpr3of'],
+    CHFR:['https://gen.sendtric.com/countdown/3r1x88h47v'],
+    FR:['https://gen.sendtric.com/countdown/3r1x88h47v'],
+    UK:['https://gen.sendtric.com/countdown/gf5ok93rn6'],
+    DE:['https://gen.sendtric.com/countdown/gx3ygpr3of'],
+    AT:['https://gen.sendtric.com/countdown/gx3ygpr3of'],
+    ES:['https://gen.sendtric.com/countdown/r7sek3cb3j'],
+    PL:['https://gen.sendtric.com/countdown/1fjcoigdjo'],
+    NL:['https://gen.sendtric.com/countdown/qwi3ixh0sr'],
+    PT:['https://gen.sendtric.com/countdown/a3567s60vj'],
+    IT:['https://gen.sendtric.com/countdown/153qvcxc4t'],
+    SE:['https://gen.sendtric.com/countdown/4odozbfwbv'],
+    HU:['https://gen.sendtric.com/countdown/n47yc8sodi'],
+    DK:['https://gen.sendtric.com/countdown/gvc05gevi2'],
+    CZ:['https://gen.sendtric.com/countdown/lq2df2bglc'],
+    FI:['https://gen.sendtric.com/countdown/yypzt93b26'],
+    NO:['https://gen.sendtric.com/countdown/w2me5g3mv8'],
+    SK:['https://gen.sendtric.com/countdown/sm5mlcbs5u'],
+    BENL:['https://gen.sendtric.com/countdown/qwi3ixh0sr'],
+    BEFR:['https://gen.sendtric.com/countdown/3r1x88h47v'],
+    RO:['https://gen.sendtric.com/countdown/bingtjubma'],
   };
+  const gif_src2 = {
+    CHDE:['https://gen.sendtric.com/countdown/l074hwubr4'],
+    CHFR:['https://gen.sendtric.com/countdown/6u69emjara'],
+    FR:['https://gen.sendtric.com/countdown/1ey33ehlj7'],
+    UK:['https://gen.sendtric.com/countdown/4e62vsgotn'],
+    DE:['https://gen.sendtric.com/countdown/jfgw8mz5to'],
+    AT:['https://gen.sendtric.com/countdown/c92gxrqo37'],
+    ES:['https://gen.sendtric.com/countdown/cqkr3ppdq9'],
+    PL:['https://gen.sendtric.com/countdown/44jao0oi2m'],
+    NL:['https://gen.sendtric.com/countdown/koe50jy0z2'],
+    PT:['https://gen.sendtric.com/countdown/5dalwcmns7'],
+    IT:['https://gen.sendtric.com/countdown/43czzgbcke'],
+    SE:['https://gen.sendtric.com/countdown/jo2ld3oau7'],
+    HU:['https://gen.sendtric.com/countdown/o07jruzodm'],
+    DK:['https://gen.sendtric.com/countdown/xspvb43d8y'],
+    CZ:['https://gen.sendtric.com/countdown/8x7lielj2k'],
+    FI:['https://gen.sendtric.com/countdown/sg1f28fqcj'],
+    NO:['https://gen.sendtric.com/countdown/sb52kc4a23'],
+    SK:['https://gen.sendtric.com/countdown/m7ey3fmdpg'],
+    BENL:['https://gen.sendtric.com/countdown/koe50jy0z2'],
+    BEFR:['https://gen.sendtric.com/countdown/ijkmabns81'],
+    RO:['https://gen.sendtric.com/countdown/w2f6agmcdw'],
+  };
+  console.log(shop.slug)
+    console.log(shop)
   return `
   ${Header(
     {
@@ -148,8 +178,8 @@ export async function FrenchDays({
                             href: links[0],
                             title1: queries.tit[0],
                             title2: queries.tit[1],
-                            color: "#ffffff",
-                            type: "up_to",
+                            color: "#000",
+                            type: "twoSameLines",
                         })}
                         `
                         }
@@ -158,68 +188,57 @@ export async function FrenchDays({
 
                 `
             }
+           
+            
             <tr>
-                <td align="center">
-                    ${ImageWithLink({
-                        href: links[0],
-                        src: links[7],
-                    })}
-                </td>
-            </tr>
+                            <td align="center" style="background-color: ${background};" class="newsletterContainer">
+                              ${Intro({
+                                paragraph: queries.intro[0],
+                                color: "#000",
+                                align: "center",
+                                title: "no_title",
+                              })}
+                              </td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: ${background};" class="newsletterBottom35px"></td>
+                          </tr>
+           <tr>
+                          <td style="background-color: #750000" class="newsletterBottom10px"></td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #750000">
+                          ${Timer({
+                            title: queries.timer[0],
+                            subtitle: queries.timer[1],
+          
+                            href: links[2],
+                            imageSrc: campDate==="2025.06.06" ? gif_src1[country]: gif_src2[country],
+                            style: {
+                              bgColor: "#750000",
+                              textColor: "#fff",
+                              align: "center",
+                            },
+                            cta: getPhrase("Shop now"),
+                          })}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #750000;" class="newsletterBottom20px"></td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #750000">
+                                ${ImageWithLink({
+                                  href: links[2],
+                                  src: links[7],
+                                })}
+                          </td>
+                        </tr>
             <tr>
               <td class="newsletterContainer">
                   ${Space()}
-                  ${
-                    offerPart.type === "code"
-                      ? OfferPartCode({
-                          color: offerPart.color,
-                          data: queries.offerPart,
-                          //data2: queries.ChooseFrom,
-                          href: links[0],
-                          code: queries.offerPart[3],
-                          code1: queries.offerPart[5],
-                          code2: queries.offerPart[6],
-                          code3: queries.offerPart[7],
-                          getPhrase,
-                          type,
-                          queries
-                        })
-                      : ""
-                  }
-                  ${
-                    offerPart.type === "codes"
-                      ? OfferPartCodes({
-                          type,
-                          offerParts: [
-                            {
-                              paragraph: queries.offerPart[0],
-                              code: codes?.code1,
-                              type: "landing",
-                            },
-                            {
-                              paragraph: queries.offerPart[1],
-                              code: codes?.code2,
-                              type: "landing",
-                            },
-                            {
-                              paragraph: queries.offerPart[2],
-                              code: codes?.code3,
-                              type: "landing",
-                            },
-                            {
-                              paragraph: queries.offerPart[4],
-                              href: links[0],
-                              type: "newsletter",
-                            },
-                            {
-                              paragraph: queries.offerPart[5],
-                              code: codes?.code4,
-                              type: "landing",
-                            },
-                          ],
-                        })
-                      : ""
-                  }
+                
+                  
               </td>
             </tr>
             <tr>
@@ -256,13 +275,10 @@ export async function FrenchDays({
                             : shop.origin,
                         type,
                   })}
-                  ${Space()}
+                  ${Space({ className: "newsletterBottom80px" })}
               </td>
             </tr>
-            ${
-                ["BEFR", "BENL"].includes(country)
-                  ? ""
-                  : `
+           
                     <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
                         <tbody>
                             <tr>
@@ -305,8 +321,7 @@ export async function FrenchDays({
                             </tr>
                         </tbody>
                     </table>
-                `
-            }
+               
       ${Footer(
         {
           id,
