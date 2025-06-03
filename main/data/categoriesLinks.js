@@ -352,10 +352,13 @@ export default [
     "outdoor-kitchen": "outdoorkuechen",
     "office-desk-dividers": "trennwande-fur-den-schreibtisch",
     "picnic-basket": "picknickkorbe",
-    "Sort by alphabet": 1,
-    "Sort by translations": 4,
-    "Sort by new translations": 4,
-    "Sort for CGB": 4
+    "basins": "waschbecken",
+    "outdoor-lighting": "aussenbeleuchtungen",
+    "reclining-armchairs": "relaxsessel",
+    "adjustable-desks": "schreibtisch-verstellbar",
+    "outdoor-showers": "gartenduschen",
+    "trends": "wohntrends",
+    "dreamy-pastels": "moebel-in-pastellfarben"
   },
   {
     "slug": "befr",
@@ -710,10 +713,13 @@ export default [
     "outdoor-kitchen": "cuisine-exterieure",
     "office-desk-dividers": "separateurs-pour-bureaux",
     "picnic-basket": "paniers-de-pique-nique",
-    "Sort by alphabet": 2,
-    "Sort by translations": 19,
-    "Sort by new translations": 10,
-    "Sort for CGB": 20
+    "basins": "lavabos",
+    "outdoor-lighting": "eclairage-exterieur",
+    "reclining-armchairs": "fauteuils-inclinables",
+    "adjustable-desks": "bureaux-reglables",
+    "outdoor-showers": "douches-exterieur",
+    "trends": "tendances",
+    "dreamy-pastels": "reves-de-pastels"
   },
   {
     "slug": "benl",
@@ -1068,10 +1074,13 @@ export default [
     "outdoor-kitchen": "buitenkeuken",
     "office-desk-dividers": "bureauverdelers",
     "picnic-basket": "picknickmand",
-    "Sort by alphabet": 3,
-    "Sort by translations": 20,
-    "Sort by new translations": 7,
-    "Sort for CGB": 21
+    "basins": "wastafels",
+    "outdoor-lighting": "buiten-verlichting",
+    "reclining-armchairs": "relax-fauteuils",
+    "adjustable-desks": "verstelbare-bureaus",
+    "outdoor-showers": "buiten-douche",
+    "trends": "interieurtrends",
+    "dreamy-pastels": "dromerige-pastelkleuren"
   },
   {
     "slug": "chde",
@@ -1426,10 +1435,13 @@ export default [
     "outdoor-kitchen": "outdoorkuechen",
     "office-desk-dividers": "trennwande-fur-den-schreibtisch",
     "picnic-basket": "picknickkorbe",
-    "Sort by alphabet": 4,
-    "Sort by translations": 5,
-    "Sort by new translations": 5,
-    "Sort for CGB": 5
+    "basins": "waschbecken",
+    "outdoor-lighting": "aussenbeleuchtungen",
+    "reclining-armchairs": "relaxsessel",
+    "adjustable-desks": "schreibtisch-verstellbar",
+    "outdoor-showers": "gartenduschen",
+    "trends": "wohntrends",
+    "dreamy-pastels": "moebel-in-pastellfarben"
   },
   {
     "slug": "chfr",
@@ -1784,10 +1796,13 @@ export default [
     "outdoor-kitchen": "cuisine-exterieure",
     "office-desk-dividers": "separateurs-pour-bureaux",
     "picnic-basket": "paniers-de-pique-nique",
-    "Sort by alphabet": 5,
-    "Sort by translations": 8,
-    "Sort by new translations": 9,
-    "Sort for CGB": 6
+    "basins": "lavabos",
+    "outdoor-lighting": "eclairage-exterieur",
+    "reclining-armchairs": "fauteuils-inclinables",
+    "adjustable-desks": "bureaux-reglables",
+    "outdoor-showers": "douches-exterieur",
+    "trends": "tendances",
+    "dreamy-pastels": "reves-de-pastels"
   },
   {
     "slug": "chit",
@@ -2142,10 +2157,13 @@ export default [
     "outdoor-kitchen": "cucina-per-esterni",
     "office-desk-dividers": "divisori-per-scrivania",
     "picnic-basket": "cestini-per-picnic",
-    "Sort by alphabet": 6,
-    "Sort by translations": 22,
-    "Sort by new translations": 22,
-    "Sort for CGB": 22
+    "basins": "lavabi",
+    "outdoor-lighting": "illuminazione-da-esterno",
+    "reclining-armchairs": "poltrone-reclinabili",
+    "adjustable-desks": "scrivanie-regolabili-elettronicamente",
+    "outdoor-showers": "docce-esterno",
+    "trends": "tendenze",
+    "dreamy-pastels": "colori-pastello-da-sogno"
   },
   {
     "slug": "cz",
@@ -2500,10 +2518,13 @@ export default [
     "outdoor-kitchen": "venkovni-kuchyne",
     "office-desk-dividers": "rozdelovace-kancelarskych-stolu",
     "picnic-basket": "piknikovy-kos",
-    "Sort by alphabet": 7,
-    "Sort by translations": 16,
-    "Sort by new translations": 18,
-    "Sort for CGB": 16
+    "basins": "umyvadla",
+    "outdoor-lighting": "venkovni-osvetleni",
+    "reclining-armchairs": "polohovaci-kresla",
+    "adjustable-desks": "vyskove-nastavitelne-psaci-stoly",
+    "outdoor-showers": "zahradni-sprchy",
+    "trends": "trendy-cz",
+    "dreamy-pastels": "snove-pastely"
   },
   {
     "slug": "de",
@@ -2858,10 +2879,13 @@ export default [
     "outdoor-kitchen": "outdoorkuechen",
     "office-desk-dividers": "trennwande-fur-den-schreibtisch",
     "picnic-basket": "picknickkorbe",
-    "Sort by alphabet": 8,
-    "Sort by translations": 3,
-    "Sort by new translations": 3,
-    "Sort for CGB": 3
+    "basins": "waschbecken",
+    "outdoor-lighting": "aussenbeleuchtungen",
+    "reclining-armchairs": "relaxsessel",
+    "adjustable-desks": "schreibtisch-verstellbar",
+    "outdoor-showers": "gartenduschen",
+    "trends": "wohntrends",
+    "dreamy-pastels": "moebel-in-pastellfarben"
   },
   {
     "slug": "dk",
@@ -3216,10 +3240,13 @@ export default [
     "outdoor-kitchen": "udendoers-koekken",
     "office-desk-dividers": "kontor-skrivebords-opdelere",
     "picnic-basket": "picnickurve",
-    "Sort by alphabet": 9,
-    "Sort by translations": 12,
-    "Sort by new translations": 14,
-    "Sort for CGB": 12
+    "basins": "handvaske-til-badevaerelset",
+    "outdoor-lighting": "udendors-belysning",
+    "reclining-armchairs": "recliner-laenestole",
+    "adjustable-desks": "justerbare-borde",
+    "outdoor-showers": "udendoers-brusere",
+    "trends": "trends",
+    "dreamy-pastels": "pastel-dromme"
   },
   {
     "slug": "es",
@@ -3574,10 +3601,13 @@ export default [
     "outdoor-kitchen": "cocina-exterior",
     "office-desk-dividers": "separadores-de-oficina",
     "picnic-basket": "cestas-picnic",
-    "Sort by alphabet": 10,
-    "Sort by translations": 9,
-    "Sort by new translations": 11,
-    "Sort for CGB": 9
+    "basins": "lavabos",
+    "outdoor-lighting": "iluminacion-exterior",
+    "reclining-armchairs": "sillones-reclinables",
+    "adjustable-desks": "escritorios-de-altura-regulable",
+    "outdoor-showers": "duchas-de-exterior",
+    "trends": "tendencias",
+    "dreamy-pastels": "colores-pastel-de-ensueno"
   },
   {
     "slug": "fi",
@@ -3932,10 +3962,13 @@ export default [
     "outdoor-kitchen": "ulkokeittio",
     "office-desk-dividers": "toimiston-tyopoydan-jakajat",
     "picnic-basket": "piknik-kori",
-    "Sort by alphabet": 11,
-    "Sort by translations": 14,
-    "Sort by new translations": 16,
-    "Sort for CGB": 15
+    "basins": "pesualtaat",
+    "outdoor-lighting": "ulkovalaisimet",
+    "reclining-armchairs": "mekanisminojatuolit",
+    "adjustable-desks": "saadettavat-tyopoydat",
+    "outdoor-showers": "ulkosuihkut",
+    "trends": "trendit",
+    "dreamy-pastels": "unenomaiset-pastellivarit"
   },
   {
     "slug": "fr",
@@ -4290,10 +4323,13 @@ export default [
     "outdoor-kitchen": "cuisine-exterieure",
     "office-desk-dividers": "separateurs-pour-bureaux",
     "picnic-basket": "paniers-de-pique-nique",
-    "Sort by alphabet": 12,
-    "Sort by translations": 7,
-    "Sort by new translations": 8,
-    "Sort for CGB": 7
+    "basins": "lavabos",
+    "outdoor-lighting": "eclairage-exterieur",
+    "reclining-armchairs": "fauteuils-inclinables",
+    "adjustable-desks": "bureaux-reglables",
+    "outdoor-showers": "douches-exterieur",
+    "trends": "tendances",
+    "dreamy-pastels": "reves-de-pastels"
   },
   {
     "slug": "hu",
@@ -4648,10 +4684,13 @@ export default [
     "outdoor-kitchen": "kulteri-konyha",
     "office-desk-dividers": "irodai-iroasztal-elvalasztok",
     "picnic-basket": "piknik-kosarak",
-    "Sort by alphabet": 13,
-    "Sort by translations": 18,
-    "Sort by new translations": 20,
-    "Sort for CGB": 18
+    "basins": "mosdokagylok",
+    "outdoor-lighting": "kulteri-lampak",
+    "reclining-armchairs": "fekvo-fotelek",
+    "adjustable-desks": "elektromosan-allithato-iroasztalok",
+    "outdoor-showers": "kulteri-zuhanyzok",
+    "trends": "trendek",
+    "dreamy-pastels": "pasztell-arnyalatok"
   },
   {
     "slug": "it",
@@ -5006,10 +5045,13 @@ export default [
     "outdoor-kitchen": "cucina-per-esterni",
     "office-desk-dividers": "divisori-per-scrivania",
     "picnic-basket": "cestini-per-picnic",
-    "Sort by alphabet": 14,
-    "Sort by translations": 11,
-    "Sort by new translations": 13,
-    "Sort for CGB": 8
+    "basins": "lavabi",
+    "outdoor-lighting": "illuminazione-da-esterno",
+    "reclining-armchairs": "poltrone-reclinabili",
+    "adjustable-desks": "scrivanie-regolabili-elettronicamente",
+    "outdoor-showers": "docce-esterno",
+    "trends": "tendenze",
+    "dreamy-pastels": "colori-pastello-da-sogno"
   },
   {
     "slug": "nl",
@@ -5364,10 +5406,13 @@ export default [
     "outdoor-kitchen": "buitenkeuken",
     "office-desk-dividers": "bureauverdelers",
     "picnic-basket": "picknickmand",
-    "Sort by alphabet": 15,
-    "Sort by translations": 6,
-    "Sort by new translations": 6,
-    "Sort for CGB": 11
+    "basins": "wastafels",
+    "outdoor-lighting": "buiten-verlichting",
+    "reclining-armchairs": "relax-fauteuils",
+    "adjustable-desks": "verstelbare-bureaus",
+    "outdoor-showers": "buiten-douche",
+    "trends": "interieurtrends",
+    "dreamy-pastels": "dromerige-pastelkleuren"
   },
   {
     "slug": "no",
@@ -5722,10 +5767,13 @@ export default [
     "outdoor-kitchen": "utekjokken",
     "office-desk-dividers": "skillevegger-til-skrivebord",
     "picnic-basket": "piknik-kurver",
-    "Sort by alphabet": 16,
-    "Sort by translations": 13,
-    "Sort by new translations": 15,
-    "Sort for CGB": 14
+    "basins": "servanter",
+    "outdoor-lighting": "utendorsbelysning",
+    "reclining-armchairs": "reclinerstoler",
+    "adjustable-desks": "justerbare-skrivebord",
+    "outdoor-showers": "utedusjer",
+    "trends": "trender",
+    "dreamy-pastels": "drommende-pastellfarger"
   },
   {
     "slug": "pl",
@@ -6080,10 +6128,13 @@ export default [
     "outdoor-kitchen": "kuchnia-ogrodowa",
     "office-desk-dividers": "scianki-na-biurka",
     "picnic-basket": "kosz-piknikowy",
-    "Sort by alphabet": 17,
-    "Sort by translations": 2,
-    "Sort by new translations": 2,
-    "Sort for CGB": 1
+    "basins": "umywalki",
+    "outdoor-lighting": "oswietlenie-zewnetrzne",
+    "reclining-armchairs": "fotele-rozkladane",
+    "adjustable-desks": "biurka-z-regulacja-wysokosci",
+    "outdoor-showers": "prysznice-ogrodowe",
+    "trends": "trendy",
+    "dreamy-pastels": "pastelowa-lekkosc"
   },
   {
     "slug": "pt",
@@ -6438,10 +6489,13 @@ export default [
     "outdoor-kitchen": "cozinha-exterior",
     "office-desk-dividers": "divisorias-para-secretarias",
     "picnic-basket": "cestos-de-picnic",
-    "Sort by alphabet": 18,
-    "Sort by translations": 10,
-    "Sort by new translations": 12,
-    "Sort for CGB": 10
+    "basins": "lavatorios",
+    "outdoor-lighting": "iluminacao-exterior",
+    "reclining-armchairs": "poltronas-reclinaveis",
+    "adjustable-desks": "secretarias-elevatorias",
+    "outdoor-showers": "chuveiros-de-exterior",
+    "trends": "tendencias",
+    "dreamy-pastels": "tons-pastel-sonhadores"
   },
   {
     "slug": "ro",
@@ -6796,10 +6850,13 @@ export default [
     "outdoor-kitchen": "bucatarie-in-aer-liber",
     "office-desk-dividers": "paravane-si-separatoare-de-camera",
     "picnic-basket": "cos-de-picnic",
-    "Sort by alphabet": 19,
-    "Sort by translations": 21,
-    "Sort by new translations": 21,
-    "Sort for CGB": 19
+    "basins": "lavoare",
+    "outdoor-lighting": "iluminat-in-aer-liber",
+    "reclining-armchairs": "fotolii-rabatabile",
+    "adjustable-desks": "birouri-reglabil",
+    "outdoor-showers": "dusuri-in-aer-liber",
+    "trends": "tendinte",
+    "dreamy-pastels": "culori-pastelate-de-vis"
   },
   {
     "slug": "se",
@@ -7154,10 +7211,13 @@ export default [
     "outdoor-kitchen": "utekok",
     "office-desk-dividers": "avdelare-for-kontorsbord",
     "picnic-basket": "picknickkorg",
-    "Sort by alphabet": 20,
-    "Sort by translations": 15,
-    "Sort by new translations": 17,
-    "Sort for CGB": 13
+    "basins": "tvattstall",
+    "outdoor-lighting": "utomhusbelysning",
+    "reclining-armchairs": "reclinerfatoljer",
+    "adjustable-desks": "justerbara-skrivbord",
+    "outdoor-showers": "uteduschar",
+    "trends": "trender",
+    "dreamy-pastels": "drommiga-pasteller"
   },
   {
     "slug": "sk",
@@ -7512,10 +7572,13 @@ export default [
     "outdoor-kitchen": "vonkajsia-kuchyna",
     "office-desk-dividers": "rozdelovace-kancelarskych-stolov",
     "picnic-basket": "piknikovy-kosik",
-    "Sort by alphabet": 21,
-    "Sort by translations": 17,
-    "Sort by new translations": 19,
-    "Sort for CGB": 17
+    "basins": "umyvadla",
+    "outdoor-lighting": "vonkajsie-osvetlenie",
+    "reclining-armchairs": "nastavitelne-kresla",
+    "adjustable-desks": "vyskove-nastavitelne-pisacie-stoly",
+    "outdoor-showers": "zahradne-sprchy",
+    "trends": "trendy-sk",
+    "dreamy-pastels": "pastelove-sny"
   },
   {
     "slug": "uk",
@@ -7870,9 +7933,12 @@ export default [
     "outdoor-kitchen": "outdoor-kitchen",
     "office-desk-dividers": "office-desk-dividers",
     "picnic-basket": "picnic-basket",
-    "Sort by alphabet": 22,
-    "Sort by translations": 1,
-    "Sort by new translations": 1,
-    "Sort for CGB": 2
+    "basins": "basins",
+    "outdoor-lighting": "outdoor-lights",
+    "reclining-armchairs": "reclining-armchairs",
+    "adjustable-desks": "adjustable-desks",
+    "outdoor-showers": "outdoor-showers",
+    "trends": "trends",
+    "dreamy-pastels": "dreamy-pastels"
   }
 ]
