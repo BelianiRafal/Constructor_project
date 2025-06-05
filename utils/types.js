@@ -34,7 +34,9 @@ export default {
       margin-bottom: 10px;
       margin-top: 10px;
     }
-  
+  .br {
+    display: block; 
+}
     
     /* NEWSLETTER START */
       @media screen and (max-width: 768px) {
@@ -42,7 +44,10 @@ export default {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
-
+    .br {
+    
+    display: contents;
+}
                   .newsletterSubtitleTimer {
         font-size: 20px !important;
       }
@@ -1041,14 +1046,18 @@ export default {
        margin-bottom: 10px;
        margin-top: 10px;
      }
-     
+     .br {
+    display: block; 
+}
      /* NEWSLETTER START */
        @media screen and (max-width: 768px) {
        #newsletter .newsletterCounter{
          padding-left: 20px !important;
          padding-right: 20px !important;
      }
-
+.br {
+    display: contents; 
+}
      #newsletter .newsletterSubtitleTimer {
          font-size: 20px !important;
        }
