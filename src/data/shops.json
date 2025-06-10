@@ -1,0 +1,259 @@
+{
+  "CHDE": {
+    "origin": "https://www.beliani.ch/",
+    "shopId": "1",
+    "seller": "Beliani.ch",
+    "languages": [
+      { "slug": "CHDE", "title": "german", "name": "German", "tableColumn": "N" },
+      { "slug": "CHIT", "title": "italian", "name": "Italian", "tableColumn": "AV" },
+      { "slug": "CHFR", "title": "french", "name": "French", "tableColumn": "T" },
+      { "slug": "CHFR_Mattress", "title": "french", "name": "French Mattress", "tableColumn": "H" },
+      { "slug": "CHDE_Mattress", "title": "german", "name": "German Mattress", "tableColumn": "J" }
+    ],
+    "price_format": {
+      "currency": "Fr.",
+      "delimiters": { "hundred": "'", "thousand": "" }
+    }
+  },
+  "UK": {
+    "origin": "https://www.beliani.co.uk/",
+    "shopId": "2",
+    "seller": "Beliani.uk",
+    "languages": [
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "F" },
+      { "slug": "PL", "title": "polish", "name": "Polish", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "£",
+      "delimiters": { "hundred": ",", "thousand": "" }
+    }
+  },
+  "DE": {
+    "origin": "https://www.beliani.de/",
+    "shopId": "3",
+    "seller": "Beliani.de",
+    "languages": [
+      { "slug": "DE", "title": "germanDE", "name": "German De", "tableColumn": "J" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "F" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": "", "thousand": "" }
+    }
+  },
+  "FR": {
+    "origin": "https://www.beliani.fr/",
+    "shopId": "7",
+    "seller": "Beliani.fr",
+    "languages": [
+      { "slug": "FR", "title": "french", "name": "French", "tableColumn": "R" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" },
+      { "slug": "NL", "title": "dutch", "name": "Dutch", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "AT": {
+    "origin": "https://www.beliani.at/",
+    "shopId": "8",
+    "seller": "Beliani.at",
+    "languages": [
+      { "slug": "AT", "title": "germanDE", "name": "German De", "tableColumn": "L" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "F" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "ES": {
+    "origin": "https://www.beliani.es/",
+    "shopId": "10",
+    "seller": "Beliani.sp",
+    "languages": [
+      { "slug": "ES", "title": "spanish", "name": "Spanish", "tableColumn": "V" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "PL": {
+    "origin": "https://www.beliani.pl/",
+    "shopId": "12",
+    "seller": "Beliani.pl",
+    "languages": [
+      { "slug": "PL", "title": "polish", "name": "Polish", "tableColumn": "H" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": ",-",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "NL": {
+    "origin": "https://www.beliani.nl/",
+    "shopId": "17",
+    "seller": "Beliani.nl",
+    "languages": [
+      { "slug": "NL", "title": "dutch", "name": "Dutch", "tableColumn": "P" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" },
+      { "slug": "FR", "title": "french", "name": "French", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "PT": {
+    "origin": "https://www.beliani.pt/",
+    "shopId": "22",
+    "seller": "Beliani.pt",
+    "languages": [
+      { "slug": "PT", "title": "portugal", "name": "Portugal", "tableColumn": "X" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "IT": {
+    "origin": "https://www.beliani.it/",
+    "shopId": "21",
+    "seller": "Beliani.it",
+    "languages": [
+      { "slug": "IT", "title": "italian", "name": "Italian", "tableColumn": "Z" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "SE": {
+    "origin": "https://www.beliani.se/",
+    "shopId": "23",
+    "seller": "Beliani.se",
+    "languages": [
+      { "slug": "SE", "title": "swedish", "name": "Swedish", "tableColumn": "AH" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": ":-",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "HU": {
+    "origin": "https://www.beliani.hu/",
+    "shopId": "24",
+    "seller": "Beliani.hu",
+    "languages": [
+      { "slug": "HU", "title": "Hungarian", "name": "Hugarian", "tableColumn": "AN" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "Ft",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "DK": {
+    "origin": "https://www.beliani.dk/",
+    "shopId": "25",
+    "seller": "Beliani.dk",
+    "languages": [
+      { "slug": "DK", "title": "danish", "name": "Danish", "tableColumn": "AB" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "kr.",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "CZ": {
+    "origin": "https://www.beliani.cz/",
+    "shopId": "26",
+    "seller": "Beliani.cz",
+    "languages": [
+      { "slug": "CZ", "title": "czech", "name": "Czech", "tableColumn": "AJ" },
+      { "slug": "SK", "title": "slovak", "name": "Slovak", "tableColumn": "" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "Kč",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "FI": {
+    "origin": "https://www.beliani.fi/",
+    "shopId": "27",
+    "seller": "Beliani.fi",
+    "languages": [
+      { "slug": "FI", "title": "finnish", "name": "Finnish", "tableColumn": "AF" },
+      { "slug": "SE", "title": "swedish", "name": "Swedish", "tableColumn": "" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "NO": {
+    "origin": "https://www.beliani.no/",
+    "shopId": "28",
+    "seller": "Beliani.no",
+    "languages": [
+      { "slug": "NO", "title": "norsk", "name": "Norsk", "tableColumn": "AD" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": ",-",
+      "delimiters": { "hundred": ".", "thousand": "" }
+    }
+  },
+  "SK": {
+    "origin": "https://www.beliani.sk/",
+    "shopId": "29",
+    "seller": "Beliani.sk",
+    "languages": [
+      { "slug": "SK", "title": "slovak", "name": "Slovak", "tableColumn": "AL" },
+      { "slug": "CZ", "title": "czech", "name": "Czech", "tableColumn": "" },
+      { "slug": "HU", "title": "Hungarian", "name": "Hugarian", "tableColumn": "" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": " ", "thousand": "" }
+    }
+  },
+  "BE": {
+    "origin": "https://www.beliani.be/",
+    "shopId": "19",
+    "seller": "Beliani.be",
+    "languages": [
+      { "slug": "BENL", "title": "dutch", "name": "Dutch", "tableColumn": "AR" },
+      { "slug": "BEFR", "title": "french", "name": "French", "tableColumn": "AP" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "F" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ",", "thousand": "" }
+    }
+  },
+  "RO": {
+    "origin": "https://www.beliani.ro/",
+    "shopId": "30",
+    "seller": "Beliani.ro",
+    "languages": [
+      { "slug": "RO", "title": "romanian", "name": "Romanian", "tableColumn": "AT" },
+      { "slug": "UK", "title": "english", "name": "English", "tableColumn": "" }
+    ],
+    "price_format": {
+      "currency": "€",
+      "delimiters": { "hundred": ",", "thousand": "" }
+    }
+  }
+}
