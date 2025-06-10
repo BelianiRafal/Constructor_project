@@ -1,0 +1,5 @@
+- [ ] More spreadsheet sync?
+  - [ ] Header
+  - [ ] Category Links
+  - [ ] Category Titles
+  - [ ] Footer
