@@ -1,0 +1,43 @@
+.constructor-layout {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.constructor-menu {
+  width: 260px;
+  padding: 24px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.constructor-preview {
+  flex: 1;
+  padding: 24px;
+  height: 100vh;
+  overflow: auto;
+  background: #fafafa;
+}
+
+.constructor-button {
+  padding: 8px 16px;
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.constructor-select,
+.constructor-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+}

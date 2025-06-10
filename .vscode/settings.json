@@ -1,0 +1,12 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "markdown.extension.tableFormatter.enabled": true,
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "javascript.implicitProjectConfig.checkJs": false,
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}
