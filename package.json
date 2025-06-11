@@ -6,27 +6,31 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack serve --mode development",
+    "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md,json}\""
   },
   "dependencies": {
-    "googleapis": "^150.0.1"
+    "@types/node": "^24.0.0",
+    "create-react-class": "^15.7.0",
+    "googleapis": "^150.0.1",
+    "react-inline-css": "^2.3.1",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@types/react": "^19.1.7",
-    "babel-loader": "^10.0.0",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
     "css-loader": "^7.1.2",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
-    "webpack": "^5.99.9",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "vite": "^6.3.5"
   },
   "packageManager": "pnpm@10.11.0"
 }

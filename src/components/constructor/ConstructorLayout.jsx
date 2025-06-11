@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Menu from "./Menu"
 import Preview from "./Preview"
 import "./constructor-ui.scss"
+import logger from "../../utilities/logger"
 
 export default function ConstructorLayout({
   campaigns,
@@ -10,6 +11,7 @@ export default function ConstructorLayout({
   templates,
   getPreviewHtml,
   onCampaignChange,
+  onTemplateChange, // <-- add this line
   onShopChange,
   onLanguageChange,
   selectedCampaign,
@@ -47,13 +49,32 @@ export default function ConstructorLayout({
     if (onLanguageChange && state.language) onLanguageChange(state.language)
   }, [state.language, onLanguageChange])
 
-  const handleChange = (field, value) => setState((s) => ({ ...s, [field]: value }))
-  const handlePreview = () => setState((s) => ({ ...s, html: getPreviewHtml(s) }))
-  const handleCopy = () => {
-    if (state.html) {
-      navigator.clipboard.writeText(state.html)
+  const handleChange = (field, value) => {
+    logger.debug("Menu changed", { field, value })
+    setState((s) => ({ ...s, [field]: value }))
+    if (field === "template" && onTemplateChange) {
+      onTemplateChange(value)
     }
   }
+
+  const handlePreview = () => {
+    logger.debug("Preview button clicked")
+    setState((s) => ({ ...s, html: getPreviewHtml(s) }))
+  }
+
+  const handleCopy = () => {
+    logger.debug("Copy HTML button clicked", state.html)
+    if (state.html) {
+      // Extract content inside COPY_CONTAINER
+      const match = state.html.match(/<div id="COPY_CONTAINER"[^>]*>([\s\S]*?)<\/div>/i)
+      const htmlToCopy = match ? match[1] : state.html
+      navigator.clipboard.writeText(htmlToCopy)
+    }
+  }
+
+  useEffect(() => {
+    logger.debug("Rendering preview in ConstructorLayout", state.template)
+  }, [state.template])
 
   return (
     <div className="constructor-layout">
