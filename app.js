@@ -35,8 +35,8 @@ function updateConfigWithCurrentYear(config) {
  */
 function getImageVersion(imageName) {
   // Klucz do przechowywania wersji w localStorage
-  const storageKey = 'image_versions';
-  
+  const storageKey = "image_versions";
+
   // Pobierz zapisane wersje z localStorage
   let versionsMap = {};
   try {
@@ -45,44 +45,44 @@ function getImageVersion(imageName) {
       versionsMap = JSON.parse(storedVersions);
     }
   } catch (error) {
-    console.warn('Błąd podczas odczytu wersji obrazów:', error);
+    console.warn("Błąd podczas odczytu wersji obrazów:", error);
   }
-  
+
   // Sprawdź aktualną wersję obrazu lub ustaw domyślną wartość 1
   const currentVersion = versionsMap[imageName] || 1;
-  
+
   // Inkrementuj wersję
   const newVersion = currentVersion + 1;
-  
+
   // Zapisz zaktualizowaną wersję
   versionsMap[imageName] = newVersion;
   try {
     localStorage.setItem(storageKey, JSON.stringify(versionsMap));
   } catch (error) {
-    console.warn('Błąd podczas zapisu wersji obrazów:', error);
+    console.warn("Błąd podczas zapisu wersji obrazów:", error);
   }
-  
+
   return newVersion;
 }
 
 /**
  * Generuje URL obrazu z automatyczną inkrementacją numeru wersji
  * @param {string} imageName - Nazwa obrazu
- * @param {boolean|string} version - Wersja obrazu: 
+ * @param {boolean|string} version - Wersja obrazu:
  *   - true/undefined: automatyczna inkrementacja
  *   - false: używa wersji 1
  *   - string/number: używa konkretnej wersji
  * @returns {string} - Pełny URL obrazu z parametrem wersji
  */
-function getImageUrl(imageName, version) {
+export function getImageUrl(imageName, version) {
   // Aktualizacja roku w konfiguracji
   const updatedConfig = updateConfigWithCurrentYear(config);
-  
+
   // Obsługa różnych przypadków wersji
   let versionParam;
-  
+
   // Jeśli wersja jest stringiem lub liczbą, użyj jej bezpośrednio
-  if (typeof version === 'string' || typeof version === 'number') {
+  if (typeof version === "string" || typeof version === "number") {
     versionParam = version;
   }
   // Jeśli wersja jest false, użyj stałej wartości 1
@@ -93,7 +93,7 @@ function getImageUrl(imageName, version) {
   else {
     versionParam = getImageVersion(imageName);
   }
-  
+
   // Zwróć pełny URL z parametrem wersji
   return updatedConfig.server_url + imageName + "?ver=" + versionParam;
 }
@@ -106,7 +106,8 @@ try {
         name: "March Peak reminder",
         date: "2025.04.14",
         issueCardId: "334000",
-        figmaUrl: "https://www.figma.com/design/8GAjaJthNDBZ4lmRYLah23/2025-MarchPeak-(Copy)?t=EtPECgGgl5ApEN30-0",
+        figmaUrl:
+          "https://www.figma.com/design/8GAjaJthNDBZ4lmRYLah23/2025-MarchPeak-(Copy)?t=EtPECgGgl5ApEN30-0",
         optimizeImg: false,
         alarm: {
           isActive: false,
@@ -129,7 +130,7 @@ try {
                 isCategoriesDB: true,
                 name: "Outdoor ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -141,7 +142,7 @@ try {
                 isCategoriesDB: true,
                 name: "Living Room",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -153,7 +154,7 @@ try {
                 isCategoriesDB: true,
                 name: "Dining Room ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -165,7 +166,7 @@ try {
                 isCategoriesDB: true,
                 name: "Bedroom",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -177,7 +178,7 @@ try {
                 isCategoriesDB: true,
                 name: "Hallway ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -189,7 +190,7 @@ try {
                 isCategoriesDB: true,
                 name: "Bathroom",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -201,7 +202,7 @@ try {
                 isCategoriesDB: true,
                 name: "Kids ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -213,7 +214,7 @@ try {
                 isCategoriesDB: true,
                 name: "Office",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -369,7 +370,7 @@ try {
                 isCategoriesDB: true,
                 name: "Outdoor ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -381,7 +382,7 @@ try {
                 isCategoriesDB: true,
                 name: "Living Room",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -393,7 +394,7 @@ try {
                 isCategoriesDB: true,
                 name: "Dining Room ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -405,7 +406,7 @@ try {
                 isCategoriesDB: true,
                 name: "Bedroom",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -417,7 +418,7 @@ try {
                 isCategoriesDB: true,
                 name: "Hallway ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -429,7 +430,7 @@ try {
                 isCategoriesDB: true,
                 name: "Bathroom",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -441,7 +442,7 @@ try {
                 isCategoriesDB: true,
                 name: "Kids ",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -453,7 +454,7 @@ try {
                 isCategoriesDB: true,
                 name: "Office",
                 background: "#FFCCB7",
-                src:{
+                src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
@@ -607,7 +608,8 @@ try {
         issueCardId: "350971",
         name: "Free scatter cushion",
         startId: "32082",
-        figmaUrl: "https://www.figma.com/design/IjK9bpuYSsDvyYGnJwhnQG/2025.04.07-Free-scatter-cushion-(Copy)?m=auto&fuid=1328681953229888224",
+        figmaUrl:
+          "https://www.figma.com/design/IjK9bpuYSsDvyYGnJwhnQG/2025.04.07-Free-scatter-cushion-(Copy)?m=auto&fuid=1328681953229888224",
         alarm: {
           isActive: false,
         },
@@ -751,8 +753,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250407_01.png", true),
+                  value: getImageUrl("20250407_01.png", true),
                 },
               },
               {
@@ -781,8 +782,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250328b.png", true),
+                  value: getImageUrl("20250328b.png", true),
                 },
               },
               {
@@ -799,8 +799,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250327b.png", true),
+                  value: getImageUrl("20250327b.png", true),
                 },
               },
               {
@@ -817,8 +816,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("_20250307.png", true),
+                  value: getImageUrl("_20250307.png", true),
                 },
               },
             ],
@@ -1085,8 +1083,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250407_01.png", true),
+                  value: getImageUrl("20250407_01.png", true),
                 },
               },
               {
@@ -1115,8 +1112,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250328b.png", true),
+                  value: getImageUrl("20250328b.png", true),
                 },
               },
               {
@@ -1133,8 +1129,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250327b.png", true),
+                  value: getImageUrl("20250327b.png", true),
                 },
               },
               {
@@ -1151,8 +1146,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value:
-                    getImageUrl("_20250307.png", true),
+                  value: getImageUrl("_20250307.png", true),
                 },
               },
             ],
