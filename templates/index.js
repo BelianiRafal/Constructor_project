@@ -30,7 +30,8 @@ import { Living } from "./Living.js";
 import { Office } from "./Office.js";
 import { RegularWednesdayNslt } from "./test.js";
 import { FrenchDays } from "./french.js";
-import { BelianiBirthday} from "./BelianiBirthday.js"
+import { BelianiBirthday} from "./BelianiBirthday.js";
+import { mondayRegularNslt } from "./mondayRegularNslt.js"
 
 export const templates = {
   newsletter_FGG,
@@ -66,4 +67,5 @@ export const templates = {
   RegularWednesdayNslt,
   FrenchDays,
   BelianiBirthday,
+  mondayRegularNslt
 };

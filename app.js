@@ -101,6 +101,535 @@ function getImageUrl(imageName, version) {
 try {
   initApp({
     campaigns: [
+
+      new entities.Campaign({
+        date: "2025.07.04",
+        issueCardId: "376710",
+        name: "Bathrooms",
+        startId: "34417",
+        figmaUrl: "https://www.figma.com/design/8C4T0ut0ltnwdnYd8SeHy7/2025.07.04-Bathroom--Copy-?node-id=11001-191&t=nDCiQY9vzVXN7DTT-0",
+        alarm: {
+          isActive: false,
+        },
+        isArchive: false,
+        optimizeImg: false,
+        single_image: false,
+        templates: [
+          {
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.mondayRegularNslt,
+            background: "#FFCCB7",
+            wrapper: types.WRAPPER,
+            css: types.CSS.NS,
+            intro: {
+              background: "#FFCCB7",
+              color: "#000000",
+              type: "paragraph"
+            },
+            inside: {
+              type: "timer",
+              background: "#FF2F00",
+              color: "#fff",
+              src: getImageUrl("20250630free.png", true),
+            },
+            categories: [
+              {
+                name: "Baths",
+                background: "#FFCCB7",
+                color: "#000000",
+                src: getImageUrl("20250704Category1.png", true),
+                href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                products: [
+                  {
+                    id: "417123", //origin.includes("HU") ? "306283" : "231605",
+                    src: getImageUrl("20250704Category11.png", true), //origin.includes("HU") ? getImageUrl("20250505Category11.png", true) : getImageUrl("20250505huCategory11.png", true),
+                  },
+                  {
+                    id: "193516",
+                    src: getImageUrl("20250704Category12.png", true),
+                  },
+                  {
+                    id: "432492",
+                    src: getImageUrl("20250704Category13.png", true),
+                  },
+                  {
+                    id: "57688",
+                    src: getImageUrl("20250704Category14.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Basins",
+                background: "#FF2F00",
+                color: "#FFFFFF",
+                src: getImageUrl("20250704Category2.png", true),
+                href: "https://www.beliani.ch/bathroom-furniture/basins/",
+                products: [
+                  {
+                    id: "433170",
+                    src: getImageUrl("20250704Category21.png", true),
+                  },
+                  {
+                    id: "615288",
+                    src: getImageUrl("20250704Category22.png", true),
+                  },
+                  {
+                    id: "509524",
+                    src: getImageUrl("20250704Category23.png", true),
+                  },
+                  {
+                    id: "510913",
+                    src: getImageUrl("20250704Category24.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Storage",
+                background: "#FFCCB7",
+                color: "#000000",
+                src: getImageUrl("20250704Category3.png", true),
+                href: "https://www.beliani.ch/bathroom-furniture/storage/",
+                products: [
+                  {
+                    id: "610806",
+                    src: getImageUrl("20250704Category31.png", true),
+                  },
+                  {
+                    id: "610883",
+                    src: getImageUrl("20250704Category32.png", true),
+                  },
+                  {
+                    id: "588752",
+                    src: getImageUrl("20250704Category33.png", true),
+                  },
+                  {
+                    id: "572170",
+                    src: getImageUrl("20250704Category34.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Bath mats",
+                background: "#FF2F00",
+                color: "#FFFFFF",
+                src: getImageUrl("20250704Category4.png", true),
+                href: "https://www.beliani.ch/bathroom-furniture/bathroom-mats/",
+                products: [
+                  {
+                    id: "456393",
+                    src: getImageUrl("20250704Category41.png", true),
+                  },
+                  {
+                    id: "514543",
+                    src: getImageUrl("20250704Category42.png", true),
+                  },
+                  {
+                    id: "456142",
+                    src: getImageUrl("20250704Category43.png", true),
+                  },
+                  {
+                    id: "456086",
+                    src: getImageUrl("20250704Category44.png", true),
+                  },
+                ],
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250704_01.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-06-30",
+                },
+              },
+              {
+                value: getImageUrl("20250704_image.png", true),
+              },
+              {
+                value: getImageUrl("20250630free.png", true),
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-06-26",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250627b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-06-27",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250626b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "14",
+                name: "intro",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 30.06.2025 - Free outdoor cushion set!",
+                tableRange: "10:11",
+                name: "timer",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "19",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "15:18",
+                name: "categories",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "22:23",
+                name: "condition",
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+          {
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.mondayRegularNslt,
+            background: "#FFCCB7",
+            css: types.CSS.LP,
+            tit: {
+              color: "#000",
+              type: "up_to",
+            },
+            intro: {
+              background: "#FFCCB7",
+              color: "#000000",
+              type: "paragraph"
+            },
+            inside: {
+              type: "timer",
+              background: "#FF2F00",
+              color: "#fff",
+              src: getImageUrl("20250630free.png", true),
+            },
+            categories: [
+              {
+                name: "Baths",
+                background: "#FFCCB7",
+                color: "#000000",
+                src: getImageUrl("20250704Category1.png", true),
+                href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                products: [
+                  {
+                    id: "417123", //origin.includes("HU") ? "306283" : "231605",
+                    src: getImageUrl("20250704Category11.png", true), //origin.includes("HU") ? getImageUrl("20250505Category11.png", true) : getImageUrl("20250505huCategory11.png", true),
+                  },
+                  {
+                    id: "193516",
+                    src: getImageUrl("20250704Category12.png", true),
+                  },
+                  {
+                    id: "432492",
+                    src: getImageUrl("20250704Category13.png", true),
+                  },
+                  {
+                    id: "57688",
+                    src: getImageUrl("20250704Category14.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Basins",
+                background: "#FF2F00",
+                color: "#FFFFFF",
+                src: getImageUrl("20250704Category2.png", true),
+                href: "https://www.beliani.ch/bathroom-furniture/basins/",
+                products: [
+                  {
+                    id: "433170",
+                    src: getImageUrl("20250704Category21.png", true),
+                  },
+                  {
+                    id: "615288",
+                    src: getImageUrl("20250704Category22.png", true),
+                  },
+                  {
+                    id: "509524",
+                    src: getImageUrl("20250704Category23.png", true),
+                  },
+                  {
+                    id: "510913",
+                    src: getImageUrl("20250704Category24.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Storage",
+                background: "#FFCCB7",
+                color: "#000000",
+                src: getImageUrl("20250704Category3.png", true),
+                href: "https://www.beliani.ch/bathroom-furniture/storage/",
+                products: [
+                  {
+                    id: "610806",
+                    src: getImageUrl("20250704Category31.png", true),
+                  },
+                  {
+                    id: "610883",
+                    src: getImageUrl("20250704Category32.png", true),
+                  },
+                  {
+                    id: "588752",
+                    src: getImageUrl("20250704Category33.png", true),
+                  },
+                  {
+                    id: "572170",
+                    src: getImageUrl("20250704Category34.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Bath mats",
+                background: "#FF2F00",
+                color: "#FFFFFF",
+                src: getImageUrl("20250704Category4.png", true),
+                href: "https://www.beliani.ch/bathroom-furniture/bathroom-mats/",
+                products: [
+                  {
+                    id: "456393",
+                    src: getImageUrl("20250704Category41.png", true),
+                  },
+                  {
+                    id: "514543",
+                    src: getImageUrl("20250704Category42.png", true),
+                  },
+                  {
+                    id: "456142",
+                    src: getImageUrl("20250704Category43.png", true),
+                  },
+                  {
+                    id: "456086",
+                    src: getImageUrl("20250704Category44.png", true),
+                  },
+                ],
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250704_01.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-06-30",
+                },
+              },
+              {
+                value: getImageUrl("20250704_image.png", true),
+              },
+              {
+                value: getImageUrl("20250630free.png", true),
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-06-26",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250627b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-06-27",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250626b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "11:12",
+                name: "tit",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "14",
+                name: "intro",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 30.06.2025 - Free outdoor cushion set!",
+                tableRange: "10:11",
+                name: "timer",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "19",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "15:18",
+                name: "categories",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "04.07.25 - Bathrooms!",
+                tableRange: "22:23",
+                name: "condition",
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+        ],
+      }),
       new entities.Campaign({
         startId: "33607",
         name: "Sales category ",
@@ -110,7 +639,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
@@ -692,7 +1221,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
@@ -1270,10 +1799,10 @@ try {
         date: "2025.06.20",
         issueCardId: "355100",
         alarm: {
-          isActive: true,
+          isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
