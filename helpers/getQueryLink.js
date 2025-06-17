@@ -1,4 +1,4 @@
-import { getState } from "../main/initApp.js";
+import { getState } from '../../utils/stateManager.js';
 import { computeValue } from "./computeValue.js";
 import Toast from "../utils/toasts.js";
 

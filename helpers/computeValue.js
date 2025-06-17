@@ -1,4 +1,4 @@
-import { getState } from '../main/initApp.js';
+import { getState } from '../utils/stateManager.js';
 import getImageUrl from './getImageUrl.js';
 
 const types = {

@@ -4,6 +4,8 @@ import Toast from './utils/toasts.js';
 import { initApp } from './main/initApp.js';
 import { config } from './config.js';
 
+const root = document.querySelector('#app');
+
 try {
   initApp({
     campaigns: [test_campaign],
@@ -14,3 +16,5 @@ try {
   console.log(error);
   Toast.error(error.message || 'Something went wrong. More details in console.');
 }
+
+export { root };

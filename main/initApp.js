@@ -18,43 +18,12 @@ import { computeValue } from '../helpers/computeValue.js';
 import { getTrackingUrl } from '../utils/geTrackingUrl.js';
 import initCampaigns from './initCampaigns.js';
 import renderAvailableTemplates from './renderAvailableTemplates.js';
+import { setState, getState, getAllState } from '../utils/stateManager.js';
+import { root } from '../app.js';
 
-const state = {
-  queries: {},
-  country: '',
-  loading: false,
-  ids: {},
-  translations: {},
-  selectedCampaign: {},
-  selectedTemplates: [],
-  shop: null,
-};
-const root = document.querySelector('#app');
-
-export function setState(key, value) {
-  state[key] = value;
-
-  if (key === 'loading' && value === true) {
-    root.innerHTML = '';
-    SpinnerInit.spin(root);
-  }
-
-  if (key === 'loading' && value === false) {
-    SpinnerInit.stop(root);
-  }
-}
-
-export function getState(key) {
-  if (key in state) {
-    return state[key];
-  } else {
-    return undefined;
-  }
-}
+const jsConfetti = new JSConfetti();
 
 export function initApp({ campaigns, shops, config }) {
-  const jsConfetti = new JSConfetti();
-
   const shops_select = document.querySelector('#shops');
   const languages_select = document.querySelector('#languages');
   const new_products = document.querySelector('#new_products');
@@ -159,7 +128,7 @@ export function initApp({ campaigns, shops, config }) {
 
     try {
       const html = await templateToRender.template({
-        ...state,
+        ...getAllState(),
         ...templateToRender,
         background: templateToRender.background || '#ffffff',
         country,
@@ -334,20 +303,22 @@ export function initApp({ campaigns, shops, config }) {
         Toast.error(`Products error: ${error.message}`);
       }
     });
-    openCampaign?.addEventListener('click', (e) => openCampaignHandler(state.ids[state.country]));
+    openCampaign?.addEventListener('click', (e) =>
+      openCampaignHandler(getState('ids')[getState('country')])
+    );
     openIssue?.addEventListener('click', (e) => {
-      if (!state.selectedCampaign.issueCardId) {
+      if (!getState('selectedCampaign').issueCardId) {
         Toast.warn(`Select campaign.`);
         return;
       }
-      openIssueHandler(state.selectedCampaign.issueCardId);
+      openIssueHandler(getState('selectedCampaign').issueCardId);
     });
     figmaCard?.addEventListener('click', (e) => {
-      if (!state.selectedCampaign.figmaUrl) {
+      if (!getState('selectedCampaign').figmaUrl) {
         Toast.error(`Figma url not found.`);
         return;
       }
-      figmaCardHandler(state.selectedCampaign.figmaUrl);
+      figmaCardHandler(getState('selectedCampaign').figmaUrl);
     });
     clearStorage?.addEventListener('click', (e) => {
       if (confirm('All data will be removed from localstorage! Are you sure?')) {
@@ -407,7 +378,7 @@ export function initApp({ campaigns, shops, config }) {
         Toast.error(`Render HTML.`);
         return;
       }
-      if (state.config?.confetti) {
+      if (getState('config')?.confetti) {
         jsConfetti.addConfetti({
           emojiSize: 20,
           confettiNumber: 80,

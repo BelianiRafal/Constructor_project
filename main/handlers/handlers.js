@@ -1,6 +1,6 @@
 import { handleProduct } from "./index.js";
 import { getQueryLink } from "../../helpers/getQueryLink.js";
-import { getState } from "../initApp.js";
+import { getState } from "../../utils/stateManager.js";
 import _templates from "../data/templates.js";
 import _categoriesLinks from "../data/categoriesLinks.js";
 import _categoriesTitles from "../data/categoriesTitles.js";
