@@ -1,5 +1,5 @@
-import { getState } from "../main/initApp.js";
-import { getImageUrl } from "../app.js";
+import { getState } from '../main/initApp.js';
+import getImageUrl from './getImageUrl.js';
 
 const types = {
   relation: handleRelation,
@@ -9,7 +9,7 @@ export function computeValue(value) {
   for (const iterator in value) {
     let item = value[iterator];
 
-    if (typeof item === "object" && item.type === "relation") {
+    if (typeof item === 'object' && item.type === 'relation') {
       value[iterator] = types[item.type](item);
     }
   }
@@ -17,26 +17,22 @@ export function computeValue(value) {
 }
 
 function handleRelation(relation) {
-  const shop = getState("shop");
-  const country = getState("country");
+  const shop = getState('shop');
+  const country = getState('country');
   const { value, placeholderPosition, relyOn } = relation;
 
-  let relyOnValue = "";
-  if (relyOn === "slug") {
+  let relyOnValue = '';
+  if (relyOn === 'slug') {
     relyOnValue = country;
   }
 
-  if (relyOn === "origin") {
+  if (relyOn === 'origin') {
     relyOnValue = shop.origin;
   }
 
-  const arrayValue = value.split("");
-  const splitted = arrayValue.toSpliced(
-    placeholderPosition,
-    0,
-    relyOnValue.toLowerCase()
-  );
-  const newValue = splitted.join("");
+  const arrayValue = value.split('');
+  const splitted = arrayValue.toSpliced(placeholderPosition, 0, relyOnValue.toLowerCase());
+  const newValue = splitted.join('');
 
   return newValue;
 }

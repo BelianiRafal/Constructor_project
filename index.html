@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/spin.css" />
     <title>Constructor</title>
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
 
   <body>
@@ -47,25 +48,12 @@
         </div>
       </div>
     </div>
+
+    <div id="toast_container"></div>
+
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="services/GoogleAuth.js" defer></script>
 
-    <script defer type="module">
-      import { GoogleAuth } from './services/GoogleAuth.js';
-
-      const btn = document.querySelector('#login');
-      btn.addEventListener('click', GoogleAuth.login);
-
-      const access = location.hash.split('&')[0].split('=')[1];
-      if (access) {
-        localStorage.setItem('token', access);
-        window.location.href = window.location.origin;
-        Toastify({
-          text: 'Token successfully setted.',
-          escapeMarkup: false,
-          duration: 3000,
-        }).showToast();
-      }
-    </script>
     <script type="module" src="app.js"></script>
   </body>
 </html>

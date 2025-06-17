@@ -1,5 +1,6 @@
 import { getState } from "../main/initApp.js";
 import { computeValue } from "./computeValue.js";
+import Toast from "../utils/toasts.js";
 
 export function addParams({ links }) {
   const country = getState("country");
@@ -48,11 +49,7 @@ export function addParamsProduct(product) {
       href: url.href,
     };
   } catch (error) {
-    Toastify({
-      text: "Product url parse error.",
-      escapeMarkup: false,
-      duration: 3000,
-    }).showToast();
+    Toast.error("Product url parse error.");
     return;
   }
 }

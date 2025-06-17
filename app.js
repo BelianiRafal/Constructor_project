@@ -1,5 +1,6 @@
 import { test_campaign } from './campaigns/test-campaign.js';
 import shops from './config/shops.js';
+import Toast from './utils/toasts.js';
 import { initApp } from './main/initApp.js';
 import { config } from './config.js';
 
@@ -11,9 +12,5 @@ try {
   });
 } catch (error) {
   console.log(error);
-  Toastify({
-    text: error.message || 'Something went wrong. More details in console.',
-    escapeMarkup: false,
-    duration: 3000,
-  }).showToast();
+  Toast.error(error.message || 'Something went wrong. More details in console.');
 }
