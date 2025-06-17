@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,9 +20,7 @@
           <div class="panel">
             <div style="display: flex; gap: 0.4rem">
               <button id="login">Login</button>
-              <button id="new_products" style="display: none">
-                Set products
-              </button>
+              <button id="new_products" style="display: none">Set products</button>
               <select id="campaigns">
                 <option value="default">Select campaign</option>
               </select>
@@ -33,67 +31,36 @@
             <div style="display: flex; gap: 0.4rem">
               <select id="shops"></select>
               <select style="display: none" id="languages"></select>
-              <button
-                class="openCampaign"
-                title="To open campaign url in new tab"
-              >
+              <button class="openCampaign" title="To open campaign url in new tab">
                 Open campaign
               </button>
-              <button
-                class="copyTemplate"
-                title="To copy template in clipboard"
-              >
+              <button class="copyTemplate" title="To copy template in clipboard">
                 Copy template
               </button>
-              <button class="openIssue" title="To open prolo issue in new tab">
-                Issue card
-              </button>
-              <button
-                class="figmaCard"
-                title="To open figma template in new tab"
-              >
+              <button class="openIssue" title="To open prolo issue in new tab">Issue card</button>
+              <button class="figmaCard" title="To open figma template in new tab">
                 Figma template
               </button>
-              <button class="clearStorage" title="To clear all products data">
-                Clear storage
-              </button>
+              <button class="clearStorage" title="To clear all products data">Clear storage</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script
-      defer
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/DemaPy/isAllowed@main/RAT.js"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/DemaPy/isAllowed@main/initC.js"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/DemaPy/isAllowed@main/render.js"
-      defer
-    ></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <script defer type="module">
-      import { GoogleAuth } from "./services/GoogleAuth.js";
+      import { GoogleAuth } from './services/GoogleAuth.js';
 
-      const btn = document.querySelector("#login");
-      btn.addEventListener("click", GoogleAuth.login);
+      const btn = document.querySelector('#login');
+      btn.addEventListener('click', GoogleAuth.login);
 
-      const access = location.hash.split("&")[0].split("=")[1];
+      const access = location.hash.split('&')[0].split('=')[1];
       if (access) {
-        localStorage.setItem("token", access);
+        localStorage.setItem('token', access);
         window.location.href = window.location.origin;
         Toastify({
-          text: "Token successfully setted.",
+          text: 'Token successfully setted.',
           escapeMarkup: false,
           duration: 3000,
         }).showToast();
