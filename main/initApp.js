@@ -71,7 +71,6 @@ export function initApp({ campaigns, shops, config }) {
   setEvents();
 
   async function render() {
-    console.log(state)
     if (!getState('country')) return;
     const country = getState('country');
     const templateToRender = getState('template');
