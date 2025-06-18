@@ -181,8 +181,18 @@ export function initApp({ campaigns, shops, config }) {
         root.innerHTML = withStylesOrNo;
       }
     } catch (error) {
-      console.log(error);
-      Toast.error(`Please check console. ${error.message}`);
+      if (
+        error instanceof TypeError &&
+        error.message.includes('templateToRender.template is not a function')
+      ) {
+        Toast.error('Template not found. Cannot build.');
+        console.error(
+          'Template not found: The selected template does not exist or is not properly defined. Please check the campaign file (look for "template:") or exported templates!'
+        );
+      } else {
+        console.log(error);
+        Toast.error(`Please check console. ${error.message}`);
+      }
     }
   }
 
