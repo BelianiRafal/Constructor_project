@@ -65,7 +65,7 @@ export async function getTranslations({ tableId, tableName, tableRange, fallback
   // includeGridData
   try {
     const response = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${tableId}/values/${tableName}${tableRange}`,
+      `https://sheets.googleapis.com/v4/spreadsheets/${tableId}/values/${tableName}!${tableRange}`,
       {
         method: 'GET',
         headers: {
