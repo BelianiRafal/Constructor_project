@@ -21,18 +21,29 @@ function handleRelation(relation) {
   const country = getState('country');
   const { value, placeholderPosition, relyOn } = relation;
 
+  console.debug('handleRelation called with:', relation);
+  console.debug('Current shop:', shop);
+  console.debug('Current country:', country);
+
   let relyOnValue = '';
   if (relyOn === 'slug') {
     relyOnValue = country;
+    console.debug('Using country for relyOnValue:', relyOnValue);
   }
 
   if (relyOn === 'origin') {
     relyOnValue = shop.origin;
+    console.debug('Using shop.origin for relyOnValue:', relyOnValue);
   }
 
   const arrayValue = value.split('');
-  const splitted = arrayValue.toSpliced(placeholderPosition, 0, relyOnValue.toLowerCase());
+  console.debug('arrayValue:', arrayValue);
+
+  const splitted = arrayValue.toSpliced(placeholderPosition, 0, relyOnValue?.toLowerCase());
+  console.debug('splitted:', splitted);
+
   const newValue = splitted.join('');
+  console.debug('newValue:', newValue);
 
   return newValue;
 }
