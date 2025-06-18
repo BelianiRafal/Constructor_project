@@ -1,4 +1,5 @@
 import { test_campaign } from './campaigns/test-campaign.js';
+import { c20250703 } from './campaigns/20250703.js';
 import shops from './config/shops.js';
 import Toast from './utils/toasts.js';
 import { initApp } from './main/initApp.js';
@@ -8,7 +9,7 @@ const root = document.querySelector('#app');
 
 try {
   initApp({
-    campaigns: [test_campaign],
+    campaigns: [test_campaign, c20250703],
     shops: shops,
     config: config,
   });
