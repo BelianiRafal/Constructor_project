@@ -3,6 +3,17 @@ export default {
   LANDINGPAGE: "landing",
   CSS: {
     NS: `
+          #newsletter .newsletterSubtitleTimer {
+            font-size: 30px;
+            line-height: 1.25;
+          }
+
+          @media screen and (max-width: 768px) {
+            #newsletter .newsletterSubtitleTimer {
+              font-size: 20px !important;
+            }
+          }
+
           /* Prevent WebKit and Windows mobile changing default text sizes */
           table, td {
               mso-table-lspace: 0pt;
