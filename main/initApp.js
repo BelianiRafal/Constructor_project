@@ -61,6 +61,7 @@ export function initApp({ campaigns, shops, config }) {
       try {
         setState('loading', true);
         const translationsResult = await fetchTranslations({
+          tableName: selectedCampaign.translationsSpreadsheet,
           tableQueries: templateToRender.tableQueries,
         });
         const queries = {};
