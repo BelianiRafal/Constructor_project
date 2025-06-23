@@ -1,3 +1,6 @@
+// @TODO:
+// Split types into separate files, they grow too large
+
 export default {
   NEWSLETTER: "newsletter",
   LANDINGPAGE: "landing",
@@ -986,6 +989,11 @@ export default {
   }
   `,
     LP: `
+          #newsletter .newsletterHrefTit {
+            text-decoration:none;
+            text-align:center;
+          }
+
           #newsletter .title-advantages {
             text-align: center;
             font-size: 11px;
@@ -1039,6 +1047,10 @@ export default {
           #newsletter .newsletterCode {
             font-size: 20px;
             line-height: 1.20;
+          }
+          
+          #newsletter .newsletterMarginBottom20px {
+            margin-bottom: 20px;
           }
           
           #newsletter .newsletterBottom20px {
@@ -1324,6 +1336,10 @@ export default {
           
             #newsletter .newsletterBottom20px {
               padding-bottom: 10px;
+            }
+ 
+            #newsletter .newsletterMarginBottom20px {
+              margin-bottom: 10px;
             }
           
             #newsletter .newsletterBottom80px {
