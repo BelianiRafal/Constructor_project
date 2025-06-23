@@ -2,7 +2,7 @@ import { c20250703 } from './campaigns/20250703.js';
 import shops from './config/shops.js';
 import Toast from './utils/toasts.js';
 import { initApp } from './main/initApp.js';
-import { config } from './config.js';
+import { config } from './config/config.js';
 
 const root = document.querySelector('#app');
 

@@ -2,8 +2,8 @@ import { getState } from '../utils/stateManager.js';
 import { adjustTableRangeToCountry } from '../utils/fixRange.js';
 import { normalizeTranslations } from '../utils/normalizeTranslations.js';
 import { GoogleAuth } from '../services/GoogleAuth.js';
+import { TRANSLATIONS_SHEET_2025 } from '../config/config.js';
 import Toast from '../utils/toasts.js';
-const TRANSLATIONS_SHEET_2025 = '1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc';
 
 export const fetchTranslations = async ({ tableName, tableQueries }) => {
   if (!tableName) {

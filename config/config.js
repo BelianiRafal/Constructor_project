@@ -9,4 +9,6 @@ const config = {
     `<span style='font-size: 20px; background: #ff0000;'>${message || 'Cell is empty'}</span>`,
 };
 
-export { config };
+const TRANSLATIONS_SHEET_2025 = '1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc';
+
+export { config, TRANSLATIONS_SHEET_2025 };

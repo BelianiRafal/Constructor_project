@@ -1,4 +1,4 @@
-import { config } from '../config.js';
+import { config } from '../config/config.js';
 
 /**
  * Aktualizuje rok w konfiguracji na podstawie aktualnego roku systemowego
