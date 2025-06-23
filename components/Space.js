@@ -1,5 +1,5 @@
 import { isAllowToRender } from "../helpers/optimizeImage.js";
-import { getState } from '../../utils/stateManager.js';
+import { getState } from "../utils/stateManager.js";
 
 export const Space = isAllowToRender((props) => {
   const country = getState("country");

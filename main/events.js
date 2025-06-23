@@ -1,6 +1,6 @@
 import { incrementId } from '../helpers/incrementId.js';
 import Toast from '../utils/toasts.js';
-import { getState, setState } from '../../utils/stateManager.js';
+import { getState, setState } from '../utils/stateManager.js';
 
 function openCampaignHandler(id) {
   const config = getState('config');

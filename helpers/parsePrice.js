@@ -1,4 +1,4 @@
-import { getState } from '../../utils/stateManager.js';
+import { getState } from '../utils/stateManager.js';
 import { priceFormats } from "./priceFormats.js";
 
 export function parsePrice(product, options) {

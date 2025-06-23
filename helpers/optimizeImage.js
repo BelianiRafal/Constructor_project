@@ -1,4 +1,4 @@
-import { getState } from '../../utils/stateManager.js';
+import { getState } from '../utils/stateManager.js';
 import { swapImage } from "./swapImage.js";
 
 export function optimize(component) {
