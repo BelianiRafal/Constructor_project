@@ -1,0 +1,16 @@
+{
+  "name": "constructor-project",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.11.0"
+}
