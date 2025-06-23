@@ -215,13 +215,13 @@ export function initApp({ campaigns, shops, config }) {
       const prev = localStorage.getItem('products');
       try {
         const prevProducts = prev ? JSON.parse(prev) : [];
-        const isProductsSetted = prevProducts.find(
+        const areProductsSet = prevProducts.find(
           (item) => item.campaign_id === selectedCampaign.startId
         );
 
         const normalizedProducts = normalizeProducts(newProducts);
         // If products already exists for selected campaign
-        if (isProductsSetted) {
+        if (areProductsSet) {
           const updatedProducts = prevProducts.map((item) => {
             if (item.campaign_id === selectedCampaign.startId) {
               return {
