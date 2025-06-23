@@ -6,13 +6,27 @@ const types = {
 };
 
 export function computeValue(value) {
-  for (const iterator in value) {
-    let item = value[iterator];
-
-    if (typeof item === 'object' && item.type === 'relation') {
-      value[iterator] = types[item.type](item);
-    }
+  if (Array.isArray(value)) {
+    return value.map(computeValue);
   }
+
+  if (typeof value === 'object' && value !== null) {
+    // If this object is a relation, resolve it
+    if (value.type && types[value.type]) {
+      return types[value.type](value);
+    }
+   
+    // Otherwise, recursively resolve all properties
+    const result = {};
+   
+    for (const key in value) {
+      result[key] = computeValue(value[key]);
+   
+    }
+  
+    return result;
+  }
+
   return value;
 }
 
