@@ -3,7 +3,6 @@
 > **README & Wiki are W.I.P.**  
 > Contributions and suggestions are welcome!
 
-
 ## Project Structure
 
 ```
@@ -24,39 +23,75 @@
 └── README.md
 ```
 
-
 ## Getting Started
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/BelianiRafal/Constructor_project.git
-   cd Constructor_project
-   ```
+### 1. **Install [Node.js](https://nodejs.org/) using [fnm](https://github.com/Schniz/fnm)**
+JavaScript runtime environment
 
-2. **Open `index.html` in your browser via Live Server**  
-   [Live Server VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+```sh
+# Install fnm using winget:
+winget install Schniz.fnm
 
-3. **Configure your campaigns**  
-   Add new campaigns in campaigns/ and export them
-   Edit `app.js` to import campaigns.
+# Restart your terminal, then install Node.js LTS:
+fnm install lts-latest
+fnm use lts-latest
+fnm default lts-latest
+```
 
-4. **Customize templates**  
-   - Add new templates in [`templates/`](templates/)
-   - Extend or copy components from [`components/`](components/)
-   - Update data in [`main/data/`](main/data/)
+### 2. **Install [pnpm](https://pnpm.io/pnpm-vs-npm)**
+Fast, disk space efficient package manager
+```sh
+corepack enable
+corepack prepare pnpm@latest --activate
+```
 
+### 3. **Clone the repository**
+```sh
+git clone https://github.com/BelianiRafal/Constructor_project.git
+cd Constructor_project
+```
+
+### 4. **Install dependencies**
+```sh
+pnpm install
+```
+
+### 5. **Start the development server**
+```sh
+pnpm start
+```
+#### This will launch the Vite server:
+
+```sh
+VITE v6.3.5  ready in 152 ms
+
+➜  Local:   http://localhost:5500/
+➜  Network: use --host to expose
+➜  press h + enter to show help
+```
+
+
+## Configure Your Campaigns
+
+- Add new campaigns in `campaigns/` and export them.
+- Edit `app.js` to import campaigns.
+
+## Customize Templates
+
+- Add new templates in [`templates/`](templates/)
+- Extend or copy components from [`components/`](components/)
+- Update data in [`main/data/`](main/data/)
 
 ## Libraries
 
 - [Iconify](https://iconify.design/)
 - [js-confetti](https://github.com/loonywizard/js-confetti)
 
-
 ## Contributing
 
 - PRs and issues are welcome!
 - See [Wiki](https://github.com/BelianiRafal/Constructor_project/wiki) (W.I.P.) for more documentation.
 
-
 ---
+
 > _README and Wiki are work in progress. For questions, see code comments or open an issue._
