@@ -40,32 +40,133 @@ const timer = {
 
 const categories = [
   {
+    type: 'inspirational-0703',
     name: 'cosy-neutral',
     background: '#FFE0D9',
     color: '#000',
+    // src: getImageUrl('uk20250703_cat1.png'), // <--- that way image doesn't change based on country
     src: translateImage('20250703_cat1.png'),
     href: 'https://www.beliani.ch/trends/cosy-neutral/',
+    products: [
+      {
+        id: 363736,
+        src: getImageUrl('20250703_prod1.png', true),
+      },
+      {
+        id: 403317,
+        src: getImageUrl('20250703_prod2.png', true),
+      },
+      {
+        id: 81395,
+        src: getImageUrl('20250703_prod3.png', true),
+      },
+      {
+        id: 423964,
+        src: getImageUrl('20250703_prod4.png', true),
+      },
+      {
+        id: 427359,
+        src: getImageUrl('20250703_prod5.png', true),
+      },
+    ]
   },
   {
+    type: 'inspirational-0703',
     name: 'maximalist-haven',
     background: '#FFE0D9',
     color: '#000',
     src: translateImage('20250703_cat2.png'),
     href: 'https://www.beliani.ch/trends/maximalist-haven/',
+    products: [
+      {
+        id: 358009,
+        src: getImageUrl('20250703_prod6.png', true),
+      },
+      {
+        id: 433452,
+        src: getImageUrl('20250703_prod7.png', true),
+      },
+      {
+        id: 380473,
+        src: getImageUrl('20250703_prod8.png', true),
+      },
+      {
+        id: 581895,
+        src: getImageUrl('20250703_prod9.png', true),
+      },
+      {
+        id: 421872,
+        src: getImageUrl('20250703_prod10.png', true),
+      },
+      {
+        id: 553162,
+        src: getImageUrl('20250703_prod11.png', true),
+      },
+    ]
   },
   {
+    type: 'inspirational-0703',
     name: 'earthy-tones',
     background: '#FFE0D9',
     color: '#000',
     src: translateImage('20250703_cat3.png'),
     href: 'https://www.beliani.ch/trends/earthy-tones/',
+    products: [
+      {
+        id: 459448,                                    // got to be changed
+        src: getImageUrl('20250703_prod12.png', true), //
+      },
+      {
+        id: 211042,
+        src: getImageUrl('20250703_prod13.png', true),
+      },
+      {
+        id: 428815,
+        src: getImageUrl('20250703_prod14.png', true),
+      },
+      {
+        id: 612563,
+        src: getImageUrl('20250703_prod15.png', true),
+      },
+      {
+        id: 430872,
+        src: getImageUrl('20250703_prod16.png', true),
+      },
+      {
+        id: 258242,
+        src: getImageUrl('20250703_prod17.png', true),
+      },
+    ]
   },
   {
+    type: 'inspirational-0703',
     name: 'soft-glam',
     background: '#FFE0D9',
     color: '#000',
     src: translateImage('20250703_cat4.png'),
     href: 'https://www.beliani.ch/trends/soft-glam/',
+    products: [
+      {
+        id: 168282,
+        src: getImageUrl('20250703_prod18.png', true),
+      },
+      {
+        id: 413674,
+        src: getImageUrl('20250703_prod19.png', true),
+      },
+      {
+        id: 442708,
+        src: getImageUrl('20250703_prod20.png', true),
+      },
+      {
+        id: 403789,
+        src: getImageUrl('20250703_prod21.png', true),
+      },
+      {
+        id: 433980,
+        src: getImageUrl('20250703_prod22.png', true),
+      },
+    ]
   },
 ];
 
@@ -129,7 +230,9 @@ const lp_links = [
 
   // TOP IMAGE TITLE GIF
   translateLink('content/lp25-07-03'),
-  translateImage('20250703lpgif_top.gif'),
+  {
+    value: getImageUrl('20250703lp_gif.gif', true),
+  },
 
   // BANNER 1
   translateLink('content/lp25-06-26'),
@@ -143,7 +246,7 @@ const lp_links = [
 const c20250703 = new entities.Campaign({
   date: '2025.07.03',
   name: 'Rent friendly',
-  translationsSpreadsheet: '03.07.25 - Rent friendly',
+  translationsSpreadsheet: campaignTranslationsSheet,
   issueCardId: '375807',
   startId: '34577',
   figmaUrl: 'https://www.figma.com/design/h9X4yymu6EC5WUVF6m71WC',
@@ -200,6 +303,7 @@ const c20250703 = new entities.Campaign({
       intro: {
         background: '#FFE0D9',
         color: '#000000',
+        align: 'left',
       },
       tit: {
         color: '#000000',
