@@ -282,7 +282,7 @@ export async function mondayRegularNslt({
                 ``
               }
 
-              ${!inside ?
+              ${!inside || inside.type == "timer" ?
               `
                 <tr>
                   <td style="background-color: ${background};">
@@ -369,6 +369,7 @@ export async function mondayRegularNslt({
                   background,
                   freebies: freebies.items,
                   getProductById,
+                  color:freebies.options.color,
                 })}
                   </td>
               </tr>
@@ -385,7 +386,7 @@ export async function mondayRegularNslt({
               :
               ''
               }
-              ${intro ? 
+              ${intro && intro.type != "paragraph" ? 
                 `<tr>
                     <td class="newsletterContainer" style="background-color: ${intro.background || background};">
                         ${Intro({

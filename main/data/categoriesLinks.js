@@ -231,6 +231,7 @@ export default [
     "bed-sheets": "bettlaken",
     "sofa-armchair-covers": "sofa-und-sesselbezuege",
     "towels": "badetucher",
+    "towel": "badetuche",
     "covers-rain-covers": "schutzhullen",
     "pendant-lights": "haengelampen",
     "floor-lamps": "stehlampen",
@@ -358,7 +359,14 @@ export default [
     "adjustable-desks": "schreibtisch-verstellbar",
     "outdoor-showers": "gartenduschen",
     "trends": "wohntrends",
-    "dreamy-pastels": "moebel-in-pastellfarben"
+    "dreamy-pastels": "moebel-in-pastellfarben",
+    "coastal-style": "kuesten-look",
+    "desert-style": "wuesten-stil",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "befr",
@@ -592,6 +600,7 @@ export default [
     "bed-sheets": "draps-de-lit",
     "sofa-armchair-covers": "housses-canapes-et-fauteuils",
     "towels": "linge-de-bain",
+    "towel": "serviettes-de-bain",
     "covers-rain-covers": "baches-de-protection",
     "pendant-lights": "lampes-suspension",
     "floor-lamps": "lampadaires-design",
@@ -719,7 +728,14 @@ export default [
     "adjustable-desks": "bureaux-reglables",
     "outdoor-showers": "douches-exterieur",
     "trends": "tendances",
-    "dreamy-pastels": "reves-de-pastels"
+    "dreamy-pastels": "reves-de-pastels",
+    "coastal-style": "style-cotier",
+    "desert-style": "style-desertique",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "benl",
@@ -953,6 +969,7 @@ export default [
     "bed-sheets": "lakens",
     "sofa-armchair-covers": "hoezen-voor-banken-en-fauteuils",
     "towels": "handdoeken-nl",
+    "towel": "handdoeken-nl",
     "covers-rain-covers": "beschermhoezen",
     "pendant-lights": "hanglampen",
     "floor-lamps": "staande-lampen",
@@ -1080,7 +1097,14 @@ export default [
     "adjustable-desks": "verstelbare-bureaus",
     "outdoor-showers": "buiten-douche",
     "trends": "interieurtrends",
-    "dreamy-pastels": "dromerige-pastelkleuren"
+    "dreamy-pastels": "dromerige-pastelkleuren",
+    "coastal-style": "kust-stijl",
+    "desert-style": "woestijn-stijl",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "chde",
@@ -1314,6 +1338,7 @@ export default [
     "bed-sheets": "bettlaken",
     "sofa-armchair-covers": "sofa-und-sesselbezuege",
     "towels": "badetucher",
+    "towel": "badetuche",
     "covers-rain-covers": "schutzhullen",
     "pendant-lights": "haengeleuchten",
     "floor-lamps": "stehlampen",
@@ -1441,7 +1466,14 @@ export default [
     "adjustable-desks": "schreibtisch-verstellbar",
     "outdoor-showers": "gartenduschen",
     "trends": "wohntrends",
-    "dreamy-pastels": "moebel-in-pastellfarben"
+    "dreamy-pastels": "moebel-in-pastellfarben",
+    "coastal-style": "kuesten-look",
+    "desert-style": "wuesten-stil",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "chfr",
@@ -1675,6 +1707,7 @@ export default [
     "bed-sheets": "draps-de-lit",
     "sofa-armchair-covers": "housses-canapes-et-fauteuils",
     "towels": "linge-de-bain",
+    "towel": "serviettes-de-bain",
     "covers-rain-covers": "baches-de-protection",
     "pendant-lights": "lampes-suspension",
     "floor-lamps": "lampadaires-design",
@@ -1802,7 +1835,14 @@ export default [
     "adjustable-desks": "bureaux-reglables",
     "outdoor-showers": "douches-exterieur",
     "trends": "tendances",
-    "dreamy-pastels": "reves-de-pastels"
+    "dreamy-pastels": "reves-de-pastels",
+    "coastal-style": "style-cotier",
+    "desert-style": "style-desertique",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "chit",
@@ -2036,6 +2076,7 @@ export default [
     "bed-sheets": "coprimaterassi",
     "sofa-armchair-covers": "copridivani",
     "towels": "asciugamani",
+    "towel": "asciugamano",
     "covers-rain-covers": "coperture-impermeabili",
     "pendant-lights": "lampadari",
     "floor-lamps": "lampade-da-terra",
@@ -2163,7 +2204,14 @@ export default [
     "adjustable-desks": "scrivanie-regolabili-elettronicamente",
     "outdoor-showers": "docce-esterno",
     "trends": "tendenze",
-    "dreamy-pastels": "colori-pastello-da-sogno"
+    "dreamy-pastels": "colori-pastello-da-sogno",
+    "coastal-style": "stile-costiero",
+    "desert-style": "stile-deserto",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "cz",
@@ -2397,6 +2445,7 @@ export default [
     "bed-sheets": "povleceni-na-postel",
     "sofa-armchair-covers": "potahy-na-pohovky-a-kresla",
     "towels": "rucniky",
+    "towel": "rucnik",
     "covers-rain-covers": "protidestove-plachty",
     "pendant-lights": "zavesne-osvetleni",
     "floor-lamps": "stojaci-lampy",
@@ -2524,7 +2573,14 @@ export default [
     "adjustable-desks": "vyskove-nastavitelne-psaci-stoly",
     "outdoor-showers": "zahradni-sprchy",
     "trends": "trendy-cz",
-    "dreamy-pastels": "snove-pastely"
+    "dreamy-pastels": "snove-pastely",
+    "coastal-style": "pobrezni-styl",
+    "desert-style": "poustni-styl",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "de",
@@ -2758,6 +2814,7 @@ export default [
     "bed-sheets": "bettlaken",
     "sofa-armchair-covers": "sofa-und-sesselbezuege",
     "towels": "badetucher",
+    "towel": "badetuche",
     "covers-rain-covers": "schutzhullen",
     "pendant-lights": "haengelampen",
     "floor-lamps": "stehlampen",
@@ -2885,7 +2942,14 @@ export default [
     "adjustable-desks": "schreibtisch-verstellbar",
     "outdoor-showers": "gartenduschen",
     "trends": "wohntrends",
-    "dreamy-pastels": "moebel-in-pastellfarben"
+    "dreamy-pastels": "moebel-in-pastellfarben",
+    "coastal-style": "kuesten-look",
+    "desert-style": "wuesten-stil",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "dk",
@@ -3119,6 +3183,7 @@ export default [
     "bed-sheets": "lagner",
     "sofa-armchair-covers": "betraek-til-sofaer-og-lenestole",
     "towels": "handklaeder",
+    "towel": "handklaede",
     "covers-rain-covers": "havemoebelovertraek",
     "pendant-lights": "pendel-lamper",
     "floor-lamps": "gulvlamper",
@@ -3246,7 +3311,14 @@ export default [
     "adjustable-desks": "justerbare-borde",
     "outdoor-showers": "udendoers-brusere",
     "trends": "trends",
-    "dreamy-pastels": "pastel-dromme"
+    "dreamy-pastels": "pastel-dromme",
+    "coastal-style": "koest-stil",
+    "desert-style": "orken-stil",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "es",
@@ -3480,6 +3552,7 @@ export default [
     "bed-sheets": "sabanas-de-cama",
     "sofa-armchair-covers": "fundas-para-sofa-y-sillon",
     "towels": "toallas",
+    "towel": "toalla",
     "covers-rain-covers": "cubiertas-para-lluvia",
     "pendant-lights": "lamparas-colgantes",
     "floor-lamps": "lamparas-de-pie",
@@ -3607,7 +3680,14 @@ export default [
     "adjustable-desks": "escritorios-de-altura-regulable",
     "outdoor-showers": "duchas-de-exterior",
     "trends": "tendencias",
-    "dreamy-pastels": "colores-pastel-de-ensueno"
+    "dreamy-pastels": "colores-pastel-de-ensueno",
+    "coastal-style": "estilo-costero",
+    "desert-style": "estilo-desierto",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "fi",
@@ -3841,6 +3921,7 @@ export default [
     "bed-sheets": "lakanat",
     "sofa-armchair-covers": "sohva-nojatuoli-paalliset",
     "towels": "pyyhkeet",
+    "towel": "pyyhe",
     "covers-rain-covers": "suojapeitteet",
     "pendant-lights": "riippuvalaisimet",
     "floor-lamps": "lattiavalaisimet",
@@ -3968,7 +4049,14 @@ export default [
     "adjustable-desks": "saadettavat-tyopoydat",
     "outdoor-showers": "ulkosuihkut",
     "trends": "trendit",
-    "dreamy-pastels": "unenomaiset-pastellivarit"
+    "dreamy-pastels": "unenomaiset-pastellivarit",
+    "coastal-style": "merellinen-tyyli",
+    "desert-style": "aavikkotyyli",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "fr",
@@ -4202,6 +4290,7 @@ export default [
     "bed-sheets": "draps-de-lit",
     "sofa-armchair-covers": "housses-canapes-et-fauteuils",
     "towels": "linge-de-bain",
+    "towel": "serviettes-de-bain",
     "covers-rain-covers": "baches-de-protection",
     "pendant-lights": "lampes-suspension",
     "floor-lamps": "lampadaires-design",
@@ -4329,7 +4418,14 @@ export default [
     "adjustable-desks": "bureaux-reglables",
     "outdoor-showers": "douches-exterieur",
     "trends": "tendances",
-    "dreamy-pastels": "reves-de-pastels"
+    "dreamy-pastels": "reves-de-pastels",
+    "coastal-style": "style-cotier",
+    "desert-style": "style-desertique",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "hu",
@@ -4563,6 +4659,7 @@ export default [
     "bed-sheets": "lepedo",
     "sofa-armchair-covers": "kanape-es-fotelhuzatok",
     "towels": "torolkozok",
+    "towel": "torolkozo",
     "covers-rain-covers": "esovedo-huzat",
     "pendant-lights": "mennyezeti-lampak",
     "floor-lamps": "allolampak",
@@ -4690,7 +4787,14 @@ export default [
     "adjustable-desks": "elektromosan-allithato-iroasztalok",
     "outdoor-showers": "kulteri-zuhanyzok",
     "trends": "trendek",
-    "dreamy-pastels": "pasztell-arnyalatok"
+    "dreamy-pastels": "pasztell-arnyalatok",
+    "coastal-style": "tengerparti-stilus",
+    "desert-style": "sivatagi-stilus",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "it",
@@ -4924,6 +5028,7 @@ export default [
     "bed-sheets": "coprimaterassi",
     "sofa-armchair-covers": "copridivani",
     "towels": "asciugamani",
+    "towel": "asciugamano",
     "covers-rain-covers": "coperture-impermeabili",
     "pendant-lights": "lampadari",
     "floor-lamps": "lampade-da-terra",
@@ -5051,7 +5156,14 @@ export default [
     "adjustable-desks": "scrivanie-regolabili-elettronicamente",
     "outdoor-showers": "docce-esterno",
     "trends": "tendenze",
-    "dreamy-pastels": "colori-pastello-da-sogno"
+    "dreamy-pastels": "colori-pastello-da-sogno",
+    "coastal-style": "stile-costiero",
+    "desert-style": "stile-deserto",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "nl",
@@ -5285,6 +5397,7 @@ export default [
     "bed-sheets": "lakens",
     "sofa-armchair-covers": "hoezen-voor-banken-en-fauteuils",
     "towels": "handdoeken-nl",
+    "towel": "handdoeken-nl",
     "covers-rain-covers": "beschermhoezen",
     "pendant-lights": "hanglampen",
     "floor-lamps": "staande-lampen",
@@ -5412,7 +5525,14 @@ export default [
     "adjustable-desks": "verstelbare-bureaus",
     "outdoor-showers": "buiten-douche",
     "trends": "interieurtrends",
-    "dreamy-pastels": "dromerige-pastelkleuren"
+    "dreamy-pastels": "dromerige-pastelkleuren",
+    "coastal-style": "kust-stijl",
+    "desert-style": "woestijn-stijl",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "no",
@@ -5646,6 +5766,7 @@ export default [
     "bed-sheets": "laken",
     "sofa-armchair-covers": "overtrekk-til-sofaer-og-lenestoler",
     "towels": "haandklaer",
+    "towel": "handklae",
     "covers-rain-covers": "overtrekk",
     "pendant-lights": "pendellamper",
     "floor-lamps": "gulvlamper",
@@ -5773,7 +5894,14 @@ export default [
     "adjustable-desks": "justerbare-skrivebord",
     "outdoor-showers": "utedusjer",
     "trends": "trender",
-    "dreamy-pastels": "drommende-pastellfarger"
+    "dreamy-pastels": "drommende-pastellfarger",
+    "coastal-style": "kyststil",
+    "desert-style": "orken-stil",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "pl",
@@ -6007,6 +6135,7 @@ export default [
     "bed-sheets": "przescieradla",
     "sofa-armchair-covers": "pokrowce-na-sofy-i-fotele",
     "towels": "reczniki",
+    "towel": "recznik",
     "covers-rain-covers": "pokrowce-ochronne",
     "pendant-lights": "lampy-wiszace",
     "floor-lamps": "lampy-podlogowe",
@@ -6134,7 +6263,14 @@ export default [
     "adjustable-desks": "biurka-z-regulacja-wysokosci",
     "outdoor-showers": "prysznice-ogrodowe",
     "trends": "trendy",
-    "dreamy-pastels": "pastelowa-lekkosc"
+    "dreamy-pastels": "pastelowa-lekkosc",
+    "coastal-style": "styl-nadmorski",
+    "desert-style": "styl-pustynny",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "pt",
@@ -6368,6 +6504,7 @@ export default [
     "bed-sheets": "lencois-de-cama",
     "sofa-armchair-covers": "capas-para-sofas-e-poltrona",
     "towels": "toalhas",
+    "towel": "toalha",
     "covers-rain-covers": "capa-impermeavel",
     "pendant-lights": "candeeiros-de-tecto",
     "floor-lamps": "candeeiros-de-pe",
@@ -6495,7 +6632,14 @@ export default [
     "adjustable-desks": "secretarias-elevatorias",
     "outdoor-showers": "chuveiros-de-exterior",
     "trends": "tendencias",
-    "dreamy-pastels": "tons-pastel-sonhadores"
+    "dreamy-pastels": "tons-pastel-sonhadores",
+    "coastal-style": "estilo-costeiro",
+    "desert-style": "estilo-deserto",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "ro",
@@ -6729,6 +6873,7 @@ export default [
     "bed-sheets": "huse-pentru-saltele",
     "sofa-armchair-covers": "huse-pentru-canapele-si-fotolii",
     "towels": "prosoape",
+    "towel": "prosop",
     "covers-rain-covers": "acoperisuri-impermeabile",
     "pendant-lights": "candelabre",
     "floor-lamps": "lampi-de-podea",
@@ -6856,7 +7001,14 @@ export default [
     "adjustable-desks": "birouri-reglabil",
     "outdoor-showers": "dusuri-in-aer-liber",
     "trends": "tendinte",
-    "dreamy-pastels": "culori-pastelate-de-vis"
+    "dreamy-pastels": "culori-pastelate-de-vis",
+    "coastal-style": "stil-nautic",
+    "desert-style": "stil-desertic",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "se",
@@ -7090,6 +7242,7 @@ export default [
     "bed-sheets": "lakan",
     "sofa-armchair-covers": "soffoverdrag-och-fatoljoverdrag",
     "towels": "handdukar",
+    "towel": "handduka",
     "covers-rain-covers": "mobelskydd",
     "pendant-lights": "taklampor",
     "floor-lamps": "golvlampor",
@@ -7217,7 +7370,14 @@ export default [
     "adjustable-desks": "justerbara-skrivbord",
     "outdoor-showers": "uteduschar",
     "trends": "trender",
-    "dreamy-pastels": "drommiga-pasteller"
+    "dreamy-pastels": "drommiga-pasteller",
+    "coastal-style": "kustnara-stil",
+    "desert-style": "okenstil",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "sk",
@@ -7451,6 +7611,7 @@ export default [
     "bed-sheets": "postelne-plachty",
     "sofa-armchair-covers": "potahy-na-pohovky-a-kresla",
     "towels": "uteraky",
+    "towel": "uterak",
     "covers-rain-covers": "protidazdove-plachty",
     "pendant-lights": "zavesne-lampy",
     "floor-lamps": "stojacie-lampy",
@@ -7578,7 +7739,14 @@ export default [
     "adjustable-desks": "vyskove-nastavitelne-pisacie-stoly",
     "outdoor-showers": "zahradne-sprchy",
     "trends": "trendy-sk",
-    "dreamy-pastels": "pastelove-sny"
+    "dreamy-pastels": "pastelove-sny",
+    "coastal-style": "primorsky-styl",
+    "desert-style": "pustny-styl",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   },
   {
     "slug": "uk",
@@ -7812,6 +7980,7 @@ export default [
     "bed-sheets": "bed-sheets",
     "sofa-armchair-covers": "sofa-armchair-covers",
     "towels": "towels",
+    "towel": "towel",
     "covers-rain-covers": "covers-rain-covers",
     "pendant-lights": "pendant-lights",
     "floor-lamps": "floor-lamps",
@@ -7939,6 +8108,13 @@ export default [
     "adjustable-desks": "adjustable-desks",
     "outdoor-showers": "outdoor-showers",
     "trends": "trends",
-    "dreamy-pastels": "dreamy-pastels"
+    "dreamy-pastels": "dreamy-pastels",
+    "coastal-style": "coastal-style",
+    "desert-style": "desert-style",
+    "search": "search",
+    "cardigan": "cardigan",
+    "glastonbury": "glastonbury",
+    "blythe": "blythe",
+    "albany": "albany"
   }
 ]

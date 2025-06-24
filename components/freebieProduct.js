@@ -4,7 +4,8 @@ export function FreebieProduct(
   product,
   align = "center",
   style,
-  containerAlign = "center"
+  containerAlign = "center",
+  color
 ) {
   return `
 
@@ -31,7 +32,7 @@ export function FreebieProduct(
                       </td>
                     </tr>
                       <tr>
-                        <td align="${align}" style="padding-top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px;">
+                        <td align="${align}" style="padding-top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; color= ${color};">
                           <span class="newsletterProductTitleFreebie">${ product.name }</span>
                         </td>
                       </tr>
@@ -45,7 +46,7 @@ export function FreebieProduct(
                           : ""
                       }
                       <tr>
-                        <td align="${align}" style="color: #000">
+                        <td align="${align}" style="color: ${color};">
                           <span class="newsletterProductLowPrice" >${ product.lowPrice } </span>
                           <span class="newsletterProductHightPrice" >${ product.highPrice  }</span>
                         </td>

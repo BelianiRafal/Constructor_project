@@ -103,7 +103,7 @@ try {
     campaigns: [
       
       new entities.Campaign({
-        startId: "32965",
+        startId: "29760",
         name: "Beliani Birthday Start",
         date: "2025.06.02",
         issueCardId: "359284",
@@ -131,7 +131,7 @@ try {
             },
             categories: [
               {
-                isCategoriesDB: true,
+                isCategoriesDB: false,
                 name: "Outdoor",
                 background: "#FFCCB7",
                 src:{
@@ -140,7 +140,7 @@ try {
                   placeholderPosition: "38",
                   value: getImageUrl("20250602Cat1.png", true),
                 },
-                href: "https://www.beliani.ch/garden-furniture/outdoor-furniture/",
+                href: "https://www.beliani.ch/search/cardigan/",
               },
               {
                 isCategoriesDB: true,
