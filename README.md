@@ -3,6 +3,18 @@
 > **README & Wiki are W.I.P.**  
 > Contributions and suggestions are welcome!
 
+
+## Core changes:
+- Uses [fnm](https://github.com/Schniz/fnm) for Node.js version management (no admin required).
+- Uses [pnpm](https://pnpm.io/) as the package manager.
+- Uses Vite with port `5500` for local development.
+- HMR (Hot Module Replacement) is enabled for all files imported from `app.js`.
+- Campaigns are now exported from `/campaigns/[campaign].js` and imported in `app.js`
+- Static assets (constructor styles, favicon etc.) are served from `/public/`.
+- `.prettierignore` and `.gitignore` are set up properly.
+
+
+
 ## Project Structure
 
 ```
