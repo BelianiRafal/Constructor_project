@@ -30,6 +30,7 @@ const Toast = (() => {
       fadeAndCollapse(oldest, () => createToast(type, message, duration));
     } else {
       createToast(type, message, duration);
+      console.log(`[${type.toUpperCase()}]: ${message}`);
     }
   }
 
