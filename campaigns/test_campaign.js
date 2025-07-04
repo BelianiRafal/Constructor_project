@@ -5,6 +5,24 @@ import types from "../utils/types.js";
 
 const categories = [
   {
+    products: [
+      {
+        id: "81395",
+        src: "https://www.pictureserver.net/pic_storage/pic/2a/84/undef_src_sa_picid_706228_x_185_type_color_image.jpg?ver=41",
+      },
+      {
+        id: "81395",
+        src: "https://www.pictureserver.net/pic_storage/pic/ee/1a/undef_src_sa_picid_759944_x_185_type_color_image.jpg?ver=57",
+      },
+      {
+        id: "81395",
+        src: "https://www.pictureserver.net/pic_storage/pic/93/b2/undef_src_sa_picid_785038_x_185_type_color_image.jpg?ver=23",
+      },
+      {
+        id: "81395",
+        src: "https://www.pictureserver.net/pic_storage/pic/39/e7/undef_src_sa_picid_843614_x_185_type_color_image.jpg?ver=9",
+      },
+    ],
     isCategoriesDB: true,
     name: "Outdoor ",
     background: "#FFCCB7",
@@ -17,6 +35,7 @@ const categories = [
     href: "https://www.beliani.ch/garden-furniture/outdoor-furniture/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Living Room",
     background: "#FFCCB7",
@@ -29,6 +48,7 @@ const categories = [
     href: "https://www.beliani.ch/living-room-furniture/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Dining Room ",
     background: "#FFCCB7",
@@ -41,6 +61,7 @@ const categories = [
     href: "https://www.beliani.ch/dining-room-furniture/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Bedroom",
     background: "#FFCCB7",
@@ -53,6 +74,7 @@ const categories = [
     href: "https://www.beliani.ch/bedroom-furniture/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Hallway ",
     background: "#FFCCB7",
@@ -65,6 +87,7 @@ const categories = [
     href: "https://www.beliani.ch/hallway/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Bathroom",
     background: "#FFCCB7",
@@ -77,6 +100,7 @@ const categories = [
     href: "https://www.beliani.ch/bathroom-furniture/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Kids ",
     background: "#FFCCB7",
@@ -89,6 +113,7 @@ const categories = [
     href: "https://www.beliani.ch/children-room/",
   },
   {
+    type: "no_products",
     isCategoriesDB: true,
     name: "Office",
     background: "#FFCCB7",
@@ -238,7 +263,7 @@ const tableQueries = [
 const newsletterTemplate = {
   name: "Newsletter",
   type: types.NEWSLETTER,
-  template: templates.CategoriesRows,
+  template: templates.CategoriesTester,
   background: "#FFCCB7",
   wrapper: types.WRAPPER,
   css: types.CSS.NS,
@@ -254,7 +279,7 @@ const newsletterTemplate = {
 const landingTemplate = {
   name: "Landing",
   type: types.LANDINGPAGE,
-  template: templates.CategoriesRows,
+  template: templates.CategoriesTester,
   background: "#FFCCB7",
   css: types.CSS.LP,
   intro: {
