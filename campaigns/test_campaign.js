@@ -1,0 +1,281 @@
+import { templates } from "../templates/index.js";
+import { entities } from "../entities/index.js";
+import { getImageUrl } from "../utils/getImageUrl.js";
+import types from "../utils/types.js";
+
+const categories = [
+  {
+    isCategoriesDB: true,
+    name: "Outdoor ",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat1.png", true),
+    },
+    href: "https://www.beliani.ch/garden-furniture/outdoor-furniture/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Living Room",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat2.png", true),
+    },
+    href: "https://www.beliani.ch/living-room-furniture/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Dining Room ",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat3.png", true),
+    },
+    href: "https://www.beliani.ch/dining-room-furniture/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Bedroom",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat4.png", true),
+    },
+    href: "https://www.beliani.ch/bedroom-furniture/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Hallway ",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat5.png", true),
+    },
+    href: "https://www.beliani.ch/hallway/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Bathroom",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat6.png", true),
+    },
+    href: "https://www.beliani.ch/bathroom-furniture/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Kids ",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat7.png", true),
+    },
+    href: "https://www.beliani.ch/children-room/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Office",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414Cat8.png", true),
+    },
+    href: "https://www.beliani.ch/office-furniture/",
+  },
+];
+
+const links = [
+  {
+    query: true,
+    href: {
+      type: "relation",
+      relyOn: "origin",
+      placeholderPosition: "0",
+      value: "content/lp25-04-14",
+    },
+  },
+  {
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250303_01.png", true),
+    },
+  },
+  {
+    query: true,
+    href: {
+      type: "relation",
+      relyOn: "origin",
+      placeholderPosition: "0",
+      value: "content/lp25-04-14",
+    },
+  },
+  {
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250414_gif.gif", true),
+    },
+  },
+  {
+    query: true,
+    href: {
+      type: "relation",
+      relyOn: "origin",
+      placeholderPosition: "0",
+      value: "content/lp25-04-04",
+    },
+  },
+  {
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250404b.png", true),
+    },
+  },
+  {
+    query: true,
+    href: {
+      type: "relation",
+      relyOn: "origin",
+      placeholderPosition: "0",
+      value: "content/lp25-04-03",
+    },
+  },
+  {
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250403b.png", true),
+    },
+  },
+];
+
+const tableQueries = [
+  {
+    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+    tableName: "14.04.25 - March Peak reminder!",
+    tableRange: "12",
+    name: "intro",
+  },
+  {
+    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+    tableName: "14.04.25 - March Peak reminder!",
+    tableRange: "21",
+    name: "cta",
+  },
+  {
+    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+    tableName: "14.04.25 - March Peak reminder!",
+    tableRange: "25:26",
+    name: "condition",
+  },
+  {
+    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+    tableName: "14.04.25 - March Peak reminder!",
+    tableRange: "13:20",
+    name: "category",
+  },
+  {
+    tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+    tableName: "Templates",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "templates",
+    tableColumns: false,
+  },
+  {
+    tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+    tableName: "Categories",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "categoriesTitles",
+    tableColumns: false,
+  },
+  {
+    tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+    tableName: "Categories",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "categoriesLinks",
+    tableColumns: false,
+  },
+  {
+    tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+    tableName: "Header",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "header",
+    tableColumns: false,
+  },
+  {
+    tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+    tableName: "Footer",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "footer",
+    tableColumns: false,
+  },
+];
+
+const newsletterTemplate = {
+  name: "Newsletter",
+  type: types.NEWSLETTER,
+  template: templates.CategoriesRows,
+  background: "#FFCCB7",
+  wrapper: types.WRAPPER,
+  css: types.CSS.NS,
+  intro: {
+    background: "#FFCCB7",
+    align: "center",
+  },
+  categories: categories,
+  links: links,
+  tableQueries: tableQueries,
+};
+
+const landingTemplate = {
+  name: "Landing",
+  type: types.LANDINGPAGE,
+  template: templates.CategoriesRows,
+  background: "#FFCCB7",
+  css: types.CSS.LP,
+  intro: {
+    background: "#FFCCB7",
+    align: "center",
+  },
+  categories: categories,
+  links: links,
+  tableQueries: tableQueries,
+};
+
+export const test_campaign = new entities.Campaign({
+  startId: "00000",
+  name: "Test Campaign",
+  date: "2025.05.30",
+  issueCardId: "373633",
+  figmaUrl: "https://www.figma.com/design/8GAjaJthNDBZ4lmRYLah23",
+  optimizeImg: false,
+  alarm: {
+    isActive: false,
+  },
+  isArchive: false,
+  templates: [newsletterTemplate, landingTemplate],
+});

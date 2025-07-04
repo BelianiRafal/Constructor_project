@@ -1,5 +1,5 @@
 import { getState } from "../main/initApp.js";
-import { getImageUrl } from "../app.js";
+import { getImageUrl } from "../utils/getImageUrl.js";
 
 const types = {
   relation: handleRelation,
