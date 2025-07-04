@@ -2,10 +2,31 @@ import { isAllowToRender } from '../../helpers/optimizeImage.js';
 import { Space } from './Space.js';
 
 export const Intro = isAllowToRender(
-  ({ title, paragraph, data, spaceClassName, color, background, align = 'left' }) => {
+  ({ title, paragraph, spaceClassName, color, background, align = 'left' }) => {
     let html = `<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="background: ${background}; color: ${color};"><tbody>`;
 
-    if (title && title.trim() != 'undefined') {
+    if (spaceClassName) html += Space({ className: spaceClassName });
+
+		console.log(title, paragraph);
+
+		let titleTrimmed, paragraphTrimmed = undefined;
+
+		if (title) {
+			titleTrimmed = String(title).trim();
+		} 
+
+		if (paragraph) {
+			paragraphTrimmed = String(paragraph).trim();
+		}
+
+		console.log(
+			'Intro component rendering with title:',
+			titleTrimmed,
+			'and paragraph:',
+			paragraphTrimmed
+		);
+
+    if (titleTrimmed) {
       html += `
     <tr>
       <td>
@@ -14,23 +35,19 @@ export const Intro = isAllowToRender(
             <tr>
               <td class="newsletterContainer" align="${align}">
                 <span class="${title?.className || 'newsletterTitle'}">
-                  ${data ? data[0] : title}
+                  ${titleTrimmed}
                 </span>
               </td>
             </tr>
           </tbody>
         </table>
       </td>
-    </tr>
-
-    <tr>
-      <td>
-        ${Space({ className: spaceClassName })}
-      </td>
     </tr>`;
+
+			if (spaceClassName) html += Space({ className: spaceClassName });
     }
 
-    if (paragraph) {
+    if (paragraphTrimmed) {
       html += `
     <tr>
       <td>
@@ -38,8 +55,8 @@ export const Intro = isAllowToRender(
           <tbody>
             <tr>
               <td class="newsletterContainer" align="${align}" >
-                <span class="newsletterParagraph">
-                  ${data ? data[1] : paragraph}
+                <span class="newsletterParagraph" style="display: block;">
+                  ${paragraphTrimmed}
                 </span>
               </td>
             </tr>
@@ -48,6 +65,8 @@ export const Intro = isAllowToRender(
       </td>
     </tr>`;
     }
+
+    if (spaceClassName) html += Space({ className: spaceClassName });
 
     html += `</tbody></table>`;
 

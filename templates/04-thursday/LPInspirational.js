@@ -4,9 +4,9 @@ import {
   ImageWithLink,
   Intro,
   Paragraph,
-} from '../components/components_remake/_index.js';
-import { TopImageTitle } from '../components/TopImageTitle.js';
-import getImageUrl from '../helpers/getImageUrl.js';
+} from '../../components/components_remake/_index.js';
+import { TopImageTitle } from '../../components/TopImageTitle.js';
+import getImageUrl from '../../helpers/getImageUrl.js';
 
 export async function LPInspirational({
   links,
@@ -107,11 +107,14 @@ export async function LPInspirational({
       </td>
     </tr>
 
-    ${categoriesHtml}
-  
+		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" styles="background-color: #ffe0d9; color: #000; max-width: 650px; width: 100%;">
+
+    	${categoriesHtml}
+
+		</table>
   </table>
 
-  ${Footer(
+  ${Footer('980px',
     {
       id,
       conditions: {

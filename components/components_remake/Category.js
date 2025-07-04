@@ -1,6 +1,6 @@
-import { isAllowToRender } from "../../helpers/optimizeImage.js";
-import { ImageWithLink, Line, Paragraph, Product, Space, Title } from "./_index.js";
-import translateImage from "../../helpers/translateImage.js";
+import { isAllowToRender } from '../../helpers/optimizeImage.js';
+import { ImageWithLink, Line, Paragraph, Product, Space, Title } from './_index.js';
+import translateImage from '../../helpers/translateImage.js';
 
 export const Category = isAllowToRender(
   ({
@@ -14,52 +14,44 @@ export const Category = isAllowToRender(
     line,
     len,
     idx,
-    cta = "CTA",
-    type = "monday",
+    cta = 'CTA',
+    type = 'monday',
   }) => {
-
-
     src = typeof src == 'object' ? src.src ?? src.value : src;
 
     if (!type) {
-      return "Please specify type category.";
+      return 'Please specify type category.';
     }
 
-    if (type === "inspirational-0703") {
-
-    function ProductDiv(product) {
-      return `
-        <div style="min-width: 0; box-sizing: border-box; text-align: left;">
+    if (type === 'inspirational-0703') {
+      function ProductDiv(product) {
+        return `
+        <div style="min-width: 0; box-sizing: border-box; text-align: left; height: 50%; min-height: 160px; width: 100%;">
           <div class="newsletterBottom20px">
-            <table border="0" cellspacing="0" cellpadding="0" width="100%">
-              <tbody>
-                <tr>
-                  <td align="center">
-                    <a href="${product.href}">
-                      <img alt="${product.name}" src="${product.src}" style="vertical-align: text-top; max-width: 100%;" loading="lazy">
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <a href="${product.href}">
+							<img alt="${product.name}" src="${
+          product.src
+        }" style="vertical-align: text-top; max-width: 100%; display:block; height: 100%; aspect-ratio: 1 / 1; height: 100%; min-height: 90px;" loading="lazy">
+						</a>
           </div>
           <div style="display: flex; text-align: left; flex-direction: column;">
-            <div class="newsletterProductTitleRow">
-              <div class="newsletterProductTitle">
-                ${product.name}
-              </div>
-            </div>
+						<span class="newsletterProductTitle">
+							${product.name}
+						</span>
             <div class="newsletterProductPriceRow" style="padding-bottom: 8px; text-align: left;">
               <span class="newsletterProductLowPrice">${product.lowPrice} </span>
-              <span class="newsletterProductHightPrice">${product.highPrice}</span>
-            </div>
+${
+                  product.highPrice
+                    ? `<span class="newsletterProductHightPrice">${product.highPrice}</span>`
+                    : `<span class="newsletterProductHightPrice" style="text-decoration: none; !important">&nbsp;</span>`
+                }            </div>
           </div>
         </div>
       `;
-    }
+      }
 
-    function ProductDivTall(product) {
-      return `
+      function ProductDivTall(product) {
+        return `
         <div style="height: 100%; min-width: 0; box-sizing: border-box;">
           <div style="
             display: flex;
@@ -94,27 +86,32 @@ export const Category = isAllowToRender(
               </div>
               <div class="newsletterProductPriceRow" style="padding-bottom: 8px; text-align: left;">
                 <span class="newsletterProductLowPrice">${product.lowPrice} </span>
-                <span class="newsletterProductHightPrice">${product.highPrice}</span>
+								${
+                  product.highPrice
+                    ? `<span class="newsletterProductHightPrice">${product.highPrice}</span>`
+                    : `<span class="newsletterProductHightPrice" style="text-decoration: none; !important">&nbsp;</span>`
+                }
+                
               </div>
             </div>
           </div>
         </div>
       `;
-    }
+      }
 
-    function generateProductsFlexGrid(products, layoutType = 0) {
-      // layoutType: 0 = [small, small, tall, small, small]
-      // layoutType: 1 = [small, small, small, small, small, small]
-      // layoutType: 3 = [tall, small, small, small, small]
-      if (layoutType === 0) {
-        // [small, small, tall, small, small]
-        return `
+      function generateProductsFlexGrid(products, layoutType = 0) {
+        // layoutType: 0 = [small, small, tall, small, small]
+        // layoutType: 1 = [small, small, small, small, small, small]
+        // layoutType: 3 = [tall, small, small, small, small]
+        if (layoutType === 0) {
+          // [small, small, tall, small, small]
+          return `
           <div class="newsletterContainer" style="text-align: left; display: flex; gap: 1%; align-items: stretch; justify-content: space-between;">
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; width: 33.33%;">
               ${ProductDiv(products[0])}
               ${ProductDiv(products[3])}
             </div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; width: 33.33%;">
               ${ProductDiv(products[1])}
               ${ProductDiv(products[4])}
             </div>
@@ -123,52 +120,51 @@ export const Category = isAllowToRender(
             </div>
           </div>
         `;
-      }
-      if (layoutType === 1 || layoutType === 2) {
-        // [small, small, small, small, small, small]
-        return `
+        }
+        if (layoutType === 1 || layoutType === 2) {
+          // [small, small, small, small, small, small]
+          return `
           <div class="newsletterContainer" style="display: flex; text-align: left; gap: 1%; align-items: stretch; justify-content: space-between;">
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; height: 100%; width: 33.33%;">
               ${ProductDiv(products[0])}
               ${ProductDiv(products[3])}
             </div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; height: 100%; width: 33.33%;">
               ${ProductDiv(products[1])}
               ${ProductDiv(products[4])}
             </div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; height: 100%; width: 33.33%;">
               ${ProductDiv(products[2])}
               ${ProductDiv(products[5])}
             </div>
           </div>
         `;
-      }
-      if (layoutType === 3) {
-        // [tall, small, small, small, small]
-        return `
+        }
+        if (layoutType === 3) {
+          // [tall, small, small, small, small]
+          return `
           <div class="newsletterContainer" style="display: flex; text-align: left; gap: 1%; align-items: stretch; justify-content: space-between;">
             <div style="min-width: 0; max-width: 33.33%; box-sizing: border-box; width: 100%;">
               ${ProductDivTall(products[0])}
             </div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; width: 33.33%;">
               ${ProductDiv(products[1])}
               ${ProductDiv(products[3])}
             </div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; width: 33.33%;">
               ${ProductDiv(products[2])}
               ${ProductDiv(products[4])}
             </div>
           </div>
         `;
-      }
-      // fallback: all small in a row
-      return `
+        }
+        // fallback: all small in a row
+        return `
         <div class="newsletterContainer" style="display: flex; width: 100%; text-align: left; gap: 1%; align-items: stretch; justify-content: space-between;">
           ${products.map(ProductDiv).join('')}
         </div>
       `;
-    }
-
+      }
 
       return `
 
@@ -181,42 +177,43 @@ export const Category = isAllowToRender(
           </td>
         </tr>
       </table>
+			
+			<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 980px; width: 100%; background-color: #FFE0D9; color: #000000;" id="newsletter">
 
-      ${Space()}
+      ${Space({})}
 
-      ${Paragraph(queries.paragraphs[idx], "left", color)}
+      <tr><td>${Paragraph(queries.paragraphs[idx], 'left', color)}</td></tr>
 
-      ${Space()}
+      ${Space({})}
       
       <!-- Category Products -->
-      ${generateProductsFlexGrid(products, idx)}
+      <tr><td>${generateProductsFlexGrid(products, idx)}</td></tr>
 
-      ${Space()}
+      ${Space({})}
+			</table>
       
       <!-- CTA START -->
-      <table cellspacing="0" cellpadding="0" border="0" width="100%" >
-        <tbody>
+			<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 980px; width: 100%; background-color: #FFE0D9; color: #000000;" id="newsletter">        <tbody>
           <tr>
             <td align="center">
-              <a href="${href}" style="color: ${
-          color || "#000"
-        }; text-decoration: underline;">
+              <a href="${href}" style="color: ${color || '#000'}; text-decoration: underline;">
                 <span class="newsletterCta">${cta}</span>
               </a>
             </td>
           </tr>
         </tbody>
       </table>
-      <!-- END CTA -->
-
-      ${Space({className: "newsletterBottom80px"})}
-
+      
+			<!-- END CTA -->
+			<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 980px; width: 100%; background-color: #FFE0D9; color: #000000;" id="newsletter">
+      	${Space({ className: 'newsletterBottom80px' })}
+			</table>
       <!-- END INSPIRATIONAL CATEGORY -->
 
       `;
     }
 
-    if (type === "no_products") {
+    if (type === 'no_products') {
       if (idx === len) {
         return `
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
@@ -226,7 +223,7 @@ export const Category = isAllowToRender(
         </tr>
         <tr>
           <td>
-            ${Title({ title: name, align: "left", color: color })}
+            ${Title({ title: name, align: 'left', color: color })}
           </td>
         </tr>
         <tr>
@@ -248,9 +245,7 @@ export const Category = isAllowToRender(
               ctaComponent
                 ? ctaComponent(href, cta)
                 : `
-                <a href="${href}" style="color:${
-                    color || "#000"
-                  }; text-decoration: underline;">
+                <a href="${href}" style="color:${color || '#000'}; text-decoration: underline;">
                   <span class="newsletterCta">${cta}</span>
                 </a>
               `
@@ -269,7 +264,7 @@ export const Category = isAllowToRender(
         </tr>
         <tr>
           <td>
-            ${Title({ title: name, align: "left", color: color })}
+            ${Title({ title: name, align: 'left', color: color })}
           </td>
         </tr>
         <tr>
@@ -291,9 +286,7 @@ export const Category = isAllowToRender(
               ctaComponent
                 ? ctaComponent(href, cta)
                 : `
-                <a href="${href}" style="color:${
-                    color || "#000"
-                  }; text-decoration: underline;">
+                <a href="${href}" style="color:${color || '#000'}; text-decoration: underline;">
                   <span class="newsletterCta">${cta}</span>
                 </a>
               `
@@ -313,13 +306,13 @@ export const Category = isAllowToRender(
     `;
     }
 
-    if (type === "monday") {
+    if (type === 'monday') {
       return `
   <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <thead>
       <tr>
         <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
-          ${Title({ title: name, align: "left", color: color })}
+          ${Title({ title: name, align: 'left', color: color })}
         </td>
       </tr>
       <tr>
@@ -345,19 +338,11 @@ export const Category = isAllowToRender(
                   <tr>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="newsletterRight10px">
-                      ${Product(
-                        products[0],
-                        "left",
-                        `color: ${color || "#000000"}`
-                      )}
+                      ${Product(products[0], 'left', `color: ${color || '#000000'}`)}
                     </td>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 50%" class="newsletterLeft10px">
-                      ${Product(
-                        products[1],
-                        "left",
-                        `color: ${color || "#000000"}`
-                      )}
+                      ${Product(products[1], 'left', `color: ${color || '#000000'}`)}
                     </td>
                   </tr>
                 </table>
@@ -370,19 +355,11 @@ export const Category = isAllowToRender(
                   <tr>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="newsletterRight10px">
-                      ${Product(
-                        products[2],
-                        "left",
-                        `color: ${color || "#000000"}`
-                      )}
+                      ${Product(products[2], 'left', `color: ${color || '#000000'}`)}
                     </td>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 50%" class="newsletterLeft10px">
-                      ${Product(
-                        products[3],
-                        "left",
-                        `color: ${color || "#000000"}`
-                      )}
+                      ${Product(products[3], 'left', `color: ${color || '#000000'}`)}
                     </td>
                   </tr>
                 </table>
@@ -406,7 +383,7 @@ export const Category = isAllowToRender(
                       ? ctaComponent(href, cta)
                       : `
                       <a href="${href}" style="color:${
-                          color || "#000"
+                          color || '#000'
                         }; text-decoration: underline;">
                         <span class="newsletterCta">${cta}</span>
                       </a>
@@ -423,7 +400,7 @@ export const Category = isAllowToRender(
   `;
     }
 
-    if (type === "image") {
+    if (type === 'image') {
       if (idx === len) {
         return `
         <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -435,7 +412,7 @@ export const Category = isAllowToRender(
             </tr>
             <tr>
               <td>
-                  ${Space({className: "newsletterBottom20px"})}
+                  ${Space({ className: 'newsletterBottom20px' })}
               </td>
             </tr>
             <tr>
@@ -457,7 +434,7 @@ export const Category = isAllowToRender(
           </tr>
             <tr>
               <td>
-                ${Space({className: "newsletterBottom20px"})}
+                ${Space({ className: 'newsletterBottom20px' })}
               </td>
             </tr>
         </thead>

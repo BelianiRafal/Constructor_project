@@ -11,6 +11,15 @@ export function computeValue(value) {
   }
 
   if (typeof value === 'object' && value !== null) {
+    // If this object has query property and href, it's a translateLink object
+    if (value.query && value.href && value.href.type) {
+      // Return object with query flag and translated href for getQueryLink.js
+      return {
+        query: value.query,
+        href: computeValue(value.href)
+      };
+    }
+    
     // If this object is a relation, resolve it
     if (value.type && types[value.type]) {
       return types[value.type](value);

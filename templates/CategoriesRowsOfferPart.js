@@ -204,39 +204,41 @@ export async function CategoriesRowsOfferPart({
         </tbody>
       </table>
 
-        <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
-          <tbody>
-            <tr>
-              <td class="newsletterBottom35px" >
-              </td>
-            </tr>
-              <tr>
-                <td align="left" class="newsletterBottom35px">
-                    <span class="newsletterFooterTitle">${getPhrase(
-                      "Shop limited-time deals"
-                    )}</span>
-                </td>
-              </tr>
-              <tr>
-                <td align="left" class="newsletterBottom20px">
-                    <a href=${links[2]}>
-                        <img loading="lazy" src=${
-                          links[3]
-                        } style="display: block;" width="100%">
-                    </a>
-                </td>
-              </tr>
-              <tr>
-                <td align="left" class="newsletterBottom35px">
-                    <a href=${links[4]}>
-                        <img loading="lazy" src=${
-                          links[5]
-                        } style="display: block;" width="100%">
-                    </a>
-                </td>
-              </tr>
-          </tbody>
-        </table>
+			${Line()}
+			
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
+				<tbody>
+					<tr>
+						<td class="newsletterBottom35px" >
+						</td>
+					</tr>
+						<tr>
+							<td align="left" class="newsletterBottom35px">
+									<span class="newsletterFooterTitle">${getPhrase(
+										"Shop limited-time deals"
+									)}</span>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" class="newsletterBottom20px">
+									<a href=${links[2]}>
+											<img loading="lazy" src=${
+												links[3]
+											} style="display: block;" width="100%">
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" class="newsletterBottom35px">
+									<a href=${links[4]}>
+											<img loading="lazy" src=${
+												links[5]
+											} style="display: block;" width="100%">
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
 
       ${Footer(
         {

@@ -2092,8 +2092,37 @@ export default {
                   <!--[if gte mso 7]>
                     <style type="text/css">
                       table {
-                        border-collapse: collapse;
-                        border-spacing: 0;
+                        border-collapse: collapse !important;
+                        border-spacing: 0 !important;
+                        mso-table-lspace: 0pt !important;
+                        mso-table-rspace: 0pt !important;
+                        border: none !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                      }
+                      td {
+                        border-collapse: collapse !important;
+                        border-spacing: 0 !important;
+                        mso-table-lspace: 0pt !important;
+                        mso-table-rspace: 0pt !important;
+                        border: none !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                      }
+                      img {
+                        border: none !important;
+                        outline: none !important;
+                        -ms-interpolation-mode: bicubic !important;
+                        display: block !important;
+                      }
+                      /* Fix for 1px gaps in Outlook */
+                      .newsletterContainer table {
+                        border-collapse: collapse !important;
+                        border-spacing: 0 !important;
+                      }
+                      .newsletterContainer td {
+                        border-collapse: collapse !important;
+                        border-spacing: 0 !important;
                       }
                     </style>
                   <![endif]-->

@@ -13,8 +13,12 @@ import { CategoriesRowsLine } from './CategoriesRowsLine.js';
 import { mondayOfferFreebiesInsideBanner } from './mondayOfferFreebiesInsideBanner.js';
 import { RegularNslt } from './RegularNslt.js';
 import { mondayRegularNslt } from './mondayRegularNslt.js';
-import { TimerOnlyNewsletter } from './TimerOnlyNewsletter.js';
-import { LPInspirational } from './LPInspirational.js';
+import { TimerOnlyNewsletter } from './04-thursday/TimerOnlyNewsletter.js';
+import { LPInspirational } from './04-thursday/LPInspirational.js';
+import { DoubleTopImage } from './04-thursday/DoubleTopImage.js';
+import { aDoubleTopImage } from './04-thursday/aDoubleTopImage.js';
+import { bDoubleTopImage } from './04-thursday/bDoubleTopImage.js';
+import { UniversalTemplate } from './04-thursday/UniversalTemplate.js';
 
 export const templates = {
   newsletter_FGG,
@@ -34,4 +38,8 @@ export const templates = {
   mondayRegularNslt,
   TimerOnlyNewsletter,
   LPInspirational,
+  DoubleTopImage,
+  aDoubleTopImage,
+  bDoubleTopImage,
+  UniversalTemplate,
 };
