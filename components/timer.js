@@ -43,6 +43,11 @@ export const Timer = ({
   return `
         <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
             <tr>
+                <td align="center" style="color: #ffffff">
+                    ${Space({className: "newsletterBottom10px"})}
+                </td>
+            </tr>
+            <tr>
                 <td align="center">
                     <span class="newsletterSubtitleTimer" style="color: #ffffff">
                         ${title}
