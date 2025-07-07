@@ -25,7 +25,7 @@ export class TemplateHandlers {
     this.templates = templates;
   }
 
-  getProductById = (productId, src, options) => {
+  getProductById = (productId, src, extraStyles, options) => {
     if (!this.isCalled && !this.products) {
       this.isCalled = true;
       Toastify({
@@ -40,20 +40,53 @@ export class TemplateHandlers {
       (item) => item.language.slug === country
     );
 
-    let country_products = this.products?.filter(
-      (product) => product.country === shop.slug.toLowerCase()
+    const countrySlug = shop?.slug?.toLowerCase();
+
+    // check if we do product swapping for specific country, if so return swapped id
+    let resolvedProductId = productId;
+    if (
+      productId &&
+      typeof productId === "object" &&
+      Array.isArray(productId.swap) &&
+      productId.countrySlug
+    ) {
+      const shopSlug = shop && shop.slug;
+      const shouldSwap = Array.isArray(productId.countrySlug)
+        ? productId.countrySlug.includes(shopSlug)
+        : shopSlug === productId.countrySlug;
+      resolvedProductId = shouldSwap ? productId.swap[1] : productId.swap[0];
+    }
+
+    // check if we do image swapping for specific country, if so return swapped image src
+    let resolvedSrc = src;
+    if (
+      src &&
+      typeof src === "object" &&
+      Array.isArray(src.swap) &&
+      src.countrySlug
+    ) {
+      const shopSlug = shop && shop.slug;
+      const shouldSwap = Array.isArray(src.countrySlug)
+        ? src.countrySlug.includes(shopSlug)
+        : shopSlug === src.countrySlug;
+      resolvedSrc = shouldSwap ? src.swap[1] : src.swap[0];
+    }
+
+    const country_products = this.products?.filter(
+      (product) => product.country === countrySlug
     );
 
     const product = country_products?.find(
-      (product) => Number(product.main_id) === Number(productId)
+      (product) => Number(product.main_id) === Number(resolvedProductId)
     );
 
     if (!product) {
       return {
-        name: `Product ${productId} not found`,
+        extraStyles: extraStyles || "",
+        name: `Product ${resolvedProductId} not found`,
         lowPrice: "00.00",
         highPrice: "00.00",
-        src: src,
+        src: resolvedSrc,
       };
     }
 
@@ -62,7 +95,9 @@ export class TemplateHandlers {
       product.href.hrefs[languageHREF.language.title].value +
       ".html";
     return handleProduct(
-      src ? { ...product, href, src } : { ...product, href },
+      resolvedSrc
+        ? { ...product, href, extraStyles, src: resolvedSrc }
+        : { ...product, href },
       options
     );
   };
