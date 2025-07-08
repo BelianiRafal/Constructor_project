@@ -1,6 +1,3 @@
-// @TODO:
-// Split types into separate files, they grow too large
-
 export default {
   NEWSLETTER: "newsletter",
   LANDINGPAGE: "landing",
@@ -102,11 +99,6 @@ export default {
             font-size: 30px;
             font-family: "Open Sans", sans-serif;
             line-height: 1.20;
-          }
-
-          #newsletter .newsletterHrefTit {
-            text-decoration:none;
-            text-align:center;
           }
           
           .newsletterTitle {
@@ -989,9 +981,15 @@ export default {
   }
   `,
     LP: `
-          #newsletter .newsletterHrefTit {
-            text-decoration:none;
-            text-align:center;
+					#newsletter .newsletterSubtitleTimer {
+            font-size: 30px;
+            line-height: 1.25;
+          }
+
+          @media screen and (max-width: 768px) {
+            #newsletter .newsletterSubtitleTimer {
+              font-size: 20px !important;
+            }
           }
 
           #newsletter .title-advantages {
@@ -1049,10 +1047,6 @@ export default {
             line-height: 1.20;
           }
           
-          #newsletter .newsletterMarginBottom20px {
-            margin-bottom: 20px;
-          }
-          
           #newsletter .newsletterBottom20px {
             padding-bottom: 20px;
           }
@@ -1078,6 +1072,13 @@ export default {
             font-size: 30px;
             line-height: 1.20;
             font-weight: 600;
+          }
+
+          #newsletter .newsletterHrefTit {
+            text-decoration:none;
+            text-align:center;
+            padding:0 20px;
+            display:block;
           }
 
           #newsletter .newsletterTitleH1 {
@@ -1228,6 +1229,10 @@ export default {
               padding-bottom: 10px !important;
               padding-right: 5px !important;
             }
+
+            #newsletter .newsletterHrefTit {
+              padding:0 10px;
+            }
           
             #newsletter .newsletterFooterCategoryRIGHT {
               padding-bottom: 10px !important;
@@ -1242,14 +1247,6 @@ export default {
               padding-top: 20px !important;
               padding-bottom: 20px !important;
             }
-          
-            #newsletter .newsletterFooterTitle {
-              font-size: 18px;
-            }
-
-            #newsletter .newsletterIntroTitle {
-              font-size: 28px;
-            }
 
             #newsletter .newsletterTitleH1 {
               font-size: 30px;
@@ -1260,15 +1257,13 @@ export default {
               font-size: 22px;
               line-height: 27px;
             }
-
-            #newsletter .newsletterTitleH1Bold {
-              font-size: 30px;
-              line-height: 35px;
+          
+            #newsletter .newsletterFooterTitle {
+              font-size: 18px;
             }
- 
-            #newsletter .newsletterTitleH1Bigger {
-              font-size: 45px;
-              line-height: 45px;
+
+            #newsletter .newsletterIntroTitle {
+              font-size: 28px;
             }
           
             #newsletter .newsletterProductTitleFreebie {
@@ -1336,10 +1331,6 @@ export default {
           
             #newsletter .newsletterBottom20px {
               padding-bottom: 10px;
-            }
- 
-            #newsletter .newsletterMarginBottom20px {
-              margin-bottom: 10px;
             }
           
             #newsletter .newsletterBottom80px {
@@ -2092,37 +2083,8 @@ export default {
                   <!--[if gte mso 7]>
                     <style type="text/css">
                       table {
-                        border-collapse: collapse !important;
-                        border-spacing: 0 !important;
-                        mso-table-lspace: 0pt !important;
-                        mso-table-rspace: 0pt !important;
-                        border: none !important;
-                        margin: 0 !important;
-                        padding: 0 !important;
-                      }
-                      td {
-                        border-collapse: collapse !important;
-                        border-spacing: 0 !important;
-                        mso-table-lspace: 0pt !important;
-                        mso-table-rspace: 0pt !important;
-                        border: none !important;
-                        margin: 0 !important;
-                        padding: 0 !important;
-                      }
-                      img {
-                        border: none !important;
-                        outline: none !important;
-                        -ms-interpolation-mode: bicubic !important;
-                        display: block !important;
-                      }
-                      /* Fix for 1px gaps in Outlook */
-                      .newsletterContainer table {
-                        border-collapse: collapse !important;
-                        border-spacing: 0 !important;
-                      }
-                      .newsletterContainer td {
-                        border-collapse: collapse !important;
-                        border-spacing: 0 !important;
+                        border-collapse: collapse;
+                        border-spacing: 0;
                       }
                     </style>
                   <![endif]-->
@@ -2140,3 +2102,4 @@ export default {
               </body>
           </html>`,
 };
+

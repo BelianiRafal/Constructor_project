@@ -2,7 +2,6 @@ import { Header } from '../../components/header.js';
 import {
   ImageWithLink_new as ImageWithLink,
   ImageWithText,
-  Footer,
   CTA,
   Intro,
   Line,
@@ -10,6 +9,8 @@ import {
   Space,
   ImageWithLink_new,
 } from '../../components/components_remake/_index.js';
+
+import { Footer } from '../../components/footer.js';
 
 export async function bDoubleTopImage({
   TopImageTitle_data,
@@ -232,141 +233,251 @@ export async function bDoubleTopImage({
   );
 
   return `
+
 		${header}
 
   	<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
+
+		${topImageTitle}
+
+		${topImage}
 		
-			${topImageTitle}
-
-			${topImage}
-
 			<tr>
 				<td>
 					<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
 						<tr>
 							<td align="left" valign="top" width="59.69%">
 								${ImageWithLink({
-									href: links['TopImageTitle_href'],
-									src: links['TopImage2'],
-								})}
+                  href: links['TopImageTitle_href'],
+                  src: links['TopImage2'],
+                })}
 							</td>
 
 							<td align="right" width="40.31%">
-							<a href="${getCategoryLink(categories[0].href)}" style="display: block; text-decoration: none;">
-								<img src="${
-									links[`TopImage2_Text`]
-								}" style="display: block; max-width: 100%; height: auto;" loading="lazy">
-								</a>
+											<a href="${getCategoryLink(categories[0].href)}">
+												<img src="${
+                          links[`TopImage2_Text`]
+                        }" style="display: block; max-width: 100%; height: auto;" loading="lazy"/>
+											</a>
 							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 
-			${introCTA}
+			<tr>
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
 
-			${categoriesWithProducts
-        .map((category, index) => {
-          const prod = category.products;
-
-          return `
-					<!-- prod-0 -->
-					${ImageWithLink({
-            href: prod[0].href,
-            src: prod[0].src,
-            insideRow: true,
-          })}
-
-					<!-- prod-1 --->
-					<tr>
-						<td>
-							<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-								<tr>
-					${index % 2 === 0 ? `
-						<td align="left" width="40.31%">
+						<tr>
+								<td align="center">
+										<a href="${getCategoryLink(categories[0].href)}" style="color:#000; text-decoration: underline;">
+												<span class="newsletterCta" style="font-size: 20px; line-height: 1.20;">${getPhrase(
+                          'Shop now'
+                        )}</span>
+										</a>
+								</td>
+						</tr>
 						
-							<a href="${getCategoryLink(category.href)}" style="display: block; text-decoration: none;">
-								<img src="${
-									links[`Paragraph_${index + 1}`]
-								}" style="display: block; max-width: 100%; height: auto;" loading="lazy">
-							</a>
-						</td>
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom60px' })}
+								</td>
+						</tr>
 
-						<td align="right" valign="top" width="59.69%">
-							${ImageWithLink({
-								href: prod[1].href,
-								src: prod[1].src,
-							})}
-						</td>
-						` :
-						`
-						<td align="left" valign="top" width="59.69%">
-							${ImageWithLink({
-								href: prod[1].href,
-								src: prod[1].src,
-							})}
-						</td>
+					</table>
+				</td>
+			</tr>
 
-						<td align="right" width="40.31%">
-							<a href="${getCategoryLink(category.href)}" style="display: block; text-decoration: none;">
-								<img src="${
-									links[`Paragraph_${index + 1}`]
-								}" style="display: block; max-width: 100%; height: auto;" loading="lazy">
-							</a>
-						</td>
+			<tr>
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+
+
+						${ImageWithLink({
+              href: categoriesWithProducts[0].products[0].href,
+              src: categoriesWithProducts[0].products[0].src,
+              insideRow: true,
+            })}
 						
-						`
-					
-					
-					}
 
-								</tr>
-							</table>
-						</td>
-					</tr>
-
-									
-					
-
-					<tr>
-						${
-              prod.length > 3
-                ? `
-							<td align="center">
-								<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
 									<tr>
-										<td align="center">${ImageWithLink({ href: prod[2].href, src: prod[2].src, insideRow: false })}</td>
-										<td align="center">${ImageWithLink({ href: prod[3].href, src: prod[3].src, insideRow: false })}</td>
+										<td>
+											<a href="${getCategoryLink(categories[1].href)}">
+												<img src="${
+                          links[`Paragraph_1`]
+                        }" style="display: block; max-width: 100%; height: auto;" loading="lazy"/>
+											</a>
+										</td>
+
+										<td valign="top" align="right">
+											${ImageWithLink({
+                        href: categoriesWithProducts[0].products[1].href,
+                        src: categoriesWithProducts[0].products[1].src,
+                      })}
+										</td>
 									</tr>
 								</table>
 							</td>
-						`
-                : `
-							<td align="center">
-								${ImageWithLink({
-                  href: prod[2].href,
-                  src: prod[2].src,
-                  insideRow: false,
-                })}
+						</tr>
+
+						<tr>
+								<td align="center">
+										<a href="${getCategoryLink(categories[1].href)}" style="color:#000; text-decoration: underline;">
+												<span class="newsletterCta" style="font-size: 20px; line-height: 1.20;">${getPhrase(
+                          'Shop now'
+                        )}</span>
+										</a>
+								</td>
+						</tr>
+						
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom60px' })}
+								</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+
+
+			<tr>
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+
+						${ImageWithLink({
+              href: categoriesWithProducts[1].products[0].href,
+              src: categoriesWithProducts[1].products[0].src,
+              insideRow: true,
+            })}
+
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+									<tr>
+										<td valign="top" align="left">
+											${ImageWithLink({
+                        href: categoriesWithProducts[1].products[1].href,
+                        src: categoriesWithProducts[1].products[1].src,
+                      })}
+										</td>
+										
+										<td>
+											<a href="${getCategoryLink(categories[2].href)}">
+												<img src="${
+                          links[`Paragraph_2`]
+                        }" style="display: block; max-width: 100%; height: auto;" loading="lazy"/>
+											</a>
+										</td>
+									</tr>
+								</table>
 							</td>
-						`
-            }
-					</tr>
+						</tr>
 
-					<tr>
-						<td>
-					${CTA({
-            text: getPhrase('Shop now'),
-            href: getCategoryLink(category.href),
-            spaceBefore: true,
-            spaceAfter: { class: 'newsletterBottom60px' },
-          })}
-					</td>
-					</tr>
+						<tr>
+								<td align="center">
+										<a href="${getCategoryLink(categories[2].href)}" style="color:#000; text-decoration: underline;">
+												<span class="newsletterCta" style="font-size: 20px; line-height: 1.20;">${getPhrase(
+                          'Shop now'
+                        )}</span>
+										</a>
+								</td>
+						</tr>
+						
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom60px' })}
+								</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
 
-				`;
-        })
-        .join('')}
+
+
+
+			<tr>
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+
+						${ImageWithLink({
+              href: categoriesWithProducts[2].products[0].href,
+              src: categoriesWithProducts[2].products[0].src,
+              insideRow: true,
+            })}
+
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+									<tr>
+										<td>
+											<a href="${getCategoryLink(categories[3].href)}">
+												<img src="${
+                          links[`Paragraph_3`]
+                        }" style="display: block; max-width: 100%; height: auto;" loading="lazy"/>
+											</a>
+										</td>
+
+										<td valign="top" align="right">
+											${ImageWithLink({
+                        href: categoriesWithProducts[2].products[1].href,
+                        src: categoriesWithProducts[2].products[1].src,
+                      })}
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+								<tr>
+									<td>
+										${ImageWithLink({
+                      href: categoriesWithProducts[2].products[2].href,
+                      src: categoriesWithProducts[2].products[2].src,
+                    })}
+									</td>
+
+									<td>
+										${ImageWithLink({
+                      href: categoriesWithProducts[2].products[3].href,
+                      src: categoriesWithProducts[2].products[3].src,
+                    })}
+									</td>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom35px' })}
+								</td>
+						</tr>
+
+						<tr>
+								<td align="center">
+										<a href="${getCategoryLink(categories[3].href)}" style="color:#000; text-decoration: underline;">
+												<span class="newsletterCta" style="font-size: 20px; line-height: 1.20;">${getPhrase(
+                          'Shop now'
+                        )}</span>
+										</a>
+								</td>
+						</tr>
+						
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom60px' })}
+								</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
 
 		</table>
 
@@ -402,6 +513,7 @@ export async function bDoubleTopImage({
 					</tr>
 			</tbody>
 		</table>
+
 
 		${footer}
 	`;

@@ -6,8 +6,8 @@ export const CTA = ({ align = 'center', spaceBefore, spaceAfter, text, href }) =
 
   const ctaInner = `
 		<td width="100%" style="text-align: center; color: #000000; text-decoration: underline;">
-			<a href="${href}" style="color: #000000; display: block;" class="newsletterCta" >
-				${text}
+			<a href="${href}" style="color: #000; text-decoration: underline;">
+				<span class="newsletterCta">${text}</span>
 			</a>
 		</td>
 	`;

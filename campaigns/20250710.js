@@ -26,7 +26,7 @@ const categories = [
     products: [
       {
         id: 571884,
-        src: getImageUrl('b20250710_Cat_1_Prod_1.png', true),
+        src: getImageUrl('c20250710_cat1.png', true),
       },
       {
         id: 383878,
@@ -49,7 +49,7 @@ const categories = [
     products: [
       {
         id: 158160,
-        src: getImageUrl('b20250710_Cat_2_Prod_1.png', true),
+        src: getImageUrl('c20250710_cat2.png', true),
       },
       {
         id: 198618,
@@ -72,7 +72,7 @@ const categories = [
     products: [
       {
         id: 584780,
-        src: getImageUrl('b20250710_Cat_3_Prod_1.png', true),
+        src: getImageUrl('c20250710_cat3.png', true),
       },
       {
         id: 618043,
@@ -120,7 +120,7 @@ const links = {
   TopImageTitle_href: translateLink('content/lp25-07-10'),
   TopImageTitle_src: translateImage('20250710_TopImageTitle.png'),
 
-  TopImage: getImageUrl('b20250710_TopImage.png', true),
+  TopImage: getImageUrl('c20250710_topimage.png', true),
   TopImage2: getImageUrl('20250710_TopImage_2.png', true),
 
 	TopImage2_Text: translateImage('20250710_intro_text.png'),

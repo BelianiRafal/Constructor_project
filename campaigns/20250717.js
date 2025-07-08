@@ -44,25 +44,25 @@ const categories = [
     name: 'Lemon Glow',
     background: '#FEBC66',
     color: '#000',
-    src: getImageUrl('20250717_Cat_1.png'), // <--- that way image doesn't change based on country
+    src: getImageUrl('20250717final_Cat_1.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/dining-room-furniture/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
         id: 178967,
-        src: getImageUrl('20250717_Cat_1_Prod_1.png', true),
+        src: getImageUrl('20250717final_Cat_1_Prod_1.png', true),
       },
       {
         id: 442616,
-        src: getImageUrl('20250717_Cat_1_Prod_2.png', true),
+        src: getImageUrl('20250717final_Cat_1_Prod_2.png', true),
       },
       {
         id: 317927,
-        src: getImageUrl('20250717_Cat_1_Prod_3.png', true),
+        src: getImageUrl('20250717final_Cat_1_Prod_3.png', true),
       },
       {
         id: 314390,
-        src: getImageUrl('20250717_Cat_1_Prod_4.png', true),
+        src: getImageUrl('20250717final_Cat_1_Prod_4.png', true),
       },
     ],
   },
@@ -71,25 +71,25 @@ const categories = [
     name: 'Retro Vibes',
     background: '#FFB6A6',
     color: '#000',
-    src: getImageUrl('20250717_Cat_2.png'), // <--- that way image doesn't change based on country
+    src: getImageUrl('20250717final_Cat_2.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/dining-room-furniture/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
         id: 76525,
-        src: getImageUrl('20250717_Cat_2_Prod_1.png', true),
+        src: getImageUrl('20250717final_Cat_2_Prod_1.png', true),
       },
       {
         id: 173522,
-        src: getImageUrl('20250717_Cat_2_Prod_2.png', true),
+        src: getImageUrl('20250717final_Cat_2_Prod_2.png', true),
       },
       {
         id: 346545,
-        src: getImageUrl('20250717_Cat_2_Prod_3.png', true),
+        src: getImageUrl('20250717final_Cat_2_Prod_3.png', true),
       },
       {
         id: 211144,
-        src: getImageUrl('20250717_Cat_2_Prod_4.png', true),
+        src: getImageUrl('20250717final_Cat_2_Prod_4.png', true),
       },
     ],
   },
@@ -98,25 +98,25 @@ const categories = [
     name: 'Lisbon Light',
     background: '#FEBC66',
     color: '#000',
-    src: getImageUrl('20250717_Cat_3.png'), // <--- that way image doesn't change based on country
+    src: getImageUrl('20250717final_Cat_3.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/dining-room-furniture/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
         id: 334668,
-        src: getImageUrl('20250717_Cat_3_Prod_1.png', true),
+        src: getImageUrl('20250717final_Cat_3_Prod_1.png', true),
       },
       {
         id: 427307,
-        src: getImageUrl('20250717_Cat_3_Prod_2.png', true),
+        src: getImageUrl('20250717final_Cat_3_Prod_2.png', true),
       },
       {
         id: 372810,
-        src: getImageUrl('20250717_Cat_3_Prod_3.png', true),
+        src: getImageUrl('20250717final_Cat_3_Prod_3.png', true),
       },
       {
         id: 343615,
-        src: getImageUrl('20250717_Cat_3_Prod_4.png', true),
+        src: getImageUrl('20250717final_Cat_3_Prod_4.png', true),
       },
     ],
   },
@@ -125,25 +125,25 @@ const categories = [
     name: 'Wabi-sabi Dining',
     background: '#FFB6A6',
     color: '#000',
-    src: getImageUrl('20250717_Cat_4.png'), // <--- that way image doesn't change based on country
+    src: getImageUrl('20250717final_Cat_4.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/dining-room-furniture/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
         id: 405175,
-        src: getImageUrl('20250717_Cat_4_Prod_1.png', true),
+        src: getImageUrl('20250717final_Cat_4_Prod_1.png', true),
       },
       {
         id: 398757,
-        src: getImageUrl('20250717_Cat_4_Prod_2.png', true),
+        src: getImageUrl('20250717final_Cat_4_Prod_2.png', true),
       },
       {
         id: 363754,
-        src: getImageUrl('20250717_Cat_4_Prod_3.png', true),
+        src: getImageUrl('20250717final_Cat_4_Prod_3.png', true),
       },
       {
         id: 432762,
-        src: getImageUrl('20250717_Cat_4_Prod_4.png', true),
+        src: getImageUrl('20250717final_Cat_4_Prod_4.png', true),
       },
     ],
   },
@@ -193,25 +193,25 @@ const links = {
   Banner_2: translateLink('content/lp25-07-09'),
   Banner_2_Image: translateImage('20250709b.png'),
 
-	cat1a_src: getImageUrl('20250717_Cat_1a.png', true),
-	cat1b_src: getImageUrl('20250717_Cat_1b.png', true),
-	cat1c_src: getImageUrl('20250717_Cat_1c.png', true),
-	cat1d_src: getImageUrl('20250717_Cat_1d.png', true),
+	cat1a_src: getImageUrl('20250717final_Cat_1a.png', true),
+	cat1b_src: getImageUrl('20250717final_Cat_1b.png', true),
+	cat1c_src: getImageUrl('20250717final_Cat_1c.png', true),
+	cat1d_src: getImageUrl('20250717final_Cat_1d.png', true),
 
-	cat2a_src: getImageUrl('20250717_Cat_2a.png', true),
-	cat2b_src: getImageUrl('20250717_Cat_2b.png', true),
-	cat2c_src: getImageUrl('20250717_Cat_2c.png', true),
-	cat2d_src: getImageUrl('20250717_Cat_2d.png', true),
+	cat2a_src: getImageUrl('20250717final_Cat_2a.png', true),
+	cat2b_src: getImageUrl('20250717final_Cat_2b.png', true),
+	cat2c_src: getImageUrl('20250717final_Cat_2c.png', true),
+	cat2d_src: getImageUrl('20250717final_Cat_2d.png', true),
 
-	cat3a_src: getImageUrl('20250717_Cat_3a.png', true),
-	cat3b_src: getImageUrl('20250717_Cat_3b.png', true),
-	cat3c_src: getImageUrl('20250717_Cat_3c.png', true),
-	cat3d_src: getImageUrl('20250717_Cat_3d.png', true),
+	cat3a_src: getImageUrl('20250717final_Cat_3a.png', true),
+	cat3b_src: getImageUrl('20250717final_Cat_3b.png', true),
+	cat3c_src: getImageUrl('20250717final_Cat_3c.png', true),
+	cat3d_src: getImageUrl('20250717final_Cat_3d.png', true),
 
-	cat4a_src: getImageUrl('20250717_Cat_4a.png', true),
-	cat4b_src: getImageUrl('20250717_Cat_4b.png', true),
-	cat4c_src: getImageUrl('20250717_Cat_4c.png', true),
-	cat4d_src: getImageUrl('20250717_Cat_4d.png', true),
+	cat4a_src: getImageUrl('20250717final_Cat_4a.png', true),
+	cat4b_src: getImageUrl('20250717final_Cat_4b.png', true),
+	cat4c_src: getImageUrl('20250717final_Cat_4c.png', true),
+	cat4d_src: getImageUrl('20250717final_Cat_4d.png', true),
 };
 
 const TopImageTitle_data = {

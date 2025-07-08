@@ -2,7 +2,6 @@ import { Header } from '../../components/header.js';
 import {
   ImageWithLink_new as ImageWithLink,
   ImageWithText,
-  Footer,
   CTA,
   Intro,
   Line,
@@ -10,6 +9,8 @@ import {
   Timer,
   Space,
 } from '../../components/components_remake/_index.js';
+
+import { Footer } from '../../components/footer.js';
 
 export async function UniversalTemplate({
   TopImageTitle_data,
@@ -200,7 +201,7 @@ export async function UniversalTemplate({
 								<!-- START A -->
 								<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${cat_styles}">
 									<tr width="100%">
-										<td width="30%" valign="top">
+										<td valign="top">
 											${ImageWithLink({
 												href: prod[0].href,
 												src: prod[0].src,
@@ -209,10 +210,10 @@ export async function UniversalTemplate({
 											})}
 										</td>
 										
-										<td width="70%" rowspan="2">
+										<td >
 											${ImageWithLink({
 												src: links[`cat${index+1}a_src`],
-												href: category.href,
+												href: getCategoryLink(category.href),
 												alt: queries['categories'][index],
 												align: 'right'
 											})}
@@ -223,7 +224,7 @@ export async function UniversalTemplate({
 								<!-- START B -->
 								<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${cat_styles}">
 									<tr width="100%">
-										<td width="30%" valign="top">
+										<td valign="top">
 											${ImageWithLink({
 												href: prod[1].href,
 												src: prod[1].src,
@@ -232,10 +233,10 @@ export async function UniversalTemplate({
 											})}
 										</td>
 										
-										<td width="70%" rowspan="2">
+										<td >
 											${ImageWithLink({
 												src: links[`cat${index+1}b_src`],
-												href: category.href,
+												href: getCategoryLink(category.href),
 												alt: queries['categories'][index],
 												align: 'right'
 											})}
@@ -246,7 +247,7 @@ export async function UniversalTemplate({
 								<!-- START C -->
 								<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${cat_styles}">
 									<tr width="100%">
-										<td width="30%" valign="top">
+										<td valign="top">
 											${ImageWithLink({
 												href: prod[2].href,
 												src: prod[2].src,
@@ -255,10 +256,10 @@ export async function UniversalTemplate({
 											})}
 										</td>
 										
-										<td width="70%" rowspan="2">
+										<td >
 											${ImageWithLink({
 												src: links[`cat${index+1}c_src`],
-												href: category.href,
+												href: getCategoryLink(category.href),
 												alt: queries['categories'][index],
 												align: 'right'
 											})}
@@ -269,7 +270,7 @@ export async function UniversalTemplate({
 								<!-- START D -->
 								<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${cat_styles}">
 									<tr width="100%">
-										<td width="30%" valign="top">
+										<td valign="top">
 											${ImageWithLink({
 												href: prod[3].href,
 												src: prod[3].src,
@@ -278,10 +279,10 @@ export async function UniversalTemplate({
 											})}
 										</td>
 										
-										<td width="70%" rowspan="2">
+										<td >
 											${ImageWithLink({
 												src: links[`cat${index+1}d_src`],
-												href: category.href,
+												href: getCategoryLink(category.href),
 												alt: queries['categories'][index],
 												align: 'right'
 											})}

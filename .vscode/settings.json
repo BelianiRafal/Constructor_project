@@ -1,5 +1,8 @@
 {
   "liveServer.settings.port": 5500,
   "cSpell.words": ["Iconify"],
-  "javascript.validate.enable": false
+	"javascript.validate.enable": false,
+	"vite.port": 5500,
+	"vite.showTerminal": true,
+	"vite.vitepress": false
 }
