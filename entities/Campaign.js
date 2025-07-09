@@ -1,5 +1,7 @@
 export class Campaign {
   startId;
+  lpId;
+  specialLpIds;
   name;
   date;
   alarm;
@@ -9,6 +11,7 @@ export class Campaign {
   isArchive;
   products;
   figmaUrl;
+  version;
   constructor({
     date,
     data,
@@ -19,8 +22,11 @@ export class Campaign {
     isArchive,
     optimizeImg,
     startId,
+    lpId,
+    specialLpIds = null,
     templates,
     figmaUrl,
+    version = "old",
   }) {
     if (!Array.isArray(templates)) {
       throw new Error("templates property should be array");
@@ -47,7 +53,9 @@ export class Campaign {
     this.date = date;
     this.issueCardId = issueCardId || null;
     this.name = name;
-    this.startId = startId
+    this.startId = startId;
+    this.lpId = lpId || null;
+    this.specialLpIds = specialLpIds || null;
     this.templates = templates;
     this.alarm = {
       isActive: alarm?.isActive || false,
@@ -58,5 +66,6 @@ export class Campaign {
     this.isArchive = isArchive || false;
     this.products = products || null;
     this.figmaUrl = figmaUrl || null;
+    this.version = version || "old";
   }
 }
