@@ -254,11 +254,11 @@ export async function bDoubleTopImage({
 							</td>
 
 							<td align="right" width="40.31%">
-											<a href="${getCategoryLink(categories[0].href)}">
-												<img src="${
-                          links[`TopImage2_Text`]
-                        }" style="display: block; max-width: 100%; height: auto;" loading="lazy"/>
-											</a>
+								<a href="${getCategoryLink(categories[0].href)}">
+									<img src="${
+										links[`TopImage2_Text`]
+									}" style="display: block; max-width: 100%; height: auto;" loading="lazy"/>
+								</a>
 							</td>
 						</tr>
 					</table>
@@ -325,6 +325,27 @@ export async function bDoubleTopImage({
 						</tr>
 
 						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+								<tr>
+									<td align="center">
+										${ImageWithLink({
+                      href: categoriesWithProducts[0].products[2].href,
+                      src: categoriesWithProducts[0].products[2].src,
+                    })}
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom35px' })}
+								</td>
+						</tr>
+
+						<tr>
 								<td align="center">
 										<a href="${getCategoryLink(categories[1].href)}" style="color:#000; text-decoration: underline;">
 												<span class="newsletterCta" style="font-size: 20px; line-height: 1.20;">${getPhrase(
@@ -376,6 +397,27 @@ export async function bDoubleTopImage({
 									</tr>
 								</table>
 							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+								<tr>
+									<td align="center">
+										${ImageWithLink({
+                      href: categoriesWithProducts[1].products[2].href,
+                      src: categoriesWithProducts[1].products[2].src,
+                    })}
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+								<td>
+										${Space({ className: 'newsletterBottom35px' })}
+								</td>
 						</tr>
 
 						<tr>
@@ -437,14 +479,14 @@ export async function bDoubleTopImage({
 							<td>
 								<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
 								<tr>
-									<td>
+									<td align="center">
 										${ImageWithLink({
                       href: categoriesWithProducts[2].products[2].href,
                       src: categoriesWithProducts[2].products[2].src,
                     })}
 									</td>
 
-									<td>
+									<td align="center">
 										${ImageWithLink({
                       href: categoriesWithProducts[2].products[3].href,
                       src: categoriesWithProducts[2].products[3].src,
