@@ -1,4 +1,4 @@
-import { getState } from "../main/initApp.js";
+import { getState } from '../utils/stateManager.js';
 import { computeValue } from "./computeValue.js";
 
 export function addParams({ links }) {
@@ -48,12 +48,8 @@ export function addParamsProduct(product) {
       href: url.href,
     };
   } catch (error) {
-    Toastify({
-      text: "Product url parse error.",
-      escapeMarkup: false,
-      duration: 3000,
-    }).showToast();
-    return;
+    Toast.error("Product url parse error.");
+		return;
   }
 }
 
