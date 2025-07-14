@@ -7,19 +7,19 @@ const categories = [
   {
     products: [
       {
-        id: "81395",
+        id: "345800",
         src: "https://www.pictureserver.net/pic_storage/pic/2a/84/undef_src_sa_picid_706228_x_185_type_color_image.jpg?ver=41",
       },
       {
-        id: "81395",
+        id: "345800",
         src: "https://www.pictureserver.net/pic_storage/pic/ee/1a/undef_src_sa_picid_759944_x_185_type_color_image.jpg?ver=57",
       },
       {
-        id: "81395",
+        id: "345800",
         src: "https://www.pictureserver.net/pic_storage/pic/93/b2/undef_src_sa_picid_785038_x_185_type_color_image.jpg?ver=23",
       },
       {
-        id: "81395",
+        id: "345800",
         src: "https://www.pictureserver.net/pic_storage/pic/39/e7/undef_src_sa_picid_843614_x_185_type_color_image.jpg?ver=9",
       },
     ],
@@ -201,62 +201,27 @@ const links = [
 const tableQueries = [
   {
     tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder!",
+    tableName: "14.04.25 - March Peak reminder",
     tableRange: "12",
     name: "intro",
   },
   {
     tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder!",
+    tableName: "14.04.25 - March Peak reminder",
     tableRange: "21",
     name: "cta",
   },
   {
     tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder!",
+    tableName: "14.04.25 - March Peak reminder",
     tableRange: "25:26",
     name: "condition",
   },
   {
     tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder!",
+    tableName: "14.04.25 - March Peak reminder",
     tableRange: "13:20",
     name: "category",
-  },
-  {
-    tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
-    tableName: "Templates",
-    tableRange: "?majorDimension=COLUMNS",
-    name: "templates",
-    tableColumns: false,
-  },
-  {
-    tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
-    tableName: "Categories",
-    tableRange: "?majorDimension=COLUMNS",
-    name: "categoriesTitles",
-    tableColumns: false,
-  },
-  {
-    tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
-    tableName: "Categories",
-    tableRange: "?majorDimension=COLUMNS",
-    name: "categoriesLinks",
-    tableColumns: false,
-  },
-  {
-    tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
-    tableName: "Header",
-    tableRange: "?majorDimension=COLUMNS",
-    name: "header",
-    tableColumns: false,
-  },
-  {
-    tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
-    tableName: "Footer",
-    tableRange: "?majorDimension=COLUMNS",
-    name: "footer",
-    tableColumns: false,
   },
 ];
 
@@ -291,7 +256,10 @@ const landingTemplate = {
   tableQueries: tableQueries,
 };
 
+const campaignTranslationsSheet = "30.05.25 - Kid's day";
+
 export const test_campaign = new entities.Campaign({
+  translationsSpreadsheet: campaignTranslationsSheet,
   startId: "00000",
   name: "Test Campaign",
   date: "2025.05.30",

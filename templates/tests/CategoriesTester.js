@@ -291,8 +291,8 @@ export async function CategoriesTester({
           ? categories
               .map((category, index) =>
                 Category({
-                  name: category.name,
-                  href: category.href,
+                  name: getCategoryTitle(category.name),
+                  href: getCategoryLink(category.href),
                   src: category.src,
                   products: category.products?.map((item) =>
                     getProductById(item.id, item.src)

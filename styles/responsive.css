@@ -1,0 +1,100 @@
+/* Hamburger menu styles for responsive design */
+@media screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .container #panel {
+		position: absolute;
+		left: -100%;
+		top: 0;
+		bottom: 0;
+		width: 80%;
+		max-width: 320px;
+		background: #ffffff;
+		z-index: 999;
+		box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+		transition: left 0.3s ease;
+		overflow-y: auto;
+  }
+  
+  .container #panel.open {
+    left: 0;
+		overflow: visible;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: #F9F9F9;
+    border: 1px solid rgba(168, 168, 168, 0.25);
+    box-shadow: 0 4px 36px rgba(191, 191, 191, 0.25);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .hamburger-menu svg {
+    color: rgba(40, 40, 40, 0.75);
+    width: 24px;
+    height: 24px;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+  /* Close button inside panel */
+  .menu-close {
+		position: absolute;
+		z-index: 5;
+		color: rgba(40, 40, 40, 0.75);
+		font-family: "Poppins", sans-serif;
+		border: 1px solid rgba(168, 168, 168, 0.25);
+		background: #F9F9F9;
+		box-shadow: 0 4px 36px rgba(191, 191, 191, 0.25);
+		border-radius: 24px;
+		padding: 2px;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+  }
+  
+  .menu-close svg {
+    color: rgba(40, 40, 40, 0.75);
+  }
+}
+
+/* Display hamburger menu only below 1000px */
+@media screen and (min-width: 1001px) {
+  .hamburger-menu, 
+  .menu-close,
+  .overlay {
+    display: none !important;
+  }
+}
