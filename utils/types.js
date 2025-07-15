@@ -981,6 +981,10 @@ export default {
   }
   `,
     LP: `
+					#newsletter .newsletterMarginBottom20px {
+						margin-bottom: 20px;
+					}		
+				
 					#newsletter .newsletterSubtitleTimer {
             font-size: 30px;
             line-height: 1.25;
@@ -1217,6 +1221,10 @@ export default {
           }
           
           @media screen and (max-width: 768px) {
+						#newsletter .newsletterMarginBottom20px {
+							margin-bottom: 10px;
+						}
+
             #newsletter .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
             }
