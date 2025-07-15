@@ -19,13 +19,29 @@ export const fetchTranslations = async ({ tableName, tableQueries }) => {
   }
   const promises = [];
   for (const query of tableQueries) {
-    const queryWithAdjustedRange = adjustTableRangeToCountry(query, tableColumn.tableColumn);
-    // Ensure tableName is set for each query
-    const finalQuery = {
-      ...queryWithAdjustedRange,
-      tableName: queryWithAdjustedRange.tableName || tableName,
-    };
-    promises.push(finalQuery);
+    try {
+      const queryWithAdjustedRange = adjustTableRangeToCountry(query, tableColumn.tableColumn);
+      // Ensure tableName is set for each query, and preserve tableId if provided
+      const finalQuery = {
+        ...queryWithAdjustedRange,
+        tableName: queryWithAdjustedRange.tableName || tableName,
+        // Use tableId from query if provided, otherwise use default campaign translations sheet
+        tableId: queryWithAdjustedRange.tableId || TRANSLATIONS_SHEET_2025,
+      };
+      
+      // Validate that we have required fields
+      if (!finalQuery.tableId) {
+        throw new Error(`Missing tableId for query: ${JSON.stringify(query)}`);
+      }
+      if (!finalQuery.tableName) {
+        throw new Error(`Missing tableName for query: ${JSON.stringify(query)}`);
+      }
+      
+      promises.push(finalQuery);
+    } catch (error) {
+      Toast.error(`Error processing query ${JSON.stringify(query)}: ${error.message}`);
+      throw error;
+    }
   }
 
   const promisesResult = await Promise.allSettled(
@@ -70,12 +86,15 @@ export const fetchTranslations = async ({ tableName, tableQueries }) => {
 };
 
 export async function getTranslations({
-  tableId = TRANSLATIONS_SHEET_2025,
+  tableId,
   tableName,
   tableRange,
   fallback = ['Translations not found'],
   name,
 }) {
+  if (!tableId) {
+    throw new Error('No tableId provided to getTranslations.');
+  }
   if (!tableName) {
     throw new Error('No tableName provided to getTranslations.');
   }
