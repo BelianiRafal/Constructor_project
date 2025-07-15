@@ -429,16 +429,16 @@ export async function mondayRegularNslt({
                     <tr>
                       <td align="left" class="newsletterBottom20px">
                         ${ImageWithLink({
-                          href: links[links.length - 4], // Przedostatnia para linków (href)
-                          src: links[links.length - 3],  // Przedostatnia para linków (src)
+                          href: links[Object.keys(links).length - 4], // Przedostatnia para linków (href)
+                          src: links[Object.keys(links).length - 3],  // Przedostatnia para linków (src)
                         })}
                       </td>
                     </tr>
                     <tr>
                       <td align="left" class="newsletterBottom35px">
                         ${ImageWithLink({
-                          href: links[links.length - 2], // Ostatnia para linków (href)
-                          src: links[links.length - 1],  // Ostatnia para linków (src)
+                          href: links[Object.keys(links).length - 2], // Ostatnia para linków (href)
+                          src: links[Object.keys(links).length - 1],  // Ostatnia para linków (src)
                         })}
                       </td>
                     </tr>

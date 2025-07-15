@@ -2,6 +2,8 @@ import { templates } from "../templates/index.js";
 import { entities } from "../entities/index.js";
 import { getImageUrl } from "../utils/getImageUrl.js";
 import types from "../utils/types.js";
+import translateLink from "../helpers/translateLink.js";
+import translateImage from "../helpers/translateImage.js";
 
 const categories = [
   {
@@ -150,59 +152,16 @@ const categories = [
   },
 ];
 
-const links = [
-  {
-    query: true,
-    href: {
-      type: "relation",
-      relyOn: "origin",
-      placeholderPosition: "0",
-      value: "content/lp25-06-02",
-    },
-  },
-  {
-    src: {
-      type: "relation",
-      relyOn: "slug",
-      placeholderPosition: "38",
-      value: getImageUrl("20250602_gif.gif", true),
-    },
-  },
-  {
-    query: true,
-    href: {
-      type: "relation",
-      relyOn: "origin",
-      placeholderPosition: "0",
-      value: "content/lp25-05-15",
-    },
-  },
-  {
-    src: {
-      type: "relation",
-      relyOn: "slug",
-      placeholderPosition: "38",
-      value: getImageUrl("20250515b.png", true),
-    },
-  },
-  {
-    query: true,
-    href: {
-      type: "relation",
-      relyOn: "origin",
-      placeholderPosition: "0",
-      value: "content/lp25-05-14",
-    },
-  },
-  {
-    src: {
-      type: "relation",
-      relyOn: "slug",
-      placeholderPosition: "38",
-      value: getImageUrl("20250514b.png", true),
-    },
-  },
-];
+const links = {
+  0: translateLink({ value: "content/lp25-06-02" }),
+  // 1: getImageUrl("20250602_gif.gif", true),
+  // ^ this way image doesn't change based on country
+  1: translateImage({ value: "20250602_gif.gif" }),
+  2: translateLink({ value: "content/lp25-05-15" }),
+  3: translateImage({ value: "20250515b.png" }),
+  4: translateLink({ value: "content/lp25-05-14" }),
+  5: translateImage({ value: "20250514b.png" }),
+};
 
 const tableQueries = [
   {

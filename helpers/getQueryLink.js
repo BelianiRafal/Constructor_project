@@ -1,34 +1,79 @@
 import { getState } from '../utils/stateManager.js';
 import { computeValue } from "./computeValue.js";
+import Toast from "../utils/toasts.js";
 
 export function addParams({ links }) {
   const country = getState("country");
   const template = getState("template");
   const ids = getState("ids");
 
-  return links.map((link) => {
-    if ("value" in link) {
-      return link.value;
-    }
-
-    let newValue = "";
-    let value = "src" in link ? link.src : link.href;
-    if ("type" in value) {
-      newValue = computeValue({ ...link });
-    }
-
-    if ("query" in newValue) {
-      const url = new URL(newValue.href);
-      if (template.type === "newsletter") {
-        url.searchParams.set("utm_source", "newsletter");
-        url.searchParams.set("utm_medium", "email");
-        url.searchParams.set("utm_campaign", ids[country]);
+  // If links is an array (old format), process as before
+  if (Array.isArray(links)) {
+    return links.map((link) => {
+      if ("value" in link) {
+        return link.value;
       }
-      newValue = url;
+
+      let newValue = "";
+      let value = "src" in link ? link.src : link.href;
+      if ("type" in value) {
+        newValue = computeValue({ ...link });
+      }
+
+      if ("query" in newValue) {
+        const url = new URL(newValue.href);
+        if (template.type === "newsletter") {
+          url.searchParams.set("utm_source", "newsletter");
+          url.searchParams.set("utm_medium", "email");
+          url.searchParams.set("utm_campaign", ids[country]);
+        }
+        newValue = url;
+      }
+
+      return "src" in newValue ? newValue.src : newValue.href;
+    });
+  }
+
+  // If links is an object (new format), process each property
+  const processedLinks = {};
+  for (const [key, link] of Object.entries(links)) {
+    // If it's a simple value (string), just use it
+    if (typeof link === 'string') {
+      processedLinks[key] = link;
+      continue;
     }
 
-    return "src" in newValue ? newValue.src : newValue.href;
-  });
+    // If it's an object with value property, use the value
+    if (typeof link === 'object' && "value" in link) {
+      processedLinks[key] = link.value;
+      continue;
+    }
+
+    // Handle translateLink/translateImage objects directly
+    if (typeof link === 'object' && link !== null) {
+      let newValue = computeValue(link);
+
+      // If newValue has query property, add UTM parameters for newsletter
+      if (typeof newValue === 'object' && "query" in newValue) {
+        const url = new URL(newValue.href);
+        if (template.type === "newsletter") {
+          url.searchParams.set("utm_source", "newsletter");
+          url.searchParams.set("utm_medium", "email");
+          url.searchParams.set("utm_campaign", ids[country]);
+        }
+        processedLinks[key] = url.href;
+      } else {
+        // For images and other objects, return the src or the object itself
+        processedLinks[key] = typeof newValue === 'object' && "src" in newValue ? newValue.src : newValue;
+      }
+      continue;
+    }
+
+    // Fallback for other cases
+    processedLinks[key] = link;
+  }
+
+  return processedLinks;
 }
 
 export function addParamsProduct(product) {
@@ -49,7 +94,7 @@ export function addParamsProduct(product) {
     };
   } catch (error) {
     Toast.error("Product url parse error.");
-		return;
+    return;
   }
 }
 
