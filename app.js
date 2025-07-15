@@ -5,7 +5,6 @@ import { appjs_config as config } from "./utils/config.js";
 
 const root = document.querySelector("#app");
 
-
 try {
   initApp({
     campaigns: loaded_campaigns,

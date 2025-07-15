@@ -5,125 +5,148 @@ import types from "../utils/types.js";
 
 const categories = [
   {
-    products: [
-      {
-        id: "345800",
-        src: "https://www.pictureserver.net/pic_storage/pic/2a/84/undef_src_sa_picid_706228_x_185_type_color_image.jpg?ver=41",
-      },
-      {
-        id: "345800",
-        src: "https://www.pictureserver.net/pic_storage/pic/ee/1a/undef_src_sa_picid_759944_x_185_type_color_image.jpg?ver=57",
-      },
-      {
-        id: "345800",
-        src: "https://www.pictureserver.net/pic_storage/pic/93/b2/undef_src_sa_picid_785038_x_185_type_color_image.jpg?ver=23",
-      },
-      {
-        id: "345800",
-        src: "https://www.pictureserver.net/pic_storage/pic/39/e7/undef_src_sa_picid_843614_x_185_type_color_image.jpg?ver=9",
-      },
-    ],
-    isCategoriesDB: true,
-    name: "Outdoor ",
+    isCategoriesDB: false,
+    name: "Outdoor",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat1.png", true),
+      value: getImageUrl("20250602Cat1.png", true),
     },
-    href: "https://www.beliani.ch/garden-furniture/outdoor-furniture/",
+    href: "https://www.beliani.ch/search/cardigan/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Living Room",
+    name: "Sofas",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat2.png", true),
+      value: getImageUrl("20250602Cat2.png", true),
     },
-    href: "https://www.beliani.ch/living-room-furniture/",
+    href: "https://www.beliani.ch/sofas/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Dining Room ",
+    name: "Beds",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat3.png", true),
+      value: getImageUrl("20250602Cat3.png", true),
     },
-    href: "https://www.beliani.ch/dining-room-furniture/",
+    href: "https://www.beliani.ch/beds/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Bedroom",
+    name: "Armchairs",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat4.png", true),
+      value: getImageUrl("20250602Cat4.png", true),
     },
-    href: "https://www.beliani.ch/bedroom-furniture/",
+    href: "https://www.beliani.ch/armchairs/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Hallway ",
+    name: "Chairs",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat5.png", true),
+      value: getImageUrl("20250602Cat5.png", true),
     },
-    href: "https://www.beliani.ch/hallway/",
+    href: "https://www.beliani.ch/chairs/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Bathroom",
+    name: "Tables",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat6.png", true),
+      value: getImageUrl("20250602Cat6.png", true),
     },
-    href: "https://www.beliani.ch/bathroom-furniture/",
+    href: "https://www.beliani.ch/tables/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Kids ",
+    name: "Storage",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat7.png", true),
+      value: getImageUrl("20250602Cat7.png", true),
     },
-    href: "https://www.beliani.ch/children-room/",
+    href: "https://www.beliani.ch/storage/",
   },
   {
-    type: "no_products",
     isCategoriesDB: true,
-    name: "Office",
+    name: "Textiles",
     background: "#FFCCB7",
     src: {
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414Cat8.png", true),
+      value: getImageUrl("20250602Cat8.png", true),
     },
-    href: "https://www.beliani.ch/office-furniture/",
+    href: "https://www.beliani.ch/textiles/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Bathtubs",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250602Cat9.png", true),
+    },
+    href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Desks",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250602Cat10.png", true),
+    },
+    href: "https://www.beliani.ch/office-furniture/desks-eng/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Rugs",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250602Cat11.png", true),
+    },
+    href: "https://www.beliani.ch/rugs/",
+  },
+  {
+    isCategoriesDB: true,
+    name: "Accessories",
+    background: "#FFCCB7",
+    src: {
+      type: "relation",
+      relyOn: "slug",
+      placeholderPosition: "38",
+      value: getImageUrl("20250602Cat12.png", true),
+    },
+    href: "https://www.beliani.ch/home-accessories/accessories-decor/",
   },
 ];
 
@@ -134,7 +157,7 @@ const links = [
       type: "relation",
       relyOn: "origin",
       placeholderPosition: "0",
-      value: "content/lp25-04-14",
+      value: "content/lp25-06-02",
     },
   },
   {
@@ -142,7 +165,7 @@ const links = [
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250303_01.png", true),
+      value: getImageUrl("20250602_gif.gif", true),
     },
   },
   {
@@ -151,7 +174,7 @@ const links = [
       type: "relation",
       relyOn: "origin",
       placeholderPosition: "0",
-      value: "content/lp25-04-14",
+      value: "content/lp25-05-15",
     },
   },
   {
@@ -159,7 +182,7 @@ const links = [
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250414_gif.gif", true),
+      value: getImageUrl("20250515b.png", true),
     },
   },
   {
@@ -168,7 +191,7 @@ const links = [
       type: "relation",
       relyOn: "origin",
       placeholderPosition: "0",
-      value: "content/lp25-04-04",
+      value: "content/lp25-05-14",
     },
   },
   {
@@ -176,59 +199,73 @@ const links = [
       type: "relation",
       relyOn: "slug",
       placeholderPosition: "38",
-      value: getImageUrl("20250404b.png", true),
-    },
-  },
-  {
-    query: true,
-    href: {
-      type: "relation",
-      relyOn: "origin",
-      placeholderPosition: "0",
-      value: "content/lp25-04-03",
-    },
-  },
-  {
-    src: {
-      type: "relation",
-      relyOn: "slug",
-      placeholderPosition: "38",
-      value: getImageUrl("20250403b.png", true),
+      value: getImageUrl("20250514b.png", true),
     },
   },
 ];
 
 const tableQueries = [
   {
-    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder",
-    tableRange: "12",
+    tableRange: "15",
     name: "intro",
   },
   {
-    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder",
-    tableRange: "21",
+    tableRange: "15",
+    name: "paragraph",
+  },
+  {
+    tableRange: "28",
     name: "cta",
   },
   {
-    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder",
-    tableRange: "25:26",
+    tableRange: "32:33",
     name: "condition",
   },
   {
-    tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-    tableName: "14.04.25 - March Peak reminder",
-    tableRange: "13:20",
-    name: "category",
+    tableRange: "16:27",
+    name: "categories",
+  },
+  {
+    tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+    tableName: "Templates",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "templates",
+    tableColumns: false,
+  },
+  {
+    tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+    tableName: "Categories",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "categoriesTitles",
+    tableColumns: false,
+  },
+  {
+    tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+    tableName: "Categories",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "categoriesLinks",
+    tableColumns: false,
+  },
+  {
+    tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+    tableName: "Header",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "header",
+    tableColumns: false,
+  },
+  {
+    tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+    tableName: "Footer",
+    tableRange: "?majorDimension=COLUMNS",
+    name: "footer",
+    tableColumns: false,
   },
 ];
 
 const newsletterTemplate = {
   name: "Newsletter",
   type: types.NEWSLETTER,
-  template: templates.CategoriesTester,
+  template: templates.mondayRegularNslt,
   background: "#FFCCB7",
   wrapper: types.WRAPPER,
   css: types.CSS.NS,
@@ -244,7 +281,7 @@ const newsletterTemplate = {
 const landingTemplate = {
   name: "Landing",
   type: types.LANDINGPAGE,
-  template: templates.CategoriesTester,
+  template: templates.mondayRegularNslt,
   background: "#FFCCB7",
   css: types.CSS.LP,
   intro: {
@@ -256,16 +293,21 @@ const landingTemplate = {
   tableQueries: tableQueries,
 };
 
-const campaignTranslationsSheet = "30.05.25 - Kid's day";
+const campaignTranslationsSheet = "02.06.25 - Beliani Birthday Start";
 
 export const test_campaign = new entities.Campaign({
-  translationsSpreadsheet: campaignTranslationsSheet,
-  startId: "00000",
-  name: "Test Campaign",
-  date: "2025.05.30",
-  issueCardId: "373633",
-  figmaUrl: "https://www.figma.com/design/8GAjaJthNDBZ4lmRYLah23",
+  startId: "29760",
+  name: "Beliani Birthday Start",
+  date: "2025.06.02",
+  issueCardId: "359284",
+  figmaUrl:
+    "https://www.figma.com/design/fu1KpVQ9E8u07abWbbUa4w/Beliani-Birthday-start---Monday-2025.06.02--Copy-?t=Wl9NAacsA1p65rAf-0",
   optimizeImg: false,
+  single_image: true,
+  soon_banners: true,
+  white_line: false,
+  full_img_width: false,
+  translationsSpreadsheet: campaignTranslationsSheet,
   alarm: {
     isActive: false,
   },
