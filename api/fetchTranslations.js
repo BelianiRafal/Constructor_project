@@ -17,72 +17,94 @@ export const fetchTranslations = async ({ tableName, tableQueries }) => {
     Toast.error(`Table column is empty`);
     return;
   }
-  const promises = [];
+
+  // Group queries by tableId and tableName
+  const groupedQueries = {};
+  
   for (const query of tableQueries) {
     try {
       const queryWithAdjustedRange = adjustTableRangeToCountry(query, tableColumn.tableColumn);
-      // Ensure tableName is set for each query, and preserve tableId if provided
-      const finalQuery = {
-        ...queryWithAdjustedRange,
-        tableName: queryWithAdjustedRange.tableName || tableName,
-        // Use tableId from query if provided, otherwise use default campaign translations sheet
-        tableId: queryWithAdjustedRange.tableId || TRANSLATIONS_SHEET_2025,
-      };
+      
+      // Determine final tableId and tableName for this query
+      const finalTableId = queryWithAdjustedRange.tableId || TRANSLATIONS_SHEET_2025;
+      const finalTableName = queryWithAdjustedRange.tableName || tableName;
       
       // Validate that we have required fields
-      if (!finalQuery.tableId) {
+      if (!finalTableId) {
         throw new Error(`Missing tableId for query: ${JSON.stringify(query)}`);
       }
-      if (!finalQuery.tableName) {
+      if (!finalTableName) {
         throw new Error(`Missing tableName for query: ${JSON.stringify(query)}`);
       }
       
-      promises.push(finalQuery);
+      // Create a unique key for grouping
+      const groupKey = `${finalTableId}:${finalTableName}`;
+      
+      // Initialize group if it doesn't exist
+      if (!groupedQueries[groupKey]) {
+        groupedQueries[groupKey] = {
+          tableId: finalTableId,
+          tableName: finalTableName,
+          queries: []
+        };
+      }
+      
+      // Add query to the group
+      groupedQueries[groupKey].queries.push({
+        ...queryWithAdjustedRange,
+        tableId: finalTableId,
+        tableName: finalTableName
+      });
+      
     } catch (error) {
       Toast.error(`Error processing query ${JSON.stringify(query)}: ${error.message}`);
       throw error;
     }
   }
 
-  const promisesResult = await Promise.allSettled(
-    promises.map((finalQuery) => getTranslations(finalQuery))
-  );
+  // Process each group separately
+  const allResults = [];
+  
+  for (const group of Object.values(groupedQueries)) {
+    const promisesResult = await Promise.allSettled(
+      group.queries.map((finalQuery) => getTranslations(finalQuery))
+    );
 
-  const computedPromise = [];
-  for (const { value } of promisesResult) {
-    if (value.error) {
-      switch (value.error.code) {
-        case 400:
-          throw new Error(value.error.message);
-        case 401:
-          setTimeout(() => {
-            GoogleAuth.login();
-          }, 3000);
-          throw new Error('Token will be updated in 3 seconds.');
-        case 429:
-          throw new Error('Too many requests. Please, try again later.');
-        case 503:
-          throw new Error('Service currently unavailable');
+    for (const { value } of promisesResult) {
+      if (value.error) {
+        switch (value.error.code) {
+          case 400:
+            throw new Error(value.error.message);
+          case 401:
+            setTimeout(() => {
+              GoogleAuth.login();
+            }, 3000);
+            throw new Error('Token will be updated in 3 seconds.');
+          case 429:
+            throw new Error('Too many requests. Please, try again later.');
+          case 503:
+            throw new Error('Service currently unavailable');
+        }
       }
-    }
 
-    if ('values' in value && value.values.length > 0) {
-      computedPromise.push({
-        data:
-          value.majorDimension === 'COLUMNS'
-            ? value.values
-            : normalizeTranslations(value.values, value.fallback, value.range),
-        name: value.name,
-      });
-    } else {
-      computedPromise.push({
-        data: value.fallback || undefined,
-        name: value.name,
-      });
+      if ('values' in value && value.values.length > 0) {
+        allResults.push({
+          data:
+            value.majorDimension === 'COLUMNS'
+              ? value.values
+              : normalizeTranslations(value.values, value.fallback, value.range),
+          name: value.name,
+        });
+      } else {
+        allResults.push({
+          data: value.fallback || undefined,
+          name: value.name,
+        });
+      }
     }
   }
 
-  return computedPromise;
+  return allResults;
 };
 
 export async function getTranslations({
@@ -98,22 +120,43 @@ export async function getTranslations({
   if (!tableName) {
     throw new Error('No tableName provided to getTranslations.');
   }
+  
   const token = localStorage.getItem('token');
-  // includeGridData
+  
   try {
-    const response = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${tableId}/values/${tableName}!${tableRange}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: 'Bearer ' + token,
-        },
-      }
-    );
+    // Handle special case where tableRange contains URL parameters
+    let url;
+    let range = tableRange;
+    
+    if (tableRange && tableRange.includes('?')) {
+      // Extract parameters from tableRange
+      const [rangesPart, paramsPart] = tableRange.split('?');
+      range = rangesPart || 'A:Z'; // Default range if empty
+      
+      // Build URL with parameters
+      url = `https://sheets.googleapis.com/v4/spreadsheets/${tableId}/values/${tableName}!${range}?${paramsPart}`;
+    } else {
+      // Regular range without parameters
+      url = `https://sheets.googleapis.com/v4/spreadsheets/${tableId}/values/${tableName}!${range}`;
+    }
+    
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+    });
+    
     const data = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(data.error?.message || `HTTP ${response.status}: ${response.statusText}`);
+    }
+    
     return { ...data, name, fallback };
   } catch (error) {
-    console.log(error);
+    console.log('Error in getTranslations:', error);
+    throw error;
   }
 }
