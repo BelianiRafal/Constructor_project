@@ -1,14 +1,14 @@
 import SHOPS from "./config/shops.js";
+import { loaded_campaigns } from "./loaded_campaigns.js";
 import { initApp } from "./main/initApp.js";
 import { appjs_config as config } from "./utils/config.js";
 
 const root = document.querySelector("#app");
 
-import { test_campaign } from "./campaigns/test_campaign.js";
 
 try {
   initApp({
-    campaigns: [test_campaign],
+    campaigns: loaded_campaigns,
     shops: SHOPS,
     config: config,
   });
