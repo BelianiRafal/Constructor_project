@@ -117,25 +117,25 @@ const tableQueries = [
 ];
 
 const links = {
-  TopImageTitle_href: translateLink('content/lp25-07-10'),
-  TopImageTitle_src: translateImage('20250710_TopImageTitle.png'),
+  TopImageTitle_href: translateLink({value:'content/lp25-07-10'}),
+  TopImageTitle_src: translateImage({value:'20250710_TopImageTitle.png'}),
 
   TopImage: getImageUrl('c20250710_topimage.png', true),
   TopImage2: getImageUrl('20250710_TopImage_2x.png', true),
 
-	TopImage2_Text: translateImage('20250710_intro_text.png'),
+	TopImage2_Text: translateImage({value:'20250710_intro_text.png'}),
 
-	Paragraph_1: translateImage('20250710_p1_text.png'),
-	Paragraph_2: translateImage('20250710_p2_text.png'),
-	Paragraph_3: translateImage('20250710_p3_text.png'),
+	Paragraph_1: translateImage({value:'20250710_p1_text.png'}),
+	Paragraph_2: translateImage({value:'20250710_p2_text.png'}),
+	Paragraph_3: translateImage({value:'20250710_p3_text.png'}),
 
-  Timer: translateLink('content/lp25-07-07'),
+  Timer: translateLink({value:'content/lp25-07-07'}),
 
-  Banner_1: translateLink('content/lp25-07-03'),
-  Banner_1_Image: translateImage('20250703b.png'),
+  Banner_1: translateLink({value:'content/lp25-07-03'}),
+  Banner_1_Image: translateImage({value:'20250703b.png'}),
 
-  Banner_2: translateLink('content/lp25-07-02'),
-  Banner_2_Image: translateImage('20250702b.png'),
+  Banner_2: translateLink({value:'content/lp25-07-02'}),
+  Banner_2_Image: translateImage({value:'20250702b.png'}),
 };
 const TopImageTitle_data = {
   color: '#000000',

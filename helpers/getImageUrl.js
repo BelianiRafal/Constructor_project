@@ -31,8 +31,8 @@ function getImageVersion(imageName) {
     console.warn('Błąd podczas odczytu wersji obrazów:', error);
   }
 
-  // Sprawdź aktualną wersję obrazu lub ustaw domyślną wartość 1
-  const currentVersion = versionsMap[imageName] || 1;
+  // Sprawdź aktualną wersję obrazu lub ustaw domyślną wartość 10
+  const currentVersion = versionsMap[imageName] || 10;
 
   // Inkrementuj wersję
   const newVersion = currentVersion + 1;

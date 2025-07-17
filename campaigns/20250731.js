@@ -69,7 +69,7 @@ const categories = [
   {
     type: 'image-4productsgrid',
     name: 'parasols',
-    background: '#FFE9CC',
+    background: '#FFE3D8',
     color: '#000',
     src: getImageUrl('20250731_Category_2.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/garden-furniture/parasols/',
@@ -148,18 +148,18 @@ const tableQueries = [
 ];
 
 const links = {
-  TopImageTitle_href: translateLink('content/lp25-07-24'),
-  TopImageTitle_src: translateImage('20250731_TopImageTitle.png'),
+  TopImageTitle_href: translateLink({ value: 'content/lp25-07-31' }),
+  TopImageTitle_src: translateImage({ value: '20250731_TopImageTitle.png' }),
 
   TopImage: getImageUrl('20250731_TopImage.png', true),
 
-  Timer: translateLink('content/lp25-07-28'),
+  Timer: translateLink({ value: 'content/lp25-07-28' }),
 
-  Banner_1: translateLink('content/lp25-07-24'),
-  Banner_1_Image: translateImage('20250724b.png'),
+  Banner_1: translateLink({ value: 'content/lp25-07-24' }),
+  Banner_1_Image: translateImage({ value: '20250724b.png' }),
 
-  Banner_2: translateLink('content/lp25-07-23'),
-  Banner_2_Image: translateImage('20250723b.png'),
+  Banner_2: translateLink({ value: 'content/lp25-07-23' }),
+  Banner_2_Image: translateImage({ value: '20250723b.png' }),
 };
 
 const TopImageTitle_data = {
@@ -189,6 +189,7 @@ const c20250731 = new entities.Campaign({
       wrapper: types.WRAPPER, // TYLKO DLA NSLT
       template: templates.TIT_TopImage_Timer_Categories,
       css: types.CSS.NS,
+			intro: true,
       timer: timer,
       TopImageTitle_data: TopImageTitle_data,
       categories: categories,
@@ -202,6 +203,7 @@ const c20250731 = new entities.Campaign({
       color: '#000000',
       template: templates.TIT_TopImage_Timer_Categories,
       css: types.CSS.LP,
+			intro: true,
       timer: timer,
       TopImageTitle_data: TopImageTitle_data,
       categories: categories,

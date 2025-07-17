@@ -142,10 +142,34 @@ export async function TIT_TopImage_Timer_Categories({
 			</table>
 		</table>
 
+		${
+      intro
+        ? `<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
+			<tr>
+				<td>
+					${Intro({
+            spaceClassName: 'newsletterBottom35px',
+            paragraph: queries['intro'],
+            color: color,
+            background: background,
+            align: 'center',
+          })}
+				</td>
+			</tr>
+		</table>
 
 		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-			${Space({})}
-		</table>
+			${CTA({
+        align: 'center',
+        spaceAfter: { class: 'newsletterBottom35px' },
+        text: getPhrase('Shop now'),
+        href: links['TopImageTitle_href'],
+      })}
+		</table>`
+        : `<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
+		${Space({})}
+		</table>`
+    }
 		
 		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
 			<tr>
@@ -153,6 +177,10 @@ export async function TIT_TopImage_Timer_Categories({
 					${timerElement}
 				</td>
 			</tr>
+		</table>
+
+		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
+		${Space({ className: 'newsletterBottom60px' })}
 		</table>
 
 		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
@@ -166,19 +194,19 @@ export async function TIT_TopImage_Timer_Categories({
 					<td align="center">
 					<table cellspacing="0" cellpadding="0" border="0" align="center" style="${cat_styles}">
 						${Category({
-							links: links,
-							queries: queries,
-							name: category.name,
-							href: getCategoryLink(category.href),
-							src: category.src,
-							products: prod,
-							background: category.background,
-							color: category.color,
-							len: categoriesWithProducts.length,
-							idx: index,
-							type: category.type,
-							getPhrase: getPhrase,
-						})}
+              links: links,
+              queries: queries,
+              name: category.name,
+              href: getCategoryLink(category.href),
+              src: category.src,
+              products: prod,
+              background: category.background,
+              color: category.color,
+              len: categoriesWithProducts.length,
+              idx: index,
+              type: category.type,
+              getPhrase: getPhrase,
+            })}
 						</table>
 					</td>
 				</tr>

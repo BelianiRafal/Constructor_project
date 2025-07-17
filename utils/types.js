@@ -432,12 +432,14 @@ export default {
     }
     
     .newsletterProductTitle {
+			min-height: 20px;
       font-size: 20px;
       font-family: "Open Sans", sans-serif;
       line-height: 1.20;
     }
     
     .newsletterProductLowPrice {
+			min-height: 20px;
       font-size: 18px;
       font-family: "Open Sans", sans-serif;
       line-height: 1.20;
@@ -445,6 +447,7 @@ export default {
     }
     
     .newsletterProductHightPrice {
+			min-height: 20px;
       font-size: 14px;
       font-family: "Open Sans", sans-serif;
       line-height: 1.20;
@@ -1125,17 +1128,20 @@ export default {
           }
           
           #newsletter .newsletterProductTitle {
+						min-height: 20px;
             font-size: 20px;
             line-height: 1.20;
           }
           
           #newsletter .newsletterProductLowPrice {
+						min-height: 20px;
             font-size: 18px;
             line-height: 1.20;
             font-weight: 600;
           }
           
           #newsletter .newsletterProductHightPrice {
+						min-height: 20px;
             font-size: 14px;
             line-height: 1.20;
             text-decoration: line-through;

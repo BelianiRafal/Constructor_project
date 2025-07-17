@@ -1,11 +1,16 @@
-import getImageUrl from "./getImageUrl.js";
+import getImageUrl from './getImageUrl.js';
 
-const translateImage = (imageName) => ({
+const translateImage = ({
+  value,
+  type = 'relation',
+  relyOn = 'slug',
+  placeholderPosition = '38',
+}) => ({
   src: {
-    type: 'relation',
-    relyOn: 'slug',
-    placeholderPosition: '38',
-    value: getImageUrl(imageName, true),
+    type: type,
+    relyOn: relyOn,
+    placeholderPosition: placeholderPosition,
+    value: getImageUrl(value, true),
   },
 });
 

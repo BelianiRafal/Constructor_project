@@ -180,38 +180,38 @@ const tableQueries = [
 ];
 
 const links = {
-  TopImageTitle_href: translateLink('content/lp25-07-17'),
-  TopImageTitle_src: translateImage('20250717_TopImageTitle.png'),
+  TopImageTitle_href: translateLink({ value: 'content/lp25-07-17' }),
+  TopImageTitle_src: translateImage({ value: '20250717_TopImageTitle.png' }),
 
   TopImage: getImageUrl('20250717_TopImage.gif', true),
 
-  Timer: translateLink('content/lp25-07-14'),
+  Timer: translateLink({ value: 'content/lp25-07-14' }),
 
-  Banner_1: translateLink('content/lp25-07-10'),
-  Banner_1_Image: translateImage('20250710b.png'),
+  Banner_1: translateLink({ value: 'content/lp25-07-10' }),
+  Banner_1_Image: translateImage({ value: '20250710b.png' }),
 
-  Banner_2: translateLink('content/lp25-07-09'),
-  Banner_2_Image: translateImage('20250709b.png'),
+  Banner_2: translateLink({ value: 'content/lp25-07-09' }),
+  Banner_2_Image: translateImage({ value: '20250709b.png' }),
 
-	cat1a_src: getImageUrl('20250717final_Cat_1a.png', true),
-	cat1b_src: getImageUrl('20250717final_Cat_1b.png', true),
-	cat1c_src: getImageUrl('20250717final_Cat_1c.png', true),
-	cat1d_src: getImageUrl('20250717final_Cat_1d.png', true),
+  cat1a_src: getImageUrl('20250717final_Cat_1a.png', true),
+  cat1b_src: getImageUrl('20250717final_Cat_1b.png', true),
+  cat1c_src: getImageUrl('20250717final_Cat_1c.png', true),
+  cat1d_src: getImageUrl('20250717final_Cat_1d.png', true),
 
-	cat2a_src: getImageUrl('20250717final_Cat_2a.png', true),
-	cat2b_src: getImageUrl('20250717final_Cat_2b.png', true),
-	cat2c_src: getImageUrl('20250717final_Cat_2c.png', true),
-	cat2d_src: getImageUrl('20250717final_Cat_2d.png', true),
+  cat2a_src: getImageUrl('20250717final_Cat_2a.png', true),
+  cat2b_src: getImageUrl('20250717final_Cat_2b.png', true),
+  cat2c_src: getImageUrl('20250717final_Cat_2c.png', true),
+  cat2d_src: getImageUrl('20250717final_Cat_2d.png', true),
 
-	cat3a_src: getImageUrl('20250717final_Cat_3a.png', true),
-	cat3b_src: getImageUrl('20250717final_Cat_3b.png', true),
-	cat3c_src: getImageUrl('20250717final_Cat_3c.png', true),
-	cat3d_src: getImageUrl('20250717final_Cat_3d.png', true),
+  cat3a_src: getImageUrl('20250717final_Cat_3a.png', true),
+  cat3b_src: getImageUrl('20250717final_Cat_3b.png', true),
+  cat3c_src: getImageUrl('20250717final_Cat_3c.png', true),
+  cat3d_src: getImageUrl('20250717final_Cat_3d.png', true),
 
-	cat4a_src: getImageUrl('20250717final_Cat_4a.png', true),
-	cat4b_src: getImageUrl('20250717final_Cat_4b.png', true),
-	cat4c_src: getImageUrl('20250717final_Cat_4c.png', true),
-	cat4d_src: getImageUrl('20250717final_Cat_4d.png', true),
+  cat4a_src: getImageUrl('20250717final_Cat_4a.png', true),
+  cat4b_src: getImageUrl('20250717final_Cat_4b.png', true),
+  cat4c_src: getImageUrl('20250717final_Cat_4c.png', true),
+  cat4d_src: getImageUrl('20250717final_Cat_4d.png', true),
 };
 
 const TopImageTitle_data = {

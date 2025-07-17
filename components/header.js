@@ -1,5 +1,5 @@
-import types from "../utils/types.js";
-
+import types from '../utils/types.js';
+import getImageUrl from '../helpers/getImageUrl.js';
 export function Header(sections, options) {
   const json_header = {
     advantages: {
@@ -15,7 +15,7 @@ export function Header(sections, options) {
                   </p>`,
       },
       [types.LANDINGPAGE]: {
-        value: () => "",
+        value: () => '',
       },
     },
     paragraph: {
@@ -26,20 +26,25 @@ export function Header(sections, options) {
               </p>`,
       },
       [types.LANDINGPAGE]: {
-        value: () => "",
+        value: () => '',
       },
     },
     topImage: {
       [types.NEWSLETTER]: {
-        value: (
-          topImage
-        ) => `<table align="center" cellspacing="0" cellpadding="0" border="0"
+        value: (topImage) => `<table align="center" cellspacing="0" cellpadding="0" border="0"
                     style="margin: 0 auto; background-color:#ffffff; padding-top: 0em; padding-bottom: 0em; ">
                     <tbody>
                         <tr>
                             <th>
-                                <a href="${topImage.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}">
-                                    <img src="${topImage.src}" border="0" alt="Beliani" style="display:block; max-width: 100%;" />
+                                <a href="${
+                                  topImage.href
+                                }?utm_source=newsletter&utm_medium=email&utm_campaign=${
+          sections.id
+        }">
+                                    <img src="${getImageUrl(
+                                      topImage.src,
+                                      true
+                                    )}" border="0" alt="Beliani" style="display:block; max-width: 100%;" />
                                 </a>
                             </th>
                         </tr>
@@ -47,7 +52,7 @@ export function Header(sections, options) {
                 </table>`,
       },
       [types.LANDINGPAGE]: {
-        value: () => "",
+        value: () => '',
       },
     },
     categories: {
@@ -61,23 +66,35 @@ export function Header(sections, options) {
                     <tbody>
                         <tr>
                             <th><a
-                                    href="${firstCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}"><img
-                                        src="${firstCategory.src}" border="0"
+                                    href="${
+                                      firstCategory.href
+                                    }?utm_source=newsletter&utm_medium=email&utm_campaign=${
+          sections.id
+        }"><img
+                                        src="${getImageUrl(firstCategory.src, true)}" border="0"
                                         alt="M&ouml;bel" style="display:block; max-width: 100%;" /></a></th>
                             <th><a
-                                    href="${secondCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}"><img
-                                        src="${secondCategory.src}" border="0"
+                                    href="${
+                                      secondCategory.href
+                                    }?utm_source=newsletter&utm_medium=email&utm_campaign=${
+          sections.id
+        }"><img
+                                        src="${getImageUrl(secondCategory.src, true)}" border="0"
                                         alt="Accessoires" style="display:block; max-width: 100%;" /></a></th>
                             <th><a
-                                    href="${thirdCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}"><img
-                                        src="${thirdCategory.src}" border="0"
+                                    href="${
+                                      thirdCategory.href
+                                    }?utm_source=newsletter&utm_medium=email&utm_campaign=${
+          sections.id
+        }"><img
+                                        src="${getImageUrl(thirdCategory.src, true)}" border="0"
                                         alt="Garten" style="display:block; max-width: 100%;" /></a></th>
                         </tr>
                     </tbody>
                 </table>`,
       },
       [types.LANDINGPAGE]: {
-        value: () => "",
+        value: () => '',
       },
     },
     assembly: {
@@ -114,22 +131,22 @@ export function Header(sections, options) {
     },
   };
 
-  let html = "";
+  let html = '';
   for (const section in sections) {
     const elem = sections[section];
-    if (typeof elem !== "object") continue;
+    if (typeof elem !== 'object') continue;
 
     if (section in json_header) {
-      if (!("exclude" in elem)) {
+      if (!('exclude' in elem)) {
         const conditionalSections = {};
 
         for (const key in elem) {
           let element = elem[key];
           if (element === undefined) {
-            element = ""
+            element = '';
           }
 
-          if (typeof elem !== "object") {
+          if (typeof elem !== 'object') {
             conditionalSections[key] = element;
             continue;
           }
@@ -147,9 +164,9 @@ export function Header(sections, options) {
         for (const key in elem) {
           let element = elem[key];
           if (element === undefined) {
-            element = ""
+            element = '';
           }
-          if (typeof elem !== "object") {
+          if (typeof elem !== 'object') {
             conditionalSections[key] = element;
             continue;
           }
@@ -161,9 +178,7 @@ export function Header(sections, options) {
         html += json_header[section][options.type].value(conditionalSections);
       }
     } else {
-      throw new Error(
-        "Dodaj sekcje: " + section + ". Do json_header in Header.js"
-      );
+      throw new Error('Dodaj sekcje: ' + section + '. Do json_header in Header.js');
     }
   }
   return html;

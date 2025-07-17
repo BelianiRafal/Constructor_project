@@ -153,7 +153,7 @@ export const Category = isAllowToRender(
 
 					${CTA({
 						align: 'center',
-						spaceAfter: {class: 'newsletterBottom60px'},
+						spaceAfter: {class: 'newsletterBottom80px'},
 						text: getPhrase("Shop now"),
 						href: href,
 					})}

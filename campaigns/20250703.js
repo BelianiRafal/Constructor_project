@@ -45,7 +45,7 @@ const categories = [
     background: '#FFE0D9',
     color: '#000',
     // src: getImageUrl('uk20250703_cat1.png'), // <--- that way image doesn't change based on country
-    src: translateImage('20250703_cat1.png'),
+    src: translateImage({ value: '20250703_cat1.png' }),
     href: 'https://www.beliani.ch/trends/cosy-neutral/',
     products: [
       {
@@ -68,14 +68,14 @@ const categories = [
         id: 427359,
         src: getImageUrl('20250703_prod5.png', true),
       },
-    ]
+    ],
   },
   {
     type: 'inspirational-0703',
     name: 'maximalist-haven',
     background: '#FFE0D9',
     color: '#000',
-    src: translateImage('20250703_cat2.png'),
+    src: translateImage({value:'20250703_cat2.png'}),
     href: 'https://www.beliani.ch/trends/maximalist-haven/',
     products: [
       {
@@ -102,18 +102,18 @@ const categories = [
         id: 553162,
         src: getImageUrl('20250703_prod11.png', true),
       },
-    ]
+    ],
   },
   {
     type: 'inspirational-0703',
     name: 'earthy-tones',
     background: '#FFE0D9',
     color: '#000',
-    src: translateImage('20250703_cat3.png'),
+    src: translateImage({value:'20250703_cat3.png'}),
     href: 'https://www.beliani.ch/trends/earthy-tones/',
     products: [
       {
-        id: 459448,                                    // got to be changed
+        id: 459448, // got to be changed
         src: getImageUrl('20250703_prod12.png', true), //
       },
       {
@@ -136,14 +136,14 @@ const categories = [
         id: 258242,
         src: getImageUrl('20250703_prod17.png', true),
       },
-    ]
+    ],
   },
   {
     type: 'inspirational-0703',
     name: 'soft-glam',
     background: '#FFE0D9',
     color: '#000',
-    src: translateImage('20250703_cat4.png'),
+    src: translateImage({value:'20250703_cat4.png'}),
     href: 'https://www.beliani.ch/trends/soft-glam/',
     products: [
       {
@@ -166,7 +166,7 @@ const categories = [
         id: 433980,
         src: getImageUrl('20250703_prod22.png', true),
       },
-    ]
+    ],
   },
 ];
 
@@ -202,45 +202,45 @@ const tableQueries = [
 
 const nslt_links = [
   // TOP IMAGE TITLE
-  translateLink('content/lp25-07-03'),
-  translateImage('20250703_01.png'),
+  translateLink({value:'content/lp25-07-03'}),
+  translateImage({value:'20250703_01.png'}),
 
   // TOP IMAGE TITLE GIF
-  translateLink('content/lp25-07-03'),
+  translateLink({value:'content/lp25-07-03'}),
   {
     value: getImageUrl('20250703nslt_gif.gif', true),
   },
 
   // TIMER
-  translateLink('content/lp25-06-30'),
+  translateLink({value:'content/lp25-06-30'}),
 
   // BANNER 1
-  translateLink('content/lp25-06-26'),
-  translateImage('20250626b.png'),
+  translateLink({value:'content/lp25-06-26'}),
+  translateImage({value:'20250626b.png'}),
 
   // BANNER 2
-  translateLink('content/lp25-06-25'),
-  translateImage('20250625b.png'), //links 8
+  translateLink({value:'content/lp25-06-25'}),
+  translateImage({value:'20250625b.png'}), //links 8
 ];
 
 const lp_links = [
   // TOP IMAGE TITLE
-  translateLink('content/lp25-07-03'),
-  translateImage('20250703_01.png'),
+  translateLink({value:'content/lp25-07-03'}),
+  translateImage({value:'20250703_01.png'}),
 
   // TOP IMAGE TITLE GIF
-  translateLink('content/lp25-07-03'),
+  translateLink({value:'content/lp25-07-03'}),
   {
     value: getImageUrl('20250703lp_gif.gif', true),
   },
 
   // BANNER 1
-  translateLink('content/lp25-06-26'),
-  translateImage('20250626b.png'),
+  translateLink({value:'content/lp25-06-26'}),
+  translateImage({value:'20250626b.png'}),
 
   // BANNER 2
-  translateLink('content/lp25-06-25'),
-  translateImage('20250625b.png'), //links 8
+  translateLink({value:'content/lp25-06-25'}),
+  translateImage({value:'20250625b.png'}), //links 8
 ];
 
 const c20250703 = new entities.Campaign({
