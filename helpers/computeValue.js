@@ -58,36 +58,90 @@ function handleRelation(relation) {
   return newValue;
 }
 
+
+// @EXAMPLE:
+// id: swapProductsBySlug(
+// 	{
+// 		'["DE", "CHFR", "PL", "UK"]': 585758,
+// 		SE: 585357
+// 	}, 585243),
+// src: swapImagesBySlug(
+// 	{ '["DE", "CHFR", "PL", "UK"]': "20250724_Category_1_Prod_2.png",
+// 		SE: "20250724_Category_1_Prod_3.png"
+// 	}, "20250724_Category_1_Prod_1.png"),
+
 /**
  * Swap product IDs based on the current country slug.
  *
- * @param {string|number} from - product ID for all countries except the specified ones.
- * @param {string|number} to - alternative product ID
- * @param {string|string[]} countrySlug - The country slug(s) for which the swap should occur. Can be a single string (e.g. "FR") or an array of strings (e.g. ["UK", "PL", "DE"]).
- * @returns {{swap: [string|number, string|number], countrySlug: string|string[]}} The swap configuration object.
+ *    // lub bez dodatkowych nawiasów: swapProductsBySlug({ '["DE","CHFR","PL","UK"]': 585758, "SE": 2137420 }, 585243)
+ *
+ * @param {object|string|number} mapping - Obiekt mapujący slug kraju na ID produktu (może mieć klucz będący stringiem tablicowym), lub domyślne ID (legacy)
+ * @param {string|number} defaultId - Domyślne ID produktu (fallback lub alternatywa w trybie legacy)
+ * @param {string|string[]} [countrySlug] - Legacy: slug kraju/krajów dla zamiany
+ * @returns {{mapping?: object, swap?: [string|number, string|number], countrySlug?: string|string[], defaultId: string|number}} Obiekt konfiguracji zamiany.
  */
-export function swapProductsBySlug(from, to, countrySlug) {
-  let object = {
-    swap: [from, to],
-    countrySlug,
-  };
-
-  return object;
+export function swapProductsBySlug(mapping, defaultId) {
+  // Only new mapping format supported
+  if (typeof mapping === 'object' && mapping !== null && !Array.isArray(mapping)) {
+    const processedMapping = {};
+    for (const [key, value] of Object.entries(mapping)) {
+      try {
+        const parsedKey = JSON.parse(key);
+        if (Array.isArray(parsedKey)) {
+          parsedKey.forEach((country) => {
+            processedMapping[country] = value;
+          });
+        } else {
+          processedMapping[key] = value;
+        }
+      } catch {
+        processedMapping[key] = value;
+      }
+    }
+    return {
+      mapping: processedMapping,
+      defaultId,
+    };
+  }
+  throw new Error('swapProductsBySlug: Only mapping object format is supported.');
 }
 
 /**
  * Swap image src based on the current country slug.
  *
- * @param {string|number} from - image src for all countries except the specified ones.
- * @param {string|number} to - alternative image src
- * @param {string|string[]} countrySlug - The country slug(s) for which the swap should occur. Can be a single string (e.g. "FR") or an array of strings (e.g. ["UK", "PL", "DE"]).
- * @returns {{swap: [string|number, string|number], countrySlug: string|string[]}} The swap configuration object.
+ * Przykłady użycia:
+ * 1. Legacy: swapImagesBySlug("default.jpg", "alternative.jpg", ["PL", "SE"])
+ * 2. Nowa składnia (string jako klucz tablicowy):
+ *    swapImagesBySlug({ '["DE","CHFR","PL"]': "euro.jpg", "UK": "british.jpg" }, "default.jpg")
+ * 3. Standardowy mapping: swapImagesBySlug({ "DE": "image1.jpg", "CHFR": "image2.jpg", "PL": "image3.jpg" }, "default.jpg")
+ *
+ * @param {object|string|number} mapping - Obiekt mapujący slug kraju na źródło obrazka (może mieć klucz będący stringiem tablicowym), lub domyślne źródło (legacy)
+ * @param {string|number} defaultSrc - Domyślne źródło obrazka (fallback lub alternatywa w trybie legacy)
+ * @param {string|string[]} [countrySlug] - Legacy: slug kraju/krajów dla zamiany
+ * @returns {{mapping?: object, swap?: [string|number, string|number], countrySlug?: string|string[], defaultId: string|number}} Obiekt konfiguracji zamiany.
  */
-export function swapImagesBySlug(from, to, countrySlug) {
-  let object = {
-    swap: [getImageUrl(from), getImageUrl(to)],
-    countrySlug,
-  };
-
-  return object;
+export function swapImagesBySlug(mapping, defaultSrc) {
+  // Only new mapping format supported
+  if (typeof mapping === 'object' && mapping !== null && !Array.isArray(mapping)) {
+    const processedMapping = {};
+    for (const [key, value] of Object.entries(mapping)) {
+      try {
+        const parsedKey = JSON.parse(key);
+        if (Array.isArray(parsedKey)) {
+          parsedKey.forEach((country) => {
+            processedMapping[country] = getImageUrl(value);
+          });
+        } else {
+          processedMapping[key] = getImageUrl(value);
+        }
+      } catch {
+        processedMapping[key] = getImageUrl(value);
+      }
+    }
+    return {
+      mapping: processedMapping,
+      defaultId: getImageUrl(defaultSrc),
+    };
+  }
+  throw new Error('swapImagesBySlug: Only mapping object format is supported.');
 }

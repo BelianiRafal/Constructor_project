@@ -4,6 +4,7 @@ import types from '../utils/types.js';
 import translateImage from '../helpers/translateImage.js';
 import translateLink from '../helpers/translateLink.js';
 import getImageUrl from '../helpers/getImageUrl.js';
+import { swapProductsBySlug, swapImagesBySlug } from '../helpers/computeValue.js';
 
 // prettier-ignore
 const timerGifsSource = {
@@ -49,7 +50,17 @@ const categories = [
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 585243,
+        // id: swapProductsBySlug(
+				// 	{
+				// 		'["DE", "CHFR", "PL", "UK"]': 585758,
+				// 		SE: 585357
+				// 	}, 585243),
+				// src: swapImagesBySlug(
+				// 	{ 
+				// 		'["DE", "CHFR", "PL", "UK"]': "20250724_Category_1_Prod_2.png",
+				// 		SE: "20250724_Category_1_Prod_3.png"
+				// 	}, "20250724_Category_1_Prod_1.png"),
+				id: 585243,
         src: getImageUrl('20250724_Category_1_Prod_1.png', true),
       },
       {

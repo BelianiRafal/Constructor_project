@@ -41,32 +41,24 @@ export class TemplateHandlers {
 
     // check if we do product swapping for specific country, if so return swapped id
     let resolvedProductId = productId;
-    if (
-      productId &&
-      typeof productId === "object" &&
-      Array.isArray(productId.swap) &&
-      productId.countrySlug
-    ) {
-      const shopSlug = shop && shop.slug;
-      const shouldSwap = Array.isArray(productId.countrySlug)
-        ? productId.countrySlug.includes(shopSlug)
-        : shopSlug === productId.countrySlug;
-      resolvedProductId = shouldSwap ? productId.swap[1] : productId.swap[0];
+    if (productId && typeof productId === "object") {
+      const shopSlug = shop && languageHREF.language.slug;
+      // New mapping format: {mapping: {DE: 123, FR: 456}, defaultId: 789}
+      if (productId.mapping && productId.defaultId) {
+				console.log("jest productId.mapping ", productId.mapping, " oraz jest productId.defaultId ", productId.defaultId);
+        resolvedProductId = productId.mapping[shopSlug] || productId.defaultId;
+      }
     }
 
     // check if we do image swapping for specific country, if so return swapped image src
     let resolvedSrc = src;
-    if (
-      src &&
-      typeof src === "object" &&
-      Array.isArray(src.swap) &&
-      src.countrySlug
-    ) {
-      const shopSlug = shop && shop.slug;
-      const shouldSwap = Array.isArray(src.countrySlug)
-        ? src.countrySlug.includes(shopSlug)
-        : shopSlug === src.countrySlug;
-      resolvedSrc = shouldSwap ? src.swap[1] : src.swap[0];
+    if (src && typeof src === "object") {
+      const shopSlug = shop && languageHREF.language.slug;
+      
+      // New mapping format: {mapping: {DE: "image1.jpg", FR: "image2.jpg"}, defaultId: "default.jpg"}
+      if (src.mapping && src.defaultId) {
+        resolvedSrc = src.mapping[shopSlug] || src.defaultId;
+      }
     }
 
     const country_products = this.products?.filter(
@@ -97,6 +89,28 @@ export class TemplateHandlers {
         : { ...product, href },
       options
     );
+  };
+
+	getImageBySlug = (src) => {
+    const country = getState("country");
+    const shop = getState("shop");
+    const languageHREF = shop.languages.find(
+      (item) => item.language.slug === country
+    );
+    const countrySlug = shop?.slug?.toLowerCase();
+
+    // check if we do image swapping for specific country, if so return swapped image src
+    let resolvedSrc = src;
+    if (src && typeof src === "object") {
+      const shopSlug = shop && languageHREF.language.slug;
+      
+      // New mapping format: {mapping: {DE: "image1.jpg", FR: "image2.jpg"}, defaultId: "default.jpg"}
+      if (src.mapping && src.defaultId) {
+        resolvedSrc = src.mapping[shopSlug] || src.defaultId;
+      }
+    }
+
+		return resolvedSrc;
   };
 
   getCategoryTitle = (column) => {

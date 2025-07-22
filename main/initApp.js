@@ -393,6 +393,7 @@ export function initApp({ campaigns, shops, config }) {
       ),
       type: templateToRender.type,
       getProductById: handlers.getProductById,
+			getImageBySlug: handlers.getImageBySlug,
       getCategoryTitle: handlers.getCategoryTitle,
       getCategoryLink: handlers.getCategoryLink,
       getFooter: handlers.getFooter,

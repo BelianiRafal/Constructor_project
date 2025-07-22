@@ -9,12 +9,15 @@ import { c20250710 } from './campaigns/20250710.js';
 import { c20250717 } from './campaigns/20250717.js';
 import { c20250724 } from './campaigns/20250724.js';
 import { c20250731 } from './campaigns/20250731.js';
+// import { c20250805 } from './campaigns/20250805_notacceptedyet.js';
+import { c20250807 } from './campaigns/20250807.js';
+// import { c20250814 } from './campaigns/20250814.js';
 
 const root = document.querySelector('#app');
 
 try {
   initApp({
-    campaigns: [c20250703, c20250710, c20250717, c20250724, c20250731],
+    campaigns: [c20250703, c20250710, c20250717, c20250724, c20250731, c20250807],
     shops: shops,
     config: config,
   });

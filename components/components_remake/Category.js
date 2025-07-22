@@ -41,7 +41,7 @@ export const Category = isAllowToRender(
         const secondParagraphIdx = idx * 2 + 1;
 
         return `
-					${Space({ className: 'newsletterBottom35px' })}
+					${idx > 0 ? Space({ className: 'newsletterBottom35px' }) : ''}
 
 					${Title({ title: queries.categories[idx], insideContainer: true })}
 

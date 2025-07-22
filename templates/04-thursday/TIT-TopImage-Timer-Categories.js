@@ -19,6 +19,7 @@ export async function TIT_TopImage_Timer_Categories({
   timer,
   links,
   getProductById,
+	getImageBySlug,
   getCategoryLink,
   getCategoryTitle,
   getPhrase,
@@ -106,7 +107,7 @@ export async function TIT_TopImage_Timer_Categories({
         subtitle: queries['Timer'][1] ?? 'timer subtitle not found',
         href: links['Timer'],
         gif: timer.gif[country],
-        image: timer.image,
+        image: getImageBySlug(timer.image),
         background: timer.background,
         color: timer.color,
         align: timer.align,
@@ -126,46 +127,55 @@ export async function TIT_TopImage_Timer_Categories({
 
 		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
 			${topImageTitle}
-		</table>
-
-		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-			<table cellspacing="0" cellpadding="0" border="0" align="center" style="max-width: 650px; width: 100%;" >
-				<tbody>
-					<tr>
-						<td align="center" >
-							<a href="${links['TopImageTitle_href']}">
-								<img src="${links['TopImage']}" style="vertical-align: middle; max-width: 100%;" loading="lazy">
-							</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+				<tr>
+					<td align="center" >
+						<a href="${links['TopImageTitle_href']}">
+							<img src="${links['TopImage']}" style="vertical-align: middle; max-width: 100%;" loading="lazy">
+						</a>
+					</td>
+				</tr>
 		</table>
 
 		${
       intro
-        ? `<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-			<tr>
-				<td>
-					${Intro({
-            spaceClassName: 'newsletterBottom35px',
-            paragraph: queries['intro'],
-            color: color,
-            background: background,
-            align: 'center',
-          })}
-				</td>
-			</tr>
-		</table>
-
-		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-			${CTA({
-        align: 'center',
-        spaceAfter: { class: 'newsletterBottom35px' },
-        text: getPhrase('Shop now'),
-        href: links['TopImageTitle_href'],
-      })}
-		</table>`
+        ? `
+				<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
+					<tr>
+						<td>	
+							<table cellspacing="0" cellpadding="0" border="0" align="center">
+								<tr>
+									<td>
+										${Intro({
+											spaceClassName: 'newsletterBottom35px',
+											paragraph: queries['intro'],
+											color: color,
+											background: background,
+											align: 'center',
+										})}
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<table cellspacing="0" cellpadding="0" border="0" align="center">
+								${CTA({
+									align: 'center',
+									spaceAfter: { class: 'newsletterBottom35px' },
+									text: getPhrase('Shop now'),
+									// for 24.07
+									// href: links['TopImageTitle_href'],
+									//
+									// for 31.07
+									href: getCategoryLink(categories[0].href),
+								})}
+							</table>
+						</td>
+					</tr>
+				</table>
+			`
         : `<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
 		${Space({})}
 		</table>`
