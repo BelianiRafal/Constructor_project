@@ -2,7 +2,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import { Space } from "./Space.js";
 import { Freebies } from "./freebies.js";
 
-const FreebiesGenerator = ({ freebies, getProductById }) => {
+const FreebiesGenerator = ({ freebies, getProductById, normalPrice = false }) => {
   
   return freebies
     .map((freebie, idx) => {
@@ -11,11 +11,11 @@ const FreebiesGenerator = ({ freebies, getProductById }) => {
         ${Freebies({
           products: freebie.products.map((item) => ({
             ...item,
-            ...priceFree(getProductById(item.id, item.src)),
+            ...priceFree(getProductById(item.id, item.src), normalPrice),
           })),
           size: freebie.size,
         })}
-        ${Space({ className: "newsletterBottom80px" })}
+        
         `;
       }
 
@@ -23,7 +23,7 @@ const FreebiesGenerator = ({ freebies, getProductById }) => {
         ${Freebies({
           products: freebie.products.map((item) => ({
             ...item,
-            ...priceFree(getProductById(item.id, item.src)),
+            ...priceFree(getProductById(item.id, item.src), normalPrice),
           })),
           size: freebie.size,
         })}

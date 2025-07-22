@@ -27,7 +27,7 @@ import { getCodes } from "../utils/getCodes.js";
  * Funkcja generująca sekcje kategorii dla newslettera/landing page
  * Kolejność parametrów zgodna z wymaganiami
  */
-function generateCategoriesSection(categories, queries, background, add_utm, white_line, full_img_width, getCategoryTitle, getProductById, getPhrase, getCategoryLink, id, typeCamp) {
+function generateCategoriesSection(categories, queries, background, add_utm, white_line, full_img_width, getCategoryTitle, getProductById, getPhrase, getCategoryLink, id, typeCamp, specialHref) {
   let categoriesHTML = '';
 
   // Sprawdź czy tablica categories istnieje i ma elementy
@@ -158,7 +158,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, whi
       <tr>
         <td style="background-color: ${category?.background || background}; color: ${category?.color || "#000000"}">
           ${Category({
-            href: category.name === 'King'? newLink : categoryHref,
+            href: specialHref,
             name: queries?.categories && queries.categories[index]
               ? split_categories(queries.categories, index, true)
               : getCategoryTitle(category.name || ""),
@@ -166,7 +166,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, whi
             src: typeof category.src === 'object' && category.src.value ? category.src.value : category.src,
             cta: safeGetPhrase("Shop now"),
             color: category?.color,
-            type: categoryType,
+            type: console.log(categoryType),
             img_class: (full_img_width === false ? "newsletterContainer" : ""),
             products: category.products ? category.products.map((item) =>
               getProductById(item.id, item.src, item.name)
@@ -186,7 +186,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, whi
   return categoriesHTML;
 }
 
-export async function mondayRegularNslt({
+export async function fridayDziwnyNsltr({
   links,
   getProductById,
   getCategoryLink,
@@ -218,7 +218,7 @@ export async function mondayRegularNslt({
 }) {console.log(shop.slug)
   const codes = getCodes(queries);
   
-
+const u_t_m = "?utm_source=newsletter&utm_medium=email&utm_campaign="  + id
   const categoriesSectionHTML = generateCategoriesSection(
     categories, 
     queries, 
@@ -232,6 +232,7 @@ export async function mondayRegularNslt({
     getCategoryLink,
     id,
     type,
+    type === "landing" ? queries.categoriesLink : queries.categoriesLink + u_t_m,
   );
   //console.log('origin includes PL:', origin);
 
@@ -337,97 +338,17 @@ export async function mondayRegularNslt({
                       href: links[8],
                       src: links[9],
                     })}
-                    ${Space({ className: "newsletterBottom60px" })}
+                    
                   </td>
               </tr>`
               }
-              ${freebies ?
-              `<tr>
-                  <td class="newsletterContainer" style="background-color: ${ freebies.options.background || background }; color: ${ offerPart.color || "#000" };">
-                      
-                      ${
-                        offerPart.type === "code"
-                          ? OfferPartCode({
-                              color: offerPart.color,
-                              data: queries.offerPart,
-                              //data2: queries.ChooseFrom,
-                              href: links[0],
-                              getPhrase,
-                              type,
-                              queries
-                            })
-                          : ""
-                      }
-                      ${
-                        offerPart.type === "codes"
-                          ? OfferPartCodes({
-                              type,
-                              offerParts: [
-                                {
-                                  paragraph: queries.offerPart[0],
-                                  code: codes?.code1,
-                                  type: "landing",
-                                },
-                                {
-                                  paragraph: queries.offerPart[1],
-                                  code: codes?.code2,
-                                  type: "landing",
-                                },
-                                {
-                                  paragraph: queries.offerPart[2],
-                                  code: codes?.code3,
-                                  type: "landing",
-                                },
-                                {
-                                  code: getPhrase("Get codes"),
-                                  href: links[0],
-                                  type: "newsletter",
-                                },
-                                type === 'newsletter' ? 
-                                `{
-                                  paragraph: queries.offerPart[3],
-                                  class: "newsletterBottom35px",
-                                }` : 
-                                ``,
-
-                                {
-                                  paragraph: getPhrase("Choose from:"),
-                                },
-                              ],
-                            })
-                          : ""
-                      }
-
-                      ${Space()}
-                  </td> 
-              </tr>
-              
-              <tr>
-                <td style="background-color: ${ freebies.options.background || background }; color: ${ freebies.options?.color || "#000" };">
-                ${FreebiesGenerator({
-                  background,
-                  freebies: freebies.items,
-                  getProductById,
-                })}
-                  </td>
-              </tr>
-              <tr>
-                  <td style="background-color: ${ freebies.options.background || background }; color: ${ freebies.options?.color || "#000" };">
-                      ${Space({ className: "newsletterBottom60px" })}
-                  </td>
-              </tr>
-              <tr>
-                  <td style="background-color: ${ intro.background || background };">
-                    ${Space()}
-                  </td>
-              </tr>`
-              :
-              ''
-              }
+             
               ${intro && intro.type != "paragraph" ? 
-                `<tr>
+                `
+                <tr>
                 
-                    <td class="newsletterContainer" style="background-color: ${intro.background || background}; ">
+                    <td class="newsletterContainer" style="background-color: #FEB24D;">
+                    
                         ${Intro({
                           data: queries.intro,
                           color: intro?.color,
@@ -440,7 +361,7 @@ export async function mondayRegularNslt({
                     </td>
                 </tr>` 
                 : `<tr>
-                    <td class="newsletterContainer" style="background-color: ${intro.background || background};">
+                    <td class="newsletterContainer" style="background-color: #FEB24D;">
                         ${Intro({
                           data: queries.intro,
                           color: intro?.color,
@@ -454,14 +375,15 @@ export async function mondayRegularNslt({
                 </tr>`
               }
               ${shopNow({
-                href: getCategoryLink("https://www.beliani.ch/chairs"),
+                href: type === "landing" ? queries.categoriesLink : queries.categoriesLink + u_t_m,
                 cta: queries.cta,
-                textColor: "#000000"
+                textColor: "#000000",
+                backgorund: "#FEB24D",
               })}
 
               ${inside && inside.type == "timer" ?
               `<tr>
-                  <td style="background-color:${intro.background || background}; color: ${intro.color || "#000"};">
+                  <td style="background-color:#FEB24D; color: ${intro.color || "#000"};">
                     ${Space()}
                   </td>
                 </tr>
@@ -489,9 +411,111 @@ export async function mondayRegularNslt({
               :
               ``
               }
-
+              
+               ${!single_image ? 
+                `<tr><td class="newsletterBottom60px"></td></tr>
+                <tr>
+                    <td align="center">
+                      ${ImageWithLink({
+                        href: type === "landing" ? queries.categoriesLink : queries.categoriesLink + u_t_m,
+                        src: links[5],
+                      })}
+                    </td>
+                </tr>
+                <tr><td class="newsletterBottom35px"></td></tr>
+                <tr>
+                    <td class="newsletterContainer" style="background-color: ${intro.background || background};">
+                        ${Intro({
+                          data: queries.paragraph,
+                          color: intro?.color,
+                          type: "paragraph",
+                          align: categories.some(cat => cat.products && cat.products.length > 0) ? undefined : "center",
+                          title: {
+                            className: "newsletterIntroTitle",
+                          },
+                        })}
+                    </td>
+                </tr>
+                <tr><td class="newsletterBottom35px"></td></tr>`
+              : 
+                ``
+              }
+               ${freebies ?
+              `
+              
+              <tr>
+                <td style="background-color: ${ freebies.options.background || background }; color: ${ freebies.options?.color || "#000" };">
+                ${FreebiesGenerator({
+                  background,
+                  freebies: freebies.items1,
+                  getProductById,
+                  normalPrice: true,
+                })}
+                  </td>
+              </tr>
+              <tr>
+                  <td style="background-color: ${ freebies.options.background || background }; color: ${ freebies.options?.color || "#000" };">
+                      ${Space({ className: "newsletterBottom35px" })}
+                  </td>
+              </tr>
+             `
+              :
+              ''
+              }
               <!-- Wstawienie wygenerowanych dynamicznie sekcji kategorii -->
+              
               ${categoriesSectionHTML}
+
+              ${!single_image ? 
+                `<tr><td ></td></tr>
+                <tr>
+                    <td align="center">
+                      ${ImageWithLink({
+                        href: type === "landing" ? queries.categoriesLink : queries.categoriesLink + u_t_m,
+                        src: links[6],
+                      })}
+                    </td>
+                </tr>
+                <tr><td class="newsletterBottom35px"></td></tr>
+                <tr>
+                    <td class="newsletterContainer" style="background-color: ${intro.background || background};">
+                        ${new Paragraph({
+                          paragraph: queries.split,
+                          type: "split",
+                          align: 'center',
+                        }).htmlOutput }
+                        
+                    </td>
+                </tr>
+                <tr><td class="newsletterBottom35px"></td></tr>`
+              : 
+                ``
+              }
+               ${freebies ?
+              `
+              
+              <tr>
+                <td style="background-color: ${ freebies.options.background || background }; color: ${ freebies.options?.color || "#000" };">
+                ${FreebiesGenerator({
+                  background,
+                  freebies: freebies.items2,
+                  getProductById,
+                  normalPrice: true,
+                })}
+                  </td>
+              </tr>
+              
+             `
+              :
+              ''
+              }
+              ${shopNow({
+                href: type === "landing" ? queries.categoriesLink : queries.categoriesLink + u_t_m,
+                cta: queries.cta,
+                textColor: "#000000",
+                space: 80,
+                backgorund: freebies.options.background
+              })}
           <tbody>
       </table>
       ${ (type === "landing" && !soon_banners) || type === "newsletter"
@@ -538,7 +562,7 @@ export async function mondayRegularNslt({
         :
         ''
       }
-      ${Footer(
+       ${Footer(
         {
           id,
           assembly: {

@@ -7,7 +7,7 @@ export const Intro = isAllowToRender(({
   data, 
   spaceClassName, 
   color = "#000000", 
-  align = "left", 
+  align = "center", 
   type = "title&paragraph", 
   idx, 
   len 

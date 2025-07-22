@@ -33,7 +33,7 @@ import { CategoryOneBannerWhite } from "./categoryOneBannerWhite.js";
 import { AdditionalCategories } from "./additional_categories.js";
 import { TwoCategory } from "./twoCategories.js";
 import { Create2Columns_Grid } from "./Create2Columns_Grid.js";
-
+import { shopNow } from "./shopNow.js";
 export {
   ProductWithSize,
   Space,
@@ -70,4 +70,5 @@ export {
   AdditionalCategories,
   TwoCategory,
   Create2Columns_Grid,
+  shopNow
 };

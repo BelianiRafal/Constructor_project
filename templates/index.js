@@ -32,6 +32,9 @@ import { RegularWednesdayNslt } from "./test.js";
 import { FrenchDays } from "./french.js";
 import { BelianiBirthday} from "./BelianiBirthday.js";
 import { mondayRegularNslt } from "./mondayRegularNslt.js"
+import { fridayDziwnyNsltr } from "./fridayDziwnyNsltr.js"
+import { product_of_the_month } from "./product_of_the_month.js"
+
 
 export const templates = {
   newsletter_FGG,
@@ -67,5 +70,7 @@ export const templates = {
   RegularWednesdayNslt,
   FrenchDays,
   BelianiBirthday,
-  mondayRegularNslt
+  mondayRegularNslt,
+  fridayDziwnyNsltr,
+  product_of_the_month
 };
