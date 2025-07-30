@@ -26,6 +26,7 @@ export const Category = isAllowToRender(
 		getPhrase,
     line,
     len,
+		showTitle,
     idx,
     cta = 'CTA',
     type = 'monday',
@@ -75,7 +76,7 @@ export const Category = isAllowToRender(
 
 					${CTA({
 						align: 'center',
-						spaceAfter: {class: 'newsletterBottom60px'},
+						spaceAfter: {class: 'newsletterBottom80px'},
 						text: getPhrase("Shop now"),
 						href: href,
 					})}
@@ -83,6 +84,12 @@ export const Category = isAllowToRender(
 
       case 'image-4productsgrid':
         return `
+					${showTitle ? (idx !== 0 ? Space({ className: 'newsletterBottom35px' }) : '') : ''}
+
+					${showTitle ? Title({ title: queries.categories[idx], insideContainer: true }) : ''}
+
+					${showTitle ? Space({ className: 'newsletterBottom35px' }) : ''}
+
 					${ImageWithLink({ href: href, src: src, alt: queries['categories']?.idx || null, insideRow: true })}
 
 					${Space({ className: 'newsletterBottom35px' })}
