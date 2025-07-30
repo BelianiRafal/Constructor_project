@@ -124,14 +124,14 @@ export function Footer(sections, options) {
                                 <tr>
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
-                                            href="${firstCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${firstCategory.href}">
                                             <img loading="lazy" src="${firstCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
-                                            href="${secondCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${secondCategory.href}">
                                             <img loading="lazy" src="${secondCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
@@ -140,14 +140,14 @@ export function Footer(sections, options) {
                                 <tr>
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
-                                            href="${thirdCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${thirdCategory.href}">
                                             <img loading="lazy" src="${thirdCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
-                                            href="${foutrthCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${foutrthCategory.href}">
                                             <img loading="lazy" src="${foutrthCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
@@ -156,14 +156,14 @@ export function Footer(sections, options) {
                                 <tr>
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
-                                            href="${fifthCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${fifthCategory.href}">
                                             <img loading="lazy" src="${fifthCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
-                                            href="${sixthCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${sixthCategory.href}">
                                             <img loading="lazy" src="${sixthCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
@@ -172,14 +172,14 @@ export function Footer(sections, options) {
                                 <tr>
                                     <td class="newsletterFooterCategoryLEFTBottom">
                                         <a
-                                            href="${seventhCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${seventhCategory.href}">
                                             <img loading="lazy" src="${seventhCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHTBottom">
                                         <a
-                                            href="${eigthCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${eigthCategory.href}">
                                             <img loading="lazy" src="${eigthCategory.src}" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
