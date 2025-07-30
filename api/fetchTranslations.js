@@ -31,8 +31,16 @@ export const fetchTranslations = async ({ tableName, tableQueries }) => {
     name: "header",
     tableColumns: false
   };
+	
+	const categoryLinksQuery = {
+		name: "categoriesLinks",
+		tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+    tableRange: "A:NZ?majorDimension=COLUMNS",
+		tableName: "Categories",
+    tableColumns: false
+  };
   
-  tableQueries = [...tableQueries, headerQuery];
+  tableQueries = [...tableQueries, headerQuery, categoryLinksQuery];
 
   // Group queries by tableId and tableName
   const groupedQueries = {};
@@ -127,7 +135,7 @@ export async function getTranslations({
   tableId,
   tableName,
   tableRange,
-  fallback = ['Translations not found'],
+  fallback,
   name,
 }) {
   if (!tableId) {
