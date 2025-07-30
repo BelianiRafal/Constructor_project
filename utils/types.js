@@ -76,6 +76,10 @@ export default {
             line-height: 1.20;
             font-family: "Open Sans", sans-serif;
           }
+
+					#newsletter .newsletterBottom15px {
+						padding-bottom: 15px;
+					}
           
           .newsletterBottom20px {
             padding-bottom: 20px;
@@ -312,7 +316,11 @@ export default {
             .newsletterBottom20px {
               padding-bottom: 10px;
             }
-          
+
+						#newsletter .newsletterBottom15px {
+							padding-bottom: 10px;
+						}
+							
             .newsletterBottom80px {
               padding-bottom: 50px;
             }
@@ -1058,6 +1066,10 @@ export default {
             padding-bottom: 20px;
           }
 
+					#newsletter .newsletterBottom15px {
+						padding-bottom: 15px;
+					}
+
           #newsletter .newsletterBottom10px {
             padding-bottom: 10px;
           }
@@ -1346,6 +1358,10 @@ export default {
             #newsletter .newsletterBottom20px {
               padding-bottom: 10px;
             }
+
+						#newsletter .newsletterBottom15px {
+							padding-bottom: 10px;
+						}
           
             #newsletter .newsletterBottom80px {
               padding-bottom: 50px;
