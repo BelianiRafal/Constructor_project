@@ -48,7 +48,7 @@ export default [
       },
       {
         language: LANGUAGES.PL,
-        tableColumn: "",
+        tableColumn: "D",
       },
     ],
     price_format: {
