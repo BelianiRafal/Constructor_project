@@ -8,134 +8,141 @@ import { swapImagesBySlug } from '../helpers/computeValue.js';
 
 // prettier-ignore
 const timerGifsSource = {
-  CHDE: [''],
-	CHFR: [''],
-  FR:   [''],
-  DE:   [''],
-  UK:   [''],
-  AT:   [''],
-  ES:   [''],
-  PL:   [''],
-  NL:   [''],
-  PT:   [''],
-  IT:   [''],
-  SE:   [''],
-  HU:   [''],
-  DK:   [''],
-  CZ:   [''],
-  FI:   [''],
-  NO:   [''],
-  SK:   [''],
-  BENL: [''],
-  BEFR: [''],
-  RO:   [''],
+  CHDE: ['https://gen.sendtric.com/countdown/4dggc1fwey'],
+	CHFR: ['https://gen.sendtric.com/countdown/nhm0wohx9k'],
+  FR:   ['https://gen.sendtric.com/countdown/95hjfozzyb'],
+  DE:   ['https://gen.sendtric.com/countdown/e7vfq1ob5l'],
+  UK:   ['https://gen.sendtric.com/countdown/ac1md62j4i'],
+  AT:   ['https://gen.sendtric.com/countdown/tx4dqxbqe6'],
+  ES:   ['https://gen.sendtric.com/countdown/iw3c7u1w84'],
+  PL:   ['https://gen.sendtric.com/countdown/m8qqjcwryb'],
+  NL:   ['https://gen.sendtric.com/countdown/qkl399r3f0'],
+  PT:   ['https://gen.sendtric.com/countdown/81kkg3tlbt'],
+  IT:   ['https://gen.sendtric.com/countdown/nj5jikhk1w'],
+  SE:   ['https://gen.sendtric.com/countdown/z91daybc5s'],
+  HU:   ['https://gen.sendtric.com/countdown/j07zp45xrm'],
+  DK:   ['https://gen.sendtric.com/countdown/zt461n3jwa'],
+  CZ:   ['https://gen.sendtric.com/countdown/6w9hzzvmyo'],
+  FI:   ['https://gen.sendtric.com/countdown/upeh49s19b'],
+  NO:   ['https://gen.sendtric.com/countdown/up73q7fbm2'],
+  SK:   ['https://gen.sendtric.com/countdown/owoaesyyu8'],
+  BENL: ['https://gen.sendtric.com/countdown/a2p6w4x9ow'],
+  BEFR: ['https://gen.sendtric.com/countdown/bew3xh3xea'],
+  RO:   ['https://gen.sendtric.com/countdown/krlfkr1t11'],
 };
 
 const categories = [
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFF4E6',
+    name: 'desks',
+		showTitle: true,
+    background: '#FFDCCD',
     color: '#000',
     src: getImageUrl('20250807_Cat00.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    href: 'https://www.beliani.ch/office-furniture/desks-eng/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 82347,
+        id: 608908,
         src: getImageUrl('20250807_Cat01.png', true),
       },
       {
-        id: 82395,
+        id: 234488,
         src: getImageUrl('20250807_Cat02.png', true),
       },
       {
-        id: 82346,
+        id: 234818,
         src: getImageUrl('20250807_Cat03.png', true),
       },
       {
-        id: 326853,
+        id: 391674,
         src: getImageUrl('20250807_Cat04.png', true),
       },
     ],
   },
+
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFE3D8',
+    name: 'chairs',
+    background: '#F6E7E6',
     color: '#000',
+		showTitle: true,
     src: getImageUrl('20250807_Cat10.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    href: 'https://www.beliani.ch/office-furniture/office-chairs/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 327295,
+        id: 631276,
         src: getImageUrl('20250807_Cat11.png', true),
       },
       {
-        id: 327197,
+        id: 631893,
         src: getImageUrl('20250807_Cat12.png', true),
       },
       {
-        id: 57677,
+        id: 611647,
         src: getImageUrl('20250807_Cat13.png', true),
       },
       {
-        id: 130931,
+        id: 593169,
         src: getImageUrl('20250807_Cat14.png', true),
       },
     ],
   },
+
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFF4E6',
+    name: 'cabinets',
+    background: '#FFDCCD',
     color: '#000',
+		showTitle: true,
     src: getImageUrl('20250807_Cat20.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    href: 'https://www.beliani.ch/storage-units-and-cabinets/office-cabinet/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 634160,
+        id: 359217,
         src: getImageUrl('20250807_Cat21.png', true),
       },
       {
-        id: 368940,
+        id: 612939,
         src: getImageUrl('20250807_Cat22.png', true),
       },
       {
-        id: 522855,
+        id: 613299,
         src: getImageUrl('20250807_Cat23.png', true),
       },
       {
-        id: 116294,
+        id: 314139,
         src: getImageUrl('20250807_Cat24.png', true),
       },
     ],
   },
+
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFE3D8',
+    name: 'lamps',
+		showTitle: true,
+    background: '#F6E7E6',
     color: '#000',
     src: getImageUrl('20250807_Cat30.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    href: 'https://www.beliani.ch/office-furniture/office-lamps/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 327295,
+        id: 380833,
         src: getImageUrl('20250807_Cat31.png', true),
       },
       {
-        id: 327197,
+        id: 321675,
         src: getImageUrl('20250807_Cat32.png', true),
       },
       {
-        id: 57677,
+        id: 72220,
         src: getImageUrl('20250807_Cat33.png', true),
       },
       {
-        id: 130931,
+        id: 35510,
         src: getImageUrl('20250807_Cat34.png', true),
       },
     ],
@@ -146,23 +153,27 @@ const campaignTranslationsSheet = '07.08.25 - School';
 
 const tableQueries = [
   {
-    tableRange: '13:14',
+    tableRange: '15:16',
     name: 'TopImageTitle',
   },
   {
-    tableRange: '16',
+    tableRange: '18',
     name: 'intro',
   },
   {
-    tableRange: '39:40',
+    tableRange: '47:48',
     name: 'Timer',
   },
   {
-    tableRange: '17:19',
+    tableRange: '19:22',
     name: 'paragraphs',
   },
+	{
+		tableRange: '23:26',
+		name: 'categories',
+	},
   {
-    tableRange: '34:35',
+    tableRange: '40:41',
     name: 'condition',
   },
 ];
@@ -209,7 +220,10 @@ const c20250807 = new entities.Campaign({
       wrapper: types.WRAPPER, // TYLKO DLA NSLT
       template: templates.TIT_TopImage_Timer_Categories,
       css: types.CSS.NS,
-      intro: true,
+			intro: {
+				align: "left",
+				hideCTA: true
+			},
       timer: {
         background: '#F6E7E6',
         color: '#000000',
@@ -234,7 +248,10 @@ const c20250807 = new entities.Campaign({
       color: '#000000',
       template: templates.TIT_TopImage_Timer_Categories,
       css: types.CSS.LP,
-      intro: true,
+			intro: {
+				align: "left",
+				hideCTA: true
+			},
       timer: {
         background: '#F6E7E6',
         color: '#000000',

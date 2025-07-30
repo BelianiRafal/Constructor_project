@@ -7,27 +7,27 @@ import getImageUrl from '../helpers/getImageUrl.js';
 
 // prettier-ignore
 const timerGifsSource = {
-  CHDE: ['https://gen.sendtric.com/countdown/sxet9fgqai'],
-	CHFR: ['https://gen.sendtric.com/countdown/0nsyi3qgl6'],
-  FR:   ['https://gen.sendtric.com/countdown/op1egcb2jp'],
-  DE:   ['https://gen.sendtric.com/countdown/qf0gjvokl3'],
-  UK:   ['https://gen.sendtric.com/countdown/rqky9bzqxo'],
-  AT:   ['https://gen.sendtric.com/countdown/ywgju0ai9i'],
-  ES:   ['https://gen.sendtric.com/countdown/yi2lfdh101'],
-  PL:   ['https://gen.sendtric.com/countdown/h207rjt1bu'],
-  NL:   ['https://gen.sendtric.com/countdown/a9488h6n2c'],
-  PT:   ['https://gen.sendtric.com/countdown/eluk3m0ijb'],
-  IT:   ['https://gen.sendtric.com/countdown/w3c5gluy47'],
-  SE:   ['https://gen.sendtric.com/countdown/4s8qbppw5t'],
-  HU:   ['https://gen.sendtric.com/countdown/qwnj1k5t42'],
-  DK:   ['https://gen.sendtric.com/countdown/1p7396kcnu'],
-  CZ:   ['https://gen.sendtric.com/countdown/ap8h483okk'],
-  FI:   ['https://gen.sendtric.com/countdown/hyh6ey13mv'],
-  NO:   ['https://gen.sendtric.com/countdown/yyr1kkjx39'],
-  SK:   ['https://gen.sendtric.com/countdown/vip661zx0y'],
-  BENL: ['https://gen.sendtric.com/countdown/nl5pt28ck0'],
-  BEFR: ['https://gen.sendtric.com/countdown/anh3pa6p6g'],
-  RO:   ['https://gen.sendtric.com/countdown/fa0x7geyso'],
+  CHDE: ['https://gen.sendtric.com/countdown/1ohz6e920d'],
+	CHFR: ['https://gen.sendtric.com/countdown/knmylt4zyp'],
+  FR:   ['https://gen.sendtric.com/countdown/306r8yzp3c'],
+  DE:   ['https://gen.sendtric.com/countdown/at9r8fm7hj'],
+  UK:   ['https://gen.sendtric.com/countdown/nxt0zummx4'],
+  AT:   ['https://gen.sendtric.com/countdown/43oljqfnix'],
+  ES:   ['https://gen.sendtric.com/countdown/65c37fnnzm'],
+  PL:   ['https://gen.sendtric.com/countdown/vmxjww1xcr'],
+  NL:   ['https://gen.sendtric.com/countdown/ycqds2dp0d'],
+  PT:   ['https://gen.sendtric.com/countdown/3vg63cm9m5'],
+  IT:   ['https://gen.sendtric.com/countdown/g5uzfmtkfn'],
+  SE:   ['https://gen.sendtric.com/countdown/dwtepxwkqt'],
+  HU:   ['https://gen.sendtric.com/countdown/joenrzd4rt'],
+  DK:   ['https://gen.sendtric.com/countdown/6puoye28de'],
+  CZ:   ['https://gen.sendtric.com/countdown/u134w6ra2f'],
+  FI:   ['https://gen.sendtric.com/countdown/gemnhlg7u1'],
+  NO:   ['https://gen.sendtric.com/countdown/03no8o0o1n'],
+  SK:   ['https://gen.sendtric.com/countdown/l1rcn5qual'],
+  BENL: ['https://gen.sendtric.com/countdown/1sqmi087es'],
+  BEFR: ['https://gen.sendtric.com/countdown/cmivhpnbvr'],
+  RO:   ['https://gen.sendtric.com/countdown/2q7ae6i2ln'],
 };
 
 const timer = {
@@ -35,131 +35,163 @@ const timer = {
   color: '#000000',
   align: 'center',
   gif: timerGifsSource,
-  image: getImageUrl('20250731_freebies.png', true),
+  image: getImageUrl('20250814_freebies.png', true),
 };
 
 const categories = [
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFF4E6',
+    name: 'Plant pots',
+    background: '#FFDED0',
     color: '#000',
-    src: getImageUrl('20250731_Category_1.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    src: getImageUrl('20250814_Cat00.png'), // <--- that way image doesn't change based on country
+    href: 'https://www.beliani.ch/garden-accessories/pots-and-planters/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 82347,
-        src: getImageUrl('20250731_Category_1_Prod_1.png', true),
+        id: 378178,
+        src: getImageUrl('20250814_Pic01.png', true),
       },
       {
-        id: 82395,
-        src: getImageUrl('20250731_Category_1_Prod_2.png', true),
+        id: 383967,
+        src: getImageUrl('20250814_Pic02.png', true),
       },
       {
-        id: 82346,
-        src: getImageUrl('20250731_Category_1_Prod_3.png', true),
+        id: 404375,
+        src: getImageUrl('20250814_Pic03.png', true),
       },
       {
-        id: 326853,
-        src: getImageUrl('20250731_Category_1_Prod_4.png', true),
+        id: 589439,
+        src: getImageUrl('20250814_Pic04.png', true),
       },
     ],
   },
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFE3D8',
+    name: 'Fire pits & grills',
+    background: '#FF9780',
     color: '#000',
-    src: getImageUrl('20250731_Category_2.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    src: getImageUrl('20250814_Cat10.png'), // <--- that way image doesn't change based on country
+    href: 'https://www.beliani.ch/garden-accessories/fire-pits/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 327295,
-        src: getImageUrl('20250731_Category_2_Prod_1.png', true),
+        id: 315858,
+        src: getImageUrl('20250814_Pic11.png', true),
       },
       {
-        id: 327197,
-        src: getImageUrl('20250731_Category_2_Prod_2.png', true),
+        id: 200578,
+        src: getImageUrl('20250814_Pic12.png', true),
       },
       {
-        id: 57677,
-        src: getImageUrl('20250731_Category_2_Prod_3.png', true),
+        id: 87001,
+        src: getImageUrl('20250814_Pic13.png', true),
       },
       {
-        id: 130931,
-        src: getImageUrl('20250731_Category_2_Prod_4.png', true),
+        id: 85075,
+        src: getImageUrl('20250814_Pic14.png', true),
       },
     ],
   },
   {
     type: 'image-4productsgrid',
-    name: 'parasols',
-    background: '#FFF4E6',
+    name: 'Parasols',
+    background: '#FFDED0',
     color: '#000',
-    src: getImageUrl('20250731_Category_3.png'), // <--- that way image doesn't change based on country
-    href: 'https://www.beliani.ch/garden-furniture/parasols/',
+    src: getImageUrl('20250814_Cat20.png'), // <--- that way image doesn't change based on country
+    href: 'https://www.beliani.ch/parasols/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
     products: [
       {
-        id: 634160,
-        src: getImageUrl('20250731_Category_3_Prod_1.png', true),
+        id: 634141,
+        src: getImageUrl('20250814_Pic21.png', true),
       },
       {
-        id: 368940,
-        src: getImageUrl('20250731_Category_3_Prod_2.png', true),
+        id: 116295,
+        src: getImageUrl('20250814_Pic22.png', true),
       },
       {
-        id: 522855,
-        src: getImageUrl('20250731_Category_3_Prod_3.png', true),
+        id: 522605,
+        src: getImageUrl('20250814_Pic23.png', true),
       },
       {
-        id: 116294,
-        src: getImageUrl('20250731_Category_3_Prod_4.png', true),
+        id: 82349,
+        src: getImageUrl('20250814_Pic24.png', true),
+      },
+    ],
+  },
+  {
+    type: 'image-4productsgrid',
+    name: 'Picnic baskets',
+    background: '#FF9780',
+    color: '#000',
+    src: getImageUrl('20250814_Cat30.png'), // <--- that way image doesn't change based on country
+    href: 'https://www.beliani.ch/picnic-basket/',
+    // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
+    products: [
+      {
+        id: 595691,
+        src: getImageUrl('20250814_Pic31.png', true),
+      },
+      {
+        id: 594913,
+        src: getImageUrl('20250814_Pic32.png', true),
+      },
+      {
+        id: 595749,
+        src: getImageUrl('20250814_Pic33.png', true),
+      },
+      {
+        id: 595711,
+        src: getImageUrl('20250814_Pic34.png', true),
       },
     ],
   },
 ];
 
-const campaignTranslationsSheet = '31.07.25 - Parasols for summer';
+const campaignTranslationsSheet = '14.08.25 - Garden Accessories';
 
 const tableQueries = [
   {
-    tableRange: '13:14',
+    tableRange: '15:16',
     name: 'TopImageTitle',
   },
   {
-    tableRange: '16',
+    tableRange: '18',
     name: 'intro',
   },
   {
-    tableRange: '39:40',
+    tableRange: '10:11',
+		tableName: 'Voucher - 12.08.25 - Free outdoor rug',
     name: 'Timer',
   },
   {
-    tableRange: '17:19',
+    tableRange: '23:26',
     name: 'paragraphs',
   },
   {
-    tableRange: '34:35',
+    tableRange: '40:41',
     name: 'condition',
   },
+	{
+		tableRange: '19:22',
+		name: 'categories'
+	}
 ];
 
 const links = {
-  TopImageTitle_href: translateLink({ value: 'content/lp25-07-31' }),
-  TopImageTitle_src: translateImage({ value: '20250731_TopImageTitle.png' }),
+  TopImageTitle_href: translateLink({ value: 'content/lp25-08-14' }),
+  TopImageTitle_src: translateImage({ value: '20250814_01.png' }),
 
-  TopImage: getImageUrl('20250731_TopImage.png', true),
+  TopImage: getImageUrl('20250814_Pic.png', true),
 
-  Timer: translateLink({ value: 'content/lp25-07-28' }),
+  Timer: translateLink({ value: 'content/lp25-08-12' }),
 
-  Banner_1: translateLink({ value: 'content/lp25-07-24' }),
-  Banner_1_Image: translateImage({ value: '20250724b.png' }),
+  Banner_1: translateLink({ value: 'content/lp25-08-07' }),
+  Banner_1_Image: translateImage({ value: '20250807b.png' }),
 
-  Banner_2: translateLink({ value: 'content/lp25-07-23' }),
-  Banner_2_Image: translateImage({ value: '20250723b.png' }),
+  Banner_2: translateLink({ value: 'content/lp25-08-06' }),
+  Banner_2_Image: translateImage({ value: '20250806b.png' }),
 };
 
 const TopImageTitle_data = {
@@ -168,13 +200,13 @@ const TopImageTitle_data = {
   type: 'twoSameLines',
 };
 
-const c20250731 = new entities.Campaign({
-  date: '2025.07.31',
-  name: 'Parasols',
+const c20250814 = new entities.Campaign({
+  date: '2025.08.14',
+  name: 'Garden Accessories',
   translationsSpreadsheet: campaignTranslationsSheet,
-  issueCardId: '384777',
-  startId: '35444',
-  figmaUrl: 'https://www.figma.com/design/NL4W3nRqUe2jHQFncEmcBA',
+  issueCardId: '388061',
+  startId: '35830',
+  figmaUrl: 'https://www.figma.com/design/Ed3ynwSlNVlQmEsuUhaNvG',
   alarm: {
     isActive: false,
   },
@@ -184,12 +216,15 @@ const c20250731 = new entities.Campaign({
     {
       name: 'Newsletter',
       type: types.NEWSLETTER,
-      background: '#FFF4E6',
+      background: '#FFDED0',
       color: '#000000',
       wrapper: types.WRAPPER, // TYLKO DLA NSLT
       template: templates.TIT_TopImage_Timer_Categories,
       css: types.CSS.NS,
-			intro: true,
+			intro: {
+				align: "left",
+				hideCTA: true
+			},
       timer: timer,
       TopImageTitle_data: TopImageTitle_data,
       categories: categories,
@@ -199,11 +234,14 @@ const c20250731 = new entities.Campaign({
     {
       name: 'Landing Page',
       type: types.LANDINGPAGE,
-      background: '#FFF4E6',
+      background: '#FFDED0',
       color: '#000000',
       template: templates.TIT_TopImage_Timer_Categories,
       css: types.CSS.LP,
-			intro: true,
+			intro: {
+				align: "left",
+				hideCTA: true
+			},
       timer: timer,
       TopImageTitle_data: TopImageTitle_data,
       categories: categories,
@@ -213,4 +251,4 @@ const c20250731 = new entities.Campaign({
   ],
 });
 
-export { c20250731 };
+export { c20250814 };
