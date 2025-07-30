@@ -4,8 +4,5 @@
 	"javascript.validate.enable": false,
 	"vite.port": 5500,
 	"vite.showTerminal": true,
-	"vite.vitepress": false,
-	"conventionalCommits.scopes": [
-		"20250710"
-	]
+	"java.search.scope": "all",
 }

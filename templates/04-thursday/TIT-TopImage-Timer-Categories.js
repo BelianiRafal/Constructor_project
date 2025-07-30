@@ -148,9 +148,9 @@ export async function TIT_TopImage_Timer_Categories({
 										${Intro({
 											spaceClassName: 'newsletterBottom35px',
 											paragraph: queries['intro'],
-											color: color,
-											background: background,
-											align: 'center',
+											color: intro.color ?? color,
+											background: intro.background ?? background,
+											align: intro.align ?? 'center',
 										})}
 									</td>
 								</tr>
@@ -158,6 +158,7 @@ export async function TIT_TopImage_Timer_Categories({
 						</td>
 					</tr>
 					
+					${!intro.hideCTA ? `
 					<tr>
 						<td>
 							<table cellspacing="0" cellpadding="0" border="0" align="center">
@@ -173,7 +174,7 @@ export async function TIT_TopImage_Timer_Categories({
 								})}
 							</table>
 						</td>
-					</tr>
+					</tr>` : ``}
 				</table>
 			`
         : `<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
@@ -210,6 +211,7 @@ export async function TIT_TopImage_Timer_Categories({
               href: getCategoryLink(category.href),
               src: category.src,
               products: prod,
+							showTitle: category.showTitle,
               background: category.background,
               color: category.color,
               len: categoriesWithProducts.length,
@@ -244,7 +246,7 @@ export async function TIT_TopImage_Timer_Categories({
 				</tr>
 
 				<tr>
-					<td align="left" class="newsletterBottom20px" style="line-height: 0; font-size: 0;">
+					<td align="left" style="line-height: 0; font-size: 0;">
 						<a href=${links['Banner_1']}>
 							<img loading="lazy" src=${
                 links['Banner_1_Image']
@@ -252,7 +254,12 @@ export async function TIT_TopImage_Timer_Categories({
 						</a>
 					</td>
 				</tr>
-				
+
+				<tr>
+					<td class="newsletterBottom20px">
+					</td>
+				</tr>
+
 				<tr>
 					<td align="left" class="newsletterBottom35px" style="line-height: 0; font-size: 0;">
 						<a href=${links['Banner_2']}>
