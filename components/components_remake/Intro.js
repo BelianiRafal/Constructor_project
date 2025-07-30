@@ -7,7 +7,7 @@ export const Intro = isAllowToRender(
 
     if (spaceClassName) html += Space({ className: spaceClassName });
 
-		console.log(title, paragraph);
+		// console.log(title, paragraph);
 
 		let titleTrimmed, paragraphTrimmed = undefined;
 
@@ -19,12 +19,12 @@ export const Intro = isAllowToRender(
 			paragraphTrimmed = String(paragraph).trim();
 		}
 
-		console.log(
-			'Intro component rendering with title:',
-			titleTrimmed,
-			'and paragraph:',
-			paragraphTrimmed
-		);
+		// console.log(
+		// 	'Intro component rendering with title:',
+		// 	titleTrimmed,
+		// 	'and paragraph:',
+		// 	paragraphTrimmed
+		// );
 
     if (titleTrimmed) {
       html += `
