@@ -62,6 +62,10 @@ export function FreebieProduct(
           </table>
         </td>
       </tr>
+			<tr>
+			<td class="newsletterBottom20px">
+			</td>
+			</tr>
     </tbody>
   </table>
     `;

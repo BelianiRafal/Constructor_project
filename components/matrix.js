@@ -1,9 +1,9 @@
 function rowFn(item) {
-  return `<tr>${item}</tr>`;
+  return `<tr style="padding-bottom: 10px;">${item}</tr>`;
 }
 
 function colFn(item, width) {
-  return `<td style="vertical-align: top; width: ${width + "%"};">${item}</td>`;
+  return `<td style="vertical-align: top; padding-left: 5px; padding-right: 5px; width: ${width + "%"};">${item}</td>`;
 }
 
 export function Matrix({ row, col, html }) {
