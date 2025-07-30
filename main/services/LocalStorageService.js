@@ -66,7 +66,7 @@ class LocalStorageService {
       if (!savedSelectionsJSON) return null;
       
       const parsed = JSON.parse(savedSelectionsJSON);
-      console.log('Loaded selections:', parsed);
+      // console.log('Loaded selections:', parsed);
       return parsed;
     } catch (error) {
       console.error('Error loading selections from localStorage:', error);

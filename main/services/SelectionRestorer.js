@@ -32,7 +32,7 @@ class SelectionRestorer {
       return false;
     }
 
-    console.log('Starting restoration process...');
+    // console.log('Starting restoration process...');
     this.isRestoring = true;
 
     try {
