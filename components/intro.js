@@ -5,7 +5,10 @@ export const Intro = isAllowToRender(
   ({ title, paragraph, data, spaceClassName, color, background, align = 'left' }) => {
     let html = `<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" class="newsletterContainer" style="background: ${background}; color: ${color};"><tbody>`;
 
-    if (title && title.trim() != 'undefined') {
+		// console.log(title, paragraph, data, spaceClassName, color, background, align);
+
+
+    if (title && String(title).trim() != 'undefined') {
       html += `
     <tr>
       <td>
