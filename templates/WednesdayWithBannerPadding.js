@@ -3,6 +3,7 @@ import { Header } from "../components/header.js";
 import {
   Line,
   Category,
+  CategoryWithBanner,
   Intro,
   Paragraph,
   ImageWithLink,
@@ -12,6 +13,7 @@ import {
   Timer,
   TopImageTitle,
   AdditionalCategories,
+  AdditionalCategoriesPadding,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -19,7 +21,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function RegularBannerPaddingWednesdayNslt({
   links,
   getProductById,
   getCategoryLink,
@@ -158,7 +160,7 @@ export async function RegularWednesdayNslt({
               <tbody>
                 ${categories
                   .map((item, index) => {
-                    const isLast = index === categories.length - 1; // Czy to ostatnia kategoria?
+                    const isLast = index === categories.length - 1;
                     const background = item.background;
                     const color = item.color;
                     const srcValue = item.src?.value || "";
@@ -168,11 +170,35 @@ export async function RegularWednesdayNslt({
           
                     const title = queries.categories[dataIndex] || "Default Title";
                     const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
-          
-                    // Ustal właściwą wartość lastbottomclass
                     const lastbottomclass = isLast ? "newsletterBottom40px" : "newsletterBottom80px";
           
-                    // Używamy TYLKO komponentu Category
+                    // Pierwsza kategoria - CategoryWithBanner
+                    if (index === 0) {
+                      return `
+                        <tr>
+                          <td style="background-color: ${background}; color: ${color};">
+                            ${CategoryWithBanner({
+                              data: [title, paragraph],
+                              href: getCategoryLink(item.href),
+                              name: title,
+                              color: item.color,
+                              desc: paragraph,
+                              src: item.src,
+                              bannerhref: links[3],
+                              bannersrc: links[4],
+                              bannername: title,
+                              lastbottomclass,
+                              cta: getPhrase("Shop now"),
+                              type: "wednesday",
+                              products: item.products?.map((product) =>
+                                getProductById(product.id, product.src)
+                              ) || [],
+                            })}
+                          </td>
+                        </tr>
+                      `;
+                    }
+                    // Kolejne kategorie - Category
                     return `
                       <tr>
                         <td style="background-color: ${background}; color: ${color};">
@@ -226,12 +252,15 @@ export async function RegularWednesdayNslt({
                           if (!categories_add[index]) return "";
                           // Ustalanie wartości paddingside na podstawie index
                           const paddingside = (index === 0 || index === 2) ? "newsletterRight10px" : "newsletterLeft10px";
+                          const paddingbottom = (index === 0 || index === 1) ? "newsletterBottom70px" : "newsletterBottom80px";
                           return `
-                            ${AdditionalCategories({
+                            ${AdditionalCategoriesPadding({
                               name: queries.additional[index],
                               href: getCategoryLink(categories_add[index].href),
                               src: categories_add[index].src,
                               paddingside: paddingside,
+                              paddingbottom: paddingbottom,
+
                             })}
                           `;
                         }).join("")

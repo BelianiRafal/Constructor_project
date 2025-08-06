@@ -47,6 +47,8 @@ import { FreeTimer } from "./freetimer.js";
 import { fCategory } from "./firstcategory.js";
 import { sCategory } from "./secondcategory.js";
 import { BigProduct } from "./bigProduct.js";
+import { CategoryWithBanner } from "./categoryWithBanner.js";
+import { AdditionalCategoriesPadding } from "./additional_categories_padding.js";
 
 export {
   ProductWithSize,
@@ -98,4 +100,6 @@ export {
   fCategory,
   sCategory,
   BigProduct,
+  CategoryWithBanner,
+  AdditionalCategoriesPadding,
 };

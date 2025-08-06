@@ -1,8 +1,9 @@
-export function AdditionalCategories({
+export function AdditionalCategoriesPadding({
     href,
     src,
     name,
     paddingside,
+    paddingbottom,
 }) {
     return `
         <td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="${paddingside}">
@@ -27,7 +28,7 @@ export function AdditionalCategories({
                         </td>
                     </tr>
                     <tr>
-                        <td class="newsletterBottom70px">
+                        <td class="${paddingbottom}">
                         </td>
                     </tr>
                 </tbody>

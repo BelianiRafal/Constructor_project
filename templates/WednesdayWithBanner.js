@@ -3,6 +3,7 @@ import { Header } from "../components/header.js";
 import {
   Line,
   Category,
+  CategoryWithBanner,
   Intro,
   Paragraph,
   ImageWithLink,
@@ -19,7 +20,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function RegularBannerWednesdayNslt({
   links,
   getProductById,
   getCategoryLink,
@@ -158,7 +159,7 @@ export async function RegularWednesdayNslt({
               <tbody>
                 ${categories
                   .map((item, index) => {
-                    const isLast = index === categories.length - 1; // Czy to ostatnia kategoria?
+                    const isLast = index === categories.length - 1;
                     const background = item.background;
                     const color = item.color;
                     const srcValue = item.src?.value || "";
@@ -168,11 +169,35 @@ export async function RegularWednesdayNslt({
           
                     const title = queries.categories[dataIndex] || "Default Title";
                     const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
-          
-                    // Ustal właściwą wartość lastbottomclass
                     const lastbottomclass = isLast ? "newsletterBottom40px" : "newsletterBottom80px";
           
-                    // Używamy TYLKO komponentu Category
+                    // Pierwsza kategoria - CategoryWithBanner
+                    if (index === 0) {
+                      return `
+                        <tr>
+                          <td style="background-color: ${background}; color: ${color};">
+                            ${CategoryWithBanner({
+                              data: [title, paragraph],
+                              href: getCategoryLink(item.href),
+                              name: title,
+                              color: item.color,
+                              desc: paragraph,
+                              src: item.src,
+                              bannerhref: links[3],
+                              bannersrc: links[4],
+                              bannername: title,
+                              lastbottomclass,
+                              cta: getPhrase("Shop now"),
+                              type: "wednesday",
+                              products: item.products?.map((product) =>
+                                getProductById(product.id, product.src)
+                              ) || [],
+                            })}
+                          </td>
+                        </tr>
+                      `;
+                    }
+                    // Kolejne kategorie - Category
                     return `
                       <tr>
                         <td style="background-color: ${background}; color: ${color};">

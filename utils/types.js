@@ -116,7 +116,7 @@ export default {
             font-weight: 600;
           }
 
-          .newsletterTitleAdditional{
+          .newsletterAdditionalCategoryTitle{
             font-size: 27px;
             font-family: "Open Sans", sans-serif;
             line-height: 1.25;
@@ -404,7 +404,7 @@ export default {
               font-size: 25px;
             }
 
-            .newsletterTitleAdditional {
+            .newsletterAdditionalCategoryTitle {
               font-size: 16px !important;
             }
 
@@ -493,7 +493,7 @@ export default {
             }
           
             .newsletterBottom80px {
-              padding-bottom: 50px;
+              padding-bottom: 60px;
             }
           }
           
@@ -1384,7 +1384,7 @@ export default {
             font-weight: 400;
           }
 
-          #newsletter .newsletterTitleAdditional{
+          #newsletter .newsletterAdditionalCategoryTitle{
             font-size: 27px;
             line-height: 1.25;
             text-decoration: underline;
@@ -1681,7 +1681,7 @@ export default {
               line-height: 45px;
             }
 
-            #newsletter .newsletterTitleAdditional {
+            #newsletter .newsletterAdditionalCategoryTitle {
               font-size: 16px !important;
             }
 
@@ -1875,7 +1875,7 @@ export default {
             }
           
             #newsletter .newsletterBottom80px {
-              padding-bottom: 50px;
+              padding-bottom: 60px;
             }
           }
           

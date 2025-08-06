@@ -40,6 +40,8 @@ import { ParasolLP } from "./ParasolLP.js";
 import { BirthdayWhiteNL } from "./BirthdayWhite.js";
 import { Side } from "./Side.js";
 import { SideLP } from "./SideLP.js";
+import { RegularBannerWednesdayNslt } from "./WednesdayWithBanner.js";
+import { RegularBannerPaddingWednesdayNslt } from "./WednesdayWithBannerPadding.js";
 
 export const templates = {
   newsletter_FGG,
@@ -84,4 +86,6 @@ export const templates = {
   BirthdayWhiteNL,
   Side,
   SideLP,
+  RegularBannerWednesdayNslt,
+  RegularBannerPaddingWednesdayNslt,
 };
