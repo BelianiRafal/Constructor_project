@@ -12,6 +12,7 @@ import {
   Timer,
   TopImageTitle,
   AdditionalCategories,
+  AdditionalCategoriesPadding,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -226,12 +227,15 @@ export async function RegularWednesdayNslt({
                           if (!categories_add[index]) return "";
                           // Ustalanie wartości paddingside na podstawie index
                           const paddingside = (index === 0 || index === 2) ? "newsletterRight10px" : "newsletterLeft10px";
+                          const paddingbottom = (index === 0 || index === 1) ? "newsletterBottom70px" : "newsletterBottom80px";
                           return `
-                            ${AdditionalCategories({
+                            ${AdditionalCategoriesPadding({
                               name: queries.additional[index],
                               href: getCategoryLink(categories_add[index].href),
                               src: categories_add[index].src,
                               paddingside: paddingside,
+                              paddingbottom: paddingbottom,
+
                             })}
                           `;
                         }).join("")

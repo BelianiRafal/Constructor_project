@@ -103,6 +103,627 @@ try {
     campaigns: [
 
       new entities.Campaign({
+        startId: "36376",
+        lpId: "26427",
+        name: "27.08.25 - Shorter and cooler outdoorss",
+        version: "new",
+        specialLpIds: {
+
+        },
+        date: "2025.08.27",
+        issueCardId: "390238",
+        alarm: {
+          isActive: false,
+          description: "Add soon ending campaigns. XXXX",
+        },
+        isArchive: false,
+        optimizeImg: false,
+        figmaUrl:
+          "https://www.figma.com/design/vPpA0NlGDiaESMh5fzfWQj/2025.08.27---Newsletter---Shorter-and-cooler-outdoors?node-id=9001-3870&p=f&t=Q0E1FHBN4kRDdIni-0",
+        templates: [
+          {
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.RegularWednesdayNslt,
+            css: types.CSS.NS,
+            background: "#913333",
+            wrapper: types.WRAPPER,
+            categories: [
+              {
+                name: "Balcony set",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#913333",
+                color: "#ffffff",
+                src: getImageUrl("20250827Cat_10.png", true),
+                href: "https://www.beliani.ch/garden-accessories/fire-pits/",
+                products: [
+                  {
+                    id: "177328",
+                    src: getImageUrl("20250827Cat_11.png", true),
+                  },
+                  {
+                    id: "86997",
+                    src: getImageUrl("20250827Cat_12.png", true),
+                  },
+                  {
+                    id: "85075",
+                    src: getImageUrl("20250827Cat_13.png", true),
+                  },
+                  {
+                    id: "86986",
+                    src: getImageUrl("20250827Cat_14.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Hanging chairs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFD6C5",
+                color: "#000000",
+                src: getImageUrl("20250827Cat_20.png", true),
+                href: "https://www.beliani.ch/outdoor-lights/",
+                products: [
+                  {
+                    id: "588730",
+                    src: getImageUrl("20250827Cat_21.png", true),
+                  },
+                  {
+                    id: "561965",
+                    src: getImageUrl("20250827Cat_22.png", true),
+                  },
+                  {
+                    id: "562269",
+                    src: getImageUrl("20250827Cat_23.png", true),
+                  },
+                  {
+                    id: "561075",
+                    src: getImageUrl("20250827Cat_24.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Rugs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#913333",
+                color: "#ffffff",
+                src: getImageUrl("20250827Cat_30.png", true),
+                href: "https://www.beliani.ch/garden-accessories/patio-heaters/",
+                products: [
+                  {
+                    id: "599856",
+                    src: getImageUrl("20250827Cat_31.png", true),
+                  },
+                  {
+                    id: "300797",
+                    src: getImageUrl("20250827Cat_32.png", true),
+                  },
+                  {
+                    id: "300798",
+                    src: getImageUrl("20250827Cat_33.png", true),
+                  },
+                  {
+                    id: "600561",
+                    src: getImageUrl("20250827Cat_34.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Outdoor cushions",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFD6C5",
+                color: "#000000",
+                src: getImageUrl("20250827Cat_40.png", true),
+                href: "https://www.beliani.ch/outdoor-textiles/",
+                products: [
+                  {
+                    id: "225065",
+                    src: getImageUrl("20250827Cat_41.png", true),
+                  },
+                  {
+                    id: "613675",
+                    src: getImageUrl("20250827Cat_42.png", true),
+                  },
+                  {
+                    id: "420917",
+                    src: getImageUrl("20250827Cat_43.png", true),
+                  },
+                  {
+                    id: "610202",
+                    src: getImageUrl("20250827Cat_44.png", true),
+                  },
+                ],
+              },
+            ],
+            categories_add: [
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/outdoor-furniture/lounge-sets/",
+                src: getImageUrl("20250827Cat_50.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/outdoor-furniture/balcony-furniture/",
+                src: getImageUrl("20250827Cat_60.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/outdoor-furniture/sun-loungers/",
+                src: getImageUrl("20250827Cat_70.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/parasols/",
+                src: getImageUrl("20250827Cat_80.png", true),
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-27",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250827_01.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "45",
+                  value:
+                    getImageUrl("250319video.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("250804inside.gif", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-14",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250814b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-07",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250807b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-03-18",
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "search/lemvig/",
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "18:25",
+                name: "categories",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "27",
+                name: "additionalt",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "28:31",
+                name: "additional",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "26",
+                name: "shopnow",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "39:40",
+                name: "condition",
+                fallback: [
+                  'All items are subject to availability. All prices are correct as of dd.mm.yyyy and are subject to change without notification.',
+                  'If you wish to unsubscribe from the newsletter, you can do so by clicking on the <a href="[[newsunassignurl]]"style="text-decoration:none;color:#000000;">Unsubscribe</a> link.'
+                ]
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+            ],
+          },
+          {
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.RegularWednesdayNslt,
+            background: "#913333",
+            topImageColor: "#913333",
+            titleFontColor: "#ffffff",
+            titleSize: "twoSameLines",
+            css: types.CSS.LP,
+            categories: [
+              {
+                name: "Balcony set",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#913333",
+                color: "#ffffff",
+                src: getImageUrl("20250827Cat_10.png", true),
+                href: "https://www.beliani.ch/garden-accessories/fire-pits/",
+                products: [
+                  {
+                    id: "177328",
+                    src: getImageUrl("20250827Cat_11.png", true),
+                  },
+                  {
+                    id: "86997",
+                    src: getImageUrl("20250827Cat_12.png", true),
+                  },
+                  {
+                    id: "85075",
+                    src: getImageUrl("20250827Cat_13.png", true),
+                  },
+                  {
+                    id: "86986",
+                    src: getImageUrl("20250827Cat_14.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Hanging chairs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFD6C5",
+                color: "#000000",
+                src: getImageUrl("20250827Cat_20.png", true),
+                href: "https://www.beliani.ch/outdoor-lights/",
+                products: [
+                  {
+                    id: "588730",
+                    src: getImageUrl("20250827Cat_21.png", true),
+                  },
+                  {
+                    id: "561965",
+                    src: getImageUrl("20250827Cat_22.png", true),
+                  },
+                  {
+                    id: "562269",
+                    src: getImageUrl("20250827Cat_23.png", true),
+                  },
+                  {
+                    id: "561075",
+                    src: getImageUrl("20250827Cat_24.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Rugs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#913333",
+                color: "#ffffff",
+                src: getImageUrl("20250827Cat_30.png", true),
+                href: "https://www.beliani.ch/garden-accessories/patio-heaters/",
+                products: [
+                  {
+                    id: "599856",
+                    src: getImageUrl("20250827Cat_31.png", true),
+                  },
+                  {
+                    id: "300797",
+                    src: getImageUrl("20250827Cat_32.png", true),
+                  },
+                  {
+                    id: "300798",
+                    src: getImageUrl("20250827Cat_33.png", true),
+                  },
+                  {
+                    id: "600561",
+                    src: getImageUrl("20250827Cat_34.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Outdoor cushions",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFD6C5",
+                color: "#000000",
+                src: getImageUrl("20250827Cat_40.png", true),
+                href: "https://www.beliani.ch/outdoor-textiles/",
+                products: [
+                  {
+                    id: "225065",
+                    src: getImageUrl("20250827Cat_41.png", true),
+                  },
+                  {
+                    id: "613675",
+                    src: getImageUrl("20250827Cat_42.png", true),
+                  },
+                  {
+                    id: "420917",
+                    src: getImageUrl("20250827Cat_43.png", true),
+                  },
+                  {
+                    id: "610202",
+                    src: getImageUrl("20250827Cat_44.png", true),
+                  },
+                ],
+              },
+            ],
+            categories_add: [
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/outdoor-furniture/lounge-sets/",
+                src: getImageUrl("20250827Cat_50.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/outdoor-furniture/balcony-furniture/",
+                src: getImageUrl("20250827Cat_60.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/outdoor-furniture/sun-loungers/",
+                src: getImageUrl("20250827Cat_70.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/parasols/",
+                src: getImageUrl("20250827Cat_80.png", true),
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-27",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250827_01.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "45",
+                  value:
+                    getImageUrl("250319video.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("250804inside.gif", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-14",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250814b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-08-07",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250807b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-03-18",
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "search/lemvig/",
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "15:16",
+                name: "tit"
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "18:25",
+                name: "categories",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "27",
+                name: "additionalt",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "28:31",
+                name: "additional",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "26",
+                name: "shopnow",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "27.08.25 - Shorter and cooler outdoors!",
+                tableRange: "39:40",
+                name: "condition",
+                fallback: [
+                  'All items are subject to availability. All prices are correct as of dd.mm.yyyy and are subject to change without notification.',
+                  'If you wish to unsubscribe from the newsletter, you can do so by clicking on the <a href="[[newsunassignurl]]"style="text-decoration:none;color:#000000;">Unsubscribe</a> link.'
+                ]
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+            ],
+          },
+        ],
+      }),
+      new entities.Campaign({
         startId: "36184",
         lpId: "26350",
         name: "20.08.25 - Dining room",
