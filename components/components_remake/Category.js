@@ -8,25 +8,28 @@ import {
   ProductsRow,
   Space,
   Title,
-	CTA,
+  CTA,
 } from './_index.js';
 import translateImage from '../../helpers/translateImage.js';
 import { Freebies } from '../freebies.js';
 
 export const Category = isAllowToRender(
   ({
+    showCTA = true,
+    showPrices = true,
     links,
     queries,
     name,
     href,
     src,
+    showParagraph,
     products,
     ctaComponent,
     color,
-		getPhrase,
+    getPhrase,
     line,
     len,
-		showTitle,
+    showTitle,
     idx,
     cta = 'CTA',
     type = 'monday',
@@ -36,6 +39,7 @@ export const Category = isAllowToRender(
     if (!type) {
       return 'Please specify type category.';
     }
+
     switch (type) {
       case 'image-3productsrow-imagewithvproducts':
         const firstParagraphIdx = idx * 2;
@@ -66,7 +70,7 @@ export const Category = isAllowToRender(
 					${Space({ className: 'newsletterBottom35px' })}
 
 					${ImageWithVProducts({
-						category: { name: name, href: href },
+            category: { name: name, href: href },
             image: links[`cat${idx + 1}a_src`],
             products: products.slice(3, 5),
             imageSide: idx % 2 === 0 ? 'left' : 'right',
@@ -75,82 +79,98 @@ export const Category = isAllowToRender(
 					${Space({ className: 'newsletterBottom35px' })}
 
 					${CTA({
-						align: 'center',
-						spaceAfter: {class: 'newsletterBottom80px'},
-						text: getPhrase("Shop now"),
-						href: href,
-					})}
+            align: 'center',
+            spaceAfter: { class: 'newsletterBottom80px' },
+            text: getPhrase('Shop now'),
+            href: href,
+          })}
 				`;
 
       case 'image-4productsgrid':
         return `
+        
 					${showTitle ? (idx !== 0 ? Space({ className: 'newsletterBottom35px' }) : '') : ''}
 
 					${showTitle ? Title({ title: queries.categories[idx], insideContainer: true }) : ''}
 
 					${showTitle ? Space({ className: 'newsletterBottom35px' }) : ''}
 
-					${ImageWithLink({ href: href, src: src, alt: queries['categories']?.idx || null, insideRow: true })}
+					${
+            src
+              ? 
+              `
+              ${ImageWithLink({
+                href: href || queries['linkWithFilter'],
+                src: src,
+                alt: queries['categories']?.idx || null,
+                insideRow: true,
+              })}
+              
+              ${Space({ className: 'newsletterBottom35px' })}
+              `
+              : ``
+          }
 
-					${Space({ className: 'newsletterBottom35px' })}
+					
 
-					${Paragraph(queries.paragraphs[idx], 'left')}
-
-					${Space({ className: 'newsletterBottom35px' })}
+					${
+            queries.paragraphs && queries.paragraphs[idx]
+              ? `
+                ${Paragraph(queries.paragraphs[idx], 'left')}
+                ${Space({ className: 'newsletterBottom35px' })}
+              `
+              : 
+              (showParagraph ? `
+                ${Paragraph(queries.paragraphs[idx], 'left')}
+                ${Space({ className: 'newsletterBottom35px' })}
+                ` : ``)
+          }
 
 					<tr>
 						<td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
 							<table cellspacing="0" cellpadding="0" style="width: 100%;">
 								<tr>
-									<td class="newsletterBottom20px">
+									<td class="${(products[2] && products[3]) ? 'newsletterBottom20px' : ``}">
 										<!-- 1-2 Products table -->
 										<table cellspacing="0" cellpadding="0" style="width: 100%; ">
 											<tr>
 												<!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
 												<td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="newsletterRight10px">
-													${Product(
-														products[0],
-														"left",
-														`color: ${color || "#000000"}`
-													)}
+													${Product(products[0], 'left', `color: ${color || '#000000'}`, showPrices)}
 												</td>
 												<!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
 												<td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 50%" class="newsletterLeft10px">
-													${Product(
-														products[1],
-														"left",
-														`color: ${color || "#000000"}`
-													)}
+													${Product(products[1], 'left', `color: ${color || '#000000'}`, showPrices)}
 												</td>
 											</tr>
 										</table>
 									</td>
 								</tr>
-								<tr>
+
+                ${
+                  products[2] && products[3]
+                    ? `
+                <tr>
 									<td>
 										<!-- 3-4 Products table -->
 										<table cellspacing="0" cellpadding="0" style="width: 100%; ">
 											<tr>
 												<!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
 												<td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="newsletterRight10px">
-													${Product(
-														products[2],
-														"left",
-														`color: ${color || "#000000"}`
-													)}
+													${Product(products[2], 'left', `color: ${color || '#000000'}`, showPrices)}
 												</td>
 												<!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
 												<td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 50%" class="newsletterLeft10px">
-													${Product(
-														products[3],
-														"left",
-														`color: ${color || "#000000"}`
-													)}
+													${Product(products[3], 'left', `color: ${color || '#000000'}`, showPrices)}
 												</td>
 											</tr>
 										</table>
 									</td>
 								</tr>
+                  `
+                    : ``
+                }
+								
 							</table>
 						</td>
 					</tr>
@@ -158,13 +178,51 @@ export const Category = isAllowToRender(
 					
 					${Space({ className: 'newsletterBottom35px' })}
 
-					${CTA({
-						align: 'center',
-						spaceAfter: {class: 'newsletterBottom80px'},
-						text: getPhrase("Shop now"),
-						href: href,
-					})}
+					${
+            showCTA ? 
+            CTA({
+              align: 'center',
+              spaceAfter: { class: 'newsletterBottom80px' },
+              text: getPhrase('Shop now'),
+              href: href || queries['linkWithFilter'],
+            })
+             : ''}
 				`;
+
+      case 'image-3productsrow':
+        return `
+					${showTitle ? (idx !== 0 ? Space({ className: 'newsletterBottom35px' }) : '') : ''}
+
+					${showTitle ? Title({ title: queries.categories[idx], insideContainer: true }) : ''}
+
+					${showTitle ? Space({ className: 'newsletterBottom35px' }) : ''}
+
+					${ImageWithLink({
+            href: products[0].href,
+            src: products[0].src,
+            alt: queries['categories']?.idx || null,
+            insideRow: true,
+          })}
+
+					${Space({ className: 'newsletterBottom35px' })}
+
+					${ProductsRow({
+            products: [products[1], products[2], products[3]],
+            showName: 'false',
+            showPrices: 'false',
+          })}
+          
+					${Space({ className: 'newsletterBottom35px' })}
+
+          ${CTA({
+            align: 'center',
+            spaceAfter: { class: 'newsletterBottom80px' },
+            text: getPhrase('Shop now'),
+            href: href,
+          })}
+
+          <tr><td>${idx !== len - 1 ? Line(undefined, true) : ''}</td></tr>
+        `;
 
       default:
         break;

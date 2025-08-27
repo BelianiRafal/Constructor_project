@@ -5,4 +5,10 @@
 	"vite.port": 5500,
 	"vite.showTerminal": true,
 	"java.search.scope": "all",
+	"workbench.colorTheme": "Default Dark+",
+	"editor.mouseWheelZoom": true,
+	"editor.autoIndentOnPaste": true,
+	"conventionalCommits.autoCommit": false,
+	"conventionalCommits.lineBreak": "\\n",
+	"conventionalCommits.showEditor": true,
 }

@@ -1,6 +1,6 @@
 import { ImageWithLink } from "./ImageWithLink.js";
 
-export function Product(product, align = "left", style) {
+export function Product(product, align = "left", style, showPrices) {
   return `
   <table cellspacing="0" cellpadding="0" style="width: 100%; ${style ?? ""}">
     <tbody>
@@ -31,16 +31,19 @@ export function Product(product, align = "left", style) {
                   <span class="newsletterProductTitle" style="${style ?? ""}">${product.name}</span>
                 </td>
               </tr>
-              <tr>
-                <td align="${align}" style="padding-bottom: 8px;">
-                  <span class="newsletterProductLowPrice" style="${style ?? ""}">${
-                    product.lowPrice
-                  } </span>
-                  <span class="newsletterProductHightPrice" style="${style ?? ""}">${
-                    product.highPrice
-                  }</span>
-                </td>
-              </tr>
+              ${showPrices ? `
+                <tr>
+                  <td align="${align}" style="padding-bottom: 8px;">
+                    <span class="newsletterProductLowPrice" style="${style ?? ""}">${
+                      product.lowPrice
+                    } </span>
+                    <span class="newsletterProductHightPrice" style="${style ?? ""}">${
+                      product.highPrice
+                    }</span>
+                  </td>
+                </tr>
+                ` : ``
+              }
             </tbody>
           </table>
         </td>

@@ -135,6 +135,8 @@ export class TemplateHandlers {
 
     let new_link = new URL(shop.origin);
 
+		// console.log(category, options)
+
     const category_url = new URL(category);
     for (const [key, value] of category_url.searchParams.entries()) {
       new_link.searchParams.append(key, value);

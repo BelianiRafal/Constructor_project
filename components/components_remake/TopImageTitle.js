@@ -15,6 +15,10 @@ export const TopImageTitle = isAllowToRender(
         <h4 style="color:${color};" class="${title1.includes('%') ? 'newsletterTitleH1Bigger' : 'newsletterTitleH1Bold'}">${title1}</h4>
         <h5 style="color:${color};" class="${title2?.includes('%') ? 'newsletterTitleH1Bigger' : 'newsletterTitleH1Bold'}">${title2 ?? ''}</h5>
       `,
+      line2bigger: `
+        <h4 style="color:${color};" class="${title1.includes('%') ? 'newsletterTitleH2BoldBigger' : 'newsletterTitleH1Bold'}">${title1}</h4>
+        <h4 style="color:${color};" class="${title2.includes('%') ? 'newsletterTitleH2BoldBigger' : 'newsletterTitleH1Bold'}">${title2}</h4>
+      `,
       standard: `
         <h5 style="color:${color};" class="newsletterTitleH1">${title1}</h5>
         <h4 style="color:${color};" class="newsletterTitleH2">${title2}</h4>
@@ -31,7 +35,7 @@ export const TopImageTitle = isAllowToRender(
 		if (renderType === "landing") {
 			return `
 				<tr>
-					<td>
+					<td class="newsletterContainer">
 						<a class="newsletterHrefTit" href="${href}">
 							${Space()}
 							${templates[type] || 'Invalid type'}

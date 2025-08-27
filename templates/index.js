@@ -22,6 +22,7 @@ import { UniversalTemplate } from './04-thursday/UniversalTemplate.js';
 import { TIT_TopImage_Timer_Categories } from './04-thursday/TIT-TopImage-Timer-Categories.js'
 import { TIT_TopImage_Timer } from './04-thursday/TIT-TopImage-Timer.js';
 import { FreebiesNew } from './04-thursday/FreebiesNew.js'
+import { categoryPeakRegular } from './categoryPeakRegular.js';
 
 export const templates = {
   newsletter_FGG,
@@ -47,5 +48,6 @@ export const templates = {
   UniversalTemplate,
   TIT_TopImage_Timer_Categories,
   TIT_TopImage_Timer,
-	FreebiesNew
+	FreebiesNew,
+	categoryPeakRegular
 };

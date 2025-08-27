@@ -57,16 +57,20 @@ export const Timer = ({
       </td>
     </tr>
 
-		${Space({ className: 'newsletterBottom20px' })}
+		${image ? 
+			`${Space({ className: 'newsletterBottom20px' })}
 
-		<tr>
-			<td align="${align}">
-				${ImageWithLink({
-          href: href,
-          src: image,
-        })}
-			</td>
-		</tr>
+				<tr>
+					<td align="${align}">
+						${ImageWithLink({
+							href: href,
+							src: image,
+						})}
+					</td>
+				</tr>
+			`
+		: `${Space({ className: 'newsletterBottom15px' })}`}
+    
   </table>
   `;
 };

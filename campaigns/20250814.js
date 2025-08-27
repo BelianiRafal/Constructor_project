@@ -11,23 +11,23 @@ const timerGifsSource = {
 	CHFR: ['https://gen.sendtric.com/countdown/knmylt4zyp'],
   FR:   ['https://gen.sendtric.com/countdown/306r8yzp3c'],
   DE:   ['https://gen.sendtric.com/countdown/at9r8fm7hj'],
-  UK:   ['https://gen.sendtric.com/countdown/nxt0zummx4'],
+  UK:   ['https://gen.sendtric.com/countdown/xld9h1o9nu'], // diff time zone JJ 11.08
   AT:   ['https://gen.sendtric.com/countdown/43oljqfnix'],
   ES:   ['https://gen.sendtric.com/countdown/65c37fnnzm'],
   PL:   ['https://gen.sendtric.com/countdown/vmxjww1xcr'],
   NL:   ['https://gen.sendtric.com/countdown/ycqds2dp0d'],
-  PT:   ['https://gen.sendtric.com/countdown/3vg63cm9m5'],
+  PT:   ['https://gen.sendtric.com/countdown/5il8z8k04o'], // diff time zone JJ 11.08
   IT:   ['https://gen.sendtric.com/countdown/g5uzfmtkfn'],
   SE:   ['https://gen.sendtric.com/countdown/dwtepxwkqt'],
   HU:   ['https://gen.sendtric.com/countdown/joenrzd4rt'],
   DK:   ['https://gen.sendtric.com/countdown/6puoye28de'],
   CZ:   ['https://gen.sendtric.com/countdown/u134w6ra2f'],
-  FI:   ['https://gen.sendtric.com/countdown/gemnhlg7u1'],
+  FI:   ['https://gen.sendtric.com/countdown/ruz0pdxwx9'],
   NO:   ['https://gen.sendtric.com/countdown/03no8o0o1n'],
   SK:   ['https://gen.sendtric.com/countdown/l1rcn5qual'],
   BENL: ['https://gen.sendtric.com/countdown/1sqmi087es'],
   BEFR: ['https://gen.sendtric.com/countdown/cmivhpnbvr'],
-  RO:   ['https://gen.sendtric.com/countdown/2q7ae6i2ln'],
+  RO:   ['https://gen.sendtric.com/countdown/vcywfbee37'],
 };
 
 const timer = {
@@ -40,6 +40,7 @@ const timer = {
 
 const categories = [
   {
+		showTitle: true,
     type: 'image-4productsgrid',
     name: 'Plant pots',
     background: '#FFDED0',
@@ -67,6 +68,7 @@ const categories = [
     ],
   },
   {
+		showTitle: true,
     type: 'image-4productsgrid',
     name: 'Fire pits & grills',
     background: '#FF9780',
@@ -94,6 +96,7 @@ const categories = [
     ],
   },
   {
+		showTitle: true,
     type: 'image-4productsgrid',
     name: 'Parasols',
     background: '#FFDED0',
@@ -121,6 +124,7 @@ const categories = [
     ],
   },
   {
+		showTitle: true,
     type: 'image-4productsgrid',
     name: 'Picnic baskets',
     background: '#FF9780',
@@ -197,7 +201,7 @@ const links = {
 const TopImageTitle_data = {
   color: '#000000',
   backgroundColor: '#FFF4E6',
-  type: 'twoSameLines',
+  type: 'standard',
 };
 
 const c20250814 = new entities.Campaign({

@@ -1,7 +1,7 @@
 import { ImageWithLink } from './ImageWithLink_new.js';
 import { Space } from './Space.js';
 
-function generateProduct({ product, align, style, width = '100' }) {
+function generateProduct({ product, align, style, width = '100', showName, showPrices }) {
   return `
 	<td style="vertical-align: top; width: ${width}%">
         <table
@@ -37,48 +37,57 @@ function generateProduct({ product, align, style, width = '100' }) {
                       <td></td>
                     </tr>
 
-                    <!-- DÓŁ -->
-                    <tr>
-                      <td align="center">
-                        <table
-                          cellspacing="0"
-                          cellpadding="0"
-                          style="width: 100%"
-                        >
-                          <tbody>
-                            ${Space({
-                              className: 'newsletterBottom20px',
-                            })}
-                            <tr>
-                              <td
-                                align="${align}"
-                                style="
-                                  padding-top: 0px;
-                                  padding-left: 0px;
-                                  padding-right: 0px;
-                                  padding-bottom: 0px;
-                                "
-                              >
-                                <span class="newsletterProductTitle">
-                                  ${product.name}
-                                </span>
-                              </td>
-                            </tr>
+                    
+                    ${(showName === "false" && showPrices === "false") ? `
+                      <!-- DÓŁ -->
+                      <tr>
+                        <td align="center">
+                          <table
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="width: 100%"
+                          >
+                            <tbody>
+                              ${Space({
+                                className: 'newsletterBottom20px',
+                              })}
 
-                            <tr>
-                              <td align="${align}">
-                                <span class="newsletterProductLowPrice">
-                                  ${product.lowPrice}
-                                </span>
-                                <span class="newsletterProductHightPrice">
-                                  ${product.highPrice}
-                                </span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
+                              ${showName === "true" ? `
+                                <tr>
+                                  <td
+                                    align="${align}"
+                                    style="
+                                      padding-top: 0px;
+                                      padding-left: 0px;
+                                      padding-right: 0px;
+                                      padding-bottom: 0px;
+                                    "
+                                  >
+                                    <span class="newsletterProductTitle">
+                                      ${product.name}
+                                    </span>
+                                  </td>
+                                </tr>
+                                ` : ``}
+
+                              ${showPrices === "true" ? `
+                                <tr>
+                                  <td align="${align}">
+                                    <span class="newsletterProductLowPrice">
+                                      ${product.lowPrice}
+                                    </span>
+                                    <span class="newsletterProductHightPrice">
+                                      ${product.highPrice}
+                                    </span>
+                                  </td>
+                                </tr>
+                                ` : ``}
+                              
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      ` : ``}
                   </tbody>
                 </table>
               </td>
@@ -89,7 +98,7 @@ function generateProduct({ product, align, style, width = '100' }) {
 			`;
 }
 
-export function ProductsRow(products, align = 'left', style) {
+export function ProductsRow(products, align = 'left', style, showName = "true", showPrices = "true") {
   const productArray = Array.isArray(products)
     ? products
     : products.products
@@ -104,7 +113,7 @@ export function ProductsRow(products, align = 'left', style) {
     <tr>
       ${productArray
         .map((product) =>
-          generateProduct({ product, align, style, width: 100 / productArray.length })
+          generateProduct({ product, align, style, width: 100 / productArray.length, showName, showPrices })
         )
         .join('')}
     </tr>

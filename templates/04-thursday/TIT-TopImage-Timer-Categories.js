@@ -166,11 +166,8 @@ export async function TIT_TopImage_Timer_Categories({
 									align: 'center',
 									spaceAfter: { class: 'newsletterBottom35px' },
 									text: getPhrase('Shop now'),
-									// for 24.07
-									// href: links['TopImageTitle_href'],
-									//
-									// for 31.07
-									href: getCategoryLink(categories[0].href),
+									href: queries['linkWithFilter'],
+									// href: getCategoryLink(categories[0].href),
 								})}
 							</table>
 						</td>
@@ -207,15 +204,18 @@ export async function TIT_TopImage_Timer_Categories({
 						${Category({
               links: links,
               queries: queries,
-              name: category.name,
-              href: getCategoryLink(category.href),
+              name: category?.name,
+              href: category.href ? getCategoryLink(category.href) : undefined,
               src: category.src,
               products: prod,
+              showParagraph: category.showParagraph,
 							showTitle: category.showTitle,
               background: category.background,
               color: category.color,
               len: categoriesWithProducts.length,
               idx: index,
+              showCTA: category.showCTA,
+              showPrices: category.showPrices,
               type: category.type,
               getPhrase: getPhrase,
             })}
