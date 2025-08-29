@@ -125,51 +125,7 @@ export async function CategoriesRowsOfferPart({
                 </td>
               </tr>
 
-              <tr>
-                <td align="center" style="background-color: ${background}; color: #ffffff">
-                  ${OfferPart({
-                    type,
-                    offerDate: queries.offerDate,
-                    code: getPhrase("Get codes"),
-                    href: links[0],
-                    color: "#ffffff",
-                    offers: [
-                      {
-                        title: {
-                          value: queries.intro[0],
-                          className: "newsletterTitleOfferPart",
-                        },
-                        paragraph: queries.intro[1],
-                        code: queries.codes[0],
-                      },
-                      {
-                        title: {
-                          value: queries.intro[2],
-                          className: "newsletterTitleOfferPart",
-                        },
-                        paragraph: queries.intro[3],
-                        code: queries.codes[1],
-                      },
-                      {
-                        title: {
-                          value: queries.intro[4],
-                          className: "newsletterTitleOfferPart",
-                        },
-                        paragraph: queries.intro[5],
-                        code: queries.codes[2],
-                      },
-                      {
-                        title: {
-                          value: queries.intro[6],
-                          className: "newsletterTitleOfferPart",
-                        },
-                        paragraph: queries.intro[7],
-                        code: queries.codes[3],
-                      },
-                    ],
-                  })}
-                </td>
-              </tr>
+              
               <tr>
                 <td>
                   ${Space()}

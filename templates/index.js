@@ -34,7 +34,8 @@ import { BelianiBirthday} from "./BelianiBirthday.js";
 import { mondayRegularNslt } from "./mondayRegularNslt.js"
 import { fridayDziwnyNsltr } from "./fridayDziwnyNsltr.js"
 import { product_of_the_month } from "./product_of_the_month.js"
-
+import { sale_categories } from "./sale_categories.js"
+import { august_peak } from "./august_peak.js"
 
 export const templates = {
   newsletter_FGG,
@@ -72,5 +73,7 @@ export const templates = {
   BelianiBirthday,
   mondayRegularNslt,
   fridayDziwnyNsltr,
-  product_of_the_month
+  product_of_the_month,
+  sale_categories,
+  august_peak
 };

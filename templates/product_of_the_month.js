@@ -321,7 +321,7 @@ const u_t_m = "?utm_source=newsletter&utm_medium=email&utm_campaign="  + id
               : 
                 ``
               }
-
+              
               ${!inside || inside.type == "timer" ?
               `
                 <tr>

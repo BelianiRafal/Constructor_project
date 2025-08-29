@@ -69,7 +69,7 @@ export class Paragraph{
             <table cellspacing="0" cellpadding="0" border="0" width="100%">
                 <tbody>
                     <tr>
-                        <td  align="${this.align}" style="${this.style ?? ""}">
+                        <td  align="${this.align}" style="color: ${this.style.textColor}">
                             ${layout}
                         </td>
                     </tr>

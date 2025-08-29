@@ -15,7 +15,8 @@ import {
   OfferPartCodes,
   TopImageTitle,
   Timer,
-  shopNow
+  shopNow,
+  Create2Columns_Grid
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -27,213 +28,31 @@ import { getCodes } from "../utils/getCodes.js";
  * Funkcja generująca sekcje kategorii dla newslettera/landing page
  * Kolejność parametrów zgodna z wymaganiami
  */
-function generateCategoriesSection(categories, queries, background, add_utm, white_line, full_img_width, getCategoryTitle, getProductById, getPhrase, getCategoryLink, id, typeCamp) {
-  let categoriesHTML = '';
 
-  // Sprawdź czy tablica categories istnieje i ma elementy
-  if (!categories || !categories.length) {
-    return categoriesHTML;
-  }
-  
-  // Sprawdź czy mamy tablicę queries.filters i określ jej długość
-  const filtersLength = queries?.filters?.length || 0;
-  let usedFiltersCount = 0; // Licznik użytych filtrów
-  
-  // Iteruj przez kategorie i generuj odpowiednie sekcje
-  categories.forEach((category, index) => {
-    // Określ typ kategorii na początku, bo będzie potrzebny też dla paddingu
-    let categoryType = category.type || "monday"; // Domyślny typ
-    
-    // Sprawdź czy kategoria jest typem "no_products" (ma nazwę, ale nie ma produktów lub ma flagę isCategoriesDB)
-    if ((category.name && (!category.products || category.products.length === 0)) || category.isCategoriesDB) {
-      categoryType = "no_products";
-    }
-    
-    // Sprawdź czy kategoria jest typem "image" (nie ma nazwy lub nazwa jest pusta)
-    if (!category.name || category.name === "") {
-      categoryType = "image";
-    }
-    
-    // Użyj określonego typu jeśli jest już ustawiony
-    if (category.type) {
-      categoryType = category.type;
-    }
-    
-    // Dodaj spacer dla każdej kategorii z odpowiednią klasą
-    // Dla pierwszego elementu typu "monday" (z produktami) użyj newsletterBottom60px
-    // Dla pozostałych pierwszy element bez klasy
-    categoriesHTML += `
-      <tr>
-        <td style="background-color: ${category?.background || background};">
-          ${index === 0 && categoryType === "wednesday" 
-            ? Space({ className: "newsletterBottom60px" })
-            : ''
-          }
-        </td>
-      </tr>
-    `;
-     
-    // Określ właściwy href na podstawie walidacji
-    let categoryHref;
-    
-    // Sprawdź czy kategoria ma własny href
-    if (category.href && category.href !== "") {
-      // Jeśli kategoria ma już określony href, użyj go
-      try {
-        if (typeof getCategoryLink === 'function') {
-          //const newLink = queries.catLink + '?utm_source=newsletter&utm_medium=email&utm_campaign=' + id
-          categoryHref = getCategoryLink(category.href)
-          
-            // if  (category.name === 'King'){
-            //   categoryHref = newLink
 
-            // } 
-        
-
-          
-        } else {
-          categoryHref = category.href;
-        }
-      } catch (e) {
-        // Jeśli getCategoryLink nie działa, użyj oryginalnego href
-        categoryHref = category.href;
-      }
-    } else if (categories.href) {
-      // Użyj ogólnego href dla wszystkich kategorii jeśli jest dostępny
-      try {
-        if (typeof getCategoryLink === 'function') {
-          categoryHref = getCategoryLink(categories.href);
-        } else {
-          categoryHref = categories.href;
-        }
-      } catch (e) {
-        // Jeśli getCategoryLink nie działa, użyj oryginalnego href
-        categoryHref = categories.href;
-      }
-    } else if (usedFiltersCount < filtersLength) {
-      // Jeśli href jest pusty i mamy dostępne filtry, użyj kolejnego filtra
-      categoryHref = add_utm(queries.filters[usedFiltersCount]);
-      usedFiltersCount++; // Zwiększ licznik użytych filtrów
-    } else {
-      // W przeciwnym razie użyj pustego stringa
-      categoryHref = "";
-    }
-    
-    // Przygotuj bezpieczne wywołanie getPhrase
-    const safeGetPhrase = (text) => {
-      try {
-        if (typeof getPhrase === 'function') {
-          return getPhrase(text);
-        }
-        return text;
-      } catch (e) {
-        return text;
-      }
-    };
-     const newLink = typeCamp === 'newsletter' ? queries.catLink + '?utm_source=newsletter&utm_medium=email&utm_campaign=' + id : queries.catLink
-    function split_categories(arr,index, includeIntro = false, isIntro = false){
-      const name = [];
-      const intro = [];
-         if (includeIntro) {
-          for (let i = 0; i < arr.length; i++) {
-            if (i % 2 === 0) {
-              name.push(arr[i]);
-            } else {
-              intro.push(arr[i]);
-            }
-          }
-          if(isIntro){
-            return intro[index];
-          }
-          else{
-            return name[index];
-          }
-          
-        } else {
-          return arr[index]; 
-        }  
-  }
-    // Dodaj sekcję kategorii
-    categoriesHTML += `
-      <tr>
-        <td style="background-color: ${category?.background || background}; color: ${category?.color || "#000000"}">
-          ${Category({
-            href: categoryHref,
-            name: queries?.categories && queries.categories[index]
-              ? split_categories(queries.categories, index, true)
-              : getCategoryTitle(category.name || ""),
-            desc:split_categories(queries.categories, index, true, true),
-            src: typeof category.src === 'object' && category.src.value ? category.src.value : category.src,
-            cta: safeGetPhrase("Shop now"),
-            color: category?.color,
-            type: categoryType,
-            img_class: (full_img_width === false ? "newsletterContainer" : ""),
-            products: category.products ? category.products.map((item) =>
-              getProductById(item.id, item.src, item.name)
-            ) : [],
-            // Dodaj dodatkowe parametry dla różnych typów
-            classCtaSpace: index == categories.length - 1 ? "newsletterBottom35px" : 'newsletterBottom80px',
-            idx: index, 
-            paddingTitle: index == 0 ? 0 : 35,
-            len: categories.length - 1, // Ostatni element
-            align: "left", // Ustawione na "left" zamiast "center"
-            line: (white_line === true || white_line === "true") ? "https://pictureserver.net/static/2024/white_line.jpg" : "https://beliani.info/newsletter/2022/line.jpg",
-          })}
-        </td>
-      </tr>
-    `;
-  });
-  
-  return categoriesHTML;
-}
-
-export async function mondayRegularNslt({
+export async function sale_categories({
   links,
-  getProductById,
   getCategoryLink,
-  getCategoryTitle,
   getPhrase,
   getFooter,
   getHeader,
   queries,
   id,
   shop,
-  utm,
   country,
   type,
   categories,
-  freebies,
   background,
   tit,
-  offerPart,
-  intro,
   inside,
-  date,
-  add_utm,
   single_image,
   soon_banners,
-  startId,
-  white_line,
-  full_img_width,
   gif_src,
 }) {console.log(shop.slug)
-  const codes = getCodes(queries);
-  
-
-  const categoriesSectionHTML = generateCategoriesSection(
-    categories, 
-    queries, 
-    background, 
-    add_utm,
-    white_line,
-    full_img_width,
-    getCategoryTitle,
-    getProductById, 
-    getPhrase,
-    getCategoryLink,
-    id,
-    type,
-  );
+  console.log(getHeader("Header Category 2 src"))
+  console.log(getCategoryLink("https://www.beliani.co.uk/rugs/all+products"))
+const u_t_m = "?utm_source=newsletter&utm_medium=email&utm_campaign="  + id
+ 
   //console.log('origin includes PL:', origin);
 
   return `
@@ -300,8 +119,8 @@ export async function mondayRegularNslt({
                         href: links[0],
                         title1: queries.tit[0],
                         title2: queries.tit[1],
-                        color: tit?.color || "#000",
-                        type: tit?.type || "twoSameLines",
+                        color: tit?.color || "#ffffff",
+                        type: tit?.type || "up_to",
                       })
                     :
                     ``)
@@ -314,7 +133,7 @@ export async function mondayRegularNslt({
                     <td align="center">
                       ${ImageWithLink({
                         href: links[0],
-                        src: links[2],
+                        src: links[3],
                       })}
                     </td>
                 </tr>`
@@ -338,52 +157,66 @@ export async function mondayRegularNslt({
                       href: links[8],
                       src: links[9],
                     })}
-                    ${Space({ className: "newsletterBottom60px" })}
+                    
                   </td>
               </tr>`
               }
-             
-              ${intro && intro.type != "paragraph" ? 
-                `<tr>
-                
-                    <td class="newsletterContainer" style="background-color: ${intro.background || background}; ">
-                        ${Intro({
-                          data: queries.intro,
-                          color: intro?.color,
-                          type: categories.some(cat => cat.products && cat.products.length > 0) ? undefined : "paragraph",
-                          align: categories.some(cat => cat.products && cat.products.length > 0) ? undefined : "center",
-                          title: {
-                            className: "newsletterIntroTitle",
-                          },
-                        })}
+             <tr>
+                    <td class="newsletterContainer" style="background-color: ${background || background}; color:#ffffff">
+                        ${new Paragraph({
+                          paragraph: queries.intro,
+                          type: "standard",
+                          align: 'center',
+                          style:{
+                            textColor:'#ffffff',
+                          }
+                        }).htmlOutput }
+                         ${Space()}
                     </td>
-                </tr>` 
-                : `<tr>
-                    <td class="newsletterContainer" style="background-color: ${intro.background || background};">
-                        ${Intro({
-                          data: queries.intro,
-                          color: intro?.color,
-                          type: "paragraph",
-                          align: intro.align,
-                          title: {
-                            className: "newsletterIntroTitle",
-                          },
+                </tr>
+              ${!single_image ? 
+                `<tr>
+                    <td style="background-color: ${background};" class="newsletterContainer">
+                        ${Create2Columns_Grid({
+                            iter: categories, 
+                            left: (computed) => `
+                            <td width="50%" style="padding-left:4px">
+                                <a href="${getCategoryLink(computed.href)}">
+                                    <img alt="" src="${
+                                    computed.src
+                                    }" style="max-width: 100%; display:block;" loading="lazy">
+                                </a>
+                            </td>
+                            `,
+                            right: (computed) => `
+                            <td width="50%" style="padding-right:4px">
+                                <a href="${getCategoryLink(computed.href)}">
+                                    <img alt="" src="${
+                                    computed.src
+                                    }" style="max-width: 100%; display:block;" loading="lazy">
+                                </a>
+                            </td>
+                            `, 
+                            shuffle: false, 
+                            href: getCategoryLink(' https://www.beliani.ch/garden-furniture/'), 
+                            cta: getPhrase("Shop All Categories"),  
+                            color:'#ffffff',
+                            align: 'center'
                         })}
+                             ${Space({ className: "newsletterBottom80px" })}
                     </td>
                 </tr>`
+              : 
+                ``
               }
-              ${inside && inside.type == "timer" ?
-              `<tr>
-                  <td style="background-color:${intro.background || background}; color: ${intro.color || "#000"};">
-                    ${Space()}
-                  </td>
-                </tr>
+               ${inside && inside.type == "timer" ?
+              `
                 <tr>
                   <td style="background-color:${inside.background || background}; color: ${inside.color || "#000"};">
                   ${Timer({
                     title:queries.timer[0],
                     subtitle: queries.timer[1],
-                    href: links[3],
+                    href: links[2],
                     imageSrc: gif_src[country],
                     style: {
                       bgColor: inside.background,
@@ -394,7 +227,7 @@ export async function mondayRegularNslt({
                   })}
                   ${Space({ className: "newsletterBottom20px" })}
                   ${ImageWithLink({
-                    href: links[3],
+                    href: links[2],
                     src: inside.src,
                   })}
                   </td>
@@ -402,13 +235,10 @@ export async function mondayRegularNslt({
               :
               ``
               }
-               <tr>
-                  <td style="background-color:${categories[0].background}; ">
-              ${Space({ className: "newsletterBottom60px" })}
-              </td>
-                </tr>
-              <!-- Wstawienie wygenerowanych dynamicznie sekcji kategorii -->
-              ${categoriesSectionHTML}
+              
+              
+             
+              
           <tbody>
       </table>
       ${ (type === "landing" && !soon_banners) || type === "newsletter"
@@ -455,7 +285,7 @@ export async function mondayRegularNslt({
         :
         ''
       }
-      ${Footer(
+       ${Footer(
         {
           id,
           assembly: {
@@ -474,35 +304,35 @@ export async function mondayRegularNslt({
             title: getFooter("Title"),
             firstCategory: {
               src: getFooter("Category src 1"),
-              href: getCategoryLink("https://www.beliani.co.uk/sofas/all+products"),//href: getFooter("Category href 1"),
+              href: getFooter("Category href 1"),
             },
             secondCategory: {
               src: getFooter("Category src 2"),
-              href: getCategoryLink("https://www.beliani.co.uk/beds/all+products"),//href: getFooter("Category href 2"),
+              href:  getFooter("Category href 2"),
             },
             thirdCategory: {
               src: getFooter("Category src 3"),
-              href: getCategoryLink("https://www.beliani.co.uk/tables/coffee-tables"),//href: getFooter("Category href 3"),
+              href:  getFooter("Category href 3"),
             },
             foutrthCategory: {
               src: getFooter("Category src 4"),
-              href: getCategoryLink("https://www.beliani.co.uk/chairs/all+products"),//href: getFooter("Category href 4"),
+              href:  getFooter("Category href 4"),
             },
             fifthCategory: {
               src: getFooter("Category src 5"),
-              href: getCategoryLink("https://www.beliani.co.uk/armchairs/all+products"),//href: getFooter("Category href 5"),
+              href: getFooter("Category href 5"),
             },
             sixthCategory: {
               src: getFooter("Category src 6"),
-              href: getCategoryLink("https://www.beliani.co.uk/storage/sideboards"),//href: getFooter("Category href 6"),
+              href: getFooter("Category href 6"),
             },
             seventhCategory: {
               src: getFooter("Category src 7"),
-              href: getCategoryLink("https://www.beliani.co.uk/lighting/all+products"),//href: getFooter("Category href 7"),
+              href: getFooter("Category href 7"),
             },
             eigthCategory: {
               src: getFooter("Category src 8"),
-              href: getCategoryLink("https://www.beliani.co.uk/rugs/all+products"),//href: getFooter("Category href 8"),
+              href: getFooter("Category href 8"),
             },
           },
           klarna: {

@@ -257,7 +257,7 @@
           }
       .newsletterMarkTitleAlign{
       
-      text-align: center;
+      text-align: left;
       }
             
        #newsletter .newsletterFooterCategoryLEFT {

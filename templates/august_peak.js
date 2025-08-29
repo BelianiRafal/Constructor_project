@@ -187,7 +187,7 @@ function generateCategoriesSection(categories, queries, background, add_utm, whi
   return categoriesHTML;
 }
 
-export async function mondayRegularNslt({
+export async function august_peak({
   links,
   getProductById,
   getCategoryLink,
@@ -300,7 +300,7 @@ export async function mondayRegularNslt({
                         href: links[0],
                         title1: queries.tit[0],
                         title2: queries.tit[1],
-                        color: tit?.color || "#000",
+                        color: tit?.color || "#ffffff",
                         type: tit?.type || "twoSameLines",
                       })
                     :
@@ -308,6 +308,26 @@ export async function mondayRegularNslt({
                   }
                 </td>
               </tr>
+               ${inside && inside.type == "timer" ?
+              `
+                <tr>
+                  <td style="background-color:${inside.background || background}; color: ${inside.color || "#000"};">
+                  ${Timer({
+                    href: links[3],
+                    imageSrc: gif_src[country],
+                    style: {
+                      bgColor: inside.background,
+                      textColor: inside.color,
+                      align: "center",
+                    },
+                    type: 'only_timer'
+                  })}
+                  </td>
+                </tr>
+                <tr><td class="newsletterBottom35px"></td></tr>`
+              :
+              ``
+              }
               <!-- Sprawdź czy masz dodany parametr single_image w Campaign jeśli się nie wyświetla -->
               ${!single_image ? 
                 `<tr>
@@ -321,90 +341,28 @@ export async function mondayRegularNslt({
               : 
                 ``
               }
-
-              ${!inside || inside.type == "timer" ?
-              `
-                <tr>
-                  <td style="background-color: ${background};">
-                    ${Space()}
-                  </td>
-                </tr>
-              `
-              :
-              `<tr>
-                  <td style="background-color: ${inside.background || background}; color: ${inside.color || "#000"};">
-                    ${Space()}
-                    ${ImageWithLink({
-                      href: links[8],
-                      src: links[9],
-                    })}
-                    ${Space({ className: "newsletterBottom60px" })}
-                  </td>
-              </tr>`
-              }
-             
-              ${intro && intro.type != "paragraph" ? 
-                `<tr>
-                
-                    <td class="newsletterContainer" style="background-color: ${intro.background || background}; ">
-                        ${Intro({
-                          data: queries.intro,
-                          color: intro?.color,
-                          type: categories.some(cat => cat.products && cat.products.length > 0) ? undefined : "paragraph",
-                          align: categories.some(cat => cat.products && cat.products.length > 0) ? undefined : "center",
-                          title: {
-                            className: "newsletterIntroTitle",
-                          },
-                        })}
-                    </td>
-                </tr>` 
-                : `<tr>
-                    <td class="newsletterContainer" style="background-color: ${intro.background || background};">
-                        ${Intro({
-                          data: queries.intro,
-                          color: intro?.color,
-                          type: "paragraph",
-                          align: intro.align,
-                          title: {
-                            className: "newsletterIntroTitle",
-                          },
-                        })}
-                    </td>
-                </tr>`
-              }
-              ${inside && inside.type == "timer" ?
-              `<tr>
-                  <td style="background-color:${intro.background || background}; color: ${intro.color || "#000"};">
-                    ${Space()}
-                  </td>
-                </tr>
-                <tr>
-                  <td style="background-color:${inside.background || background}; color: ${inside.color || "#000"};">
-                  ${Timer({
-                    title:queries.timer[0],
-                    subtitle: queries.timer[1],
-                    href: links[3],
-                    imageSrc: gif_src[country],
-                    style: {
-                      bgColor: inside.background,
-                      textColor: inside.color,
-                      align: "center",
-                    },
-                    cta: getPhrase("Shop now"),
-                  })}
-                  ${Space({ className: "newsletterBottom20px" })}
-                  ${ImageWithLink({
-                    href: links[3],
-                    src: inside.src,
-                  })}
-                  </td>
-                </tr>`
-              :
-              ``
-              }
                <tr>
-                  <td style="background-color:${categories[0].background}; ">
-              ${Space({ className: "newsletterBottom60px" })}
+                  <td style="background-color:${intro.background}; ">
+              ${Space({ className: "newsletterBottom35px" })}
+              </td>
+                </tr>
+
+             <tr>
+                                 <td class="newsletterContainer" style="background-color: ${intro.background || background};">
+                                     ${new Paragraph({
+                                       paragraph: queries.intro[0],
+                                       type: "standard",
+                                       align: 'center',
+                                     }).htmlOutput }
+                                     
+                                 </td>
+                             </tr>
+             
+             
+             
+               <tr>
+                  <td style="background-color:${intro.background}; ">
+              ${Space({ className: "newsletterBottom35px" })}
               </td>
                 </tr>
               <!-- Wstawienie wygenerowanych dynamicznie sekcji kategorii -->
