@@ -2844,44 +2844,44 @@ try {
             template: templates.sale_categories,
             background: "#FFDEB3",
             css: types.CSS.LP,
-             offerPart: {
+            offerPart: {
               type: "code",
-              color: "#000000",
-              background: "#FFDEB3",
+              color: "#ffffff",
+              background: "#FF2F00",
             },
             intro: {
-              background: "#FFDEB3",
-              color: "#000000",
+              background: "#FF2F00",
+              color: "#ffffff",
             },
-            background: "#FFDEB3",
+            background: "#FF2F00",
             inside: {
               type: "timer",
-              background: "#F6E7E6",
+              background: "#FFCCB7",
               color: "#000000",
-              src: getImageUrl("20250801free.png", true),
+              src: getImageUrl("20250912_free.png", true),
             },
             gif_src: {
-                  CHDE:'https://gen.sendtric.com/countdown/sgt37z49of',
-                  CHFR:'https://gen.sendtric.com/countdown/1y6xav4pkz',
-                  FR:'https://gen.sendtric.com/countdown/pm2gqbg7lx',
-                  UK:'https://gen.sendtric.com/countdown/71ijg3h5rh',
-                  DE:'https://gen.sendtric.com/countdown/kvtota74l8',
-                  AT:'https://gen.sendtric.com/countdown/wkcolajacv',
-                  ES:'https://gen.sendtric.com/countdown/87inb9wu14',
-                  PL:'https://gen.sendtric.com/countdown/gdmbwwi17o',
-                  NL:'https://gen.sendtric.com/countdown/v9n8i4udkj',
-                  PT:'https://gen.sendtric.com/countdown/2lk2zqkcn4',
-                  IT:'https://gen.sendtric.com/countdown/799wjl4lmc',
-                  SE:'https://gen.sendtric.com/countdown/ldro21nj5f',
-                  HU:'https://gen.sendtric.com/countdown/hk9q6hz14n',
-                  DK:'https://gen.sendtric.com/countdown/bfa0ixu972',
-                  CZ:'https://gen.sendtric.com/countdown/849obdozn4',
-                  FI:'https://gen.sendtric.com/countdown/7rqldgub58',
-                  NO:'https://gen.sendtric.com/countdown/j74380jo03',
-                  SK:'https://gen.sendtric.com/countdown/a25ku9p4sz',
-                  BENL:'https://gen.sendtric.com/countdown/j0gcrvhe81',
-                  BEFR:'https://gen.sendtric.com/countdown/h18jrf90a0',
-                  RO:'https://gen.sendtric.com/countdown/87o8r295k1',
+                  CHDE:'https://gen.sendtric.com/countdown/gt9ypn63ee',
+                  CHFR:'https://gen.sendtric.com/countdown/d9o3qwi2h4',
+                  FR:'https://gen.sendtric.com/countdown/d9o3qwi2h4',
+                  UK:'https://gen.sendtric.com/countdown/l4uvij0efj',
+                  DE:'https://gen.sendtric.com/countdown/de9lrws5ee',
+                  AT:'https://gen.sendtric.com/countdown/8sxoh9e8s3',
+                  ES:'https://gen.sendtric.com/countdown/fkap9kveb5',
+                  PL:'https://gen.sendtric.com/countdown/e44p6ed0zf',
+                  NL:'https://gen.sendtric.com/countdown/sk7ys6nvpl',
+                  PT:'https://gen.sendtric.com/countdown/vrm8ea77o7',
+                  IT:'https://gen.sendtric.com/countdown/7bq0k1mxyg',
+                  SE:'https://gen.sendtric.com/countdown/y77ogr60bw',
+                  HU:'https://gen.sendtric.com/countdown/bkgvadcn2n',
+                  DK:'https://gen.sendtric.com/countdown/vpqvo88mj3',
+                  CZ:'https://gen.sendtric.com/countdown/mw8q3tdtyc',
+                  FI:'https://gen.sendtric.com/countdown/02mv3vlpmm',
+                  NO:'https://gen.sendtric.com/countdown/3dpd1zbsm2',
+                  SK:'https://gen.sendtric.com/countdown/wvqinujmra',
+                  BENL:'https://gen.sendtric.com/countdown/havv4d712y',
+                  BEFR:'https://gen.sendtric.com/countdown/d9o3qwi2h4',
+                  RO:'https://gen.sendtric.com/countdown/o3o2cwoa4u',
                 },
                 
             categories: [
@@ -2892,7 +2892,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_1__20250808.png", true),
+                      getImageUrl("_cat_1__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/lounge-sets/",
                 },
@@ -2902,7 +2902,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_2__20250808.png", true),
+                      getImageUrl("_cat_2__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/garden-dining-sets/ ",
                 },
@@ -2914,7 +2914,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_3__20250808.png", true),
+                      getImageUrl("_cat_3__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/sun-loungers/ ",
                 },
@@ -2924,7 +2924,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_4__20250808.png", true),
+                      getImageUrl("_cat_4__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/garden-benches/ ",
                 },
@@ -2936,7 +2936,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_5__20250808.png", true),
+                      getImageUrl("_cat_5__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/patio-daybeds/ ",
                 },
@@ -2946,7 +2946,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_6__20250808.png", true),
+                      getImageUrl("_cat_6__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/storage-boxes/ ",
                 },
@@ -2958,7 +2958,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_7__20250808.png", true),
+                      getImageUrl("_cat_7__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/swings/ ",
                 },
@@ -2968,7 +2968,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_8__20250808.png", true),
+                      getImageUrl("_cat_8__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/outdoor-furniture/balcony-furniture/ ",
                 },
@@ -2980,7 +2980,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_9__20250808.png", true),
+                      getImageUrl("_cat_9__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/garden-accessories/pots-and-planters/ ",
                 },
@@ -2990,7 +2990,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_10__20250808.png", true),
+                      getImageUrl("_cat_10__20250912.png", true),
                   },
                   href: "https://www.beliani.ch/garden-accessories/fire-pits/ ",
                 },
@@ -3002,9 +3002,9 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_11__20250808.png", true),
+                      getImageUrl("_cat_11__20250912.png", true),
                   },
-                  href: "https://www.beliani.ch/garden-furniture/parasols/ ",
+                  href: "https://www.beliani.ch/garden-accessories/patio-heaters/ ",
                 },
                 {
                   src: {
@@ -3012,21 +3012,21 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_12__20250808.png", true),
+                      getImageUrl("_cat_12__20250912.png", true),
                   },
-                  href: "https://www.beliani.ch/garden-furniture/garden-rugs/ ",
+                  href: "https://www.beliani.ch/garden-furniture/parasols/ ",
                 },
               ],
               
             ],
-            links: [
+             links: [
               {
                 query: true,
                 href: {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-08-08",
+                  value: "content/lp25-09-12",
                 },
               },
               {
@@ -3035,7 +3035,7 @@ try {
                   relyOn: "slug",
                   placeholderPosition: "38",
                   value:
-                    getImageUrl("_title_20250808.png", true),
+                    getImageUrl("_title20250912.png", true),
                 },
               },
               {
@@ -3044,17 +3044,14 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-08-05",
+                  value: "content/lp25-09-08",
                 },
               },
               {
-                src: {
-                  type: "relation",
-                  relyOn: "slug",
-                  placeholderPosition: "38",
+              
                   value:
-                    getImageUrl("_top_image_20250808.png", true),
-                },
+                    getImageUrl("GIF_top_image_2025.09.12.gif", true),
+                
               },
               {
                 query: true,
@@ -3065,15 +3062,6 @@ try {
                   value: "content/lp25-06-03",
                 },
               },
-               {
-                  value: getImageUrl("ukit20250807_free.png", true),
-              },
-              {
-                  value: getImageUrl("at20250807_free.png", true),
-              },
-              {
-                  value: getImageUrl("20250807_free.png", true),
-              },
              
               {
                 query: true,
@@ -3081,7 +3069,7 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-07-31",
+                  value: "content/lp25-09-05",
                 },
               },
               {
@@ -3089,7 +3077,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("20250731b.png", true),
+                  value: getImageUrl("20250905b.png", true),
                 },
               },
               {
@@ -3098,7 +3086,7 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-07-24",
+                  value: "content/lp25-09-04",
                 },
               },
               {
@@ -3107,7 +3095,7 @@ try {
                   relyOn: "slug",
                   placeholderPosition: "38",
                   value:
-                    getImageUrl("20250724b.png", true),
+                    getImageUrl("20250904b.png", true),
                 },
               },
               
@@ -3116,16 +3104,16 @@ try {
             tableQueries: [
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "08.08.25 - Outdoor categories!",
+                tableName: "12.09.25 - Outdoor sale!",
                 tableRange: "12:13",
                 name: "tit",
                 fallback: [
                   "Extra 5% off everything",
                 ],
               },
-              {
+               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher -  05.08.25 - Free lamps!",
+                tableName: "Voucher - 08.09.25 - Free mirrors!",
                 tableRange: "10:11",
                 name: "timer",
                 fallback: [
@@ -3134,8 +3122,8 @@ try {
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "08.08.25 - Outdoor categories!",
-                tableRange: "14",
+                tableName: "12.09.25 - Outdoor sale!",
+                tableRange: "15",
                 name: "intro",
                 fallback: [
                   "Extra 5% off everything",
@@ -3152,8 +3140,8 @@ try {
              
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "08.08.25 - Outdoor categories!",
-                tableRange: "49:50",
+                tableName: "12.09.25 - Outdoor sale!",
+                tableRange: "31:32",
                 name: "condition",
               },
                {
