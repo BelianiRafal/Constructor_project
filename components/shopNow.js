@@ -5,16 +5,20 @@ export const shopNow = ({
   cta,
   textColor,
   space = false,
+  space_top = true,
   backgorund = "#FD9000",
 }) => {
 
         return `
-        
-            <tr>
-                <td align="center" style="background-color:${backgorund}">
-                    ${Space({className: "newsletterBottom35px"})}
-                </td>
-            </tr>
+        ${space_top === false ? 
+            `<tr >
+                    <td style="background-color:${backgorund}" class="newsletterBottom${space_top}px"></td>
+                 </tr>
+                ` :
+         `<tr >
+                    <td style="background-color:${backgorund}" class="newsletterBottom35px"></td>
+                 </tr>
+                `}
             <tr>
                 <td align="center" style="background-color:${backgorund}">
                     <a href="${href}" style="color:${textColor}; text-decoration: underline;">

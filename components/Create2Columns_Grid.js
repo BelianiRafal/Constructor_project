@@ -40,6 +40,7 @@ export function Create2Columns_Grid({ iter, left, right, shuffle, ctaComponent, 
           }
   
           return `
+           <table cellspacing="0" cellpadding="0" border="0" width="100%">
           <table cellspacing="0" cellpadding="0" border="0" width="100%">
             <tbody>
               <tr>

@@ -34,7 +34,9 @@ import { AdditionalCategories } from "./additional_categories.js";
 import { TwoCategory } from "./twoCategories.js";
 import { Create2Columns_Grid } from "./Create2Columns_Grid.js";
 import { shopNow } from "./shopNow.js";
+import { Create2Columns_Grid_with_img } from "./Create2Columns_Grid_with_category_img.js";
 export {
+  Create2Columns_Grid_with_img,
   ProductWithSize,
   Space,
   Paragraph,

@@ -7,7 +7,19 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
   const newsletter = `
     <tr>
       <td >
-        ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center")}
+        ${ 
+          new Paragraph({
+                          paragraph: paragraph1,
+                          type: "standard",
+                          align: 'center',
+                          style:{
+                            textColor:'#ffffff',
+                          }
+                        }).htmlOutput }
+           
+          
+          
+          
       </td>
     </tr>
     <tr>
@@ -18,7 +30,15 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
 
     <tr>
       <td >
-        ${Paragraph(data ? data[1] : paragraph2, "center")}
+        ${ 
+          new Paragraph({
+                          paragraph: paragraph2,
+                          type: "standard",
+                          align: 'center',
+                          style:{
+                            textColor:'#ffffff',
+                          }
+                        }).htmlOutput }
       </td>
     </tr>
     <tr>
@@ -28,7 +48,15 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
     </tr>
     <tr>
       <td >
-        ${Paragraph(data ? data[2] : paragraph3, "center")}
+        ${ 
+          new Paragraph({
+                          paragraph: paragraph1,
+                          type: "standard",
+                          align: 'center',
+                          style:{
+                            textColor:'#ffffff',
+                          }
+                        }).htmlOutput }
       </td>
     </tr>
     <tr>
@@ -56,7 +84,15 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
     
     <tr>
       <td >
-        ${Paragraph(data ? data[4] :paragraph4, "center")}
+        ${ 
+          new Paragraph({
+                          paragraph: paragraph1,
+                          type: "standard",
+                          align: 'center',
+                          style:{
+                            textColor:'#ffffff',
+                          }
+                        }).htmlOutput }
       </td>
     </tr>
 
@@ -71,7 +107,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
   const landing = `
     <tr>
       <td >
-        ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center")}
+        ${new Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center")}
       </td>
     </tr>
     <tr>
@@ -98,7 +134,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
 
     <tr>
       <td >
-        ${Paragraph(data ? data[1] : paragraph2, "center")}
+        ${new Paragraph(data ? data[1] : paragraph2, "center")}
       </td>
     </tr>
 
@@ -126,7 +162,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
 
     <tr>
       <td >
-        ${Paragraph(data ? data[2] : paragraph3, "center")}
+        ${new Paragraph(data ? data[2] : paragraph3, "center")}
       </td>
     </tr>
     <tr>
@@ -153,7 +189,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
     
     <tr>
       <td >
-        ${Paragraph(data ? data[4] :paragraph4, "center")}
+        ${new Paragraph(data ? data[4] :paragraph4, "center")}
       </td>
     </tr>
 

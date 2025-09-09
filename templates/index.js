@@ -36,8 +36,10 @@ import { fridayDziwnyNsltr } from "./fridayDziwnyNsltr.js"
 import { product_of_the_month } from "./product_of_the_month.js"
 import { sale_categories } from "./sale_categories.js"
 import { august_peak } from "./august_peak.js"
+import { sale_categories2 } from "./sale_categories2.js"
 
 export const templates = {
+
   newsletter_FGG,
   landing_FGG,
   AdventCalendar,
@@ -75,5 +77,6 @@ export const templates = {
   fridayDziwnyNsltr,
   product_of_the_month,
   sale_categories,
+  sale_categories2,
   august_peak
 };
