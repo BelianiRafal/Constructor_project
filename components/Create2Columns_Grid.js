@@ -43,7 +43,7 @@ export function Create2Columns_Grid({ iter, left, right, shuffle, ctaComponent, 
           <table cellspacing="0" cellpadding="0" border="0" width="100%">
             <tbody>
               <tr>
-                <td ${index === iter.length -1 ? 'class="newsletterBottom35px"' : ""} style="${index === iter.length -1 ? "" : "padding-bottom: 10px;"}">
+                <td ${index === iter.length -1 ? 'class="newsletterBottom35px"' : ""} style="${index === iter.length -1 ? "" : "padding-bottom: 8px;"}">
                   <table cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tbody>
                       <tr>

@@ -1480,6 +1480,16 @@ export default {
             font-weight: 600;
           }
 
+          #newsletter .newsletterParagraph b{
+            font-weight: bold;
+            font-size: 18px; 
+          }
+
+          #newsletter .newsletterTitle b{
+            font-weight: 600;
+            font-size: 30px; 
+          }
+
           #newsletter .newsletterTitleAditional {
             font-size: 30px;
             line-height: 1.20;
@@ -1679,6 +1689,14 @@ export default {
             #newsletter .newsletterTitleH1 {
               font-size: 30px;
               line-height: 45px;
+            }
+
+            #newsletter .newsletterParagraph b{
+              font-size: 16px; 
+            }
+
+            #newsletter .newsletterTitle b{
+              font-size: 25px;
             }
 
             #newsletter .newsletterAdditionalCategoryTitle {
