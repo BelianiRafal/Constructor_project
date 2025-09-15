@@ -1362,9 +1362,11 @@ export default {
 
             	
             #newsletter .newsletterHrefTit {
-              text-decoration:none;
-              text-align:center;
-              }
+              text-decoration: none;
+              text-align: center;
+              padding: 0 20px;
+              display: block;
+            }
 
           #newsletter .title-advantages-item {
             margin-left: 4px;
