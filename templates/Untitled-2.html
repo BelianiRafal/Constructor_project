@@ -1,0 +1,52 @@
+<div id="overlay-layer" class="screen-only overlay-canvas"></div>
+<div style="position: relative">
+  <div id="overlay-body" class="overlay-body newsletter-box-canvas-rect-2">
+    <div class="icon-close-icon" id="newsletter-cross"></div>
+    <div class="left-img">
+      <img src="/images/newsletter/popup_04102018.png" />
+    </div>
+    <div id="newsletter--box-center-content" class="right-block">
+      <div id="newsletter-box-header">
+        Skorzystaj z <span class="bold">ekskluzywnych</span>
+      </div>
+      <div class="main-title">promocji i rabatów</div>
+      <div id="newsletter-box-form">
+        <form
+          method="POST"
+          class="validation_on default_submit"
+          onsubmit="return addGAonEmailSubscription(event);"
+        >
+          <input
+            class="input-email-subscription"
+            type="text"
+            placeholder="Twój e-mail..."
+            name="news_email"
+            id="email"
+            data-rule-required="true"
+            data-rule-email="true"
+            data-msg-email="Vennligst oppgi en gyldig e-postadresse."
+            data-msg-required="Dette feltet er obligatorisk. Vennligst fyll den ut."
+            aria-required="true"
+          />
+          <button
+            class="black-button accept-button-subscription"
+            type="submit"
+            name="btn_news_add"
+            id="green-button-center"
+          >
+            Subskrybuj i odbierz korzyści z newslettera.
+          </button>
+          <div class="clear"></div>
+        </form>
+      </div>
+      <div
+        class="subscription-popup-text"
+        style="color: #000; font-size: 11px; padding-top: 15px"
+      >
+        Możesz w dowolnym momencie<br />
+        zrezygnować z subskrypcji.
+      </div>
+    </div>
+    <div id="newsletter-box-close">Nie, dziękuję ></div>
+  </div>
+</div>
