@@ -497,7 +497,39 @@ export async function mondayRegularNslt({
                       : ""
                   }
               </tr>`
-                  : ""
+                  : `<tr>
+                  <td class="newsletterContainer" style="background-color: ${
+                    offerPart.background || background
+                  }; color: ${offerPart.color || "#000"};">
+                      
+                      ${
+                        offerPart.type === "code"
+                          ? OfferPartCode({
+                              color: offerPart.color,
+                              data: queries.offerPart,
+                              //data2: queries.ChooseFrom,
+                              href: links[0],
+                              getPhrase,
+                              type,
+                              queries,
+                            })
+                          : ""
+                      }
+                      ${
+                        offerPart.type === "codes"
+                          ? OfferPartCodes({
+                              color: offerPart.color,
+                              data: queries.offerPart,
+                              data2: queries.codes,
+                              href: links[0],
+                              getPhrase,
+                              type,
+                              queries,
+                            })
+                          : ""
+                      }
+                  </td> 
+              </tr>`
               }
 
               ${

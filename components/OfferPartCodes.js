@@ -1,121 +1,279 @@
+import { Paragraph } from "./Paragraph.js";
+import { Space } from "./Space.js";
 import { GetCode } from "./getCode.js";
 
-export function OfferPartCodes({ offerParts, type }) {
-  function newsletterIntro(item, i) {
-    return `
-    ${
-      "title" in item
-        ? `
-        <tr>
-            <td align="center">
-                <span class="newsletterTitleBlackWeek">
-                    ${item.title}
-                </span>
-            </td>
-        </tr>
-        `
-        : ""
-    }
-    ${
-      "paragraph" in item
-        ? `
-        <tr>
-            <td align="center" ${
-              offerParts.length - 1 !== i ? 'class="newsletterBottom35px"' : ""
-            }>
-                <span class="newsletterParagraph">
-                    ${item.paragraph}
-                </span>
-            </td>
-        </tr>
-        `
-        : ""
-    }
-    ${
-      "code" in item && item.type === "newsletter"
-        ? `
-          <tr>
-            <td class="newsletterBottom35px">
-              ${GetCode({
-                code: item.code,
-                link: item.href,
-                type,
-              })}
-            </td>
-          </tr>
-        `
-        : ""
-    }
-    `;
-  }
+export function OfferPartCodes({ color, data, data2, queries, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, paragraph7, paragraph8, paragraph9, paragraph10, code1, code2, code3, code4, href, type, className }) {
+  const newsletter = `
+    <tr>
+      <td style="color: ${color}">
+        ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
 
-  function landingIntro(item, i) {
-    return `
-    ${
-      "title" in item
-        ? `
-        <tr>
-            <td align="center">
-                <span class="newsletterTitleBlackWeek" >
-                    ${item.title}
-                </span>
-            </td>
-        </tr>
-        `
-        : ""
-    }
-    ${
-      "paragraph" in item
-        ? `
-        <tr>
-            <td align="center" ${
-              item?.class
-                ? `class='${item.class}'`
-                : offerParts.length - 1 === i
-                ? ""
-                : 'class="newsletterBottom20px"'
-            }>
-                <span class="newsletterParagraph">
-                    ${item.paragraph}
-                </span>
-            </td>
-        </tr>
-        `
-        : ""
-    }
-    ${
-      "code" in item && item.type === "landing"
-        ? `
-          <tr>
-            <td class="newsletterBottom35px">
-              ${GetCode({
-                code: item.code,
-                link: item.href,
-                type,
-              })}
-            </td>
-          </tr>
-        `
-        : ""
-    }
-    `;
-  }
+    <tr>
+      <td >
+        ${Paragraph(data ? data[1] : paragraph2, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
 
+    <tr>
+      <td >
+        ${Paragraph(data ? data[2] : paragraph3, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Paragraph(data ? data[3] : paragraph4, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[4] : paragraph5, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Paragraph(data ? data[5] : paragraph6, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[6] : paragraph7, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Paragraph(data ? data[7] : paragraph8, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[8] : paragraph9, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom60px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${GetCode({
+          color: color,
+          code: queries?.codeCTA || "Code tableQuery not found.",
+          link: href,
+          type,
+        })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom60px" })}
+      </td>
+    </tr>
+    
+    <tr>
+      <td >
+        ${Paragraph(data ? data[9] :paragraph10, "center", `color: ${color}`)}
+      </td>
+    </tr>
+  `;
+  const landing = `
+    <tr>
+      <td style="color: ${color}">
+        ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[1] : paragraph2, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[2] : paragraph3, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data2 ? data2[0] : code1, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Paragraph(data ? data[3] : paragraph4, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[4] : paragraph5, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data2 ? data2[1] : code2, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Paragraph(data ? data[5] : paragraph6, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[6] : paragraph7, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data2 ? data2[2] : code3, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Paragraph(data ? data[7] : paragraph8, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[8] : paragraph9, "center", `color: ${color}`)}
+      </td>
+    </tr>
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom20px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data2 ? data2[3] : code4, "center", `color: ${color}`)}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+    
+    <tr>
+      <td >
+        ${Paragraph(data ? data[9] :paragraph10, "center", `color: ${color}`)}
+      </td>
+    </tr>
+  `;
   return `
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tbody>
-          ${offerParts
-            .map((item, i) => {
-              if (type === "newsletter") {
-                return newsletterIntro(item, i);
-              }
-
-              if (type === "landing") {
-                return landingIntro(item, i);
-              }
-            })
-            .join("")}
-        </tbody>
-    </table>
-    `;
+  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    ${type === "newsletter" ? newsletter : landing}
+  </table>
+  `;
 }

@@ -4,7 +4,7 @@ export function Line(img = "https://beliani.info/newsletter/2022/line.jpg") {
         <tbody>
             <tr>
                 <td>
-                    <img src=${img} style="display:block" width="100%" alt="">
+                    <img src=${img} style="display:block" width="100%" alt="Line separator"/>
                 </td>
             </tr>
         </tbody>

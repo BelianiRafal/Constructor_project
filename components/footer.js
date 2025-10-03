@@ -108,7 +108,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -211,7 +211,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -306,7 +306,7 @@ export function Footer(sections, options, name) {
         <table class="newsletterContainer" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #ffffff;">
             <tbody>
                     <tr>
-                        <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;" /></td>
+                        <td>${Line()}</td>
                     </tr>
                   <!--KLARNA-->
                     <tr>
@@ -326,7 +326,7 @@ export function Footer(sections, options, name) {
         <table class="newsletterContainer" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #ffffff;" id="newsletter">
             <tbody>
                 <tr>
-                    <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
+                    <td>${Line()}</td>
                 </tr>
                 <!--KLARNA-->
                 <tr>
@@ -349,7 +349,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -466,7 +466,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -579,7 +579,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <!-- ADVANTAGES -->
@@ -644,7 +644,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -669,7 +669,7 @@ export function Footer(sections, options, name) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
