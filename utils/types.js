@@ -399,7 +399,7 @@ export default {
       font-size: 30px;
       line-height: 1.20;
       font-family: "Open Sans", sans-serif;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     .newsletterCta {
@@ -424,14 +424,14 @@ export default {
       font-size: 18px;
       font-family: "Open Sans", sans-serif;
       line-height: 1.20;
-      font-weight: 600;
+      font-weight: 400;
     }
     
     .newsletterTitleOfferPart {
       font-size: 30px;
       font-family: "Open Sans", sans-serif;
       line-height: 1;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     .newsletterTitle {
@@ -647,7 +647,7 @@ export default {
 
       .newsletterCode {
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 400;
       }
     }
     
@@ -1443,7 +1443,7 @@ export default {
     #newsletter .newsletterParagraph {
       font-size: 18px;
       line-height: 1.20;
-      font-weight: 600;
+      font-weight: 400;
     }
     
     #newsletter .newsletterTitle {
@@ -1455,7 +1455,7 @@ export default {
     #newsletter .newsletterTitleOfferPart {
       font-size: 30px;
       line-height: 1;
-      font-weight: 600;
+      font-weight: 400;
     }
     
     #newsletter .newsletterProductTitle {
