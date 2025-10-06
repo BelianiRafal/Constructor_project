@@ -2,106 +2,69 @@ import { Paragraph } from "./Paragraph.js";
 import { Space } from "./Space.js";
 import { GetCode } from "./getCode.js";
 
-export function OfferPartCodes({ color, data, data2, queries, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, paragraph7, paragraph8, paragraph9, paragraph10, code1, code2, code3, code4, href, type, className }) {
-  const newsletter = `
-    <tr>
-      <td style="color: ${color}">
-        ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
+// Helper do renderowania pojedynczego bloku (paragraf + odstęp)
+function renderBlock({ content, spaceAfter, isTitle, color }) {
+  // Jeśli nie ma treści, nie renderuj nic
+  if (!content) return "";
 
-    <tr>
-      <td >
-        ${Paragraph(data ? data[1] : paragraph2, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
+  const paragraphHtml = Paragraph(
+    content,
+    "center",
+    `color: ${color}`,
+    isTitle ? "newsletterTitleOfferPart" : undefined
+  );
 
-    <tr>
-      <td >
-        ${Paragraph(data ? data[2] : paragraph3, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[3] : paragraph4, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
+  const spaceHtml = Space({ className: `newsletterBottom${spaceAfter}` });
 
+  return `
     <tr>
-      <td >
-        ${Paragraph(data ? data[4] : paragraph5, "center", `color: ${color}`)}
-      </td>
+      <td>${paragraphHtml}</td>
     </tr>
     <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
+      <td>${spaceHtml}</td>
     </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[5] : paragraph6, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
+  `;
+}
 
-    <tr>
-      <td >
-        ${Paragraph(data ? data[6] : paragraph7, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[7] : paragraph8, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
+// Zoptymalizowany komponent
+export function OfferPartCodes({ color, data, data2, queries, href, type }) {
+  // Tworzymy jedną, wspólną tablicę z danymi, aby uniknąć skomplikowanej logiki warunkowej
+  const paragraphs = data || [];
+  const codes = data2 || [];
 
-    <tr>
-      <td >
-        ${Paragraph(data ? data[8] : paragraph9, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom60px" })}
-      </td>
-    </tr>
+  // Definiujemy strukturę jako tablicę konfiguracji
+  const layoutConfig = [
+    { content: paragraphs[0] || "Missing Offer - part 1", spaceAfter: "35px", isTitle: true },
+    { content: paragraphs[1], spaceAfter: "20px", isTitle: true },
+    { content: paragraphs[2], spaceAfter: type === "newsletter" ? "35px" : "20px" },
+    { type: "code", content: codes[0], spaceAfter: "35px", for: "landing" },
+    { content: paragraphs[3], spaceAfter: "20px", isTitle: true },
+    { content: paragraphs[4], spaceAfter: type === "newsletter" ? "35px" : "20px" },
+    { type: "code", content: codes[1], spaceAfter: "35px", for: "landing" },
+    { content: paragraphs[5], spaceAfter: "20px", isTitle: true },
+    { content: paragraphs[6], spaceAfter: type === "newsletter" ? "35px" : "20px" },
+    { type: "code", content: codes[2], spaceAfter: "35px", for: "landing" },
+    { content: paragraphs[7], spaceAfter: "20px", isTitle: true },
+    { content: paragraphs[8], spaceAfter: type === "newsletter" ? "60px" : "20px" },
+    { type: "code", content: codes[3], spaceAfter: "35px", for: "landing" },
+  ];
 
+  const contentHtml = layoutConfig
+    .filter(block => !block.for || block.for === type) // Filtruj bloki przeznaczone tylko dla danego typu
+    .map(block => {
+      // Renderowanie specjalnych bloków
+      if (block.type === 'code') {
+        return renderBlock({ ...block, content: block.content, color });
+      }
+      // Renderowanie domyślnych bloków
+      return renderBlock({ ...block, color });
+    })
+    .join('');
+
+  // Specjalna sekcja CTA tylko dla newslettera
+  const newsletterCta = `
     <tr>
-      <td >
+      <td>
         ${GetCode({
           color: color,
           code: queries?.codeCTA || "Code tableQuery not found.",
@@ -110,170 +73,22 @@ export function OfferPartCodes({ color, data, data2, queries, paragraph1, paragr
         })}
       </td>
     </tr>
-
     <tr>
-      <td >
-        ${Space({ className: "newsletterBottom60px" })}
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        ${Paragraph(data ? data[9] :paragraph10, "center", `color: ${color}`)}
-      </td>
+      <td>${Space({ className: "newsletterBottom60px" })}</td>
     </tr>
   `;
-  const landing = `
-    <tr>
-      <td style="color: ${color}">
-        ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
 
-    <tr>
-      <td >
-        ${Paragraph(data ? data[1] : paragraph2, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
+  const finalParagraph = renderBlock({
+    content: paragraphs[9],
+    spaceAfter: "0px", // Bez dodatkowego odstępu na końcu
+    color
+  });
 
-    <tr>
-      <td >
-        ${Paragraph(data ? data[2] : paragraph3, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data2 ? data2[0] : code1, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[3] : paragraph4, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data ? data[4] : paragraph5, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data2 ? data2[1] : code2, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[5] : paragraph6, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data ? data[6] : paragraph7, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data2 ? data2[2] : code3, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[7] : paragraph8, "center", `color: ${color}`, className="newsletterTitleOfferPart")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data ? data[8] : paragraph9, "center", `color: ${color}`)}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data2 ? data2[3] : code4, "center", `color: ${color}`)}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom35px" })}
-      </td>
-    </tr>
-    
-    <tr>
-      <td >
-        ${Paragraph(data ? data[9] :paragraph10, "center", `color: ${color}`)}
-      </td>
-    </tr>
-  `;
   return `
-  <table cellspacing="0" cellpadding="0" border="0" width="100%">
-    ${type === "newsletter" ? newsletter : landing}
-  </table>
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+      ${contentHtml}
+      ${type === "newsletter" ? newsletterCta : ""}
+      ${finalParagraph}
+    </table>
   `;
 }
