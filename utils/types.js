@@ -399,7 +399,7 @@ export default {
       font-size: 30px;
       line-height: 1.20;
       font-family: "Open Sans", sans-serif;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     .newsletterCta {
@@ -647,7 +647,7 @@ export default {
 
       .newsletterCode {
         font-size: 20px;
-        font-weight: 400;
+        font-weight: 600;
       }
     }
     

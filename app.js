@@ -100,7 +100,7 @@ try {
     campaigns: [
       //! Black Week Start
       new entities.Campaign({
-        startId: "37508",
+        startId: "37764",
         name: "Voucher - 10.11.25 - Black Week start",
         date: "2025.11.10",
         issueCardId: "405559",
