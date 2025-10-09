@@ -1,6 +1,5 @@
 import { Footer } from "../components/footer.js";
 import { Header } from "../components/header.js";
-import FreebiesGenerator from "../components/FreebiesGenerator.js";
 import {
   Line,
   Category,
@@ -9,19 +8,11 @@ import {
   ImageWithLink,
   Space,
   Product,
-  ProductIMG,
   OfferPartCodes,
   Timer,
   TopImageTitle,
   AdditionalCategories,
-  CategoryOneBannerWhite,
-  CategoryOneBanner,
-  CategoryOneLast,
-  CategoryThree,
-  CategoryThreeLast,
-  OfferFree,
-  OfferFreeLP,
-  CtaC,
+  AdditionalCategoriesPadding,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -29,7 +20,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function ParasolLP({
+export async function RegularWednesdayFiltrLP({
   links,
   getProductById,
   getCategoryLink,
@@ -45,14 +36,15 @@ export async function ParasolLP({
   categories,
   categories_add,
   background,
+  titleFontColor,
+  titleSize,
   header,
   offerPart,
   intro,
   timer,
   data,
   item,
-  add_utm,
-  freebies,
+  add_utm
 }) {
   const codes = getCodes(queries);
   const timer_link = {
@@ -76,30 +68,59 @@ export async function ParasolLP({
     SK: [""],
   };
 
-  const free = {
-    UK: "FREE",
-    PL: "GRATIS",
-    DE: "GRATIS",
-    AT: "GRATIS",
-    CHDE: "GRATIS",
-    NL: "GRATIS",
-    FR: "GRATUIT",
-    CHFR: "GRATUIT",
-    CHIT: "GRATIS",
-    BEFR: "GRATUIT",
-    BENL: "GRATIS",
-    ES: "GRATIS",
-    PT: "GRÁTIS",
-    IT: "GRATIS",
-    DK: "GRATIS",
-    NO: "GRATIS",
-    FI: "ILMAINEN",
-    SE: "PÅ KÖPET",
-    CZ: "ZDARMA",
-    SK: "GRÁTIS",
-    HU: "AJÁNDÉK",
-    RO: "CADOU",
+  const cat2 = {
+    UK: "https://www.beliani.co.uk/curved-furniture/?Type=Sofas&sort=default",
+    PL: "https://www.beliani.pl/oble-ksztalty/looks/?Typ=Sofy&sort=default",
+    DE: "https://www.beliani.de/geschwungene-moebel/?Typ=Sofas&sort=default",
+    AT: "https://www.beliani.at/geschwungene-moebel/?Typ=Sofas&sort=default",
+    CHDE: "https://www.beliani.ch/geschwungene-moebel/?Typ=Sofas&sort=default",
+    NL: "https://www.beliani.nl/gebogen-meubels/?Type=Banken&sort=default",
+    FR: "https://www.beliani.fr/meuble-courbes/looks/?Type=Canapes&sort=default",
+    CHFR: "https://www.beliani.ch/meuble-courbes/looks/?Type=Canapes&sort=default",
+    ES: "https://www.beliani.es/mobiliario-curvado/looks/?Tipo=Sofas&sort=default",
+    PT: "https://www.beliani.pt/moveis-curvos/?Tipo=Sofas&sort=default",
+    IT: "https://www.beliani.it/arredi-curvi/?Tipo=Divani&sort=default",
+    DK: "https://www.beliani.dk/kurvede-moebler/?sort=default ",
+    NO: "https://www.beliani.no/kurvede-mobler/?Type=Sofaer&sort=default",
+    FI: "https://www.beliani.fi/kaarevat-kalusteet/?Malli=Sohvat",
+    SE: "https://www.beliani.se/svangda-mobler/?Typ=Soffor&sort=default",
+    CZ: "https://www.beliani.cz/zaobleny-nabytek/looks/?Typ=Pohovky&sort=default",
+    SK: "https://www.beliani.sk/zaobleny-nabytok-sk/?Typ=Pohovky&sort=default",
+    HU: "https://www.beliani.hu/ivelt-butorok/?Tipus=Kanapek&sort=default",
+    BEFR: "https://www.beliani.be/meuble-courbes/looks/?Type=Canapes&sort=default",
+    BENL: "https://www.beliani.be/gebogen-meubels/?Type=Banken&sort=default",
+    RO: "https://www.beliani.ro/mobilier-curbat/?Tip=Canapele&sort=default",
   };
+
+  const cat4 = {
+    UK: "https://www.beliani.co.uk/sofas/all+products/?Colour=Blue,Red,Pink,Green,Orange&sort=default",
+    PL: "https://www.beliani.pl/sofy/wszystkie+produkty/?Kolor=Niebieski,Czerwony,Rozowy,Zielony,Pomaranczowy&sort=default",
+    DE: "https://www.beliani.de/sofas/alle+produkte/?Farbe=Blau,Rot,Rosa,Grun,Orange&sort=default ",
+    AT: "https://www.beliani.at/sofas/alle+produkte/?Farbe=Blau,Rot,Rosa,Grun,Orange&sort=default ",
+    CHDE: "https://www.beliani.ch/sofas/alle+produkte/?Farbe=Blau,Rot,Rosa,Grun,Orange&sort=default",
+    NL: "https://www.beliani.nl/banken/alle+producten/?Kleur=Blauw,Rood,Roze,Groen,Oranje&sort=default",
+    FR: "https://www.beliani.fr/canapes/tous+les+produits/?Couleur=Bleu,Rouge,Rose,Vert,Orange&sort=default",
+    CHFR: "https://www.beliani.ch/canapes/tous+les+produits/?Couleur=Bleu,Rouge,Rose,Vert,Orange&sort=default",
+    ES: "https://www.beliani.es/sofas/todos+los+productos/?Color=Azul,Rojo,Rosa,Verde,Naranja&sort=default",
+    PT: "https://www.beliani.pt/sofas/todos+os+produtos/?Cor=Azul,Vermelho,Rosa,Verde,Laranja&sort=default",
+    IT: "https://www.beliani.it/divani/tutti+i+prodotti/?Colore=Blu,Rosso,Rosa,Verde,Arancione&sort=default",
+    DK: "https://www.beliani.dk/stuemobler/sofaer/alle+produkter/?Farve=Bla,Rod,Lyserod,Gron,Orange&sort=default ",
+    NO: "https://www.beliani.no/sofaer/alle+produkter/?Farge=Bla,Rod,Rosa,Gronn,Oransje&sort=default",
+    FI: "https://www.beliani.fi/sohvat/kaikki+tuotteet/?Vari=Sininen,Punainen,Vaaleanpunainen,Vihrea,Oranssi",
+    SE: "https://www.beliani.se/vardagsrumsmobler/soffor/alla+produkter/?Farg=Bla,Rod,Rosa,Gron,Orange&sort=default",
+    CZ: "https://www.beliani.cz/pohovky/v%C5%A1echny+produkty/?Barva=Modra,Cervena,Ruzova,Zelena,Oranzova&sort=default",
+    SK: "https://www.beliani.sk/pohovky/zobrazit+vsetky+produkty/?Farba=Modra,Cervena,Ruzova,Zelena,Oranzova&sort=default",
+    HU: "https://www.beliani.hu/nappali-butorok/kanapek/minden+termek/?Szin=Kek,Rozsaszin,Zold,Narancssarga&sort=default",
+    BEFR: "https://www.beliani.be/canapes/tous+les+produits/?Couleur=Bleu,Rouge,Rose,Vert,Orange&sort=default",
+    BENL: "https://www.beliani.be/banken/alle+producten/?Kleur=Blauw,Rood,Roze,Groen,Oranje&sort=default",
+    RO: "https://www.beliani.ro/canapele/toate+produsele/?Culoare=Albastru,Rosu,Roz,Portocaliu&sort=defa…",
+  };
+
+  const categoryLinks = [null, cat2, null, cat4];
+
+  // jeśli wpis zaczyna się od "?utm...", doklej do bazowego href
+  const withBaseIfUtm = (maybe, base) =>
+    typeof maybe === "string" && maybe.startsWith("?") ? `${base}${maybe}` : maybe;
   
   return `
   ${Header(
@@ -148,7 +169,7 @@ export async function ParasolLP({
     },
     { type }
   )}
-  <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: ${background}; color: #000000;" id="newsletter">
+  <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: ${background}; color: #000;" id="newsletter">
         <tbody>
             ${type === "newsletter"
               ? `
@@ -177,8 +198,8 @@ export async function ParasolLP({
                           href: links[0],
                           title1: queries.tit[0],
                           title2: queries.tit[1],
-                          color: "#000000",
-                          type: "firstbig",
+                          color: titleFontColor,
+                          type: titleSize,
                         })}
                       `
                       }
@@ -188,72 +209,103 @@ export async function ParasolLP({
               `
             }
             <tr>
-                <td align="center">
-                    ${ImageWithLink({
-                        href: links[0],
-                        src: links[2],
-                    })}
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    ${OfferFreeLP({
-                        paragraph1: queries.offerPart[0],
-                        paragraph2: queries.offerPart[1],
-                        paragraph3: queries.offerPart[5],
-                        paragraph4: queries.offerPart[3],
-                        paragraph5: queries.offerPart[4],
-                        href: links[0],
-                        ctatext: queries.shopnow[0],
-                        ctahref: links[3],
-                        free: free[country],
-                        type: "wednesday2x3",
-                        products: categories[0].products.map((item) =>
-                        getProductById(item.id, item.src)
-                      ),
-                    })}
-                </td>
-            </tr>
-            <tr>
-              <td style="background-color: 
-              ${freebies.options.background || background}; color: ${freebies.options?.color || "#000"};">
-                ${FreebiesGenerator({
-                  background,
-                  freebies: freebies.items || [],
-                  getProductById,
-                  color: freebies.options.color,
-                  intro,
-                })}
-                </td>
-            </tr>
-            <tr>
-              <td style="background-color: 
-              ${freebies.options.background || background}; color: ${freebies.options?.color || "#000"};">
-                ${FreebiesGenerator({
-                  background,
-                  freebies: freebies.items2 || [],
-                  getProductById,
-                  color: freebies.options.color,
-                  intro,
-                })}
-                </td>
-            </tr>
-            <tr>
-              <td class="newsletterBottom35px"></td>
-            </tr>
-            <tr>
-            <td>
-              <table cellspacing="0" cellpadding="0" style="width: 100%; ">
-                <tbody>
-                  <tr>
-                    <td style="padding-top: 0px; padding-left: 0px; padding-right: 0px; text-align: center;">
-                      ${CtaC({
-                        ctahref: links[3],
-                        ctatext: queries.shopnow[0],
-                      })}
-                    </td>
-                  </tr>
-                </tbody>
+            <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
+            <tbody>
+              ${categories
+                .map((item, index) => {
+                  const isLast = index === categories.length - 1;
+                  const background = item.background;
+                  const color = item.color;
+          
+                  const dataIndex = index * 2;
+                  if (dataIndex >= queries.categories.length) return "";
+          
+                  const title = queries.categories[dataIndex] || "Default Title";
+                  const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
+                  const lastbottomclass = isLast ? "newsletterBottom40px" : "newsletterBottom80px";
+          
+                  // --- HREF wg wymagań ---
+                  let href;
+                  if (index === 0) {
+                    href = getCategoryLink(categories[0].href);        // kat. 1
+                  } else if (index === 1) {
+                    href = cat2[country]; // kat. 2
+                  } else if (index === 2) {
+                    href = getCategoryLink(categories[2].href);        // kat. 3
+                  } else if (index === 3) {
+                    href = cat4[country]; // kat. 4
+                  } else {
+                    href = getCategoryLink(item.href);                 // fallback (gdyby były dalsze)
+                  }
+          
+                  return `
+                    <tr>
+                      <td style="background-color: ${background}; color: ${color};">
+                        ${Category({
+                          data: [title, paragraph],
+                          href,
+                          name: title,
+                          color: item.color,
+                          desc: paragraph,
+                          src: item.src,
+                          lastbottomclass,
+                          cta: getPhrase("Shop now"),
+                          type: "wednesday",
+                          products: item.products?.map((product) =>
+                            getProductById(product.id, product.src)
+                          ) || [],
+                        })}
+                      </td>
+                    </tr>
+                  `;
+                })
+                .join("")}
+            </tbody>
+          </td>
+          <tr>
+              <td style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+                  ${Space({ className: "newsletterBottom40px" })}
+              </td>
+          </tr>
+          <tr>
+            <td align="center" class="newsletterContainer" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+              <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+                <tr>
+                  <td align="center" class="newsletterBottom35px">
+                    <span class="newsletterAditionalTitle">${queries.additionalt[0]}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" class="newsletterContainer" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+              <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+                ${
+                  [0, 1].map(rowIndex => `
+                    <tr>
+                      ${
+                        [0, 1].map(colIndex => {
+                          const index = rowIndex * 2 + colIndex;
+                          if (!categories_add[index]) return "";
+                          // Ustalanie wartości paddingside na podstawie index
+                          const paddingside = (index === 0 || index === 2) ? "newsletterRight10px" : "newsletterLeft10px";
+                          const paddingbottom = (index === 0 || index === 1) ? "newsletterBottom70px" : "newsletterBottom80px";
+                          return `
+                            ${AdditionalCategoriesPadding({
+                              name: queries.additional[index],
+                              href: getCategoryLink(categories_add[index].href),
+                              src: categories_add[index].src,
+                              paddingside: paddingside,
+                              paddingbottom: paddingbottom,
+
+                            })}
+                          `;
+                        }).join("")
+                      }
+                    </tr>
+                  `).join("")
+                }
               </table>
             </td>
           </tr>

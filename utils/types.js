@@ -55,8 +55,8 @@ export default {
           }
 
           .newsletterContainerFree {
-            padding-left: 124px;
-            padding-right: 124px;
+            padding-left: 21px;
+            padding-right: 21px;
           }
           
           .newsletterCta {
@@ -422,8 +422,8 @@ export default {
             }
 
             .newsletterContainerFree {
-              padding-left: 62px;
-              padding-right: 62px;
+              padding-left: 11px;
+              padding-right: 11px;
             }
           
             .newsletterFreebieContainer {
@@ -1407,8 +1407,8 @@ export default {
           }
 
           #newsletter .newsletterContainerFree {
-            padding-left: 124px;
-            padding-right: 124px;
+            padding-left: 21px;
+            padding-right: 21px;
           }
           
           #newsletter .newsletterContainer {
@@ -1719,8 +1719,8 @@ export default {
             }
 
             #newsletter .newsletterContainerFree {
-              padding-left: 62px;
-              padding-right: 62px;
+              padding-left: 11px;
+              padding-right: 11px;
             }
               
             #newsletter .newsletterTitleH2 {

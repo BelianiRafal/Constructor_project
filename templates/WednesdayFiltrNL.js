@@ -20,7 +20,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function RegularWednesdayFiltrNslt({
   links,
   getProductById,
   getCategoryLink,
@@ -67,6 +67,60 @@ export async function RegularWednesdayNslt({
     NO: [""],
     SK: [""],
   };
+
+  const cat2 = {
+    UK: "https://www.beliani.co.uk/curved-furniture/?Type=Sofas&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37240",
+    PL: "https://www.beliani.pl/oble-ksztalty/looks/?Typ=Sofy&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37234",
+    DE: "https://www.beliani.de/geschwungene-moebel/?Typ=Sofas&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37226",
+    AT: "https://www.beliani.at/geschwungene-moebel/?Typ=Sofas&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37222",
+    CHDE: "https://www.beliani.ch/geschwungene-moebel/?Typ=Sofas&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37220",
+    NL: "https://www.beliani.nl/gebogen-meubels/?Type=Banken&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37232",
+    FR: "https://www.beliani.fr/meuble-courbes/looks/?Type=Canapes&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37229",
+    CHFR: "https://www.beliani.ch/meuble-courbes/looks/?Type=Canapes&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37221",
+    ES: "https://www.beliani.es/mobiliario-curvado/looks/?Tipo=Sofas&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37239",
+    PT: "https://www.beliani.pt/moveis-curvos/?Tipo=Sofas&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37235",
+    IT: "https://www.beliani.it/arredi-curvi/?Tipo=Divani&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37231",
+    DK: "https://www.beliani.dk/kurvede-moebler/?sort=defaults?utm_source=newsletter&utm_medium=email&utm_campaign=37227",
+    NO: "https://www.beliani.no/kurvede-mobler/?Type=Sofaer&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37233",
+    FI: "https://www.beliani.fi/kaarevat-kalusteet/?Malli=Sohvat?utm_source=newsletter&utm_medium=email&utm_campaign=37228",
+    SE: "https://www.beliani.se/svangda-mobler/?Typ=Soffor&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37237",
+    CZ: "https://www.beliani.cz/zaobleny-nabytek/looks/?Typ=Pohovky&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37225",
+    SK: "https://www.beliani.sk/zaobleny-nabytok-sk/?Typ=Pohovky&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37238",
+    HU: "https://www.beliani.hu/ivelt-butorok/?Tipus=Kanapek&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37230",
+    BEFR: "https://www.beliani.be/meuble-courbes/looks/?Type=Canapes&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37224",
+    BENL: "https://www.beliani.be/gebogen-meubels/?Type=Banken&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37223",
+    RO: "https://www.beliani.ro/mobilier-curbat/?Tip=Canapele&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37236",
+  };
+
+  const cat4 = {
+    UK: "https://www.beliani.co.uk/sofas/all+products/?Colour=Blue,Red,Pink,Green,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37240",
+    PL: "https://www.beliani.pl/sofy/wszystkie+produkty/?Kolor=Niebieski,Czerwony,Rozowy,Zielony,Pomaranczowy&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37234",
+    DE: "https://www.beliani.de/sofas/alle+produkte/?Farbe=Blau,Rot,Rosa,Grun,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37226",
+    AT: "https://www.beliani.at/sofas/alle+produkte/?Farbe=Blau,Rot,Rosa,Grun,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37222",
+    CHDE: "https://www.beliani.ch/sofas/alle+produkte/?Farbe=Blau,Rot,Rosa,Grun,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37220",
+    NL: "https://www.beliani.nl/banken/alle+producten/?Kleur=Blauw,Rood,Roze,Groen,Oranje&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37232",
+    FR: "https://www.beliani.fr/canapes/tous+les+produits/?Couleur=Bleu,Rouge,Rose,Vert,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37229",
+    CHFR: "https://www.beliani.ch/canapes/tous+les+produits/?Couleur=Bleu,Rouge,Rose,Vert,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37221",
+    ES: "https://www.beliani.es/sofas/todos+los+productos/?Color=Azul,Rojo,Rosa,Verde,Naranja&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37239",
+    PT: "https://www.beliani.pt/sofas/todos+os+produtos/?Cor=Azul,Vermelho,Rosa,Verde,Laranja&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37235",
+    IT: "https://www.beliani.it/divani/tutti+i+prodotti/?Colore=Blu,Rosso,Rosa,Verde,Arancione&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37231",
+    DK: "https://www.beliani.dk/stuemobler/sofaer/alle+produkter/?Farve=Bla,Rod,Lyserod,Gron,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37227",
+    NO: "https://www.beliani.no/sofaer/alle+produkter/?Farge=Bla,Rod,Rosa,Gronn,Oransje&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37233",
+    FI: "https://www.beliani.fi/sohvat/kaikki+tuotteet/?Vari=Sininen,Punainen,Vaaleanpunainen,Vihrea,Oranssi?utm_source=newsletter&utm_medium=email&utm_campaign=37228",
+    SE: "https://www.beliani.se/vardagsrumsmobler/soffor/alla+produkter/?Farg=Bla,Rod,Rosa,Gron,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37237",
+    CZ: "https://www.beliani.cz/pohovky/v%C5%A1echny+produkty/?Barva=Modra,Cervena,Ruzova,Zelena,Oranzova&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37225",
+    SK: "https://www.beliani.sk/pohovky/zobrazit+vsetky+produkty/?Farba=Modra,Cervena,Ruzova,Zelena,Oranzova&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37238",
+    HU: "https://www.beliani.hu/nappali-butorok/kanapek/minden+termek/?Szin=Kek,Rozsaszin,Zold,Narancssarga&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37230",
+    BEFR: "https://www.beliani.be/canapes/tous+les+produits/?Couleur=Bleu,Rouge,Rose,Vert,Orange&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37224",
+    BENL: "https://www.beliani.be/banken/alle+producten/?Kleur=Blauw,Rood,Roze,Groen,Oranje&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=37223",
+    RO: "https://www.beliani.ro/canapele/toate+produsele/?Culoare=Albastru,Rosu,Roz,Portocaliu&sort=defa…?utm_source=newsletter&utm_medium=email&utm_campaign=37236",
+  };
+
+  const categoryLinks = [null, cat2, null, cat4];
+
+  // jeśli wpis zaczyna się od "?utm...", doklej do bazowego href
+  const withBaseIfUtm = (maybe, base) =>
+    typeof maybe === "string" && maybe.startsWith("?") ? `${base}${maybe}` : maybe;
   
   return `
   ${Header(
@@ -157,49 +211,58 @@ export async function RegularWednesdayNslt({
             }
             <tr>
             <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
-              <tbody>
-                ${categories
-                  .map((item, index) => {
-                    const isLast = index === categories.length - 1; // Czy to ostatnia kategoria?
-                    const background = item.background;
-                    const color = item.color;
-                    const srcValue = item.src?.value || "";
+            <tbody>
+              ${categories
+                .map((item, index) => {
+                  const isLast = index === categories.length - 1;
+                  const background = item.background;
+                  const color = item.color;
           
-                    const dataIndex = index * 2;
-                    if (dataIndex >= queries.categories.length) return "";
+                  const dataIndex = index * 2;
+                  if (dataIndex >= queries.categories.length) return "";
           
-                    const title = queries.categories[dataIndex] || "Default Title";
-                    const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
+                  const title = queries.categories[dataIndex] || "Default Title";
+                  const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
+                  const lastbottomclass = isLast ? "newsletterBottom40px" : "newsletterBottom80px";
           
-                    // Ustal właściwą wartość lastbottomclass
-                    const lastbottomclass = isLast ? "newsletterBottom40px" : "newsletterBottom80px";
+                  // --- HREF wg wymagań ---
+                  let href;
+                  if (index === 0) {
+                    href = getCategoryLink(categories[0].href);        // kat. 1
+                  } else if (index === 1) {
+                    href = cat2[country]; // kat. 2
+                  } else if (index === 2) {
+                    href = getCategoryLink(categories[2].href);        // kat. 3
+                  } else if (index === 3) {
+                    href = cat4[country]; // kat. 4
+                  } else {
+                    href = getCategoryLink(item.href);                 // fallback (gdyby były dalsze)
+                  }
           
-                    // Używamy TYLKO komponentu Category
-                    return `
-                      <tr>
-                        <td style="background-color: ${background}; color: ${color};">
-                          ${Category({
-                            data: [title, paragraph],
-                            href: getCategoryLink(item.href),
-                            name: title,
-                            color: item.color,
-                            desc: paragraph,
-                            src: item.src,
-                            lastbottomclass,
-                            cta: getPhrase("Shop now"),
-                            type: "wednesday",
-                            products: item.products?.map((product) =>
-                              getProductById(product.id, product.src)
-                            ) || [],
-                          })}
-                        </td>
-                      </tr>
-                    `;
-                  })
-                  .join("")}
-              </tbody>
-            </td>
-          </tr>
+                  return `
+                    <tr>
+                      <td style="background-color: ${background}; color: ${color};">
+                        ${Category({
+                          data: [title, paragraph],
+                          href,
+                          name: title,
+                          color: item.color,
+                          desc: paragraph,
+                          src: item.src,
+                          lastbottomclass,
+                          cta: getPhrase("Shop now"),
+                          type: "wednesday",
+                          products: item.products?.map((product) =>
+                            getProductById(product.id, product.src)
+                          ) || [],
+                        })}
+                      </td>
+                    </tr>
+                  `;
+                })
+                .join("")}
+            </tbody>
+          </td>
           <tr>
               <td style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
                   ${Space({ className: "newsletterBottom40px" })}
@@ -270,7 +333,7 @@ export async function RegularWednesdayNslt({
                               <tr>
                                   <td align="left" class="newsletterBottom20px">
                                       <a href=${links[5]}>
-                                          <img loading="lazy" src=${
+                                          <img alt="SoonEnding" loading="lazy" src=${
                                             links[6]
                                           } style="display: block;" width="100%">
                                       </a>
@@ -279,7 +342,7 @@ export async function RegularWednesdayNslt({
                               <tr>
                                   <td align="left" class="newsletterBottom35px">
                                       <a href=${links[7]}>
-                                          <img loading="lazy" src=${
+                                          <img alt="SoonEnding" loading="lazy" src=${
                                             links[8]
                                           } style="display: block;" width="100%">
                                       </a>

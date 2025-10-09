@@ -11,7 +11,7 @@ export function AdditionalCategories({
                     <tr>
                         <td>
                             <a href="${href}">
-                                <img src="${src}" style="display: block;" width="100%">
+                                <img alt="${name}" src="${src}" style="display: block;" width="100%">
                             </a>
                         </td>
                     </tr>
@@ -27,7 +27,7 @@ export function AdditionalCategories({
                         </td>
                     </tr>
                     <tr>
-                        <td class="newsletterBottom70px">
+                        <td class="newsletterBottom80px">
                         </td>
                     </tr>
                 </tbody>

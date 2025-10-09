@@ -12,7 +12,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
     </tr>
     <tr>
       <td >
-        ${Space({ className: "newsletterBottom20px" })}
+        ${Space({ className: "newsletterBottom35px" })}
       </td>
     </tr>
 
@@ -23,17 +23,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
     </tr>
     <tr>
       <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Paragraph(data ? data[2] : paragraph3, "center")}
-      </td>
-    </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
+        ${Space({ className: "newsletterBottom35px" })}
       </td>
     </tr>
 
@@ -50,7 +40,19 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
 
     <tr>
       <td >
-        ${Space({ className: "newsletterBottom20px" })}
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[3] : paragraph3, "center")}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
       </td>
     </tr>
     
@@ -74,9 +76,22 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
         ${Paragraph(data ? data[0] : paragraph1  || "Missing Offer - part 1", "center")}
       </td>
     </tr>
+
     <tr>
       <td >
-        ${Space({ className: "newsletterBottom20px" })}
+        ${Space({ className: "newsletterBottom35px" })}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Paragraph(data ? data[1] : paragraph2, "center")}
+      </td>
+    </tr>
+
+    <tr>
+      <td >
+        ${Space({ className: "newsletterBottom35px" })}
       </td>
     </tr>
 
@@ -92,35 +107,7 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
 
     <tr>
       <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Paragraph(data ? data[1] : paragraph2, "center")}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${GetCode({
-          color: color,
-          code: code2,
-          type,
-        })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
+        ${Space({ className: "newsletterBottom35px" })}
       </td>
     </tr>
 
@@ -129,25 +116,10 @@ export function OfferPartCode({ color, data, getPhrase, queries, paragraph1, par
         ${Paragraph(data ? data[2] : paragraph3, "center")}
       </td>
     </tr>
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
-      </td>
-    </tr>
 
     <tr>
       <td >
-        ${GetCode({
-          color: color,
-          code: code3,
-          type,
-        })}
-      </td>
-    </tr>
-
-    <tr>
-      <td >
-        ${Space({ className: "newsletterBottom20px" })}
+        ${Space({ className: "newsletterBottom35px" })}
       </td>
     </tr>
     

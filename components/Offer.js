@@ -205,6 +205,100 @@ export const OfferFree = isAllowToRender(
   `;
     }
 
+  if (type === "wednesday2x3") {
+  return `
+  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <thead>
+      <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <span class="newsletterParagraph" style="color: #000000">
+                                ${paragraph1}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        </tr>
+      <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tbody>
+                  <tr>
+                      <td align="center">
+                          <span class="newsletterParagraph" style="color: #000000">
+                              ${paragraph2}
+                          </span>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-left: 0px; padding-right: 0px; text-align: center;">
+            <a href="${href}" style="color: #000000; text-decoration: underline;">
+                <span class="newsletterCta">${paragraph3}</span>
+            </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <span class="newsletterParagraph" style="color: #000000">
+                                ${paragraph4}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <span class="newsletterParagraph" style="color: #000000">
+                                ${paragraph5}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+    </thread>
+  </table>
+  `;
+    }
+
     if (type === "image") {
       return `
     <table cellspacing="0" cellpadding="0" border="0" width="100%">

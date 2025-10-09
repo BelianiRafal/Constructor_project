@@ -49,6 +49,7 @@ import { sCategory } from "./secondcategory.js";
 import { BigProduct } from "./bigProduct.js";
 import { CategoryWithBanner } from "./categoryWithBanner.js";
 import { AdditionalCategoriesPadding } from "./additional_categories_padding.js";
+import { CtaC } from "./ctac.js";
 
 export {
   ProductWithSize,
@@ -102,4 +103,5 @@ export {
   BigProduct,
   CategoryWithBanner,
   AdditionalCategoriesPadding,
+  CtaC,
 };

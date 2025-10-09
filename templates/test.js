@@ -1,6 +1,5 @@
 import { Footer } from "../components/footer.js";
 import { Header } from "../components/header.js";
-import FreebiesGenerator from "../components/FreebiesGenerator.js";
 import {
   Line,
   Category,
@@ -9,7 +8,6 @@ import {
   ImageWithLink,
   Space,
   Product,
-  ProductIMG,
   OfferPartCodes,
   Timer,
   TopImageTitle,
@@ -17,10 +15,6 @@ import {
   CategoryOneBannerWhite,
   CategoryOneBanner,
   CategoryOneLast,
-  CategoryThree,
-  CategoryThreeLast,
-  OfferFree,
-  CtaC,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -28,7 +22,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function ParasolNL({
+export async function RegularWednesdayNslt({
   links,
   getProductById,
   getCategoryLink,
@@ -50,8 +44,7 @@ export async function ParasolNL({
   timer,
   data,
   item,
-  add_utm,
-  freebies,
+  add_utm
 }) {
   const codes = getCodes(queries);
   const timer_link = {
@@ -73,31 +66,6 @@ export async function ParasolNL({
     FI: [""],
     NO: [""],
     SK: [""],
-  };
-
-  const free = {
-    UK: "FREE",
-    PL: "GRATIS",
-    DE: "GRATIS",
-    AT: "GRATIS",
-    CHDE: "GRATIS",
-    NL: "GRATIS",
-    FR: "GRATUIT",
-    CHFR: "GRATUIT",
-    CHIT: "GRATIS",
-    BEFR: "GRATUIT",
-    BENL: "GRATIS",
-    ES: "GRATIS",
-    PT: "GRÁTIS",
-    IT: "GRATIS",
-    DK: "GRATIS",
-    NO: "GRATIS",
-    FI: "ILMAINEN",
-    SE: "PÅ KÖPET",
-    CZ: "ZDARMA",
-    SK: "GRÁTIS",
-    HU: "AJÁNDÉK",
-    RO: "CADOU",
   };
   
   return `
@@ -147,7 +115,7 @@ export async function ParasolNL({
     },
     { type }
   )}
-  <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: ${background}; color: #000000;" id="newsletter">
+  <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: ${background}; color: #000;" id="newsletter">
         <tbody>
             ${type === "newsletter"
               ? `
@@ -161,7 +129,7 @@ export async function ParasolNL({
                 </tr>
               `
               : `
-                <tr>WWWW
+                <tr>
                     <td align="center">
                       ${!queries.tit ?
                       `
@@ -177,7 +145,7 @@ export async function ParasolNL({
                           title1: queries.tit[0],
                           title2: queries.tit[1],
                           color: "#000000",
-                          type: "firstbig",
+                          type: "twoSameLines",
                         })}
                       `
                       }
@@ -187,75 +155,93 @@ export async function ParasolNL({
               `
             }
             <tr>
-                <td align="center">
-                    ${ImageWithLink({
-                        href: links[0],
-                        src: links[2],
-                    })}
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    ${OfferFree({
-                        paragraph1: queries.offerPart[0],
-                        paragraph2: queries.offerPart[1],
-                        paragraph3: queries.offerPart[2],
-                        paragraph4: queries.offerPart[3],
-                        paragraph5: queries.offerPart[4],
-                        href: links[0],
-                        ctatext: queries.shopnow[0],
-                        ctahref: links[3],
-                        free: free[country],
-                        type: "wednesday2x3",
-                        products: categories[0].products.map((item) =>
-                        getProductById(item.id, item.src)
-                      ),
-                    })}
-                </td>
-            </tr>
-            <tr>
-              <td style="background-color: 
-              ${freebies.options.background || background}; color: ${freebies.options?.color || "#000"};">
-                ${FreebiesGenerator({
-                  background,
-                  freebies: freebies.items || [],
-                  getProductById,
-                  color: freebies.options.color,
-                  intro,
-                })}
-                </td>
-            </tr>
-            <tr>
-              <td style="background-color: 
-              ${freebies.options.background || background}; color: ${freebies.options?.color || "#000"};">
-                ${FreebiesGenerator({
-                  background,
-                  freebies: freebies.items2 || [],
-                  getProductById,
-                  color: freebies.options.color,
-                  intro,
-                })}
-                </td>
-            </tr>
-                  <tr>
-        <td class="newsletterBottom35px"></td>
-      </tr>
-            <tr>
-              <td>
-                <table cellspacing="0" cellpadding="0" style="width: 100%; ">
-                  <tbody>
-                    <tr>
-                      <td style="padding-top: 0px; padding-left: 0px; padding-right: 0px; text-align: center;">
-                        ${CtaC({
-                          ctahref: links[3],
-                          ctatext: queries.shopnow[0],
-                        })}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
+              <tbody>
+                ${categories
+                  .map((item, index) => {
+                    console.log(`Sprawdzam href dla kategorii ${index}:`, item.href);
+          
+                    const isLast = index === categories.length - 1; // Sprawdzenie, czy to ostatni element
+                    const background = item.background; // Domyślny kolor tła
+                    const color = item.color; // Domyślny kolor tekstu
+                    const srcValue = item.src?.value || ""; // Pobranie `value`, jeśli istnieje
+          
+                    // Pobieranie poprawnego indeksu dla `queries.categories`
+                    const dataIndex = index * 2; 
+                    if (dataIndex >= queries.categories.length) return ""; // Zabezpieczenie przed wyjściem poza zakres
+          
+                    const title = queries.categories[dataIndex] || "Default Title";
+                    const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
+                    
+                    // Wybór komponentu na podstawie pozycji (pierwszy, ostatni, inny)
+                    let categoryComponent;
+                    if (index === 3) {
+                      categoryComponent = CategoryOneLast; // Używamy CategoryOneLast dla ostatniej kategorii
+                    } else {
+                      categoryComponent = Category; // Dla pozostałych używamy Category
+                    }
+          
+                    return `
+                      <tr>
+                        <td style="background-color: ${background}; color: ${color};">
+                          ${categoryComponent({
+                            data: [title, paragraph], // Przekazanie poprawnej pary danych
+                            href: getCategoryLink(item.href),
+                            name: title,
+                            color: item.color,
+                            desc: paragraph,
+                            src: item.src,
+                            cta: getPhrase("Shop now"),
+                            type: "wednesday",
+                            products: item.products?.map((product) =>
+                              getProductById(product.id, product.src)
+                            ) || [],
+                          })}
+                        </td>
+                      </tr>
+                    `;
+                  })
+                  .join("")}
+              </tbody>
+            </td>
+          </tr>
+          <tr>
+              <td style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+                  ${Space({ className: "newsletterBottom35px" })}
               </td>
-            </tr>
+          </tr>
+          <tr>
+            <td align="center" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+              <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+                <tr>
+                  <td align="center" class="newsletterBottom35px">
+                    <span class="newsletterTitleAditional">${queries.additionalt[0]}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" class="newsletterProductContainerLast" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+                    ${[0, 1].map(rowIndex => `
+                    <tr>
+                      ${[0, 1].map(colIndex => {
+                      const index = rowIndex * 2 + colIndex;
+                      if (!categories_add[index]) return "";
+                        return `
+                          ${AdditionalCategories({
+                            name: queries.additional[index],
+                            href: getCategoryLink(categories_add[index].href),
+                            src: categories_add[index].src,
+                          })}
+                        `;
+                      }).join("")}
+                    </tr>
+                    `).join("")}
+                </table>
+            </td>
+          </tr>
         <tbody>
       </table>
       <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
@@ -321,35 +307,35 @@ export async function ParasolNL({
             title: getFooter("Title"),
             firstCategory: {
               src: getFooter("Category src 1"),
-              href: getFooter("Category href 1"),
+              href: getCategoryLink("https://www.beliani.co.uk/sofas/all+products"),//href: getFooter("Category href 1"),
             },
             secondCategory: {
               src: getFooter("Category src 2"),
-              href: getFooter("Category href 2"),
+              href: getCategoryLink("https://www.beliani.co.uk/beds/all+products"),//href: getFooter("Category href 2"),
             },
             thirdCategory: {
               src: getFooter("Category src 3"),
-              href: getFooter("Category href 3"),
+              href: getCategoryLink("https://www.beliani.co.uk/tables/coffee-tables"),//href: getFooter("Category href 3"),
             },
             foutrthCategory: {
               src: getFooter("Category src 4"),
-              href: getFooter("Category href 4"),
+              href: getCategoryLink("https://www.beliani.co.uk/chairs/all+products"),//href: getFooter("Category href 4"),
             },
             fifthCategory: {
               src: getFooter("Category src 5"),
-              href: getFooter("Category href 5"),
+              href: getCategoryLink("https://www.beliani.co.uk/armchairs/all+products"),//href: getFooter("Category href 5"),
             },
             sixthCategory: {
               src: getFooter("Category src 6"),
-              href: getFooter("Category href 6"),
+              href: getCategoryLink("https://www.beliani.co.uk/storage/sideboards"),//href: getFooter("Category href 6"),
             },
             seventhCategory: {
               src: getFooter("Category src 7"),
-              href: getFooter("Category href 7"),
+              href: getCategoryLink("https://www.beliani.co.uk/lighting/all+products"),//href: getFooter("Category href 7"),
             },
             eigthCategory: {
               src: getFooter("Category src 8"),
-              href: getFooter("Category href 8"),
+              href: getCategoryLink("https://www.beliani.co.uk/rugs/all+products"),//href: getFooter("Category href 8"),
             },
           },
           klarna: {

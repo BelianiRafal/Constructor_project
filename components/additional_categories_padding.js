@@ -12,7 +12,7 @@ export function AdditionalCategoriesPadding({
                     <tr>
                         <td>
                             <a href="${href}">
-                                <img src="${src}" style="display: block;" width="100%">
+                                <img alt="${name}" src="${src}" style="display: block;" width="100%">
                             </a>
                         </td>
                     </tr>
