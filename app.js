@@ -1285,6 +1285,12 @@ try {
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "15.10.25 - Christmas preparations!",
+                tableRange: "13:14",
+                name: "tit",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "15.10.25 - Christmas preparations!",
                 tableRange: "16:23",
                 name: "categories",
                 fallback: [
@@ -1353,7 +1359,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns. XXXX",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/utiuuflUtzLFOjradUTpxC/2025.10.08---Newsletter---Living-room--Copy-?node-id=0-1&p=f&t=7ntKJtR506zoUnun-0",
@@ -1974,7 +1980,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
@@ -2540,7 +2546,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns. XXXX",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/6fqg49N4Xd6E9RiVMMcP3S/2025.09.17---Kitchenware--Copy-?node-id=0-1&p=f&t=PJqncOj6TMRECt9G-0",
@@ -3161,7 +3167,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns. XXXX",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/vjEqn0TOZosD1QVIAqmBl9/2025.09.24-French-Days---Autumn-Celebration--Copy-?node-id=0-1&p=f&t=SVpCY9EmGCIAUW9F-0",
@@ -3746,7 +3752,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns. XXXX",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/6fqg49N4Xd6E9RiVMMcP3S/2025.09.17---Kitchenware--Copy-?node-id=0-1&p=f&t=PJqncOj6TMRECt9G-0",
@@ -17506,7 +17512,7 @@ try {
           isActive: true,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
