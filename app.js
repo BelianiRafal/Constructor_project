@@ -112,7 +112,7 @@ try {
         alarm: {
           isActive: false,
         },
-        isArchive: false,
+        isArchive: true,
         templates: [
           {
             name: "Newsletter",
@@ -662,6 +662,1829 @@ try {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "Voucher - 10.11.25 - Black Week start!",
                 tableRange: "53:55",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+        ],
+      }),
+      //! Black Week 2025-11-14
+       new entities.Campaign({
+        startId: "37956",
+        name: " 14.11.25 - Black Week ",
+        date: "2025.11.14",
+        issueCardId: "37956",
+        figmaUrl: "https://www.figma.com/design/mvL14e5shtzKnh2dKBMaZo/Black-Week-start---Monday-2025.11.10--Copy-?node-id=2005-4231&p=f&t=7LfC86d0jciphr9a-0",
+        optimizeImg: false,
+        single_image: true,
+        soon_banners: true,
+        white_line: true,
+        alarm: {
+          isActive: false,
+        },
+        isArchive: false,
+        templates: [
+          {
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            wrapper: types.WRAPPER,
+            css: types.CSS.NS_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+            
+            categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-14",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.14.gif", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-06",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251106b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-05",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251105b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+             {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "59:61",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+          {
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            css: types.CSS.LP_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+             categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251114.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+             links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-14",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.14.gif", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-06",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251106b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-05",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251105b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "59:61",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+        ],
+      }),
+       //! Black Week 2025-11-21
+       new entities.Campaign({
+        startId: "38020",
+        name: " 21.11.25 - Black Week ",
+        date: "2025.11.21",
+        issueCardId: "37956",
+        figmaUrl: "https://www.figma.com/design/mvL14e5shtzKnh2dKBMaZo/Black-Week-start---Monday-2025.11.10--Copy-?node-id=2005-4231&p=f&t=7LfC86d0jciphr9a-0",
+        optimizeImg: false,
+        single_image: true,
+        soon_banners: true,
+        white_line: true,
+        alarm: {
+          isActive: false,
+        },
+        isArchive: false,
+        templates: [
+          {
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            wrapper: types.WRAPPER,
+            css: types.CSS.NS_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+            
+            categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-21",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.21.gif", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-14",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251114b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-13",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251113b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+             {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 21.11.25 - Black Week Sales category!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 21.11.25 - Black Week Sales category!",
+                tableRange: "52:54",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+          {
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            css: types.CSS.LP_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+              categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251121.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-21",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.21.gif", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-14",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251114b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-13",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251113b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 21.11.25 - Black Week Sales category!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 21.11.25 - Black Week Sales category!",
+                tableRange: "52:54",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+        ],
+      }),
+       //! Black Week 2025-11-28
+       new entities.Campaign({
+        startId: "38148",
+        name: " 28.11.25 - Black Week ",
+        date: "2025.11.28",
+        issueCardId: "37956",
+        figmaUrl: "https://www.figma.com/design/mvL14e5shtzKnh2dKBMaZo/Black-Week-start---Monday-2025.11.10--Copy-?node-id=2005-4231&p=f&t=7LfC86d0jciphr9a-0",
+        optimizeImg: false,
+        single_image: true,
+        soon_banners: true,
+        white_line: true,
+        alarm: {
+          isActive: false,
+        },
+        isArchive: false,
+        templates: [
+          { black_28 : true,
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            wrapper: types.WRAPPER,
+            css: types.CSS.NS_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+            timer: {
+                     
+                      "UK": "https://gen.sendtric.com/countdown/dxrgomxdcw",
+                      
+                    },
+            
+            categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-28",
+                },
+              },
+              
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.28.png", true),
+                },
+              },
+              {
+               
+                 
+                  value: getImageUrl("timer_gif_20251128.gif", true),
+                
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-21",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251121b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-20",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251120b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+             {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "16",
+                name: "end_on",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "52:54",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+          {
+            black_28 : true,
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            css: types.CSS.LP_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+            timer: {
+                     
+                      "UK": "https://gen.sendtric.com/countdown/dxrgomxdcw",
+                      
+                    },
+            categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-28",
+                },
+              },
+              
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.28.png", true),
+                },
+              },
+              {
+               
+                 
+                  value: getImageUrl("timer_gif_20251128.gif", true),
+                
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-21",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251121b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-20",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251120b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+             {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "16",
+                name: "end_on",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "52:54",
                 name: "condition",
               },
               {

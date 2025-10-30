@@ -367,7 +367,12 @@ export default {
     .title-advantages-item {
       margin-left: 4px;
     }
-    
+    #newsletter .newsletterTitleH1 {
+            font-size: 45px;
+            line-height: 53px;
+            font-weight: 400;
+            margin:0;
+          }
     .newsletterRecommendationHeader {
       text-align: center;
       font-size: 11px;
@@ -545,7 +550,10 @@ export default {
       .newsletterFooterCategoryLEFTBottom {
         padding-right: 5px !important;
       }
-    
+      #newsletter .newsletterTitleH1 {
+              font-size: 30px;
+              line-height: 35px;
+            }
       .newsletterFooterCategoryRIGHTBottom {
         padding-left: 5px !important;
       }
@@ -1394,7 +1402,12 @@ export default {
     }
     
     /* NEWSLETTER START */
-    
+    #newsletter .newsletterTitleH1 {
+            font-size: 45px;
+            line-height: 53px;
+            font-weight: 400;
+            margin:0;
+          }
     #newsletter .newsletterFreebieContainer {
       padding-left: 10px;
     }
@@ -1562,7 +1575,10 @@ export default {
       #newsletter .newsletterFooterCategoryRIGHTBottom {
         padding-left: 5px !important;
       }
-    
+      #newsletter .newsletterTitleH1 {
+              font-size: 30px;
+              line-height: 35px;
+            }
       #newsletter .newsletterFooterCategoryLEFT {
         padding-bottom: 10px !important;
         padding-right: 5px !important;

@@ -6,6 +6,9 @@ import { Line, Category, Intro, ImageWithLink, Space, OfferPartCodes, TopImageTi
 import { OfferPartCode } from "../components/OfferPartCode.js";
 import { getCodes } from "../utils/getCodes.js";
 import { Create2Columns_Grid } from "../components/index.js";
+import { ColumnsTwoPeak } from "../components/index.js";
+import {Timer} from "../components/index.js";
+  
 
 /**
  * Funkcja generująca sekcje kategorii dla newslettera/landing page
@@ -16,6 +19,7 @@ function generateCategoriesSection(
   queries,
   background,
   add_utm,
+  
   white_line,
   full_img_width,
   getCategoryTitle,
@@ -101,7 +105,7 @@ function generateCategoriesSection(
         },
         right: (computed) => {
           return `
-            <td width="50%" style="padding-left: 10px;">
+            <td width="50%" style="padding-left: zpx;">
               <a href="${getCategoryLink(computed?.href) || "#"}">
                 <img alt="Category image" src="${computed?.src || ""}" style="max-width: 100%; display:block;">
               </a>
@@ -229,6 +233,7 @@ export async function mondayRegularNslt({
   type,
   categories,
   freebies,
+  black_28,
   background,
   tit,
   offerPart,
@@ -243,6 +248,7 @@ export async function mondayRegularNslt({
   under_intro_line,
   category_2_columns,
   full_img_width,
+   timer,
 }) {
   const codes = getCodes(queries);
   const selectCampaign = getState("selectedCampaign");
@@ -314,25 +320,57 @@ export async function mondayRegularNslt({
         <tbody>
               <tr>
                 <td align="center">
-                  ${
-                    type === "newsletter" || !queries.tit
-                      ? ImageWithLink({
-                          href: links[0],
-                          src: links[1],
-                          alt: "Top image title",
-                        })
-                      : !single_image
-                      ? TopImageTitle({
-                          href: links[0],
-                          title1: queries.tit[0],
-                          title2: queries.tit[1],
-                          color: tit?.color || "#000",
-                          type: tit?.type || "standart",
-                        })
-                      : ``
-                  }
+                 ${ (black_28 === true && !queries.tit)//Hurry
+                   ? ImageWithLink({
+                                  href: links[0],
+                                  src: links[3],
+                                  alt: "Top image title",
+                              })
+                        
+                        : ``
+                }
+                ${ (black_28 === true && !queries.tit)//Black week gif
+                   ? ImageWithLink({
+                                  href: links[0],
+                                  src: links[2],
+                                  alt: "Top image title",
+                              })
+                        
+                        : ``
+                }
+                ${ (type === "landing" && black_28 === true && queries.tit)
+                   ? TopImageTitle({
+                              href: links[0],
+                              title1: queries.tit[0],
+                              title2: queries.tit[1],
+                              color: tit?.color || "#000",
+                              type: tit?.type || "standart",
+                          })
+                        : ``
+                }
+                ${ (black_28 === true) ? 
+                  Timer({
+                    title : queries.end_on[0],
+                    href: "nima",
+                    imageSrc: timer[country],
+                    type: "end_in",
+                  })
+                  : "" }
+                
+                 ${
+                   ImageWithLink({//Extra 20 % gif
+                                  href: links[0],
+                                  src: links[1],
+                                  alt: "Top image title",
+                              })
+                       
+                }
                 </td>
               </tr>
+               <tr>
+                      <td align="left" class="newsletterBottom35px">
+                      </td>
+                    </tr>
               <!-- Sprawdź czy masz dodany parametr single_image w Campaign jeśli się nie wyświetla -->
               ${
                 !single_image
@@ -439,21 +477,55 @@ export async function mondayRegularNslt({
               }
 
               <!-- Wstawienie wygenerowanych dynamicznie sekcji kategorii -->
-              ${categoriesSectionHTML}
+              </tr>
+                <tr>
+                  <td style="background-color: ${background};" class="newsletterBottom35px"></td>
+                </tr>
+                <tr>
+                </tr>
+              <tr>
+              <td style="background-color: ${background};" class="newsletterContainer">
+                  ${ColumnsTwoPeak({
+                    shuffle: false,
+                    iter: categories,
+                    left: (computed) => `
+                      <td width="50%" style="padding-left:4px">
+                        <a href="${getCategoryLink(computed.href)}">
+                            <img alt="${computed.name}" src="${computed.src}" style="max-width: 100%; display:block;" loading="lazy">
+                        </a>
+                      </td>
+                    `,
+                    right: (computed) => `
+                      <td width="50%" style="padding-right:4px">
+                        <a href="${getCategoryLink(computed.href)}">
+                            <img alt="${computed.name}" src="${computed.src}" style="max-width: 100%; display:block;" loading="lazy">
+                        </a>
+                      </td>
+                    `,
+                    cta: getPhrase("Shop All Categories"),
+                    color: "#ffffff",
+                    align: "center",
+                    href:
+                      type === "newsletter"
+                        ? shop.origin + "?utm_source=newsletter&utm_medium=email&utm_campaign=" + id
+                        : shop.origin,
+                    type,
+                  })}
+                  ${Space({ className: "newsletterBottom35px" })}
+              </td>
+            </tr>
           <tbody>
       </table>
       
       ${
-        (type === "landing" && !soon_banners) || type === "newsletter"
+        type === "landing" || type === "newsletter"
           ? `<table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
           <tbody>
             <tr>
               <td align="left">
                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tbody>
-                    <tr>
-                      <td>${Line()}</td>
-                    </tr>
+                    
                     <tr>
                       <td class="newsletterBottom35px"></td>
                     </tr>
