@@ -1,0 +1,1 @@
+const server = "https://pictureserver.net/static/2025/";

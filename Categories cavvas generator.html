@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Placeholder Image with Categories</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <style>
+      #previewImage {
+        position: fixed;
+        z-index: 1000;
+        pointer-events: none;
+      }
+      .slug-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="placeholderCanvas" width="299" height="50"></canvas>
+    <br />
+    <button id="download">Download All as ZIP</button>
+
+    <div id="btns"></div>
+    <script>
+      const images = [];
+      const context = {
+        options: {
+          fontSize: 30,
+          fontFamily: "Poppins, sans-serif",
+          width: 295,
+          height: 50,
+          backgroundColor: "#FF2F00",
+          textColor: "#fff",
+        },
+        name: {
+          value: "20250818",
+          letterCase: "lower",
+        },
+        data: {
+          "UK": {
+            "Outdoor": "Outdoor",
+            "Sofas": "Sofas",
+            "Beds": "Beds",
+            "Armchairs": "Armchairs",
+            "Chairs": "Chairs",
+            "Tables": "Tables",
+            "Storage": "Storage",
+            "Kids": "Kids",
+            "Textiles": "Textiles",
+            "Lighting": "Lighting",
+            "Bathtubs": "Bathtubs",
+            "Desks": "Desks",
+            "Rugs": "Rugs",
+            "Accessories": "Accessories",
+          },
+          "PL": {
+          "Outdoor": "Meble ogrodowe",
+          "Sofas": "Sofy",
+          "Beds": "Łóżka",
+          "Armchairs": "Fotele",
+          "Chairs": "Krzesła",
+          "Tables": "Stoły",
+          "Storage": "Przechowywanie",
+          "Kids": "Dla Dzieci",
+          "Textiles": "Tekstylia",
+          "Lighting": "Lampy",
+          "Bathtubs": "Wanny",
+          "Desks": "Biurka",
+          "Rugs": "Dywany",
+          "Accessories": "Akcesoria"
+          },
+          "DE": {
+            "Lounge Sets": "Loungemöbel",
+            "Dining Sets": "Gartenmöbel Sets",
+            "Storage": "Gartenaufbewahrung",
+            "Balcony Furniture": "Balkonmöbel",
+            "Fire Pits": "Feuerstellen",
+            "Lanterns": "Gartenlaternen",
+            "Plant Pots": "Blumentöpfe",
+            "Fountains": "Gartenbrunnen",
+            "Sun Loungers": "Gartenliegen",
+            "Benches": "Gartenbänke",
+            "Chairs": "Gartenstühle",
+            "Outdoor pouffes": "Outdoor Poufs",
+            "Outdoor kitchen": "Outdoorküchen",
+            "Picnic baskets": "Picknickkörbe",
+            "Picnic blankets": "Picknickdecken",
+            "Tableware": "Geschirr"
+          },
+          "AT": {
+            "Lounge Sets": "Loungemöbel",
+            "Dining Sets": "Gartenmöbel Sets",
+            "Storage": "Gartenaufbewahrung",
+            "Balcony Furniture": "Balkonmöbel",
+            "Fire Pits": "Feuerstellen",
+            "Lanterns": "Gartenlaternen",
+            "Plant Pots": "Blumentöpfe",
+            "Fountains": "Gartenbrunnen",
+            "Sun Loungers": "Gartenliegen",
+            "Benches": "Gartenbänke",
+            "Chairs": "Gartenstühle",
+            "Outdoor pouffes": "Outdoor Poufs",
+            "Outdoor kitchen": "Outdoorküchen",
+            "Picnic baskets": "Picknickkörbe",
+            "Picnic blankets": "Picknickdecken",
+            "Tableware": "Geschirr"
+          },
+          "CHDE": {
+            "Lounge Sets": "Loungemöbel",
+            "Dining Sets": "Gartenmöbel Sets",
+            "Storage": "Gartenaufbewahrung",
+            "Balcony Furniture": "Balkonmöbel",
+            "Fire Pits": "Feuerstellen",
+            "Lanterns": "Gartenlaternen",
+            "Plant Pots": "Blumentöpfe",
+            "Fountains": "Gartenbrunnen",
+            "Sun Loungers": "Gartenliegen",
+            "Benches": "Gartenbänke",
+            "Chairs": "Gartenstühle",
+            "Outdoor pouffes": "Outdoor Poufs",
+            "Outdoor kitchen": "Outdoorküchen",
+            "Picnic baskets": "Picknickkörbe",
+            "Picnic blankets": "Picknickdecken",
+            "Tableware": "Geschirr"
+          },
+          "NL": {
+            "Outdoor": "Tuinmeubels",
+            "Sofas": "Banken",
+            "Beds": "Bedden",
+            "Armchairs": "Fauteuils",
+            "Chairs": "Stoelen",
+            "Tables": "Tafels",
+            "Storage": "Opbergen",
+            "Kids": "Kinderkamer",
+            "Textiles": "Textiel",
+            "Lighting": "Lampen",
+            "Bathtubs": "Baden",
+            "Desks": "Bureaus",
+            "Rugs": "Vloerkleden",
+            "Accessories": "Woonaccessoires"
+          },
+          "FR": {
+            "Outdoor": "Extérieur",
+            "Sofas": "Canapés",
+            "Beds": "Lits",
+            "Armchairs": "Fauteuils",
+            "Chairs": "Chaises",
+            "Tables": "Tables",
+            "Storage": "Rangement",
+            "Kids": "Enfants",
+            "Textiles": "Textiles",
+            "Lighting": "Lampes",
+            "Bathtubs": "Baignoires",
+            "Desks": "Bureaux",
+            "Rugs": "Tapis",
+            "Accessories": "Accessoires"
+          },
+          "CHFR": {
+              "Outdoor": "Extérieur",
+              "Sofas": "Canapés",
+              "Beds": "Lits",
+              "Armchairs": "Fauteuils",
+              "Chairs": "Chaises",
+              "Tables": "Tables",
+              "Storage": "Rangement",
+              "Kids": "Enfants",
+              "Textiles": "Textiles",
+              "Lighting": "Lampes",
+              "Bathtubs": "Baignoires",
+              "Desks": "Bureaux",
+              "Rugs": "Tapis",
+              "Accessories": "Accessoires"
+            },
+          "ES": {
+            "Outdoor": "Exterior",
+            "Sofas": "Sofás",
+            "Beds": "Camas",
+            "Armchairs": "Sillones",
+            "Chairs": "Sillas",
+            "Tables": "Mesas",
+            "Storage": "Almacenaje",
+            "Kids": "Habitación infantil",
+            "Textiles": "Textiles",
+            "Lighting": "Lámparas",
+            "Bathtubs": "Bañeras",
+            "Desks": "Escritorios",
+            "Rugs": "Alfombras",
+            "Accessories": "Accesorios"
+          },
+          "PT": {
+            "Outdoor": "Móveis de exterior",
+            "Sofas": "Sofás",
+            "Beds": "Camas",
+            "Armchairs": "Poltronas",
+            "Chairs": "Cadeiras",
+            "Tables": "Mesas",
+            "Storage": "Arrumação",
+            "Kids": "Quarto de criança",
+            "Textiles": "Têxteis",
+            "Lighting": "Iluminação",
+            "Bathtubs": "Banheiras",
+            "Desks": "Secretárias",
+            "Rugs": "Tapetes",
+            "Accessories": "Acessórios"
+          },
+          "IT": {
+            "Lounge Sets": "Set da Giardino",
+            "Dining Sets": "Set da Pranzo da Esterno",
+            "Storage": "Mobili Portaoggetti",
+            "Balcony Furniture": "Arredi da Balcone",
+            "Fire Pits": "Focolari",
+            "Lanterns": "Lanterne",
+            "Plant Pots": "Vasi per Piante",
+            "Fountains": "Fontane",
+            "Sun Loungers": "Lettini Prendisole",
+            "Benches": "Panche",
+            "Chairs": "Sedie",
+            "Outdoor pouffes": "Pouf da Esterno",
+            "Outdoor kitchen": "Cucine da Esterno",
+            "Picnic baskets": "Cestini per Picnic",
+            "Picnic blankets": "Coperte per Picnic",
+            "Tableware": "Accessori da Cucina"
+          },
+          "DK": {
+            "Outdoor": "Havemøbler",
+            "Sofas": "Sofaer",
+            "Beds": "Senge",
+            "Armchairs": "Lænestole",
+            "Chairs": "Stole",
+            "Tables": "Borde",
+            "Storage": "Opbevaring",
+            "Kids": "Børneværelse",
+            "Textiles": "Tekstiler",
+            "Lighting": "Belysning",
+            "Bathtubs": "Badekar",
+            "Desks": "Kontorborde",
+            "Rugs": "Tæpper",
+            "Accessories": "Tilbehør"
+          },
+          "NO": {
+            "Outdoor": "Hagemøbler",
+            "Sofas": "Sofaer",
+            "Beds": "Senger",
+            "Armchairs": "Lenestoler",
+            "Chairs": "Stoler",
+            "Tables": "Bord",
+            "Storage": "Oppbevaring",
+            "Kids": "Barnerom",
+            "Textiles": "Tekstiler",
+            "Lighting": "Belysning",
+            "Bathtubs": "Badekar",
+            "Desks": "Skrivebord",
+            "Rugs": "Tepper",
+            "Accessories": "Tilbehør"
+          },
+          "FI": {
+            "Lounge Sets": "Ulkosohvaryhmät",
+            "Dining Sets": "Ulkoruokailuryhmät",
+            "Storage": "Ulkosäilytys",
+            "Balcony Furniture": "Parvekekalusteet",
+            "Fire Pits": "Tulisijat ja grillit",
+            "Lanterns": "Ulkolyhdyt",
+            "Plant Pots": "Ulkoruukut",
+            "Fountains": "Vesiaiheet",
+            "Sun Loungers": "Aurinkotuolit",
+            "Benches": "Puutarhapenkit",
+            "Chairs": "Puutarhatuolit",
+            "Outdoor pouffes": "Ulkorahit",
+            "Outdoor kitchen": "Ulkokeittiö",
+            "Picnic baskets": "Piknik-korit",
+            "Picnic blankets": "Piknikhuovat",
+            "Tableware": "Keittiövälineet"
+          },
+          "SE": {
+            "Lounge Sets": "Loungegrupper",
+            "Dining Sets": "Matgrupper",
+            "Storage": "Förvaring",
+            "Balcony Furniture": "Balkongmöbler",
+            "Fire Pits": "Eldstäder",
+            "Lanterns": "Lyktor",
+            "Plant Pots": "Växtkrukor",
+            "Fountains": "Fontäner",
+            "Sun Loungers": "Solstolar",
+            "Benches": "Bänkar",
+            "Chairs": "Stolar",
+            "Outdoor pouffes": "Sittpuffar",
+            "Outdoor kitchen": "Utekök",
+            "Picnic baskets": "Picknickkorgar",
+            "Picnic blankets": "Picknickfiltar",
+            "Tableware": "Köksartiklar"
+          },
+          "CZ": {
+            "Lounge Sets": "Zahradní soupravy",
+            "Dining Sets": "Jídelní sady",
+            "Storage": "Venkovní úložný prostor",
+            "Balcony Furniture": "Balkonový nábytek",
+            "Fire Pits": "Ohniště",
+            "Lanterns": "Lucerny",
+            "Plant Pots": "Květináče",
+            "Fountains": "Fontány",
+            "Sun Loungers": "Lehátka",
+            "Benches": "Lavičky",
+            "Chairs": "Židle",
+            "Outdoor pouffes": "Zahradní pufy",
+            "Outdoor kitchen": "Venkovní kuchyně",
+            "Picnic baskets": "Piknikové koše",
+            "Picnic blankets": "Piknikové deky",
+            "Tableware": "Jídelní nádobí"
+          },
+          "SK": {
+            "Outdoor": "Záhradný nábytok",
+            "Sofas": "Pohovky",
+            "Beds": "Postele",
+            "Armchairs": "Kreslá",
+            "Chairs": "Stoličky",
+            "Tables": "Stoly",
+            "Storage": "Úložný priestor",
+            "Kids": "Pre deti",
+            "Textiles": "Textil",
+            "Lighting": "Svietidlá",
+            "Bathtubs": "Vane",
+            "Desks": "Kancelárske stoly",
+            "Rugs": "Koberce",
+            "Accessories": "Doplnky"
+          },
+          "HU": {
+            "Lounge Sets": "Lounge szettek",
+            "Dining Sets": "Étkezőszettek",
+            "Storage": "Tárolók",
+            "Balcony Furniture": "Teraszbútorok",
+            "Fire Pits": "Tűzrakóhelyek",
+            "Lanterns": "Lámpások",
+            "Plant Pots": "Növénycserepek",
+            "Fountains": "Szökőkutak",
+            "Sun Loungers": "Napágyak",
+            "Benches": "Padok",
+            "Chairs": "Székek",
+            "Outdoor pouffes": "Kültéri puffok",
+            "Outdoor kitchen": "Kültéri konyha",
+            "Picnic baskets": "Piknikkosarak",
+            "Picnic blankets": "Pikniktakarók",
+            "Tableware": "Étkezőedények"
+          },
+          "BEFR": {
+              "Outdoor": "Extérieur",
+              "Sofas": "Canapés",
+              "Beds": "Lits",
+              "Armchairs": "Fauteuils",
+              "Chairs": "Chaises",
+              "Tables": "Tables",
+              "Storage": "Rangement",
+              "Kids": "Enfants",
+              "Textiles": "Textiles",
+              "Lighting": "Lampes",
+              "Bathtubs": "Baignoires",
+              "Desks": "Bureaux",
+              "Rugs": "Tapis",
+              "Accessories": "Accessoires"
+            },
+          "BENL": {
+            "Outdoor": "Tuinmeubels",
+            "Sofas": "Banken",
+            "Beds": "Bedden",
+            "Armchairs": "Fauteuils",
+            "Chairs": "Stoelen",
+            "Tables": "Tafels",
+            "Storage": "Opbergen",
+            "Kids": "Kinderkamer",
+            "Textiles": "Textiel",
+            "Lighting": "Lampen",
+            "Bathtubs": "Baden",
+            "Desks": "Bureaus",
+            "Rugs": "Vloerkleden",
+            "Accessories": "Woonaccessoires"
+          },
+          "RO": {
+            "Outdoor": "Exterior",
+            "Sofas": "Canapele",
+            "Beds": "Paturi",
+            "Armchairs": "Fotolii",
+            "Chairs": "Scaune",
+            "Tables": "Mese",
+            "Storage": "Depozitare",
+            "Kids": "Camera copilului",
+            "Textiles": "Textile",
+            "Lighting": "Corpuri de iluminat",
+            "Bathtubs": "Căzi",
+            "Desks": "Birouri",
+            "Rugs": "Covoare",
+            "Accessories": "Accesorii"
+          },
+        },
+      };
+
+      function createPlaceholderImage({ options, name }, suffix, text, index) {
+        const canvas = document.getElementById("placeholderCanvas");
+        const ctx = canvas.getContext("2d");
+        // Parametry
+        const width = options.width || 299;
+        const height = options.height || 50;
+        const backgroundColor = options.backgroundColor || "#FBF5F5"; // Tło
+        const textColor = options.textColor || "#000000"; // Kolor tekstu
+        const fontFamily = options.fontFamily || "Poppins, sans-serif"; // Czcionka (musisz mieć Poppins w systemie lub dodany do HTML)
+        let fontSize = options.fontSize || 30;
+        const value = text; // Tekst z nową linią
+        ctx.clearRect(0, 0, width, height);
+
+        // Sprawdzenie czy tekst mieści się w canvasie, jeśli nie - zmniejsz czcionkę
+        do {
+          ctx.font = `${fontSize}px ${fontFamily}`;
+          const textWidth = Math.max(...value.split("\n").map(line => ctx.measureText(line).width));
+          if (textWidth > width - 20) {
+            fontSize--;
+          } else {
+            break;
+          }
+        } while (fontSize > 10);
+
+        // Ustawienie tła
+        ctx.fillStyle = backgroundColor;
+        ctx.fillRect(0, 0, width, height);
+
+        // Ustawienie czcionki i koloru tekstu
+        ctx.fillStyle = textColor;
+        ctx.font = `${fontSize}px ${fontFamily}`;
+        ctx.textAlign = "center";
+
+        // Podział tekstu na linie
+        const lines = value.split("\n");
+        const lineHeight = fontSize * 1.2; // Ustawienie odstępu między liniami
+
+        // Pozycjonowanie tekstu (pionowe wyśrodkowanie)
+        const totalTextHeight = lines.length * lineHeight;
+        let yPos = (height - totalTextHeight) / 2 + fontSize; // Środek, przesunięty w dół o połowę wysokości tekstu
+
+        // Renderowanie każdej linii
+        lines.forEach((line) => {
+          ctx.fillText(line, width / 2, yPos); // Wyśrodkowane poziomo
+          yPos += lineHeight;
+        });
+
+        images.push({ name: `${suffix.toLowerCase()}${context.name.value}_cat${index + 1}.png`,
+          blob: canvas.toDataURL("image/jpg"),
+        });
+      }
+
+      document.getElementById("download").addEventListener("click", () => {
+        downloadAllImagesAsZip();
+      });
+
+      function downloadAllImagesAsZip() {
+        const zip = new JSZip();
+        images.forEach((image) => {
+          const base64Data = image.blob.split(",")[1];
+          zip.file(`${image.name}`, base64Data, { base64: true });
+        });
+        zip.generateAsync({ type: "blob" }).then((content) => {
+          saveAs(content, "images.zip");
+        });
+      }
+
+      for (const [k, v] of Object.entries(context.data)) {
+        let index = 0;
+        for (const [categoryKey, categoryValue] of Object.entries(v)) {
+          createPlaceholderImage(context, k, categoryValue, index);
+          index++;
+        }
+      }
+      renderImages(images);
+
+      function renderImages(images) {
+        const btnsContainer = document.getElementById("btns");
+        const groupedImages = {};
+
+        images.forEach((image) => {
+          const slug = image.name.match(/^[a-z]+/i)[0];
+          if (!groupedImages[slug]) {
+            groupedImages[slug] = [];
+          }
+          groupedImages[slug].push(image);
+        });
+
+        for (const [slug, images] of Object.entries(groupedImages)) {
+          const slugContainer = document.createElement("div");
+          slugContainer.classList.add("slug-container");
+
+          const slugTitle = document.createElement("h3");
+          slugTitle.textContent = slug.toUpperCase();
+          slugContainer.appendChild(slugTitle);
+
+          const buttonContainer = document.createElement("div");
+          buttonContainer.classList.add("button-container");
+
+          images.forEach(({ name, blob }) => {
+            const button = document.createElement("button");
+            button.addEventListener("click", () => {
+              const link = document.createElement("a");
+              link.download = name;
+              link.href = blob;
+              link.click();
+            });
+            button.textContent = name;
+
+            // Dodaj podgląd po najechaniu
+            button.addEventListener("mouseover", (event) => {
+              let preview = document.getElementById("previewImage");
+              if (!preview) {
+                preview = document.createElement("img");
+                preview.id = "previewImage";
+                document.body.appendChild(preview);
+              }
+              preview.src = blob;
+              preview.alt = name;
+              preview.style.left = `${event.clientX + 15}px`;
+              preview.style.top = `${event.clientY + 15}px`;
+            });
+
+            button.addEventListener("mousemove", (event) => {
+              const preview = document.getElementById("previewImage");
+              if (preview) {
+                preview.style.left = `${event.clientX + 15}px`;
+                preview.style.top = `${event.clientY + 15}px`;
+              }
+            });
+
+            button.addEventListener("mouseout", () => {
+              const preview = document.getElementById("previewImage");
+              if (preview) {
+                preview.remove();
+              }
+            });
+
+            buttonContainer.appendChild(button);
+          });
+
+          slugContainer.appendChild(buttonContainer);
+          btnsContainer.appendChild(slugContainer);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<div class="content-styler">
+    <style>
+      .chat-button {
+                width: 300px;
+                height: 35px;
+                border: 1px solid #750000;
+                font-size: 14px;
+		  		color: #ffffff !important;
+                cursor: pointer;
+                font-family: "Poppins";
+                background-color: #750000;
+		  		border-radius: 4px;
+		  		transition-duration: 1s;
+            }
+	  .chat-button:hover {
+                width: 300px;
+                height: 35px;
+                border: 1px solid #750000;
+                font-size: 14px;
+		  		color: #750000 !important;
+                cursor: pointer;
+                font-family: "Poppins";
+                background-color: #ffffff;
+		  		border-radius: 4px;
+		  		transition-duration: 1s;
+            }
+	  .green {
+                background-color: #750000;
+            }
+       .red {
+                background-color: white;
+                color: #750000;
+                border: 1px solid #750000;
+            }
+    </style>
+
+    </head>
+
+    <body data-gr-ext-installed="" data-ms-editor="true" data-new-gr-c-s-check-loaded="14.1110.0" data-new-gr-c-s-loaded="14.1110.0">
+
+        <h1 class="b-header1_semibold">Contact Details</h1>
+
+        <p><img alt="Beliani design" src="https://beliani.info/Content_Marketing/Graphics/1.jpg" style="width: 100%" /></p>
+
+        <h2 class="b-header2_semibold">Helpdesk & Orders</h2>
+
+        <p>Please note that we sell exclusively online. We have no physical store or showrooms.</p>
+
+        <p>Would you like to place an order or ask about your <b>purchase</b>? You can also contact us via phone, email or chat. If available, please prepare your order number to help us process your request faster.</p>
+
+        <p><b>E-Mail:</b> <a href="mailto:mail@beliani.pl">mail@beliani.pl</a></p>
+ 
+        <p><b>Phone:</b> <a href="tel:91 350 83 60">91 350 83 60</a></p>
+        <p>We're available from Monday to Saturday, between 8 am and 6 pm.</p>
+    
+    <p>Are you calling from abroad? Then please dial the following phone number: <a href=" tel:+48 91 350 83 60 ">+48 91 350 83 60</a></p>
+    
+        <p>
+            <script>
+           function openChat() {
+                window.open('https://app.chaport.com/widget/show.html?appid=63c661238998c327000fe701', '_blank');
+            }
+
+function checkWorkingHoursAndDay() {
+    var now = new Date();
+    var hour = now.getHours();
+    var dayOfWeek = now.getDay();
+    var button = document.getElementById('chat-button');
+
+    if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hour >= 8 && hour < 18) || (dayOfWeek === 6 && hour >= 8 && hour < 18)) {
+        button.innerText = 'Chat now';
+        button.disabled = false;
+        button.style.color = ("white");
+        button.classList.add("green");
+    } else {
+        button.innerText = 'Chat offline';
+        button.disabled = true;
+        button.classList.add("red");
+    }
+}
+
+window.onload = function() {
+    checkWorkingHoursAndDay();
+
+    // Sprawdzenie stanu chatu co minutę
+    setInterval(checkWorkingHoursAndDay, 60000);
+};
+
+// Skrypt Chaport Live Chat
+(function(w, d, v3) {
+        w.chaportConfig = {
+            appId: '63c661238998c327000fe701',
+            operators: ['649d35cc567e4030a039d936', '649d35e80d8b6b3074ef8193'],
+            appearance: {
+                teamName: 'Beliani UK',
+                onlineWelcome: 'Welcome to Beliani. How can we help you?',
+                offlineWelcome: 'Welcome to Beliani.'
+            }
+        };
+
+    if (w.chaport) return;
+
+    v3 = w.chaport = {};
+    v3._q = [];
+    v3._l = {};
+    v3.q = function() {
+        v3._q.push(arguments);
+    };
+    v3.on = function(e, fn) {
+        if (!v3._l[e]) v3._l[e] = [];
+        v3._l[e].push(fn);
+    };
+
+    function checkTime() {
+        var currentTime = new Date();
+        var dayOfWeek = currentTime.getDay();
+        var hours = currentTime.getHours();
+
+        // Sprawdzenie, czy jest dzień roboczy (poniedziałek - piątek) i godzina mieści się w przedziale 8-16
+        if ((dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= 8 && hours < 18) || (dayOfWeek === 6 && hours >= 8 && hours < 18)) {
+            insertChaportScript();
+        }
+    }
+
+    function insertChaportScript() {
+        var s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://app.chaport.com/javascripts/insert.js';
+        var ss = d.getElementsByTagName('script')[0];
+        ss.parentNode.insertBefore(s, ss);
+    }
+
+    checkTime();
+})(window, document);
+            </script>
+        <button id="chat-button" class="chat-button"  onclick="window.chaport.q('open'); return false; "  disabled></button>
+            </p> 
+    
+    <h2 class="b-header2_semibold ">Marketing</h2>
+    
+    <p>Would you like to <b>promote</b> our products? Feel free to contact us in matters related to <b>promos, media, social media</b>, etc.</p>
+    
+    <p><b>E-Mail address:</b> <a href="mailto:marketing@beliani.com ">marketing@beliani.com</a></p>
+    
+    <h2 class="b-header2_semibold ">Become Our Supplier</h2>
+    
+    <p>If you would like to become our supplier, get in touch with us using via mail <a href="mailto:purchasing@beliani.com ">purchasing@beliani.com</a>.</p>
+    
+    <p>To learn more about the whole process and our requirements, please see our <a href="https://www.beliani.ch/content/how-to-become-supplier/ "><u>Supplier page</u></a>.</p>
+    
+    <h2 class="b-header2_semibold ">Return Address</h2>
+    
+    <p>Beliani.pl<br />
+        Rajkowo 26<br />
+        72-005 Przecław<br />
+        Poland</p>
+    
+<p>Before returning the goods, please contact our <a href="mailto:mail@beliani.pl "><u>Customer Service Department</u></a> to generate a return number. Shipments without a return number affixed will not be accepted.</p>
+    <p>Please kindly read about our Return Policy in our <a href="https://www.beliani.pl/content/terms-and-conditions/ ">Terms and Conditions</a> or contact our Customer Service if you need more info regarding returns.</p>
+    </div>
