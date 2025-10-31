@@ -349,13 +349,21 @@ export async function mondayRegularNslt({
                         : ``
                 }
                 ${ (black_28 === true) ? 
+                  ImageWithLink({
+                                  href: links[0],
+                                  src: links[4],
+                                  alt: "Top image title",
+                              })
+                  : "" }
+                ${ (black_28 === true) ? 
                   Timer({
-                    title : queries.end_on[0],
-                    href: "nima",
+                    
+                    href: links[0],
                     imageSrc: timer[country],
                     type: "end_in",
                   })
                   : "" }
+                  
                 
                  ${
                    ImageWithLink({//Extra 20 % gif
@@ -367,10 +375,13 @@ export async function mondayRegularNslt({
                 }
                 </td>
               </tr>
-               <tr>
+              ${ (black_28 === true) ? "" :`
+                <tr>
                       <td align="left" class="newsletterBottom35px">
                       </td>
                     </tr>
+                `}
+               
               <!-- Sprawdź czy masz dodany parametr single_image w Campaign jeśli się nie wyświetla -->
               ${
                 !single_image

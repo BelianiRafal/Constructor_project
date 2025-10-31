@@ -42,18 +42,7 @@ export const Timer = ({
     if (type === "end_in") {
         return `
             <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-            <tr>
-                <td align="center">
-                    <span class="newsletterTitleH1" style="color: #ffffff">
-                        ${title}
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td align="center" style="color: #ffffff">
-                    ${Space({className: "newsletterBottom20px"})}
-                </td>
-            </tr>
+           
             <tr>
                 <td align="center" style="padding-left: 60px; padding-right: 60px;">
                     <a href=${href}>

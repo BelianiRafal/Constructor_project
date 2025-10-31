@@ -1918,10 +1918,28 @@ try {
               background: "#000000",
             },
             timer: {
-                     
-                      "UK": "https://gen.sendtric.com/countdown/dxrgomxdcw",
-                      
-                    },
+  "CHDE": "https://gen.sendtric.com/countdown/m4yiwasl1i",
+  "CHFR": "https://gen.sendtric.com/countdown/lyal9kx4tx",
+  "FR": "https://gen.sendtric.com/countdown/h9kuynqn3x",
+  "DE": "https://gen.sendtric.com/countdown/2r4wvurepi",
+  "UK": "https://gen.sendtric.com/countdown/73trcd2da5",
+  "AT": "https://gen.sendtric.com/countdown/g71g8kbnlx",
+  "ES": "https://gen.sendtric.com/countdown/ztbik631hx",
+  "PL": "https://gen.sendtric.com/countdown/vmej4daxhl",
+  "NL": "https://gen.sendtric.com/countdown/7f5cb0rqng",
+  "PT": "https://gen.sendtric.com/countdown/7cpgozziql",
+  "IT": "https://gen.sendtric.com/countdown/0mgfdpvg4f",
+  "SE": "https://gen.sendtric.com/countdown/qqvl4u8ay2",
+  "HU": "https://gen.sendtric.com/countdown/3w5wxclz7z",
+  "DK": "https://gen.sendtric.com/countdown/afwpjlj7nl",
+  "CZ": "https://gen.sendtric.com/countdown/l8jjor5n8g",
+  "FI": "https://gen.sendtric.com/countdown/hvnryxofxt",
+  "NO": "https://gen.sendtric.com/countdown/osmki2xzto",
+  "SK": "https://gen.sendtric.com/countdown/tz87l9ie79",
+  "BENL": "https://gen.sendtric.com/countdown/5s82h1fv0u",
+  "BEFR": "https://gen.sendtric.com/countdown/lr78twoqm6",
+  "RO": "https://gen.sendtric.com/countdown/19z75h8uzq"
+},
             
             categories: [
               [
@@ -2104,6 +2122,14 @@ try {
                 },
               },
               {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128S.png", true),
+                },
+              },
+              {
                 query: true,
                 href: {
                   type: "relation",
@@ -2231,10 +2257,28 @@ try {
               background: "#000000",
             },
             timer: {
-                     
-                      "UK": "https://gen.sendtric.com/countdown/dxrgomxdcw",
-                      
-                    },
+  "CHDE": "https://gen.sendtric.com/countdown/m4yiwasl1i",
+  "CHFR": "https://gen.sendtric.com/countdown/lyal9kx4tx",
+  "FR": "https://gen.sendtric.com/countdown/h9kuynqn3x",
+  "DE": "https://gen.sendtric.com/countdown/2r4wvurepi",
+  "UK": "https://gen.sendtric.com/countdown/73trcd2da5",
+  "AT": "https://gen.sendtric.com/countdown/g71g8kbnlx",
+  "ES": "https://gen.sendtric.com/countdown/ztbik631hx",
+  "PL": "https://gen.sendtric.com/countdown/vmej4daxhl",
+  "NL": "https://gen.sendtric.com/countdown/7f5cb0rqng",
+  "PT": "https://gen.sendtric.com/countdown/7cpgozziql",
+  "IT": "https://gen.sendtric.com/countdown/0mgfdpvg4f",
+  "SE": "https://gen.sendtric.com/countdown/qqvl4u8ay2",
+  "HU": "https://gen.sendtric.com/countdown/3w5wxclz7z",
+  "DK": "https://gen.sendtric.com/countdown/afwpjlj7nl",
+  "CZ": "https://gen.sendtric.com/countdown/l8jjor5n8g",
+  "FI": "https://gen.sendtric.com/countdown/hvnryxofxt",
+  "NO": "https://gen.sendtric.com/countdown/osmki2xzto",
+  "SK": "https://gen.sendtric.com/countdown/tz87l9ie79",
+  "BENL": "https://gen.sendtric.com/countdown/5s82h1fv0u",
+  "BEFR": "https://gen.sendtric.com/countdown/lr78twoqm6",
+  "RO": "https://gen.sendtric.com/countdown/19z75h8uzq"
+},
             categories: [
               [
                 {name:"Sofas",
@@ -2413,6 +2457,14 @@ try {
                   relyOn: "slug",
                   placeholderPosition: "38",
                   value: getImageUrl("_title_20251128.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128S.png", true),
                 },
               },
               {
