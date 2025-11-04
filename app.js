@@ -98,6 +98,701 @@ export function getImageUrl(imageName, version) {
 try {
   initApp({
     campaigns: [
+       //! Cyber Week 2025-12-05
+       new entities.Campaign({
+        startId: "00001",
+        name: "Voucher - 05.12.25 - Cyber Monday Reminder",
+        date: "2025.12.05",
+        issueCardId: "418085",
+        figmaUrl: "https://www.figma.com/design/mR9dcwdKy4NbXFScKMKjzh/2025---Cyber-Week--Copy-?node-id=2001-221&p=f&t=tLyIZDyrwY3E8ik7-0",
+        optimizeImg: false,
+        single_image: true,
+        soon_banners: true,
+        white_line: true,
+        alarm: {
+          isActive: false,
+        },
+        isArchive: false,
+        templates: [
+          { black_28 : true,
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            wrapper: types.WRAPPER,
+            css: types.CSS.NS,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+            timer: {
+  "CHDE": "https://gen.sendtric.com/countdown/m4yiwasl1i",
+  "CHFR": "https://gen.sendtric.com/countdown/lyal9kx4tx",
+  "FR": "https://gen.sendtric.com/countdown/h9kuynqn3x",
+  "DE": "https://gen.sendtric.com/countdown/2r4wvurepi",
+  "UK": "https://gen.sendtric.com/countdown/73trcd2da5",
+  "AT": "https://gen.sendtric.com/countdown/g71g8kbnlx",
+  "ES": "https://gen.sendtric.com/countdown/ztbik631hx",
+  "PL": "https://gen.sendtric.com/countdown/vmej4daxhl",
+  "NL": "https://gen.sendtric.com/countdown/7f5cb0rqng",
+  "PT": "https://gen.sendtric.com/countdown/7cpgozziql",
+  "IT": "https://gen.sendtric.com/countdown/0mgfdpvg4f",
+  "SE": "https://gen.sendtric.com/countdown/qqvl4u8ay2",
+  "HU": "https://gen.sendtric.com/countdown/3w5wxclz7z",
+  "DK": "https://gen.sendtric.com/countdown/afwpjlj7nl",
+  "CZ": "https://gen.sendtric.com/countdown/l8jjor5n8g",
+  "FI": "https://gen.sendtric.com/countdown/hvnryxofxt",
+  "NO": "https://gen.sendtric.com/countdown/osmki2xzto",
+  "SK": "https://gen.sendtric.com/countdown/tz87l9ie79",
+  "BENL": "https://gen.sendtric.com/countdown/5s82h1fv0u",
+  "BEFR": "https://gen.sendtric.com/countdown/lr78twoqm6",
+  "RO": "https://gen.sendtric.com/countdown/19z75h8uzq"
+},
+            
+            categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+              ],
+              [
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+              ],
+              [
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+                {name:"Accessories",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_14__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/home-accessories/accessories-decor/ ",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-28",
+                },
+              },
+              
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.28.png", true),
+                },
+              },
+              {
+               
+                 
+                  value: getImageUrl("timer_gif_20251128.gif", true),
+                
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128S.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-21",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251121b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-20",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251120b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+             {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "16",
+                name: "end_on",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "52:54",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+          {
+            black_28 : true,
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.mondayRegularNslt,
+            background: "#000000",
+            css: types.CSS.LP_BLACK_WEEK,
+            offerPart: {
+              type: "codes",
+              color: "#FFFFFF",
+              background: "#000000",
+            },
+            timer: {
+  "CHDE": "https://gen.sendtric.com/countdown/m4yiwasl1i",
+  "CHFR": "https://gen.sendtric.com/countdown/lyal9kx4tx",
+  "FR": "https://gen.sendtric.com/countdown/h9kuynqn3x",
+  "DE": "https://gen.sendtric.com/countdown/2r4wvurepi",
+  "UK": "https://gen.sendtric.com/countdown/73trcd2da5",
+  "AT": "https://gen.sendtric.com/countdown/g71g8kbnlx",
+  "ES": "https://gen.sendtric.com/countdown/ztbik631hx",
+  "PL": "https://gen.sendtric.com/countdown/vmej4daxhl",
+  "NL": "https://gen.sendtric.com/countdown/7f5cb0rqng",
+  "PT": "https://gen.sendtric.com/countdown/7cpgozziql",
+  "IT": "https://gen.sendtric.com/countdown/0mgfdpvg4f",
+  "SE": "https://gen.sendtric.com/countdown/qqvl4u8ay2",
+  "HU": "https://gen.sendtric.com/countdown/3w5wxclz7z",
+  "DK": "https://gen.sendtric.com/countdown/afwpjlj7nl",
+  "CZ": "https://gen.sendtric.com/countdown/l8jjor5n8g",
+  "FI": "https://gen.sendtric.com/countdown/hvnryxofxt",
+  "NO": "https://gen.sendtric.com/countdown/osmki2xzto",
+  "SK": "https://gen.sendtric.com/countdown/tz87l9ie79",
+  "BENL": "https://gen.sendtric.com/countdown/5s82h1fv0u",
+  "BEFR": "https://gen.sendtric.com/countdown/lr78twoqm6",
+  "RO": "https://gen.sendtric.com/countdown/19z75h8uzq"
+},
+            categories: [
+              [
+                {name:"Sofas",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_2__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/sofas/",
+                },
+                {name:"Beds",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_3__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/beds/",
+                },
+              ],
+              [
+                {name:"Armchairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_4__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/armchairs/",
+                },
+                {name:"Chairs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_5__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/chairs/",
+                },
+              ],
+              [
+                {name:"Tables",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_6__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/tables/",
+                },
+                {name:"Storage",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_7__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/storage/",
+                },
+              ],
+              [
+                {name:"Kids",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_8__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/children-room/",
+                },
+                {name:"Textiles",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_9__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/textiles/",
+                },
+              ],
+              [
+                {name:"Lighting",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_10__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/lighting/",
+                },
+                {name:"Bathtubs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_11__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/bathtubs-hot-tubs/",
+                },
+              ],
+              [
+                {name:"Desks",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_12__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/office-furniture/desks-eng/",
+                },
+                {name:"Rugs",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_13__20251128.png", true),
+                  },
+                  href: "https://www.beliani.ch/rugs/",
+                },
+              ],
+              
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-28",
+                },
+              },
+              
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_top_image_gif_2025.11.28.png", true),
+                },
+              },
+              {
+               
+                 
+                  value: getImageUrl("timer_gif_20251128.gif", true),
+                
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("_title_20251128S.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-21",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251121b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-11-20",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251120b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+             {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "19:28",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "33",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "16",
+                name: "end_on",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "34:37",
+                name: "codes",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 14.11.25 - Black Week Sales category!",
+                tableRange: "54",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 28.11.25 - Black Week reminder!",
+                tableRange: "52:54",
+                name: "condition",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableRange: "16:27",
+                name: "category",
+              },
+              {
+                tableId: "1nY4WvP88r6uL5f89oc8Xp7wZwuerBnQii_ZIIm7BMBk",
+                tableName: "Templates",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "templates",
+                tableColumns: false,
+              },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+          },
+        ],
+      }),
       //! Black Week Start
       new entities.Campaign({
         startId: "37764",
@@ -1895,7 +2590,7 @@ try {
         name: " 28.11.25 - Black Week ",
         date: "2025.11.28",
         issueCardId: "37956",
-        figmaUrl: "https://www.figma.com/design/mvL14e5shtzKnh2dKBMaZo/Black-Week-start---Monday-2025.11.10--Copy-?node-id=2005-4231&p=f&t=7LfC86d0jciphr9a-0",
+        figmaUrl: "https://www.figma.com/design/Ix8O6KeIXj1VdOB160BX3Y/Newsletter-Black-Week-reminder---Friday-2025.11.28--Copy-?node-id=2001-3&t=uxFXuPCdMdcQ60Kk-0",
         optimizeImg: false,
         single_image: true,
         soon_banners: true,
