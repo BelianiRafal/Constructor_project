@@ -69,6 +69,13 @@ export default {
             line-height: 1.20;
             font-family: "Open Sans", sans-serif;
           }
+
+          .newsletterCodeCyber {
+            font-size: 20px;
+            line-height: 1.20;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+          }
           
           .newsletterBottom20px {
             padding-bottom: 20px;
@@ -1058,6 +1065,22 @@ export default {
             font-size: 18px;
             line-height: 1.20;
           }
+
+          .newsletterCodeCyber {
+            font-size: 20px;
+            line-height: 1.20;
+            font-weight: 600;
+          }
+
+          #newsletter .newsletterParagraph b{
+            font-weight: bold;
+            font-size: 18px; 
+          }
+
+          #newsletter .newsletterTitle b{
+            font-weight: 600;
+            font-size: 30px; 
+          }
           
           #newsletter .newsletterBottom20px {
             padding-bottom: 20px;
@@ -1239,6 +1262,14 @@ export default {
             #newsletter .newsletterCode {
               font-size: 16px;
               line-height: 1.20;
+            }
+
+            #newsletter .newsletterParagraph b{
+              font-size: 16px; 
+            }
+
+            #newsletter .newsletterTitle b{
+              font-size: 25px;
             }
           
             #newsletter .newsletterFooterCategoryRIGHTBottom {

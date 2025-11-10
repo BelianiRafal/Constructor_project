@@ -1,4 +1,4 @@
-export function GetCode({ type, code, link, color }) {
+export function GetCode({ type, code, link, color, class: className = "newsletterCode" }) {
   return `
   ${
     type === "newsletter"
@@ -7,8 +7,8 @@ export function GetCode({ type, code, link, color }) {
           <tbody>
               <tr>
                   <td align="center">
-                    <a href=${link} style="text-decoration:underline!important; color: ${color || "#000" };">
-                        <span class="newsletterCode">
+                    <a href="${link}" style="text-decoration:underline!important; color: ${color || "#000" };">
+                        <span class="${className || "newsletterCode"}">
                         ${code}
                         </span>
                     </a>
@@ -22,7 +22,7 @@ export function GetCode({ type, code, link, color }) {
           <tbody>
             <tr>
                 <td align="center">
-                    <span class="newsletterCode" style="color: ${color || "#000" }">
+                    <span class="${className || "newsletterCode"}" style="color: ${color || "#000" }">
                         ${code}
                     </span>
                 </td>

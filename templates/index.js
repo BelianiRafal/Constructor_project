@@ -15,7 +15,8 @@ import { mondayRegularNslt } from "./mondayRegularNslt.js"
 import { RegularNslt } from "./RegularNslt.js"
 import { RegularWednesdayNslt } from "./RegularWednesdayNslt.js"
 import { MondayEarthDayNslt } from "./MondayEarthDayNslt.js"
-import { categoryPeakRegular } from './categoryPeakRegular.js';
+import { categoryPeakRegular } from "./categoryPeakRegular.js";
+import { CyberWeekNslt } from "./CyberWeekNslt.js";
 
 export const templates = {
   AdventCalendar,
@@ -36,4 +37,5 @@ export const templates = {
   RegularWednesdayNslt,
   MondayEarthDayNslt,
   categoryPeakRegular,
+  CyberWeekNslt,
 };

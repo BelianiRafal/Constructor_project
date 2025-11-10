@@ -100,7 +100,7 @@ try {
     campaigns: [
        //! Cyber Week 2025-12-05
        new entities.Campaign({
-        startId: "00001",
+        startId: "38663",
         name: "Voucher - 05.12.25 - Cyber Monday Reminder",
         date: "2025.12.05",
         issueCardId: "418085",
@@ -114,10 +114,10 @@ try {
         },
         isArchive: false,
         templates: [
-          { black_28 : true,
+          { cyber : true,
             name: "Newsletter",
             type: types.NEWSLETTER,
-            template: templates.mondayRegularNslt,
+            template: templates.CyberWeekNslt,
             background: "#000000",
             wrapper: types.WRAPPER,
             css: types.CSS.NS,
@@ -127,29 +127,28 @@ try {
               background: "#000000",
             },
             timer: {
-  "CHDE": "https://gen.sendtric.com/countdown/m4yiwasl1i",
-  "CHFR": "https://gen.sendtric.com/countdown/lyal9kx4tx",
-  "FR": "https://gen.sendtric.com/countdown/h9kuynqn3x",
-  "DE": "https://gen.sendtric.com/countdown/2r4wvurepi",
-  "UK": "https://gen.sendtric.com/countdown/73trcd2da5",
-  "AT": "https://gen.sendtric.com/countdown/g71g8kbnlx",
-  "ES": "https://gen.sendtric.com/countdown/ztbik631hx",
-  "PL": "https://gen.sendtric.com/countdown/vmej4daxhl",
-  "NL": "https://gen.sendtric.com/countdown/7f5cb0rqng",
-  "PT": "https://gen.sendtric.com/countdown/7cpgozziql",
-  "IT": "https://gen.sendtric.com/countdown/0mgfdpvg4f",
-  "SE": "https://gen.sendtric.com/countdown/qqvl4u8ay2",
-  "HU": "https://gen.sendtric.com/countdown/3w5wxclz7z",
-  "DK": "https://gen.sendtric.com/countdown/afwpjlj7nl",
-  "CZ": "https://gen.sendtric.com/countdown/l8jjor5n8g",
-  "FI": "https://gen.sendtric.com/countdown/hvnryxofxt",
-  "NO": "https://gen.sendtric.com/countdown/osmki2xzto",
-  "SK": "https://gen.sendtric.com/countdown/tz87l9ie79",
-  "BENL": "https://gen.sendtric.com/countdown/5s82h1fv0u",
-  "BEFR": "https://gen.sendtric.com/countdown/lr78twoqm6",
-  "RO": "https://gen.sendtric.com/countdown/19z75h8uzq"
-},
-            
+              "CHDE": "https://gen.sendtric.com/countdown/uvr8ejtx0k",
+              "CHFR": "https://gen.sendtric.com/countdown/xygfmqjx08",
+              "FR": "https://gen.sendtric.com/countdown/ypkgv7eq84",
+              "DE": "https://gen.sendtric.com/countdown/bu7nefgmgn",
+              "UK": "https://gen.sendtric.com/countdown/yms7z7rd4m",
+              "AT": "https://gen.sendtric.com/countdown/w7jg3fpykp",
+              "ES": "https://gen.sendtric.com/countdown/yekmxbl85z",
+              "PL": "https://gen.sendtric.com/countdown/igfz1maiew",
+              "NL": "https://gen.sendtric.com/countdown/ysdl62idi8",
+              "PT": "https://gen.sendtric.com/countdown/5hjcqolzsb",
+              "IT": "https://gen.sendtric.com/countdown/qx9dn1u7e1",
+              "SE": "https://gen.sendtric.com/countdown/xlw2r5jduo",
+              "HU": "https://gen.sendtric.com/countdown/t1c4fpebsy",
+              "DK": "https://gen.sendtric.com/countdown/frt018yu5t",
+              "CZ": "https://gen.sendtric.com/countdown/lpbwmpi04d",
+              "FI": "https://gen.sendtric.com/countdown/qniz4l4odj",
+              "NO": "https://gen.sendtric.com/countdown/0ziarq3k9j",
+              "SK": "https://gen.sendtric.com/countdown/h41qarz7fv",
+              "BENL": "https://gen.sendtric.com/countdown/rx37pycp1l",
+              "BEFR": "https://gen.sendtric.com/countdown/ec0bz1c2tz",
+              "RO": "https://gen.sendtric.com/countdown/l8zhek9qkb"
+            },
             categories: [
               [
                 {name:"Sofas",
@@ -304,30 +303,18 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-11-28",
-                },
-              },
-              
-              {
-                src: {
-                  type: "relation",
-                  relyOn: "slug",
-                  placeholderPosition: "38",
-                  value: getImageUrl("_top_image_gif_2025.11.28.png", true),
+                  value: "content/lp25-12-05",
                 },
               },
               {
-               
-                 
-                  value: getImageUrl("timer_gif_20251128.gif", true),
-                
+                  value: getImageUrl("20251205_Gif.gif", true),
               },
               {
                 src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("_title_20251128.png", true),
+                  value: getImageUrl("20251205_4for3.png", true),
                 },
               },
               {
@@ -335,7 +322,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("_title_20251128S.png", true),
+                  value: getImageUrl("20251205_end.png", true),
                 },
               },
               {
@@ -344,7 +331,7 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-11-21",
+                  value: "content/lp25-11-06",
                 },
               },
               {
@@ -352,7 +339,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("20251121b.png", true),
+                  value: getImageUrl("20251106b.png", true),
                 },
               },
               {
@@ -361,7 +348,7 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-11-20",
+                  value: "content/lp25-10-30",
                 },
               },
               {
@@ -369,51 +356,45 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("20251120b.png", true),
+                  value: getImageUrl("20251030b.png", true),
                 },
               },
             ],
             tableQueries: [
              {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 28.11.25 - Black Week reminder!",
-                tableRange: "19:28",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "26:29",
                 name: "offerPart",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
                 tableRange: "33",
                 name: "codeCTA",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 28.11.25 - Black Week reminder!",
-                tableRange: "16",
-                name: "end_on",
-              },
-              {
-                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 10.11.25 - Black Week start!",
-                tableRange: "34:37",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "34:36",
                 name: "codes",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "Voucher - 14.11.25 - Black Week Sales category!",
-                tableRange: "54",
+                tableRange: "52",
                 name: "cta",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 28.11.25 - Black Week reminder!",
-                tableRange: "52:54",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "57:58",
                 name: "condition",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 10.11.25 - Black Week start!",
-                tableRange: "16:27",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "40:51",
                 name: "category",
               },
               {
@@ -454,40 +435,40 @@ try {
             ],
           },
           {
-            black_28 : true,
+            cyber : true,
             name: "Landing",
             type: types.LANDINGPAGE,
-            template: templates.mondayRegularNslt,
+            template: templates.CyberWeekNslt,
             background: "#000000",
-            css: types.CSS.LP_BLACK_WEEK,
+            css: types.CSS.LP,
             offerPart: {
               type: "codes",
               color: "#FFFFFF",
               background: "#000000",
             },
             timer: {
-  "CHDE": "https://gen.sendtric.com/countdown/m4yiwasl1i",
-  "CHFR": "https://gen.sendtric.com/countdown/lyal9kx4tx",
-  "FR": "https://gen.sendtric.com/countdown/h9kuynqn3x",
-  "DE": "https://gen.sendtric.com/countdown/2r4wvurepi",
-  "UK": "https://gen.sendtric.com/countdown/73trcd2da5",
-  "AT": "https://gen.sendtric.com/countdown/g71g8kbnlx",
-  "ES": "https://gen.sendtric.com/countdown/ztbik631hx",
-  "PL": "https://gen.sendtric.com/countdown/vmej4daxhl",
-  "NL": "https://gen.sendtric.com/countdown/7f5cb0rqng",
-  "PT": "https://gen.sendtric.com/countdown/7cpgozziql",
-  "IT": "https://gen.sendtric.com/countdown/0mgfdpvg4f",
-  "SE": "https://gen.sendtric.com/countdown/qqvl4u8ay2",
-  "HU": "https://gen.sendtric.com/countdown/3w5wxclz7z",
-  "DK": "https://gen.sendtric.com/countdown/afwpjlj7nl",
-  "CZ": "https://gen.sendtric.com/countdown/l8jjor5n8g",
-  "FI": "https://gen.sendtric.com/countdown/hvnryxofxt",
-  "NO": "https://gen.sendtric.com/countdown/osmki2xzto",
-  "SK": "https://gen.sendtric.com/countdown/tz87l9ie79",
-  "BENL": "https://gen.sendtric.com/countdown/5s82h1fv0u",
-  "BEFR": "https://gen.sendtric.com/countdown/lr78twoqm6",
-  "RO": "https://gen.sendtric.com/countdown/19z75h8uzq"
-},
+              "CHDE": "https://gen.sendtric.com/countdown/uvr8ejtx0k",
+              "CHFR": "https://gen.sendtric.com/countdown/xygfmqjx08",
+              "FR": "https://gen.sendtric.com/countdown/ypkgv7eq84",
+              "DE": "https://gen.sendtric.com/countdown/bu7nefgmgn",
+              "UK": "https://gen.sendtric.com/countdown/yms7z7rd4m",
+              "AT": "https://gen.sendtric.com/countdown/w7jg3fpykp",
+              "ES": "https://gen.sendtric.com/countdown/yekmxbl85z",
+              "PL": "https://gen.sendtric.com/countdown/igfz1maiew",
+              "NL": "https://gen.sendtric.com/countdown/ysdl62idi8",
+              "PT": "https://gen.sendtric.com/countdown/5hjcqolzsb",
+              "IT": "https://gen.sendtric.com/countdown/qx9dn1u7e1",
+              "SE": "https://gen.sendtric.com/countdown/xlw2r5jduo",
+              "HU": "https://gen.sendtric.com/countdown/t1c4fpebsy",
+              "DK": "https://gen.sendtric.com/countdown/frt018yu5t",
+              "CZ": "https://gen.sendtric.com/countdown/lpbwmpi04d",
+              "FI": "https://gen.sendtric.com/countdown/qniz4l4odj",
+              "NO": "https://gen.sendtric.com/countdown/0ziarq3k9j",
+              "SK": "https://gen.sendtric.com/countdown/h41qarz7fv",
+              "BENL": "https://gen.sendtric.com/countdown/rx37pycp1l",
+              "BEFR": "https://gen.sendtric.com/countdown/ec0bz1c2tz",
+              "RO": "https://gen.sendtric.com/countdown/l8zhek9qkb"
+            },
             categories: [
               [
                 {name:"Sofas",
@@ -497,7 +478,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_2__20251128.png", true),
+                      getImageUrl("_cat_2__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/sofas/",
                 },
@@ -508,7 +489,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_3__20251128.png", true),
+                      getImageUrl("_cat_3__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/beds/",
                 },
@@ -521,7 +502,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_4__20251128.png", true),
+                      getImageUrl("_cat_4__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/armchairs/",
                 },
@@ -532,7 +513,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_5__20251128.png", true),
+                      getImageUrl("_cat_5__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/chairs/",
                 },
@@ -545,7 +526,7 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_6__20251128.png", true),
+                      getImageUrl("_cat_6__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/tables/",
                 },
@@ -556,23 +537,12 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_7__20251128.png", true),
+                      getImageUrl("_cat_7__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/storage/",
                 },
               ],
               [
-                {name:"Kids",
-                  src: {
-                    
-                    type: "relation",
-                    relyOn: "slug",
-                    placeholderPosition: "38",
-                    value:
-                      getImageUrl("_cat_8__20251128.png", true),
-                  },
-                  href: "https://www.beliani.ch/children-room/",
-                },
                 {name:"Textiles",
                   src: {
                     
@@ -580,12 +550,10 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_9__20251128.png", true),
+                      getImageUrl("_cat_9__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/textiles/",
                 },
-              ],
-              [
                 {name:"Lighting",
                   src: {
                     
@@ -593,10 +561,12 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_10__20251128.png", true),
+                      getImageUrl("_cat_10__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/lighting/",
                 },
+              ],
+              [
                 {name:"Bathtubs",
                   src: {
                     
@@ -604,12 +574,10 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_11__20251128.png", true),
+                      getImageUrl("_cat_11__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/bathtubs-hot-tubs/",
                 },
-              ],
-              [
                 {name:"Desks",
                   src: {
                     
@@ -617,10 +585,12 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_12__20251128.png", true),
+                      getImageUrl("_cat_12__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/office-furniture/desks-eng/",
                 },
+              ],
+              [
                 {name:"Rugs",
                   src: {
                     
@@ -628,9 +598,20 @@ try {
                     relyOn: "slug",
                     placeholderPosition: "38",
                     value:
-                      getImageUrl("_cat_13__20251128.png", true),
+                      getImageUrl("_cat_13__20251205.png", true),
                   },
                   href: "https://www.beliani.ch/rugs/",
+                },
+                {name:"Accessories",
+                  src: {
+                    
+                    type: "relation",
+                    relyOn: "slug",
+                    placeholderPosition: "38",
+                    value:
+                      getImageUrl("_cat_14__20251205.png", true),
+                  },
+                  href: "https://www.beliani.ch/home-accessories/accessories-decor/ ",
                 },
               ],
               
@@ -642,30 +623,18 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-11-28",
-                },
-              },
-              
-              {
-                src: {
-                  type: "relation",
-                  relyOn: "slug",
-                  placeholderPosition: "38",
-                  value: getImageUrl("_top_image_gif_2025.11.28.png", true),
+                  value: "content/lp25-12-05",
                 },
               },
               {
-               
-                 
-                  value: getImageUrl("timer_gif_20251128.gif", true),
-                
+                  value: getImageUrl("20251205_Gif.gif", true),
               },
               {
                 src: {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("_title_20251128.png", true),
+                  value: getImageUrl("20251205_4for3.png", true),
                 },
               },
               {
@@ -673,7 +642,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("_title_20251128S.png", true),
+                  value: getImageUrl("20251205_end.png", true),
                 },
               },
               {
@@ -682,7 +651,7 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-11-21",
+                  value: "content/lp25-11-06",
                 },
               },
               {
@@ -690,7 +659,7 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("20251121b.png", true),
+                  value: getImageUrl("20251106b.png", true),
                 },
               },
               {
@@ -699,7 +668,7 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-11-20",
+                  value: "content/lp25-10-30",
                 },
               },
               {
@@ -707,51 +676,45 @@ try {
                   type: "relation",
                   relyOn: "slug",
                   placeholderPosition: "38",
-                  value: getImageUrl("20251120b.png", true),
+                  value: getImageUrl("20251030b.png", true),
                 },
               },
             ],
             tableQueries: [
              {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 28.11.25 - Black Week reminder!",
-                tableRange: "19:28",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "26:29",
                 name: "offerPart",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 10.11.25 - Black Week start!",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
                 tableRange: "33",
                 name: "codeCTA",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 28.11.25 - Black Week reminder!",
-                tableRange: "16",
-                name: "end_on",
-              },
-              {
-                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 10.11.25 - Black Week start!",
-                tableRange: "34:37",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "34:36",
                 name: "codes",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "Voucher - 14.11.25 - Black Week Sales category!",
-                tableRange: "54",
+                tableRange: "52",
                 name: "cta",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 28.11.25 - Black Week reminder!",
-                tableRange: "52:54",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "57:58",
                 name: "condition",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
-                tableName: "Voucher - 10.11.25 - Black Week start!",
-                tableRange: "16:27",
+                tableName: "Voucher - 05.12.25 - Cyber Monday Reminder!",
+                tableRange: "40:51",
                 name: "category",
               },
               {

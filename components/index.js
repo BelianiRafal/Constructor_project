@@ -18,6 +18,7 @@ import { OfferPartCodes } from "./OfferPartCodes.js";
 import { TopImageTitle } from "./TopImageTitle.js";
 import { AdditionalCategories } from "./additional_categories.js";
 import { Earth_Day } from "./earth_day.js";
+import { OfferPart4za3 } from "./4for3.js";
 
 export {
   ProductWithSize,
@@ -40,4 +41,5 @@ export {
   TopImageTitle,
   AdditionalCategories,
   Earth_Day,
+  OfferPart4za3
 };

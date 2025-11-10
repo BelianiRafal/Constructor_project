@@ -15,7 +15,7 @@ export const Timer = ({
                 <tr>
                     <td align="center">
                         <a href=${href}>
-                            <img src="https://pictureserver.net/static/2024/test_gif.gif" style="display: block; max-width: 100%;">
+                            <img src="https://pictureserver.net/static/2024/test_gif.gif" style="display: block; max-width: 100%;" alt="Timer Image">
                         </a>
                     </td>
                     <td align="right" style="padding-top: 20px; padding-bottom: 20px;">
@@ -46,7 +46,7 @@ export const Timer = ({
             <tr>
                 <td align="center" style="padding-left: 60px; padding-right: 60px;">
                     <a href=${href}>
-                        <img src="${imageSrc}" style="display: block; max-width: 100%;">
+                        <img src="${imageSrc}" style="display: block; max-width: 100%;" alt="Timer Image">
                     </a>
                 </td>
             </tr>
