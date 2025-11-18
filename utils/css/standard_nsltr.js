@@ -93,6 +93,10 @@
             padding-bottom: 35px;
           }
 
+          .newsletterBottom45px {
+            padding-bottom: 45px;
+          }
+
           .newsletterBottom40px {
             padding-bottom: 40px;
           }
@@ -141,7 +145,6 @@
           }
           
           .newsletterRight20px {
-            padding-left: 20px;
             padding-right: 20px;
           }
           .newsletterParagraph {
@@ -461,6 +464,10 @@
               padding-bottom: 20px;
             }
 
+            .newsletterBottom45px {
+              padding-bottom: 30px;
+            }
+
             .newsletterBottom60px {
               padding-bottom: 40px;
             }
@@ -470,7 +477,7 @@
             }
           
             .newsletterParagraph {
-              font-size: 16px;
+              font-size: 15px;
             }
 
             .timerParagraph {
@@ -483,11 +490,12 @@
 
             .newsletterLeft20px {
               padding-left: 10px;
+              padding-bottom: 10px !important;
             }
 
             .newsletterRight20px {
-              padding-left: 10px;
               padding-right: 10px;
+              padding-bottom: 10px !important;
             }
           
             .newsletterRight10px {
@@ -549,6 +557,26 @@
             }
           }
           
+          
+          
+          .newsletterLeft10pxTEST_BIGIMG {
+            width: 60%;
+          }
+  
+          .newsletterRight10pxTEST_BIGIMG {
+            width: 60%;
+          }
+          
+          .newsletterLeft10pxTESTPRODS {
+            padding-left: 10px;
+            width: 40%;
+          }
+
+          .newsletterRight10pxTESTPRODS {
+            padding-right: 10px;
+            width: 40%;
+          }
+
           
     `}
 

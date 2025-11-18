@@ -1,8 +1,18 @@
- export function standard_lp(){
-    return `
+export function standard_lp() {
+  return `
 
     #newsletter .newsletterBottom15px {
       padding-bottom: 15px;
+    }
+
+    .newsletterLeft20px {
+      padding-left: 20px !important;
+      padding-bottom: 20px !important;
+    }
+
+    .newsletterRight20px {
+      padding-right: 20px !important;
+      padding-bottom: 20px !important;
     }
 
     #newsletter .newsletterTitleH1 {
@@ -138,6 +148,10 @@
        padding-bottom: 35px;
      }
 
+     #newsletter .newsletterBottom45px {
+       padding-bottom: 45px;
+     }
+
      #newsletter .newsletterBottom60px {
        padding-bottom: 60px;
      }
@@ -270,6 +284,16 @@
      }
      /*============================================================ Media Queries ============================================================*/
      @media screen and (max-width: 768px) {
+
+     .newsletterLeft20px {
+        padding-left: 10px !important;
+        padding-bottom: 10px !important;
+      }
+      
+      .newsletterRight20px {
+        padding-right: 10px !important;
+        padding-bottom: 10px !important;
+      }
 
       #newsletter .newsletterBottom15px {
         padding-bottom: 10px;
@@ -410,7 +434,11 @@
        #newsletter .newsletterBottom35px {
          padding-bottom: 20px;
        }
-
+       
+       #newsletter .newsletterBottom45px {
+         padding-bottom: 30px;
+       }
+         
        #newsletter .newsletterBottom60px {
          padding-bottom: 40px;
        }
@@ -462,4 +490,5 @@
        #newsletter .newsletterProductTitleFreebie {
          font-size: 12px;
        }
-}`}
+}`;
+}
