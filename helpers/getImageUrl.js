@@ -5,6 +5,7 @@ import { config } from '../config/config.js';
  * @param {Object} config - Obiekt konfiguracyjny
  * @returns {Object} - Zaktualizowany obiekt konfiguracyjny
  */
+// TODO: get year from campaign instead of current year
 function updateConfigWithCurrentYear(config) {
   const currentYear = new Date().getFullYear();
   config.server_url = config.server_url.replace(/\d{4}/, currentYear);
