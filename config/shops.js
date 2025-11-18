@@ -1,6 +1,30 @@
 import { Shop } from "../entities/Shop.js";
 import LANGUAGES from "./languages.js";
 export default [
+  // // SKLEP DO TESTOW
+  // // KOLUMNA Z HARDCODED ZMIENNYMI
+  // // W PLIKU TLUMACZEN
+  // new Shop({
+  //   origin: "https://www.beliani.ch/",
+  //   shopId: "0",
+  //   seller: "TESTOWY SKLEP",
+  //   slug: "CHDE",
+  //   languages: [
+  //     {
+  //       language: LANGUAGES.UK,
+  //       tableColumn: "D",
+  //     },
+  //   ],
+  //   price_format: {
+  //     currency: "Fr.",
+  //     delimiters: {
+  //       hundred: "'",
+  //       thousand: "",
+  //     },
+  //   },
+  // }),
+  // // ---------------------------------
+  
   new Shop({
     origin: "https://www.beliani.ch/",
     shopId: "1",
@@ -11,22 +35,22 @@ export default [
         language: LANGUAGES.CHDE,
         tableColumn: "N",
       },
-      {
-        language: LANGUAGES.CHIT,
-        tableColumn: "AV",
-      },
+      // {
+      //   language: LANGUAGES.UK,
+      //   tableColumn: "D",
+      // },
       {
         language: LANGUAGES.CHFR,
         tableColumn: "T",
       },
-      {
-        language: LANGUAGES.CHFR_Mattress,
-        tableColumn: "H",
-      },
-      {
-        language: LANGUAGES.CHDE_Mattress,
-        tableColumn: "J",
-      },
+      // {
+      //   language: LANGUAGES.CHFR_Mattress,
+      //   tableColumn: "H",
+      // },
+      // {
+      //   language: LANGUAGES.CHDE_Mattress,
+      //   tableColumn: "J",
+      // },
     ],
     price_format: {
       currency: "Fr.",
@@ -286,7 +310,7 @@ export default [
       },
       {
         language: LANGUAGES.UK,
-        tableColumn: "",
+        tableColumn: "D",
       },
     ],
     price_format: {
