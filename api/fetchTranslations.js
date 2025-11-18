@@ -35,7 +35,7 @@ export const fetchTranslations = async ({ tableName, tableQueries }) => {
 	const categoryLinksQuery = {
 		name: "categoriesLinks",
 		tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
-    tableRange: "A:NZ?majorDimension=COLUMNS",
+    tableRange: "A:OB?majorDimension=COLUMNS",
 		tableName: "Categories",
     tableColumns: false
   };
