@@ -12,14 +12,16 @@ import {
 } from '../../components/components_remake/_index.js';
 
 import { Footer } from '../../components/footer.js';
+import { getTrackingUrl } from '../../utils/geTrackingUrl.js';
 
 export async function TIT_TopImage_Timer_Categories({
   TopImageTitle_data,
   intro,
   timer,
   links,
+  utm,
   getProductById,
-	getImageBySlug,
+  getImageBySlug,
   getCategoryLink,
   getCategoryTitle,
   getPhrase,
@@ -27,6 +29,7 @@ export async function TIT_TopImage_Timer_Categories({
   getHeader,
   queries,
   id,
+  showPrices,
   ctaComponent,
   shop,
   country,
@@ -83,7 +86,7 @@ export async function TIT_TopImage_Timer_Categories({
     { type }
   );
 
-  const nslt_styles = `background-color: ${background}; color: #000; max-width: 650px; width: 100%;`;
+  const nslt_styles = `background-color: ${background}; color: ${color}; max-width: 650px; width: 100%;`;
 
   const tit_data = {
     ...TopImageTitle_data,
@@ -130,110 +133,116 @@ export async function TIT_TopImage_Timer_Categories({
 				<tr>
 					<td align="center" >
 						<a href="${links['TopImageTitle_href']}">
-							<img src="${links['TopImage']}" style="vertical-align: middle; max-width: 100%;" loading="lazy">
+							<img src="${
+                links['TopImage']
+              }" alt="Top Image" style="vertical-align: middle; max-width: 100%;" loading="lazy">
 						</a>
 					</td>
 				</tr>
-		</table>
+        
+        ${
+          intro
+            ? `
+              <tr>
+                <td>	
+                  ${Intro({
+                    spaceClassName: 'newsletterBottom35px',
+                    paragraph: queries['intro'],
+                    color: intro.color ?? color,
+                    background: intro.background ?? background,
+                    align: intro.align ?? 'center',
+                  })}
+                </td>
+              </tr>
+              
+              ${
+                !intro.hideCTA
+                  ? `
+              <tr>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" align="center">
+                    ${CTA({
+                      align: 'center',
+                      spaceAfter: { class: intro.ctaSpace ?? 'newsletterBottom35px' },
+                      text: getPhrase('Shop now'),
+                      href:
+                        queries['linkWithFilter'] ??
+                        getCategoryLink(intro.ctaCategoryHref) ??
+                        links['TopImageTitle_href'],
+                      // href: getCategoryLink(categories[0].href),
+                    })}
+                  </table>
+                </td>
+              </tr>`
+                  : ``
+              }
+          `
+            : Space({})
+        }
 
-		${
-      intro
-        ? `
-				<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-					<tr>
-						<td>	
-							<table cellspacing="0" cellpadding="0" border="0" align="center">
-								<tr>
-									<td>
-										${Intro({
-											spaceClassName: 'newsletterBottom35px',
-											paragraph: queries['intro'],
-											color: intro.color ?? color,
-											background: intro.background ?? background,
-											align: intro.align ?? 'center',
-										})}
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-					
-					${!intro.hideCTA ? `
-					<tr>
-						<td>
-							<table cellspacing="0" cellpadding="0" border="0" align="center">
-								${CTA({
-									align: 'center',
-									spaceAfter: { class: 'newsletterBottom35px' },
-									text: getPhrase('Shop now'),
-									href: queries['linkWithFilter'],
-									// href: getCategoryLink(categories[0].href),
-								})}
-							</table>
-						</td>
-					</tr>` : ``}
-				</table>
-			`
-        : `<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-		${Space({})}
-		</table>`
-    }
-		
-		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-			<tr>
-				<td>
-					${timerElement}
-				</td>
-			</tr>
-		</table>
+        ${
+          timer
+            ? `
+              <tr>
+                <td>
+                  ${timerElement}
+                </td>
+              </tr>
+        
+              ${Space({ className: timer.spaceAfterClass ?? 'newsletterBottom60px' })}`
+            : ``
+        }
 
-		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-		${Space({ className: 'newsletterBottom60px' })}
-		</table>
-
-		<table cellspacing="0" cellpadding="0" border="0" align="center" id="newsletter" style="${nslt_styles}">
-		${categoriesWithProducts
-      .map((category, index) => {
-        const prod = category.products;
-        const cat_styles = `background-color: ${category.background}; color: ${category.color}; max-width: 650px; width: 100%;`;
-
-        return `
-				<tr>
-					<td align="center">
-					<table cellspacing="0" cellpadding="0" border="0" align="center" style="${cat_styles}">
-						${Category({
-              links: links,
-              queries: queries,
-              name: category?.name,
-              href: category.href ? getCategoryLink(category.href) : undefined,
-              src: category.src,
-              products: prod,
-              showParagraph: category.showParagraph,
-							showTitle: category.showTitle,
-              background: category.background,
-              color: category.color,
-              len: categoriesWithProducts.length,
-              idx: index,
-              showCTA: category.showCTA,
-              showPrices: category.showPrices,
-              type: category.type,
-              getPhrase: getPhrase,
-            })}
-						</table>
-					</td>
-				</tr>
-				`;
-      })
-      .join('')}
-		</table>
-
-
-		<table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
-			<tbody>
-				<tr>
-					<td>${Line()}</td>
-				</tr>
-				
+        ${categoriesWithProducts
+          .map((category, index) => {
+            const prod = category.products;
+            const cat_styles = `background-color: ${category.background}; color: ${category.color}; max-width: 650px; width: 100%;`;
+    
+            return `
+            <tr>
+              <td align="center">
+              <table cellspacing="0" cellpadding="0" border="0" align="center" style="${cat_styles}">
+                ${Category({
+                  links: links,
+                  queries: queries,
+                  name: category?.name,
+                  href: category.href
+                    ? getCategoryLink(category.href)
+                    : queries.categoryLinks
+                    ? queries.categoryLinks[index]
+                      ? `${queries.categoryLinks[index]}${utm}`
+                      : undefined
+                    : undefined,
+                  src: category.src,
+                  products: prod,
+                  showParagraph: category.showParagraph,
+                  title: category.title,
+                  background: category.background,
+                  color: category.color,
+                  productsAlignment: category.productsAlignment,
+                  len: categoriesWithProducts.length,
+                  idx: index,
+                  showRedLine: category.showRedLine,
+                  showWhiteLine: category.showWhiteLine,
+                  ctaElement: category.ctaElement,
+                  showPrices: category.showPrices,
+                  type: category.type,
+                  getPhrase: getPhrase,
+                  utm: utm,
+                })}
+                </table>
+              </td>
+            </tr>
+            `;
+          })
+          .join('')}
+          </table>
+          
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; width: 100%; color: #000000; background-color:#ffffff;" id="newsletter">
+      <tbody>
+        <tr>
+          <td>${Line()}</td>
+        </tr>
 				<tr>
 					<td class="newsletterBottom35px" >
 					</td>
@@ -250,7 +259,7 @@ export async function TIT_TopImage_Timer_Categories({
 						<a href=${links['Banner_1']}>
 							<img loading="lazy" src=${
                 links['Banner_1_Image']
-              } style="display: block; width: 100%; max-width: 100%; border: 0;" alt="">
+              } style="display: block; width: 100%; max-width: 100%; border: 0;" alt="Soon ending campaign 1">
 						</a>
 					</td>
 				</tr>
@@ -265,7 +274,7 @@ export async function TIT_TopImage_Timer_Categories({
 						<a href=${links['Banner_2']}>
 							<img loading="lazy" src=${
                 links['Banner_2_Image']
-              } style="display: block; width: 100%; max-width: 100%; border: 0;" alt="">
+              } style="display: block; width: 100%; max-width: 100%; border: 0;" alt="Soon ending campaign 2">
 						</a>
 					</td>
 				</tr>
@@ -273,7 +282,7 @@ export async function TIT_TopImage_Timer_Categories({
 			</tbody>
 		</table>
 
-		${Footer(
+    ${Footer(
       {
         id,
         assembly: {
@@ -292,41 +301,49 @@ export async function TIT_TopImage_Timer_Categories({
           title: getFooter('Title'),
           firstCategory: {
             src: getFooter('Category src 1'),
-            href: getCategoryLink('https://www.beliani.co.uk/sofas/all+products'), //href: getFooter("Category href 1"),
+            href: getCategoryLink('https://www.beliani.co.uk/sofas/all+products'),
+            name: getCategoryTitle('Sofas'), //href: getFooter("Category href 1"),
           },
           secondCategory: {
             src: getFooter('Category src 2'),
-            href: getCategoryLink('https://www.beliani.co.uk/beds/all+products'), //href: getFooter("Category href 2"),
+            href: getCategoryLink('https://www.beliani.co.uk/beds/all+products'),
+            name: getCategoryTitle('Beds'), //href: getFooter("Category href 2"),
           },
           thirdCategory: {
             src: getFooter('Category src 3'),
-            href: getCategoryLink('https://www.beliani.co.uk/tables/coffee-tables'), //href: getFooter("Category href 3"),
+            href: getCategoryLink('https://www.beliani.co.uk/tables/coffee-tables'),
+            name: getCategoryTitle('Coffee Tables'), //href: getFooter("Category href 3"),
           },
           foutrthCategory: {
             src: getFooter('Category src 4'),
-            href: getCategoryLink('https://www.beliani.co.uk/chairs/all+products'), //href: getFooter("Category href 4"),
+            href: getCategoryLink('https://www.beliani.co.uk/chairs/all+products'),
+            name: getCategoryTitle('Chairs'), //href: getFooter("Category href 4"),
           },
           fifthCategory: {
             src: getFooter('Category src 5'),
-            href: getCategoryLink('https://www.beliani.co.uk/armchairs/all+products'), //href: getFooter("Category href 5"),
+            href: getCategoryLink('https://www.beliani.co.uk/armchairs/all+products'),
+            name: getCategoryTitle('Armchairs'), //href: getFooter("Category href 5"),
           },
           sixthCategory: {
             src: getFooter('Category src 6'),
-            href: getCategoryLink('https://www.beliani.co.uk/storage/sideboards'), //href: getFooter("Category href 6"),
+            href: getCategoryLink('https://www.beliani.co.uk/storage/sideboards'),
+            name: getCategoryTitle('Storage'), //href: getFooter("Category href 6"),
           },
           seventhCategory: {
             src: getFooter('Category src 7'),
-            href: getCategoryLink('https://www.beliani.co.uk/lighting/all+products'), //href: getFooter("Category href 7"),
+            href: getCategoryLink('https://www.beliani.co.uk/lighting/all+products'),
+            name: getCategoryTitle('Lighting'), //href: getFooter("Category href 7"),
           },
           eigthCategory: {
             src: getFooter('Category src 8'),
-            href: getCategoryLink('https://www.beliani.co.uk/rugs/all+products'), //href: getFooter("Category href 8"),
+            href: getCategoryLink('https://www.beliani.co.uk/rugs/all+products'),
+            name: getCategoryTitle('Rugs'), //href: getFooter("Category href 8"),
           },
         },
         klarna: {
           src: getFooter('Klarna src'),
           href: getFooter('Klarna href'),
-          // exclude: ["HU"].includes(country),
+          //exclude: ["HU"].includes(country),
         },
         socials: {
           title: getFooter('Socials Title'),

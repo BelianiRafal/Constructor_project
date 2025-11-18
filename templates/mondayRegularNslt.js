@@ -164,7 +164,7 @@ function generateCategoriesSection(
             line:
               white_line === true || white_line === 'true'
                 ? 'https://pictureserver.net/static/2024/white_line.jpg'
-                : 'https://beliani.info/newsletter/2022/line.jpg',
+                : 'https://pictureserver.net/static/2025/line.jpg',
           })}
         </td>
       </tr>
