@@ -1,7 +1,10 @@
 import { standard_nsltr } from "../utils/css/standard_nsltr.js";
 import { standard_lp } from "../utils/css/standard_lp.js";
+import { vproducts_nslt } from "../utils/css/vproducts_nsltr.js";
+import { vproducts_lp } from "../utils/css/vproducts_lp.js";
 
 const nsltr_standard = standard_nsltr()
+
 const lp_standard = standard_lp()
 
 export default {
@@ -9,6 +12,7 @@ export default {
   LANDINGPAGE: "landing",
   CSS: {
    NS: nsltr_standard,
+   VPRODUCTS_NSLT: vproducts_nslt(),
  
     
     NS_BLACK_WEEK: `
@@ -659,6 +663,8 @@ export default {
   }
   `,
   LP: lp_standard,
+  
+   VPRODUCTS_LP: vproducts_lp(),
   LP_BLACK_WEEK: `
     #newsletter .title-advantages {
       text-align: center;
