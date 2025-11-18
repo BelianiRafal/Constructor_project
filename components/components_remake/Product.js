@@ -8,7 +8,7 @@ export function Product(product, align = "left", style, showPrices) {
         <td>
           ${
             "src" in product && product.src !== null ?
-            `<table cellspacing="0" cellpadding="0" style="width: 100%; ">
+            `<table class="newsletterProductImage" cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
               <tr>
                 <td align="${align}" class="newsletterBottom20px">
@@ -31,19 +31,17 @@ export function Product(product, align = "left", style, showPrices) {
                   <span class="newsletterProductTitle" style="${style ?? ""}">${product.name}</span>
                 </td>
               </tr>
-              ${showPrices ? `
                 <tr>
-                  <td align="${align}" style="padding-bottom: 8px;">
-                    <span class="newsletterProductLowPrice" style="${style ?? ""}">${
-                      product.lowPrice
-                    } </span>
-                    <span class="newsletterProductHightPrice" style="${style ?? ""}">${
-                      product.highPrice
-                    }</span>
+                  <td class="newsletterProductPrices" align="${align}" style="padding-bottom: 8px;">
+                    <span class="newsletterProductLowPrice" style="${style ?? ""} ${showPrices ? '' : ';text-decoration: none !important;'} ${showPrices ? '' : 'display: none;'}">
+                      ${showPrices ? product.lowPrice : ''}
+                    </span>
+                    ${showPrices && product.highPrice ? '&nbsp;' : ''}
+                    <span class="newsletterProductHightPrice" style="${style ?? ""} ${showPrices ? '' : ';text-decoration: none !important;'} ${showPrices ? '' : 'display: none;'}">
+                      ${showPrices ? product.highPrice : ''}
+                    </span>
                   </td>
                 </tr>
-                ` : ``
-              }
             </tbody>
           </table>
         </td>
