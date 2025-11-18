@@ -1,7 +1,8 @@
-import types from "../utils/types.js";
-import { Line } from "./Line.js";
+import types from '../utils/types.js';
+import { Line } from './Line.js';
 
-export function Footer(sections, options) {
+export function Footer(sections, options, name) {
+  console.log(name);
   const id = sections.id;
   const json_footer = {
     assembly: {
@@ -18,7 +19,7 @@ export function Footer(sections, options) {
                 <tr>
                     <td>
                         <a href="${href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
-                            <img loading="lazy" src="${src}" width="610" style="display: block; max-width: 610px; width: 100%">
+                            <img loading="lazy" alt="service banner" src="${src}" width="610" style="display: block; max-width: 610px; width: 100%">
                         </a>
                     </td>
                 </tr>
@@ -43,7 +44,7 @@ export function Footer(sections, options) {
                 <tr>
                     <td>
                         <a href="${href}">
-                            <img loading="lazy" src="${src}" style="display: block; max-width: 610px; width: 100%;">
+                            <img loading="lazy" alt="work banner" src="${src}" style="display: block; max-width: 610px; width: 100%;">
                         </a>
                     </td>
                 </tr>
@@ -107,7 +108,7 @@ export function Footer(sections, options) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -125,14 +126,18 @@ export function Footer(sections, options) {
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
                                             href="${firstCategory.href}">
-                                            <img loading="lazy" src="${firstCategory.src}" alt=""
+                                            <img loading="lazy" src="${firstCategory.src}" alt="${
+            firstCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
                                             href="${secondCategory.href}">
-                                            <img loading="lazy" src="${secondCategory.src}" alt=""
+                                            <img loading="lazy" src="${secondCategory.src}" alt="${
+            secondCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -141,14 +146,18 @@ export function Footer(sections, options) {
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
                                             href="${thirdCategory.href}">
-                                            <img loading="lazy" src="${thirdCategory.src}" alt=""
+                                            <img loading="lazy" src="${thirdCategory.src}" alt="${
+            thirdCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
                                             href="${foutrthCategory.href}">
-                                            <img loading="lazy" src="${foutrthCategory.src}" alt=""
+                                            <img loading="lazy" src="${foutrthCategory.src}" alt="${
+            foutrthCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -157,14 +166,18 @@ export function Footer(sections, options) {
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
                                             href="${fifthCategory.href}">
-                                            <img loading="lazy" src="${fifthCategory.src}" alt=""
+                                            <img loading="lazy" src="${fifthCategory.src}" alt="${
+            fifthCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
                                             href="${sixthCategory.href}">
-                                            <img loading="lazy" src="${sixthCategory.src}" alt=""
+                                            <img loading="lazy" src="${sixthCategory.src}" alt="${
+            sixthCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -173,14 +186,18 @@ export function Footer(sections, options) {
                                     <td class="newsletterFooterCategoryLEFTBottom">
                                         <a
                                             href="${seventhCategory.href}">
-                                            <img loading="lazy" src="${seventhCategory.src}" alt=""
+                                            <img loading="lazy" src="${seventhCategory.src}" alt="${
+            seventhCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHTBottom">
                                         <a
                                             href="${eigthCategory.href}">
-                                            <img loading="lazy" src="${eigthCategory.src}" alt=""
+                                            <img loading="lazy" src="${eigthCategory.src}" alt="${
+            eigthCategory.name
+          }"
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -210,7 +227,7 @@ export function Footer(sections, options) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -305,13 +322,13 @@ export function Footer(sections, options) {
         <table class="newsletterContainer" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #ffffff;">
             <tbody>
                     <tr>
-                        <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;" /></td>
+                        <td>${Line()}</td>
                     </tr>
                   <!--KLARNA-->
                     <tr>
                         <td class="newsletterTopBottomContainer">
                             <a href="${href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
-                                <img alt="" border="0"  src="${src}" style="display:block; max-width: 100%;"/>
+                                <img alt="Klarma" border="0"  src="${src}" style="display:block; max-width: 100%;"/>
                             </a>
                         </td>
                     </tr>
@@ -325,13 +342,13 @@ export function Footer(sections, options) {
         <table class="newsletterContainer" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #ffffff;" id="newsletter">
             <tbody>
                 <tr>
-                    <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
+                    <td>${Line()}</td>
                 </tr>
                 <!--KLARNA-->
                 <tr>
                     <td class="newsletterTopBottomContainer">
                         <a href="${href}">
-                            <img alt="" border="0"  src="${src}" style="display:block; max-width: 100%;"/>
+                            <img alt="Klarma" border="0"  src="${src}" style="display:block; max-width: 100%;"/>
                         </a>
                     </td>
                 </tr>
@@ -342,21 +359,13 @@ export function Footer(sections, options) {
     },
     socials: {
       [types.NEWSLETTER]: {
-        value: ({
-          title,
-          instagram,
-          facebook,
-          youtube,
-          pinterest,
-          Xsocial,
-          Tiktok,
-        }) => {
+        value: ({ title, instagram, facebook, youtube, pinterest, Xsocial, Tiktok }) => {
           return `
             <table class="newsletterContainer" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #ffffff;">
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
@@ -406,8 +415,7 @@ export function Footer(sections, options) {
                                                         </a>
                                                     </td>
                                                     ${
-                                                      youtube.href &&
-                                                      youtube.src
+                                                      youtube.href && youtube.src
                                                         ? `
                                                         <td class="newsletterSocialIcon">
                                                             <a
@@ -418,7 +426,7 @@ export function Footer(sections, options) {
                                                             </a>
                                                         </td>
                                                         `
-                                                        : ""
+                                                        : ''
                                                     }
                                                     <td class="newsletterSocialIcon">
                                                         <a
@@ -440,11 +448,11 @@ export function Footer(sections, options) {
                                                                 href="${Xsocial.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
                                                                 <img loading="lazy" src="${Xsocial.src}"
                                                                     border="0" style="display:block; max-width: 100%;"
-                                                                    alt="Pinterest">
+                                                                    alt="X">
                                                             </a>
                                                         </td>   
                                                         `
-                                                        : ""
+                                                        : ''
                                                     }
                                                     ${
                                                       Tiktok
@@ -454,11 +462,11 @@ export function Footer(sections, options) {
                                                                 href="${Tiktok.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
                                                                 <img loading="lazy" src="${Tiktok.src}"
                                                                     border="0" style="display:block; max-width: 100%;"
-                                                                    alt="Pinterest">
+                                                                    alt="Tik-Tok">
                                                             </a>
                                                         </td>   
                                                         `
-                                                        : ""
+                                                        : ''
                                                     }
                                                 </tr>
                                             </tbody>
@@ -475,26 +483,18 @@ export function Footer(sections, options) {
         },
       },
       [types.LANDINGPAGE]: {
-        value: ({
-          title,
-          instagram,
-          facebook,
-          youtube,
-          pinterest,
-          Xsocial,
-          Tiktok,
-        }) => `
+        value: ({ title, instagram, facebook, youtube, pinterest, Xsocial, Tiktok }) => `
         <table class="newsletterContainer" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #ffffff;" id="newsletter">
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
                     <td align="center">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                            <tbody>
+                            <tbody >
                                 <tr>
                                     <td align="left" class="footer">
                                         <table cellpadding="0" cellspacing="0" border="0">
@@ -515,9 +515,7 @@ export function Footer(sections, options) {
                                                 <tr>
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${
-                                                              instagram.href
-                                                            }">
+                                                            href="${instagram.href}">
                                                             <img loading="lazy" src="${
                                                               instagram.src
                                                             }"
@@ -527,9 +525,7 @@ export function Footer(sections, options) {
                                                     </td>
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${
-                                                              facebook.href
-                                                            }">
+                                                            href="${facebook.href}">
                                                             <img loading="lazy" src="${
                                                               facebook.src
                                                             }"
@@ -538,8 +534,7 @@ export function Footer(sections, options) {
                                                         </a>
                                                     </td>
                                                     ${
-                                                      youtube.href &&
-                                                      youtube.src
+                                                      youtube.href && youtube.src
                                                         ? `
                                                         <td class="newsletterSocialIcon">
                                                             <a
@@ -550,13 +545,11 @@ export function Footer(sections, options) {
                                                             </a>
                                                         </td>
                                                         `
-                                                        : ""
+                                                        : ''
                                                     }
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${
-                                                              pinterest.href
-                                                            }">
+                                                            href="${pinterest.href}">
                                                             <img loading="lazy" src="${
                                                               pinterest.src
                                                             }"
@@ -572,11 +565,11 @@ export function Footer(sections, options) {
                                                                 href="${Xsocial.href}">
                                                                 <img loading="lazy" src="${Xsocial.src}"
                                                                     border="0" style="display:block; max-width: 100%;"
-                                                                    alt="Pinterest">
+                                                                    alt="X">
                                                             </a>
                                                         </td>   
                                                         `
-                                                        : ""
+                                                        : ''
                                                     }
                                                     ${
                                                       Tiktok
@@ -586,11 +579,11 @@ export function Footer(sections, options) {
                                                                 href="${Tiktok.href}">
                                                                 <img loading="lazy" src="${Tiktok.src}"
                                                                     border="0" style="display:block; max-width: 100%;"
-                                                                    alt="Pinterest">
+                                                                    alt="Tik-Tok">
                                                             </a>
                                                         </td>   
                                                         `
-                                                        : ""
+                                                        : ''
                                                     }
                                                 </tr>
                                             </tbody>
@@ -608,18 +601,13 @@ export function Footer(sections, options) {
     },
     advantages: {
       [types.NEWSLETTER]: {
-        value: ({
-          firstAdvantage,
-          secondAdvantage,
-          thirdAdvantage,
-          fourthAdvantage,
-        }) => {
+        value: ({ firstAdvantage, secondAdvantage, thirdAdvantage, fourthAdvantage }) => {
           return `
         <table cellspacing="0" class="newsletterContainer" cellpadding="0" border="0" align="center" style="background-color: #ffffff;" >
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <!-- ADVANTAGES -->
@@ -630,36 +618,44 @@ export function Footer(sections, options) {
                                 <tr>
                                     <td>
                                         <a
-                                            href="${firstAdvantage.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${
+                                              firstAdvantage.href
+                                            }?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
                                             <img loading="lazy" src="${firstAdvantage.src}"
-                                                alt="" style="display:block; max-width: 100%;"  border="0" />
+                                                alt="Advantages" style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <a
-                                            href="${secondAdvantage.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${
+                                              secondAdvantage.href
+                                            }?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
                                             <img loading="lazy" src="${secondAdvantage.src}"
-                                                alt="" style="display:block; max-width: 100%;"  border="0" />
+                                                alt="Advantages" style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <a
-                                            href="${thirdAdvantage.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${
+                                              thirdAdvantage.href
+                                            }?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
                                             <img loading="lazy" src="${thirdAdvantage.src}"
-                                                alt="" style="display:block; max-width: 100%;"  border="0" />
+                                                alt="Advantages" style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <a
-                                            href="${fourthAdvantage.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
+                                            href="${
+                                              fourthAdvantage.href
+                                            }?utm_source=newsletter&utm_medium=email&utm_campaign=${id}">
                                             <img loading="lazy" src="${fourthAdvantage.src}"
-                                                alt="" style="display:block; max-width: 100%;"  border="0" />
+                                                alt="Advantages" style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                 </tr>
@@ -673,12 +669,7 @@ export function Footer(sections, options) {
         },
       },
       [types.LANDINGPAGE]: {
-        value: ({
-          firstAdvantage,
-          secondAdvantage,
-          thirdAdvantage,
-          fourthAdvantage,
-        }) => "",
+        value: ({ firstAdvantage, secondAdvantage, thirdAdvantage, fourthAdvantage }) => '',
       },
     },
     conditions: {
@@ -689,20 +680,16 @@ export function Footer(sections, options) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
                     <td class="newsletterTopBottomContainer" align="left">
                         <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${
             conditionsText.length === 2
-              ? conditionsText[0] + " " + conditionsText[1]
+              ? conditionsText[0] + ' ' + conditionsText[1]
               : conditionsText.length === 3
-              ? conditionsText[0] +
-                " " +
-                conditionsText[1] +
-                " " +
-                conditionsText[2]
+              ? conditionsText[0] + ' ' + conditionsText[1] + ' ' + conditionsText[2]
               : conditionsText
           }</span>
                     </td>
@@ -718,14 +705,18 @@ export function Footer(sections, options) {
             <tbody>
                 <tr>
                     <td>
-                        <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
+                        ${Line()}
                     </td>
                 </tr>
                 <tr>
                     <td class="newsletterTopBottomContainer" align="left">
                         <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${
-          conditionsText.length === 3
-            ? conditionsText[0] + " " + conditionsText[1]
+          conditionsText.length === 5
+            ? conditionsText[4] + ' ' + conditionsText[1]
+            : conditionsText.length === 4
+            ? conditionsText[3] + ' ' + conditionsText[1]
+            : conditionsText.length === 3
+            ? conditionsText[0] + ' ' + conditionsText[1]
             : conditionsText.length === 2
             ? conditionsText[0]
             : conditionsText[0]
@@ -777,26 +768,26 @@ export function Footer(sections, options) {
           email,
           commercialRegister,
           vat,
-        }) => "",
+        }) => '',
       },
     },
   };
 
-  let html = "";
+  let html = '';
   for (const section in sections) {
     const elem = sections[section];
-    if (typeof elem !== "object") continue;
+    if (typeof elem !== 'object') continue;
 
     if (section in json_footer) {
-      if (!("exclude" in elem)) {
+      if (!('exclude' in elem)) {
         const conditionalSections = {};
 
         for (const key in elem) {
-          const element = elem[key] || "";
+          const element = elem[key] || '';
           if (elem[key] === undefined) {
-            console.log("Value for " + key + " not found.");
+            console.log('Value for ' + key + ' not found.');
           }
-          if (typeof elem !== "object") {
+          if (typeof elem !== 'object') {
             conditionalSections[key] = element;
             continue;
           }
@@ -812,11 +803,11 @@ export function Footer(sections, options) {
         const conditionalSections = {};
 
         for (const key in elem) {
-          const element = elem[key] || "";
+          const element = elem[key] || '';
           if (elem[key] === undefined) {
-            console.log("Value for " + key + " not found.");
+            console.log('Value for ' + key + ' not found.');
           }
-          if (typeof elem !== "object") {
+          if (typeof elem !== 'object') {
             conditionalSections[key] = element;
             continue;
           }
@@ -828,9 +819,7 @@ export function Footer(sections, options) {
         html += json_footer[section][options.type].value(conditionalSections);
       }
     } else {
-      throw new Error(
-        "Dodaj sekcje: " + section + ". Do json_footer in Footer.js"
-      );
+      throw new Error('Dodaj sekcje: ' + section + '. Do json_footer in Footer.js');
     }
   }
   return html;

@@ -106,7 +106,7 @@ export function Header(sections, options) {
                         <tr>
                             <td>
                                 <a href="${assembly.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}">
-                                    <img src="${assembly.src}" border="0" alt="" style="display:block; max-width: 100%;" />
+                                    <img src="${assembly.src}" border="0" alt="Newsletter Image" style="display:block; max-width: 100%;" />
                                 </a>
                             </td>
                         </tr>
@@ -121,7 +121,7 @@ export function Header(sections, options) {
                         <tr>
                             <td>
                                 <a href="${assembly.href}">
-                                    <img src="${assembly.src}" border="0" alt="" style="display:block; max-width: 100%;" />
+                                    <img src="${assembly.src}" border="0" alt="Newsletter Image" style="display:block; max-width: 100%;" />
                                 </a>
                             </td>
                         </tr>
