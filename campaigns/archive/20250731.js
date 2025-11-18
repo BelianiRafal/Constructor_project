@@ -44,7 +44,7 @@ const categories = [
     name: 'parasols',
     background: '#FFF4E6',
     color: '#000',
-		showTitle: false,
+		title: { show: false },
     src: getImageUrl('20250731_Category_1.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/garden-furniture/parasols/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
@@ -72,7 +72,7 @@ const categories = [
     name: 'parasols',
     background: '#FFE3D8',
     color: '#000',
-		showTitle: false,
+		title: { show: false },
     src: getImageUrl('20250731_Category_2.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/garden-furniture/parasols/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
@@ -100,7 +100,7 @@ const categories = [
     name: 'parasols',
     background: '#FFF4E6',
     color: '#000',
-		showTitle: false,
+		title: { show: false },
     src: getImageUrl('20250731_Category_3.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/garden-furniture/parasols/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country

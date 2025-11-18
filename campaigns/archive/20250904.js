@@ -7,28 +7,28 @@ import getImageUrl from '../helpers/getImageUrl.js';
 
 // prettier-ignore
 const timerGifsSource = {
-  CHDE: ['https://gen.sendtric.com/countdown/5ik4n0q6bi'],
-  CHFR: ['https://gen.sendtric.com/countdown/nu4etegk9u'],
-  FR:   ['https://gen.sendtric.com/countdown/vl2731il6y'],
-  DE:   ['https://gen.sendtric.com/countdown/ym7tko2lk2'],
-  UK:   ['https://gen.sendtric.com/countdown/a2ycjfn893'],
-  AT:   ['https://gen.sendtric.com/countdown/kr5s0rezol'],
-  ES:   ['https://gen.sendtric.com/countdown/8rxb86ad1p'],
-  PL:   ['https://gen.sendtric.com/countdown/emk30jz2di'],
-  NL:   ['https://gen.sendtric.com/countdown/vozjqfkly4'],
-  PT:   ['https://gen.sendtric.com/countdown/ygd1ax2trd'],
-  IT:   ['https://gen.sendtric.com/countdown/37df0iz9bd'],
-  SE:   ['https://gen.sendtric.com/countdown/jebotlm5sb'],
-  HU:   ['https://gen.sendtric.com/countdown/mb8q5t8p3y'],
-  DK:   ['https://gen.sendtric.com/countdown/qq1c524cvl'],
-  CZ:   ['https://gen.sendtric.com/countdown/9tk8702pwp'],
-  FI:   ['https://gen.sendtric.com/countdown/vpq66npw4j'],
-  NO:   ['https://gen.sendtric.com/countdown/qn3ywy80vy'],
-  SK:   ['https://gen.sendtric.com/countdown/v5q0eadvu8'],
-  BENL: ['https://gen.sendtric.com/countdown/yu5w1kwm4y'],
-  BEFR: ['https://gen.sendtric.com/countdown/9j0e043epv'],
-  RO:   ['https://gen.sendtric.com/countdown/z00plszwyg'],
-};
+  "CHDE": "https://gen.sendtric.com/countdown/pks06ednl0",
+  "CHFR": "https://gen.sendtric.com/countdown/4a2a82bwa6",
+  "FR": "https://gen.sendtric.com/countdown/8h3a8ijjcq",
+  "DE": "https://gen.sendtric.com/countdown/aw8i7hm5ld",
+  "UK": "https://gen.sendtric.com/countdown/iaae9bq0al",
+  "AT": "https://gen.sendtric.com/countdown/2txub8zkx9",
+  "ES": "https://gen.sendtric.com/countdown/taod1axzwj",
+  "PL": "https://gen.sendtric.com/countdown/badpazmc5i",
+  "NL": "https://gen.sendtric.com/countdown/s04fw5k0u7",
+  "PT": "https://gen.sendtric.com/countdown/s2df4e8xjc",
+  "IT": "https://gen.sendtric.com/countdown/ex2j23t696",
+  "SE": "https://gen.sendtric.com/countdown/k7lqcetmiy",
+  "HU": "https://gen.sendtric.com/countdown/1p6dcd3p2b",
+  "DK": "https://gen.sendtric.com/countdown/a2p9h0o47r",
+  "CZ": "https://gen.sendtric.com/countdown/twmkzoykld",
+  "FI": "https://gen.sendtric.com/countdown/u8irwpxhza",
+  "NO": "https://gen.sendtric.com/countdown/547w170fzw",
+  "SK": "https://gen.sendtric.com/countdown/teslfm1u0o",
+  "BENL": "https://gen.sendtric.com/countdown/34zb74m80n",
+  "BEFR": "https://gen.sendtric.com/countdown/9p2kpmkblm",
+  "RO": "https://gen.sendtric.com/countdown/l42kj0gczv"
+}
 
 const timer = {
   background: '#FD9000',
@@ -40,12 +40,13 @@ const timer = {
 
 const categories = [
   {
-    showTitle: false,
+    title: { show: false },
     showPrices: true,
+    showParagraph: false,
     type: 'image-4productsgrid',
     background: '#FFEBE2',
     color: '#000',
-    showCTA: false,
+    ctaElement: { show: false },
     products: [
       {
         id: 579039,
@@ -59,13 +60,14 @@ const categories = [
   },
 
   {
-    showTitle: false,
+    title: { show: false },
+    showParagraph: false,
     showPrices: true,
     type: 'image-4productsgrid',
     background: '#FFEBE2',
     color: '#000',
     src: getImageUrl('20250904_Cat10.png'),
-    showCTA: false,
+    ctaElement: { show: false },
     products: [
       {
         id: 567546,
@@ -79,13 +81,14 @@ const categories = [
   },
 
   {
-    showTitle: false,
+    title: { show: false },
     showPrices: true,
+    showParagraph: true,
     type: 'image-4productsgrid',
     background: '#FFEBE2',
     color: '#000',
     showParagraph: true,
-    showCTA: false,
+    ctaElement: { show: false },
     src: getImageUrl('20250904_Cat20.png'),
     products: [
       {
@@ -100,7 +103,8 @@ const categories = [
   },
 
   {
-    showTitle: false,
+    title: { show: false },
+    showParagraph: false,
     showPrices: true,
     type: 'image-4productsgrid',
     background: '#FFEBE2',

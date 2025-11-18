@@ -35,7 +35,7 @@ const categories = [
   {
     type: 'image-4productsgrid',
     name: 'desks',
-		showTitle: true,
+		title: { show: true },
     background: '#FFDCCD',
     color: '#000',
     src: getImageUrl('20250807_Cat00.png'), // <--- that way image doesn't change based on country
@@ -66,7 +66,7 @@ const categories = [
     name: 'chairs',
     background: '#F6E7E6',
     color: '#000',
-		showTitle: true,
+		title: { show: true },
     src: getImageUrl('20250807_Cat10.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/office-furniture/office-chairs/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
@@ -95,7 +95,7 @@ const categories = [
     name: 'cabinets',
     background: '#FFDCCD',
     color: '#000',
-		showTitle: true,
+		title: { show: true },
     src: getImageUrl('20250807_Cat20.png'), // <--- that way image doesn't change based on country
     href: 'https://www.beliani.ch/storage-units-and-cabinets/office-cabinet/',
     // src: translateImage('20250703_cat1.png'), // <--- that way image changes based on country
@@ -122,7 +122,7 @@ const categories = [
   {
     type: 'image-4productsgrid',
     name: 'lamps',
-		showTitle: true,
+		title: { show: true },
     background: '#F6E7E6',
     color: '#000',
     src: getImageUrl('20250807_Cat30.png'), // <--- that way image doesn't change based on country

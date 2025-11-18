@@ -42,13 +42,14 @@ const categories = [
   {
     name: 'Corner sofas',
     href: 'https://www.beliani.ch/sofas/corner-sofas/',
-    showTitle: true,
+    title: { show: true },
     type: 'image-4productsgrid',
     background: '#F6E7E6',
     color: '#000',
-    showCTA: true,
+    ctaElement: { show: true},
+    showParagraph: true,
     src: getImageUrl('20250911_Cat00.png', true),
-    showPrices: false,
+    showPrices: true,
     products: [
       {
         id: 441833,
@@ -72,13 +73,14 @@ const categories = [
   {
     name: '2 seater sofas',
     href: 'https://www.beliani.ch/sofas/2-seater-sofas/',
-    showTitle: true,
+    title: { show: true },
     type: 'image-4productsgrid',
     background: '#FFCCB7',
     color: '#000',
-    showCTA: true,
+    showParagraph: true,
+    ctaElement: { show: true},
     src: getImageUrl('20250911_Cat10.png', true),
-    showPrices: false,
+    showPrices: true,
     products: [
       {
         id: 579079,
@@ -102,13 +104,14 @@ const categories = [
   {
     name: '3 seater sofas',
     href: 'https://www.beliani.ch/sofas/3-seater-sofas/',
-    showTitle: true,
+    title: { show: true },
     type: 'image-4productsgrid',
     background: '#F6E7E6',
     color: '#000',
-    showCTA: true,
+    showParagraph: true,
+    ctaElement: { show: true},
     src: getImageUrl('20250911_Cat20.png', true),
-    showPrices: false,
+    showPrices: true,
     products: [
       {
         id: 603680,
@@ -132,13 +135,14 @@ const categories = [
   {
     name: 'Sofa beds',
     href: 'https://www.beliani.ch/sofas/sofa-beds/',
-    showTitle: true,
+    title: { show: true },
     type: 'image-4productsgrid',
     background: '#FFCCB7',
     color: '#000',
-    showCTA: true,
+    ctaElement: { show: true},
+    showParagraph: true,
     src: getImageUrl('20250911_Cat30.png', true),
-    showPrices: false,
+    showPrices: true,
     products: [
       {
         id: 633454,
@@ -180,7 +184,7 @@ const tableQueries = [
     name: 'paragraphs',
   },
   {
-    tableRange: '27:28',
+    tableRange: '29:30',
     name: 'condition',
   },
   {
@@ -199,7 +203,7 @@ const links = {
   Timer: translateLink({ value: 'content/lp25-09-08' }),
 
   Banner_1: translateLink({ value: 'content/lp25-09-04' }),
-  Banner_1_Image: translateImage({ value: '20250911b.png' }),
+  Banner_1_Image: translateImage({ value: '20250904b.png' }),
 
   Banner_2: translateLink({ value: 'content/lp25-09-03' }),
   Banner_2_Image: translateImage({ value: '20250903b.png' }),
@@ -211,12 +215,12 @@ const TopImageTitle_data = {
   type: 'twoSameLines',
 };
 
-const c20250911_grupaB = new entities.Campaign({
+const c20250911_grupaA = new entities.Campaign({
   date: '2025.09.11',
-  name: 'Sofas | TEST B',
+  name: 'Sofas | TEST A',
   translationsSpreadsheet: campaignTranslationsSheet,
   issueCardId: '396480',
-  startId: '36760',
+  startId: '36792',
   figmaUrl:
     'https://www.figma.com/design/vyBbhWqUMMN27dwPcBF2Q2/2025.09.11--Sofas--Copy-?node-id=0-1&t=Ys0Ikx2xrN9feIGy-1',
   alarm: {
@@ -263,4 +267,4 @@ const c20250911_grupaB = new entities.Campaign({
   ],
 });
 
-export { c20250911_grupaB };
+export { c20250911_grupaA };

@@ -43,7 +43,7 @@ const categories = [
     name: 'Corner sofas',
     href: 'https://www.beliani.ch/sofas/corner-sofas/',
     intro: false,
-    showTitle: true,
+    title: { show: true },
     type: 'image-3productsrow',
     background: '#FFEFD9',
     color: '#000',
@@ -73,7 +73,7 @@ const categories = [
     name: 'Sofa beds',
     href: 'https://www.beliani.ch/sofas/sofa-beds/',
 
-    showTitle: true,
+    title: { show: true },
     type: 'image-3productsrow',
     background: '#FFEFD9',
     color: '#000',
@@ -103,7 +103,7 @@ const categories = [
     name: 'Chaise lounges',
     href: 'https://www.beliani.ch/sofas/chaise-lounge/',
 
-    showTitle: true,
+    title: { show: true },
     type: 'image-3productsrow',
     background: '#FFEFD9',
     color: '#000',
@@ -133,7 +133,7 @@ const categories = [
     name: 'Fabric sofas',
     href: 'https://www.beliani.ch/sofas/fabric-sofas/',
 
-    showTitle: true,
+    title: { show: true },
     type: 'image-3productsrow',
     background: '#FFEFD9',
     color: '#000',
@@ -163,7 +163,7 @@ const categories = [
     name: 'Leather sofas',
     href: 'https://www.beliani.ch/sofas/leather-sofas/',
 
-    showTitle: true,
+    title: { show: true },
     type: 'image-3productsrow',
     background: '#FFEFD9',
     color: '#000',
@@ -193,7 +193,7 @@ const categories = [
     name: 'Modular sofas',
     href: 'https://www.beliani.ch/sofas/modular-sofas/',
 
-    showTitle: true,
+    title: { show: true },
     type: 'image-3productsrow',
     background: '#FFEFD9',
     color: '#000',

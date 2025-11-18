@@ -40,7 +40,7 @@ const timer = {
 
 const categories = [
   {
-		showTitle: true,
+		title: { show: true },
     type: 'image-4productsgrid',
     name: 'Plant pots',
     background: '#FFDED0',
@@ -68,7 +68,7 @@ const categories = [
     ],
   },
   {
-		showTitle: true,
+		title: { show: true },
     type: 'image-4productsgrid',
     name: 'Fire pits & grills',
     background: '#FF9780',
@@ -96,7 +96,7 @@ const categories = [
     ],
   },
   {
-		showTitle: true,
+		title: { show: true },
     type: 'image-4productsgrid',
     name: 'Parasols',
     background: '#FFDED0',
@@ -124,7 +124,7 @@ const categories = [
     ],
   },
   {
-		showTitle: true,
+		title: { show: true },
     type: 'image-4productsgrid',
     name: 'Picnic baskets',
     background: '#FF9780',
