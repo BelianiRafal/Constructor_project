@@ -15,8 +15,10 @@ import { Space } from './Space.js';
 import { Timer } from './Timer.js';
 import { Title } from './Title.js';
 import { TopImageTitle } from './TopImageTitle.js';
+import { AlternativeProduct } from './Products/alternative.js';
 
 export {
+  AlternativeProduct,
   Category,
   CTA,
   Footer,
