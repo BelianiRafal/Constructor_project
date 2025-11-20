@@ -756,7 +756,7 @@ export const Category = isAllowToRender(
   `;
     }
     if (type === "5_products") {
-      if (idx === len) {
+      
       return `
   <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <thead>
@@ -873,7 +873,7 @@ export const Category = isAllowToRender(
       }
     </tbody>
   </table>
-  `;}
+      `;
     }
   }
 );
