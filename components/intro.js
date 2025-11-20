@@ -24,8 +24,6 @@ export const Intro = isAllowToRender(
       <span class="newsletterParagraph" style="color: ${color}">
         ${data ? data[0] : paragraph}
       </span>
-
-      ${selectCampaign.date === "2025.10.06" ? Space({ className: "newsletterBottom35px" }): ""}
     `,
 
       "title&paragraph": `
@@ -38,7 +36,6 @@ export const Intro = isAllowToRender(
         <span class="newsletterParagraph" style="color: ${color}">
           ${data ? data[1] : paragraph}
         </span>
-        ${selectCampaign.date === "2025.09.29" ? Space({ className: "newsletterBottom45px" }): ""}
       
     <!-- data[2] if you need an additional paragraph with a link example watch 28/07/25 -->
       ${
@@ -49,6 +46,16 @@ export const Intro = isAllowToRender(
       </span>`
         : ""
       }
+    `,
+
+      "paragraph&cta": `
+        <span class="newsletterParagraph" style="color: ${color}">
+          ${data ? data[0] : paragraph}
+        </span>
+        ${Space({ className: spaceClassName || "newsletterBottom35px" })}
+        <a href="${data && data[2] ? add_utm(data[2]) : '#'}" style="color:${color}; text-decoration: underline;">
+          <span class="newsletterCta">${data ? data[1] : 'CTA'}</span>
+        </a>
     `,
     };
 
