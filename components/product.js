@@ -1,56 +1,7 @@
 import { ImageWithLink } from "./ImageWithLink.js";
 
-export function Product(product, align = "left", style, type_prod){
-  if (type_prod === "special") 
-    {return `
-     <table cellspacing="0" cellpadding="0" style="width: 100%; ${style ?? ""}">
-    <tbody>
-      <tr>
-        <td>
-          ${
-            "src" in product && product.src !== null ?
-            `<table cellspacing="0" cellpadding="0" style="width: 100%; ">
-            <tbody>
-              <tr>
-                <td align="${align}" class="newsletterBottom20px">
-                  ${ImageWithLink({
-                    href: product.href,
-                    src: product.src,
-                    alt: product.name,
-                  })}
-                </td>
-              </tr>
-            </tbody>
-          </table>`
-            :
-            ""
-          }
-          <table cellspacing="0" cellpadding="0" style="width: 100%; ">
-            <tbody>
-              <tr>
-                <td align="${align}" class="newsletterContainer">
-                  <span class="newsletterProductTitle" style="${style ?? ""}">${product.name}</span>
-                </td>
-              </tr>
-              <tr>
-                <td align="${align}" class="newsletterContainer">
-                  <span class="newsletterProductLowPrice" style="${style ?? ""}">${
-                    product.lowPrice
-                  } </span>
-                  <span class="newsletterProductHightPrice" style="${style ?? ""}">${
-                    product.highPrice
-                  }</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-    `;
-    
-  }
+export function Product(product, align = "left", style, showPriceAndName) {
+  console.log(product);
   return `
   <table cellspacing="0" cellpadding="0" style="width: 100%; ${style ?? ""}">
     <tbody>
@@ -76,7 +27,9 @@ export function Product(product, align = "left", style, type_prod){
           }
           <table cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
-              <tr>
+              ${
+                showPriceAndName ? 
+                `<tr>
                 <td align="${align}">
                   <span class="newsletterProductTitle" style="${style ?? ""}">${product.name}</span>
                 </td>
@@ -90,7 +43,10 @@ export function Product(product, align = "left", style, type_prod){
                     product.highPrice
                   }</span>
                 </td>
-              </tr>
+              </tr>`
+              :
+              ''
+              }
             </tbody>
           </table>
         </td>
