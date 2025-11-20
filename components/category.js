@@ -315,7 +315,7 @@ export const Category = isAllowToRender(
       
       <tr>
           <td style="padding-top: 0px; padding-left: 0px; vertical-align: top;" >
-            ${Product(products[0], "left", `color: ${color || "#000000"}`, "special", showPriceAndName = false)}
+            ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
           </td>
         </tr>
          <tr>
@@ -334,11 +334,11 @@ export const Category = isAllowToRender(
                   <tr>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="newsletterRight10px">
-                      ${Product(products[1], "left", `color: ${color || "#000000", showPriceAndName = true}`)}
+                      ${Product(products[1], "left", `color: ${color || "#000000"}`, showPriceAndName = true)}
                     </td>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 50%" class="newsletterLeft10px">
-                      ${Product(products[2], "left", `color: ${color || "#000000"}`)}
+                      ${Product(products[2], "left", `color: ${color || "#000000"}`, showPriceAndName = true)}
                     </td>
                   </tr>
                 </table>
@@ -361,11 +361,11 @@ export const Category = isAllowToRender(
                   <tr>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 50%" class="newsletterRight10px">
-                      ${Product(products[3], "left", `color: ${color || "#000000"}`)}
+                      ${Product(products[3], "left", `color: ${color || "#000000"}`, showPriceAndName = true)}
                     </td>
                     <!-- vertical align top added for reason when product have only 1 price on mobile product grid will differ for another one-->
                     <td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 50%" class="newsletterLeft10px">
-                      ${Product(products[4], "left", `color: ${color || "#000000"}`)}
+                      ${Product(products[4], "left", `color: ${color || "#000000"}`, showPriceAndName = true)}
                     </td>
                   </tr>
                 </table>
