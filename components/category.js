@@ -314,14 +314,27 @@ export const Category = isAllowToRender(
     <thead>
       
       <tr>
-          <td style="padding-top: 0px; padding-left: 0px; vertical-align: top;" >
-            ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
-          </td>
-        </tr>
-         <tr>
-              <td class="newsletterBottom35px">
-              </td>
-            </tr>
+        <td class="newsletterBottom35px">
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-left: 0px; vertical-align: top;" >
+          ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
+        </td>
+      </tr>
+      <tr>
+        <td class="newsletterBottom35px">
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-left: 0px; vertical-align: top;" >
+          ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
+        </td>
+      </tr>
+        <tr>
+        <td class="newsletterBottom35px">
+        </td>
+      </tr>
     </thead>
     <tbody>
       <tr>
@@ -371,15 +384,14 @@ export const Category = isAllowToRender(
                 </table>
               </td>
             </tr>
-            <tr>
-              <td class="newsletterBottom35px">
-              </td>
-            </tr>
           </table>
         </td>
       </tr>
+      ${
+        idx === len
+          ? `
       <tr>
-        <td class="newsletterBottom80px">
+        <td>
           <table cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
               <tr>
@@ -399,6 +411,13 @@ export const Category = isAllowToRender(
           </table>
         </td>
       </tr>
+          `
+          : `
+      <tr>
+        <td class="newsletterBottom80px"></td>
+      </tr>
+          `
+      }
     </tbody>
   </table>
   `;
