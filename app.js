@@ -98,6 +98,649 @@ export function getImageUrl(imageName, version) {
 try {
   initApp({
     campaigns: [
+      //! 12.12.2025 - EOLs
+      new entities.Campaign({
+        date: "2025.12.12",
+        issueCardId: "424438",
+        name: "12.12.2025 - EOLs",
+        startId: "38824",
+        figmaUrl:
+          "",
+        alarm: {
+          isActive: false,
+        },
+        isArchive: false,
+        optimizeImg: false,
+        under_intro_line: false,
+        templates: [
+          {
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.fridayCategoriesListChris,
+            background: "#750000",
+            wrapper: types.WRAPPER,
+            css: types.CSS.NS,
+            timer: {
+              "CHDE": "https://gen.sendtric.com/countdown/19awt2va48",
+              "CHFR": "https://gen.sendtric.com/countdown/x95xpoe42b",
+              "FR": "https://gen.sendtric.com/countdown/8gv03wv6d0",
+              "DE": "https://gen.sendtric.com/countdown/lt6ni8z5dw",
+              "UK": "https://gen.sendtric.com/countdown/jejab1y9ey",
+              "AT": "https://gen.sendtric.com/countdown/u74b8kgvd4",
+              "ES": "https://gen.sendtric.com/countdown/c4dfkf2li2",
+              "PL": "https://gen.sendtric.com/countdown/ydqgrdl98q",
+              "NL": "https://gen.sendtric.com/countdown/pt4ysbhdgv",
+              "PT": "https://gen.sendtric.com/countdown/zgg2kirmfj",
+              "IT": "https://gen.sendtric.com/countdown/fdg56wy6xh",
+              "SE": "https://gen.sendtric.com/countdown/6iyzvu9he6",
+              "HU": "https://gen.sendtric.com/countdown/4v0wn9w0me",
+              "DK": "https://gen.sendtric.com/countdown/5jpryg8bi8",
+              "CZ": "https://gen.sendtric.com/countdown/pyjwoxks2e",
+              "FI": "https://gen.sendtric.com/countdown/43y1z5e5kd",
+              "NO": "https://gen.sendtric.com/countdown/nlivydpwon",
+              "SK": "https://gen.sendtric.com/countdown/q5iwz679y9",
+              "BENL": "https://gen.sendtric.com/countdown/zggum4s6rq",
+              "BEFR": "https://gen.sendtric.com/countdown/yovjvkvb8g",
+              "RO": "https://gen.sendtric.com/countdown/c4svklbybh"
+            },
+            intro: {
+              background: "#750000",
+              color: "#FFFFFF",
+            },
+            categories: [
+              {
+                name: "Seating",
+                background: "#750000",
+                color: "#FFFFFF",
+                src: getImageUrl("20251212Category1.png", true),
+                href: "",
+                products: [
+                  {
+                    id: "674378",
+                    src: getImageUrl("20251212Category1.png", true),
+                  },
+                  {
+                    id: "418057",
+                    src: getImageUrl("20251212Category11.png", true),
+                  },
+                  {
+                    id: "579271",
+                    src: getImageUrl("20251212Category12.png", true),
+                  },
+                  {
+                    id: "622754",
+                    src: getImageUrl("20251212Category13.png", true),
+                  },
+                  {
+                    id: "669828",
+                    src: getImageUrl("20251212Category14.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Tables & storage",
+                background: "#FF2F00",
+                color: "#FFFFFF",
+                src: getImageUrl("20251212Category2.png", true),
+                href: "",
+                products: [
+                  {
+                    id: "344543",
+                    src: getImageUrl("20251212Category2.png", true),
+                  },
+                  {
+                    id: "563721",
+                    src: getImageUrl("20251212Category21.png", true),
+                  },
+                  {
+                    id: "612563",
+                    src: getImageUrl("20251212Category22.png", true),
+                  },
+                  {
+                    id: "494458",
+                    src: getImageUrl("20251212Category23.png", true),
+                  },
+                  {
+                    id: "419679",
+                    src: getImageUrl("20251212Category24.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Accessories",
+                background: "#750000",
+                color: "#FFFFFF",
+                src: getImageUrl("20251212Category3.png", true),
+                href: "",
+                products: [
+                  {
+                    id: "577787",
+                    src: getImageUrl("20251212Category3.png", true),
+                  },
+                  {
+                    id: "500760",
+                    src: getImageUrl("20251212Category31.png", true),
+                  },
+                  {
+                    id: "495457",
+                    src: getImageUrl("20251212Category32.png", true),
+                  },
+                  {
+                    id: "433892",
+                    src: getImageUrl("20251212Category33.png", true),
+                  },
+                  {
+                    id: "425373",
+                    src: getImageUrl("20251212Category34.png", true),
+                  },
+                ],
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-12-12",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251212_01.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-12-12",
+                },
+              },
+              {
+                value: getImageUrl("20251212_gif.gif", true),
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-12-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251204b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-12-03",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20251203b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "12.12.2025 - EOLs!",
+                tableRange: "15:16",
+                name: "tit",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "12.12.2025 - EOLs!",
+                tableRange: "18",
+                name: "intro",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 08.12.25 - Free gift!",
+                tableRange: "12:13",
+                name: "timer",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "12.12.2025 - EOLs!",
+                tableRange: "19",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "12.12.2025 - EOLs!",
+                tableRange: "20:25",
+                name: "categories",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "12.12.2025 - EOLs!",
+                tableRange: "29:30",
+                name: "condition",
+              },
+              // {
+              //   tableId: "1ngzefT6Zaeiv4cJBsENkBu-Y1K1ROGP6XcccqcOqZ70",
+              //   tableName: "Templates",
+              //   tableRange: "?majorDimension=COLUMNS",
+              //   name: "templates",
+              //   tableColumns: false,
+              // },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+            freebies: {
+              options: {
+                color: "#000000",
+                background: "#FFCCB7",
+              },
+              items: [
+                {
+                  size: {
+                    row: 1,
+                    col: 2,
+                  },
+                  products: [
+                    {
+                      id: "192263",
+                      src: getImageUrl("20250915Freebie1.png", true),
+                      style: "padding-right: 5px; padding-left: 10px;",
+                    },
+                    {
+                      id: "422508",
+                      src: getImageUrl("20250915Freebie2.png", true),
+                      style: "padding-right: 10px; padding-left: 5px;",
+                    },
+                  ],
+                },
+              ],
+              items2: [
+                {
+                  size: {
+                    row: 1,
+                    col: 2,
+                  },
+                  products: [
+                    {
+                      id: "517685",
+                      src: getImageUrl("20250915Freebie3.png", true),
+                      style: "padding-right: 5px; padding-left: 10px;",
+                    },
+                    {
+                      id: "517640",
+                      src: getImageUrl("20250915Freebie4.png", true),
+                      style: "padding-right: 10px; padding-left: 5px;",
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+          {
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.fridayCategoriesListChris,
+            background: "#FFCCB7",
+            css: types.CSS.LP,
+            tit: {
+              color: "#000",
+              type: "standard",
+            },
+            offerPart: {
+              type: "code",
+              color: "#000000",
+              background: "#FFCCB7",
+            },
+            intro: {
+              background: "#FD9000",
+              color: "#000000",
+            },
+            categories: [
+              {
+                name: "Lounge sets",
+                background: "#FD9000",
+                color: "#000000",
+                src: getImageUrl("20250915Category1.gif", true),
+                href: "https://www.beliani.ch/outdoor-furniture/lounge-sets/",
+                products: [
+                  {
+                    id: "367977",
+                    src: getImageUrl("20250915Category11.png", true),
+                  },
+                  {
+                    id: "211351",
+                    src: getImageUrl("20250915Category12.png", true),
+                  },
+                  {
+                    id: "188385",
+                    src: getImageUrl("20250915Category13.png", true),
+                  },
+                  {
+                    id: "399232",
+                    src: getImageUrl("20250915Category14.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Chairs",
+                background: "#FFCCB7",
+                color: "#000000",
+                src: getImageUrl("20250915Category2.gif", true),
+                href: "https://www.beliani.ch/outdoor-furniture/garden-chairs/",
+                products: [
+                  {
+                    id: "414231",
+                    src: getImageUrl("20250915Category21.png", true),
+                  },
+                  {
+                    id: "398621",
+                    src: getImageUrl("20250915Category22.png", true),
+                  },
+                  {
+                    id: "394185",
+                    src: getImageUrl("20250915Category23.png", true),
+                  },
+                  {
+                    id: "524007",
+                    src: getImageUrl("20250915Category24.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Balcony sets",
+                background: "#FD9000",
+                color: "#000000",
+                src: getImageUrl("20250915Category3.gif", true),
+                href: "https://www.beliani.ch/outdoor-furniture/balcony-furniture/",
+                products: [
+                  {
+                    id: "245297",
+                    src: getImageUrl("20250915Category31.png", true),
+                  },
+                  {
+                    id: "242847",
+                    src: getImageUrl("20250915Category32.png", true),
+                  },
+                  {
+                    id: "294478",
+                    src: getImageUrl("20250915Category33.png", true),
+                  },
+                  {
+                    id: "345950",
+                    src: getImageUrl("20250915Category34.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Plant pots",
+                background: "#FFCCB7",
+                color: "#000000",
+                src: getImageUrl("20250915Category4.gif", true),
+                href: "https://www.beliani.ch/garden-accessories/pots-and-planters/",
+                products: [
+                  {
+                    id: "186293",
+                    src: getImageUrl("20250915Category41.png", true),
+                  },
+                  {
+                    id: "404374",
+                    src: getImageUrl("20250915Category42.png", true),
+                  },
+                  {
+                    id: "147172",
+                    src: getImageUrl("20250915Category43.png", true),
+                  },
+                  {
+                    id: "258354",
+                    src: getImageUrl("20250915Category44.png", true),
+                  },
+                ],
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-09-15",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20250915_01.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-09-15",
+                },
+              },
+              {
+                value: getImageUrl("20250915_gif.gif", true),
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-09-05",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20250905b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-09-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value: getImageUrl("20250904b.png", true),
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "17:18",
+                name: "tit",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "20:24",
+                name: "offerPart",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "29:30",
+                name: "intro",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "35",
+                name: "cta",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "26",
+                name: "code",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "24",
+                name: "codeCTA",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "31:34",
+                name: "categories",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "Voucher - 15.09.25 - Free piece of furniture!",
+                tableRange: "39:41",
+                name: "condition",
+              },
+              // {
+              //   tableId: "1ngzefT6Zaeiv4cJBsENkBu-Y1K1ROGP6XcccqcOqZ70",
+              //   tableName: "Templates",
+              //   tableRange: "?majorDimension=COLUMNS",
+              //   name: "templates",
+              //   tableColumns: false,
+              // },
+              {
+                tableId: "1HPEr1vRHkVPJ5lp0mUbSPsOoiUnWTEQKiSiL9BWiDg4",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesTitles",
+                tableColumns: false,
+              },
+              {
+                tableId: "1g4YNCi3FzxsYpbP-BWMmz9vBJuZCz_yNIfcatqUf6O8",
+                tableName: "Categories",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "categoriesLinks",
+                tableColumns: false,
+              },
+              {
+                tableId: "1Q1tgnXS3vV8tUnTgbuw0rFE6BqqfIRg8lylQ7N2v6KU",
+                tableName: "Header",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "header",
+                tableColumns: false,
+              },
+              {
+                tableId: "1IrbxxgxlXKpr22uSfC1VVqFeNH2bZaMcSe0FW2pAu8M",
+                tableName: "Footer",
+                tableRange: "?majorDimension=COLUMNS",
+                name: "footer",
+                tableColumns: false,
+              },
+            ],
+            freebies: {
+              options: {
+                color: "#000000",
+                background: "#FFCCB7",
+              },
+              items: [
+                {
+                  size: {
+                    row: 1,
+                    col: 2,
+                  },
+                  products: [
+                    {
+                      id: "192263",
+                      src: getImageUrl("20250915Freebie1.png", true),
+                      style: "padding-right: 5px; padding-left: 10px;",
+                    },
+                    {
+                      id: "422508",
+                      src: getImageUrl("20250915Freebie2.png", true),
+                      style: "padding-right: 10px; padding-left: 5px;",
+                    },
+                  ],
+                },
+              ],
+              items2: [
+                {
+                  size: {
+                    row: 1,
+                    col: 2,
+                  },
+                  products: [
+                    {
+                      id: "517685",
+                      src: getImageUrl("20250915Freebie3.png", true),
+                      style: "padding-right: 5px; padding-left: 10px;",
+                    },
+                    {
+                      id: "517640",
+                      src: getImageUrl("20250915Freebie4.png", true),
+                      style: "padding-right: 10px; padding-left: 5px;",
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+        ],
+      }),
       // 2025.10.10 - kafelki kategori(po lewej text po prawej zdjęcie) jeden pod drugim 
       new entities.Campaign({
         startId: "37604",

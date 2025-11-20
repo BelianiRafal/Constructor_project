@@ -185,7 +185,7 @@ function generateCategoriesSection(
             src: typeof category.src === "object" && category.src.value ? category.src.value : category.src,
             cta: safeGetPhrase("Shop now"),
             color: category?.color,
-            type: "image_no_padding",
+            type: "category_product",
             img_class: full_img_width === false ? "newsletterContainer" : "",
             products: category.products
               ? category.products.map((item) => getProductById(item.id, item.src, item.name))
