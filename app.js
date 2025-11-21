@@ -267,6 +267,18 @@ try {
                 value: getImageUrl("20251212_gif.gif", true),
               },
               {
+                value: getImageUrl("20251212free.png", true),
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-12-08",
+                },
+              },
+              {
                 query: true,
                 href: {
                   type: "relation",
@@ -324,7 +336,7 @@ try {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "12.12.2025 - EOLs!",
                 tableRange: "19",
-                name: "cta",
+                name: "ctaEOL",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",

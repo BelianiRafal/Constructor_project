@@ -6,6 +6,7 @@ export const Category = isAllowToRender(
     name,
     name1,
     href,
+    CTAhref,
     src,
     products,
     productImg,
@@ -318,8 +319,8 @@ export const Category = isAllowToRender(
         </td>
       </tr>
       <tr>
-        <td style="padding-top: 0px; padding-left: 0px; vertical-align: top;" >
-          ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
+        <td class="newsletterContainer" style="padding-top: 0px; vertical-align: top;" >
+          ${Title({ title: name, align: "left", color: color })}
         </td>
       </tr>
       <tr>
@@ -331,7 +332,26 @@ export const Category = isAllowToRender(
           ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
         </td>
       </tr>
-        <tr>
+      <tr>
+        <td class="newsletterBottom35px">
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tbody>
+                  <tr>
+                      <td align=${align}>
+                          <span class="newsletterParagraph" style="color:${color}">
+                              ${desc}
+                          </span>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
         <td class="newsletterBottom35px">
         </td>
       </tr>
@@ -391,6 +411,9 @@ export const Category = isAllowToRender(
         idx === len
           ? `
       <tr>
+        <td class="newsletterBottom35px"></td>
+      </tr>
+      <tr>
         <td>
           <table cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
@@ -398,9 +421,9 @@ export const Category = isAllowToRender(
                 <td style="padding-top: 0px; padding-left: 0px; padding-right: 0px; text-align: center;">
                   ${
                     ctaComponent
-                      ? ctaComponent(href, cta)
+                      ? ctaComponent(CTAhref, cta)
                       : `
-                      <a href="${href}" style="color:${color || "#000"}; text-decoration: underline;">
+                      <a href="${CTAhref}" style="color:${color || "#000"}; text-decoration: underline;">
                         <span class="newsletterCta">${cta}</span>
                       </a>
                     `

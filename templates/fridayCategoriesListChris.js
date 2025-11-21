@@ -179,11 +179,15 @@ function generateCategoriesSection(
           ${Category({
             href: categoryHref,
             name:
-              queries?.categories && queries.categories[index]
-                ? queries.categories[index]
+              queries?.categories && queries.categories[index * 2]
+                ? queries.categories[index * 2]
                 : getCategoryTitle(category.name || ""),
+            desc: queries?.categories && queries.categories[index * 2 + 1]
+                ? queries.categories[index * 2 + 1]
+                : "",
             src: typeof category.src === "object" && category.src.value ? category.src.value : category.src,
-            cta: safeGetPhrase("Shop now"),
+            cta: queries.ctaEOL,//safeGetPhrase("Shop now"),
+            CTAhref: category.CTAhref ? add_utm(category.CTAhref) : categoryHref,
             color: category?.color,
             type: "category_product",
             img_class: full_img_width === false ? "newsletterContainer" : "",
@@ -378,7 +382,7 @@ export async function fridayCategoriesListChris({
                               ? undefined
                               : "center",
                             title: {
-                              className: "newsletterIntroTitle",
+                              className: "newsletterParagraph",
                             },
                           })}
                       </td>
@@ -387,25 +391,25 @@ export async function fridayCategoriesListChris({
               }
               <tr><td class='newsletterBottom35px'></td></tr> 
               <tr>
-                                  <td style="background-color: #F6E7E6; " class="newsletterContainer">
-                                    ${Timer({
-                                        
-                                        href: links[2],
-                                        imageSrc: timer[country],
-                                        cta: queries.cta,
-                                        title: queries.timer[0],
-                                        subtitle: queries.timer[1],
-                                        
-            
-                                    })}    
-                                  </td>
-                                </tr>
-                                <tr><td>
-                                 ${ImageWithLink({
-                                      href: links[2],
-                                      src: links[4],
-                                    })}
-                                </td></tr>
+                  <td style="background-color: #F6E7E6; " class="newsletterContainer">
+                    ${Timer({
+                        
+                        href: links[5],
+                        imageSrc: timer[country],
+                        cta: getPhrase("Shop now"),
+                        title: queries.timer[0],
+                        subtitle: queries.timer[1],
+                        
+
+                    })}    
+                  </td>
+                </tr>
+                <tr><td>
+                  ${ImageWithLink({
+                      href: links[5],
+                      src: links[4],
+                    })}
+                </td></tr>
                     <tr><td class='newsletterBottom35px'></td></tr> 
               <!-- Wstawienie wygenerowanych dynamicznie sekcji kategorii -->
               ${categoriesSectionHTML}
