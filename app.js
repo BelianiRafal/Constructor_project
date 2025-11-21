@@ -146,6 +146,8 @@ try {
             intro: {
               background: "#750000",
               color: "#FFFFFF",
+              align: "center",
+              //type: "paragraph",
             },
             categories: [
               {
@@ -277,6 +279,9 @@ try {
                   placeholderPosition: "0",
                   value: "content/lp25-12-08",
                 },
+              },
+              {
+                value: "https://www.beliani.ch/last-pieces/",
               },
               {
                 query: true,

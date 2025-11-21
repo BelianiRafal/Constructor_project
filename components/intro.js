@@ -10,9 +10,11 @@ export const Intro = isAllowToRender(
     spaceClassName,
     color = "#000000",
     align = "left",
-    type = "title&paragraph",
+    type = "paragraph",
     idx,
     introLine,
+    href,
+    cta,
     len,
     add_utm,
     selectCampaign,
@@ -25,7 +27,19 @@ export const Intro = isAllowToRender(
         ${data ? data[0] : paragraph}
       </span>
 
-      ${selectCampaign.date === "2025.10.06" ? Space({ className: "newsletterBottom35px" }): ""}
+      ${selectCampaign.date === "2025.10.06" ? Space({ className: "newsletterBottom35px" }): 
+    `
+    <tr>
+      <td class="newsletterBottom35px">
+    </tr>
+    <tr>
+          <td align="center">
+              <a href="${href}" style="color:${color}; text-decoration: underline;">
+                  <span class="newsletterCta">${cta}</span>
+              </a>
+          </td>
+      </tr>
+    `}
     `,
 
       "title&paragraph": `

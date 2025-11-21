@@ -44,7 +44,7 @@ export default [
     languages: [
       {
         language: LANGUAGES.UK,
-        tableColumn: "D",
+        tableColumn: "F",
       },
       {
         language: LANGUAGES.PL,

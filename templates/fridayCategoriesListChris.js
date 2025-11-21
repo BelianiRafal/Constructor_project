@@ -23,6 +23,7 @@ import { Create2Columns_Grid } from "../components/index.js";
 function generateCategoriesSection(
   categories,
   queries,
+  links,
   background,
   add_utm,
   white_line,
@@ -187,7 +188,7 @@ function generateCategoriesSection(
                 : "",
             src: typeof category.src === "object" && category.src.value ? category.src.value : category.src,
             cta: queries.ctaEOL,//safeGetPhrase("Shop now"),
-            CTAhref: category.CTAhref ? add_utm(category.CTAhref) : categoryHref,
+            CTAhref: getCategoryLink(links[6]),
             color: category?.color,
             type: "category_product",
             img_class: full_img_width === false ? "newsletterContainer" : "",
@@ -254,6 +255,7 @@ export async function fridayCategoriesListChris({
   const categoriesSectionHTML = generateCategoriesSection(
     categories,
     queries,
+    links,
     background,
     add_utm,
     white_line,
@@ -367,23 +369,13 @@ export async function fridayCategoriesListChris({
                             add_utm: add_utm,
                             selectCampaign: selectCampaign,
                           
-                            type: categories.some(
-                              (cat) =>
-                                (cat.products && cat.products.length > 0) ||
-                                (cat.productImg && cat.productImg.length > 0)
-                            )
-                              ? undefined
-                              : "paragraph",
-                            align: categories.some(
-                              (cat) =>
-                                (cat.products && cat.products.length > 0) ||
-                                (cat.productImg && cat.productImg.length > 0)
-                            )
-                              ? undefined
-                              : "center",
+                            type: intro.type,
+                            align: intro.align,
                             title: {
                               className: "newsletterParagraph",
                             },
+                            href: getCategoryLink(links[6]),
+                            cta: queries.ctaEOL,//getPhrase("Shop now"),
                           })}
                       </td>
                     </tr>`

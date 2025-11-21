@@ -437,7 +437,7 @@ export const Category = isAllowToRender(
           `
           : `
       <tr>
-        <td class="newsletterBottom80px"></td>
+        <td class="newsletterBottom60px"></td>
       </tr>
           `
       }
