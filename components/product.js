@@ -1,6 +1,6 @@
 import { ImageWithLink } from "./ImageWithLink.js";
 
-export function Product(product, align = "left", style, showPriceAndName) {
+export function Product(product, align = "left", style, showPriceAndName, padding) {
   console.log(product);
   return `
   <table cellspacing="0" cellpadding="0" style="width: 100%; ${style ?? ""}">
@@ -12,7 +12,7 @@ export function Product(product, align = "left", style, showPriceAndName) {
             `<table cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
               <tr>
-                <td align="${align}" class="newsletterBottom20px">
+                <td align="${align}" class= ${padding ?? "newsletterBottom20px"}>
                   ${ImageWithLink({
                     href: product.href,
                     src: product.src,

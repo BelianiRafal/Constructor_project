@@ -17,7 +17,7 @@ import { RegularWednesdayNslt } from "./RegularWednesdayNslt.js"
 import { MondayEarthDayNslt } from "./MondayEarthDayNslt.js"
 import { categoryPeakRegular } from './categoryPeakRegular.js';
 import { fridayCategoriesList } from './fridayCategoriesList.js';
-import { fridayCategoriesListChris } from './fridayCategoriesListChris.js';
+import { fridayEolProducts } from './fridayEolProducts.js';
 import { artificalPlants } from './artificalPlants.js';
 import { sale_categories } from "./sale_categories.js";
 import { halloween } from "./halloween.js";
@@ -43,7 +43,7 @@ export const templates = {
   MondayEarthDayNslt,
   categoryPeakRegular,
   fridayCategoriesList,
-  fridayCategoriesListChris,
+  fridayEolProducts,
   artificalPlants,
   sale_categories
 };

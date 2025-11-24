@@ -76,6 +76,10 @@ export default {
           .newsletterBottom35px {
             padding-bottom: 35px;
           }
+            
+          .newsletterBottom25px {
+            padding-bottom: 25px;
+          }
 
           .newsletterBottom60px {
             padding-bottom: 60px;
@@ -293,6 +297,10 @@ export default {
             }
           
             .newsletterBottom35px {
+              padding-bottom: 20px;
+            }
+
+            .newsletterBottom25px {
               padding-bottom: 20px;
             }
 

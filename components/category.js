@@ -26,7 +26,7 @@ export const Category = isAllowToRender(
     extraCtaLink,
     extraCta,
     showPriceAndName,
-
+    padding
   }) => {
     if (!type) {
       return "Please specify type category.";
@@ -328,8 +328,8 @@ export const Category = isAllowToRender(
         </td>
       </tr>
       <tr>
-        <td style="padding-top: 0px; padding-left: 0px; vertical-align: top;" >
-          ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false)}
+        <td style="padding: 0px; vertical-align: top;" >
+          ${Product(products[0], "left", `color: ${color || "#000000"}`, showPriceAndName = false, padding = false)}
         </td>
       </tr>
       <tr>
@@ -437,7 +437,7 @@ export const Category = isAllowToRender(
           `
           : `
       <tr>
-        <td class="newsletterBottom60px"></td>
+        <td class="newsletterBottom80px"></td>
       </tr>
           `
       }

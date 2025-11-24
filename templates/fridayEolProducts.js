@@ -187,7 +187,7 @@ function generateCategoriesSection(
                 ? queries.categories[index * 2 + 1]
                 : "",
             src: typeof category.src === "object" && category.src.value ? category.src.value : category.src,
-            cta: queries.ctaEOL,//safeGetPhrase("Shop now"),
+            cta: queries.ctaEOLend,//safeGetPhrase("Shop now"),
             CTAhref: getCategoryLink(links[6]),
             color: category?.color,
             type: "category_product",
@@ -215,7 +215,7 @@ function generateCategoriesSection(
   return categoriesHTML;
 }
 
-export async function fridayCategoriesListChris({
+export async function fridayEolProducts({
   links,
   getProductById,
   getCategoryLink,
@@ -375,7 +375,7 @@ export async function fridayCategoriesListChris({
                               className: "newsletterParagraph",
                             },
                             href: getCategoryLink(links[6]),
-                            cta: queries.ctaEOL,//getPhrase("Shop now"),
+                            cta: queries.ctaEOLintro,//getPhrase("Shop now"),
                           })}
                       </td>
                     </tr>`
@@ -402,7 +402,9 @@ export async function fridayCategoriesListChris({
                       src: links[4],
                     })}
                 </td></tr>
-                    <tr><td class='newsletterBottom35px'></td></tr> 
+                <tr>
+                  <td class='newsletterBottom25px'></td>
+                </tr> 
               <!-- Wstawienie wygenerowanych dynamicznie sekcji kategorii -->
               ${categoriesSectionHTML}
               <tr><td class='newsletterBottom80px'></td></tr> 

@@ -116,7 +116,7 @@ try {
           {
             name: "Newsletter",
             type: types.NEWSLETTER,
-            template: templates.fridayCategoriesListChris,
+            template: templates.fridayEolProducts,
             background: "#750000",
             wrapper: types.WRAPPER,
             css: types.CSS.NS,
@@ -341,18 +341,24 @@ try {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "12.12.2025 - EOLs!",
                 tableRange: "19",
-                name: "ctaEOL",
+                name: "ctaEOLend",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "12.12.2025 - EOLs!",
-                tableRange: "20:25",
+                tableRange: "20",
+                name: "ctaEOLintro",
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "12.12.2025 - EOLs!",
+                tableRange: "21:26",
                 name: "categories",
               },
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "12.12.2025 - EOLs!",
-                tableRange: "29:30",
+                tableRange: "30:31",
                 name: "condition",
               },
               // {
@@ -391,57 +397,11 @@ try {
                 tableColumns: false,
               },
             ],
-            freebies: {
-              options: {
-                color: "#000000",
-                background: "#FFCCB7",
-              },
-              items: [
-                {
-                  size: {
-                    row: 1,
-                    col: 2,
-                  },
-                  products: [
-                    {
-                      id: "192263",
-                      src: getImageUrl("20250915Freebie1.png", true),
-                      style: "padding-right: 5px; padding-left: 10px;",
-                    },
-                    {
-                      id: "422508",
-                      src: getImageUrl("20250915Freebie2.png", true),
-                      style: "padding-right: 10px; padding-left: 5px;",
-                    },
-                  ],
-                },
-              ],
-              items2: [
-                {
-                  size: {
-                    row: 1,
-                    col: 2,
-                  },
-                  products: [
-                    {
-                      id: "517685",
-                      src: getImageUrl("20250915Freebie3.png", true),
-                      style: "padding-right: 5px; padding-left: 10px;",
-                    },
-                    {
-                      id: "517640",
-                      src: getImageUrl("20250915Freebie4.png", true),
-                      style: "padding-right: 10px; padding-left: 5px;",
-                    },
-                  ],
-                },
-              ],
-            },
           },
           {
             name: "Landing",
             type: types.LANDINGPAGE,
-            template: templates.fridayCategoriesListChris,
+            template: templates.fridayEolProducts,
             background: "#FFCCB7",
             css: types.CSS.LP,
             tit: {
